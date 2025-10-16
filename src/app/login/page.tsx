@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import {
-  signInWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
@@ -25,7 +24,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { auth } from '@/lib/firebase';
+import { useAuth, initiateEmailSignIn } from '@/firebase';
 import { Compass, Loader2 } from 'lucide-react';
 import { placeholderImages } from '@/lib/placeholder-images';
 
@@ -41,6 +40,7 @@ export default function LoginPage() {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+  const auth = useAuth();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -53,7 +53,7 @@ export default function LoginPage() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
     try {
-      await signInWithEmailAndPassword(auth, values.email, values.password);
+      initiateEmailSignIn(auth, values.email, values.password);
       toast({
         title: 'Success!',
         description: "You've been logged in.",

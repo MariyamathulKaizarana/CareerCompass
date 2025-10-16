@@ -18,8 +18,7 @@ import {
 } from 'lucide-react';
 import { signOut } from 'firebase/auth';
 
-import { useAuth } from '@/hooks/use-auth';
-import { auth } from '@/lib/firebase';
+import { useUser, useAuth } from '@/firebase';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
   DropdownMenu,
@@ -57,19 +56,20 @@ function FullScreenLoader() {
 }
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
-  const { user, loading } = useAuth();
+  const { user, isUserLoading } = useUser();
+  const auth = useAuth();
   const router = useRouter();
   const pathname = usePathname();
 
   useEffect(() => {
-    if (!loading && !user) {
+    if (!isUserLoading && !user) {
       router.replace('/login');
     }
     // Add admin role check here in a real app
-  }, [user, loading, router]);
+  }, [user, isUserLoading, router]);
 
 
-  if (loading || !user) {
+  if (isUserLoading || !user) {
     return <FullScreenLoader />;
   }
 

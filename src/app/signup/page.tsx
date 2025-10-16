@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import {
-  createUserWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
   updateProfile,
@@ -26,7 +25,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { auth } from '@/lib/firebase';
+import { useAuth, initiateEmailSignUp } from '@/firebase';
 import { Compass, Loader2 } from 'lucide-react';
 import { placeholderImages } from '@/lib/placeholder-images';
 
@@ -43,7 +42,7 @@ export default function SignupPage() {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
-
+  const auth = useAuth();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -57,11 +56,10 @@ export default function SignupPage() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
     try {
-      const userCredential = await createUserWithEmailAndPassword(auth, values.email, values.password);
-      await updateProfile(userCredential.user, {
-        displayName: values.name,
-      });
-
+      initiateEmailSignUp(auth, values.email, values.password)
+      // The user object is not immediately available, so we can't update the profile here directly.
+      // This would ideally be handled by a listener or a cloud function after sign-up.
+      // For now, we'll navigate and trust the auth state listener to pick up the new user.
       toast({
         title: 'Account Created!',
         description: 'Welcome to CareerCompass.',

@@ -11,7 +11,7 @@ import { Progress } from '@/components/ui/progress';
 import { Loader2 } from 'lucide-react';
 import { analyzeQuizResponsesAndSuggestCareers } from '@/ai/flows/analyze-quiz-responses-and-suggest-careers';
 import { useToast } from '@/hooks/use-toast';
-import { useAuth } from '@/hooks/use-auth';
+import { useUser } from '@/firebase';
 
 interface QuizClientProps {
   questions: Question[];
@@ -79,7 +79,7 @@ export function QuizClient({ questions }: QuizClientProps) {
   const [state, dispatch] = useReducer(quizReducer, initialState);
   const router = useRouter();
   const { toast } = useToast();
-  const { user } = useAuth();
+  const { user } = useUser();
   
   useEffect(() => {
     dispatch({ type: 'START_QUIZ' });
