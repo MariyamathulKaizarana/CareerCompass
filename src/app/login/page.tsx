@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import {
   GoogleAuthProvider,
+  signInWithEmailAndPassword,
   signInWithPopup,
 } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
@@ -24,7 +25,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { useAuth, initiateEmailSignIn } from '@/firebase';
+import { useAuth } from '@/firebase';
 import { Compass, Loader2 } from 'lucide-react';
 import { placeholderImages } from '@/lib/placeholder-images';
 
@@ -53,7 +54,7 @@ export default function LoginPage() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
     try {
-      initiateEmailSignIn(auth, values.email, values.password);
+      await signInWithEmailAndPassword(auth, values.email, values.password);
       toast({
         title: 'Success!',
         description: "You've been logged in.",

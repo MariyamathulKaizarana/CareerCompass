@@ -8,6 +8,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   updateProfile,
+  createUserWithEmailAndPassword,
 } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -25,7 +26,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { useAuth, initiateEmailSignUp } from '@/firebase';
+import { useAuth } from '@/firebase';
 import { Compass, Loader2 } from 'lucide-react';
 import { placeholderImages } from '@/lib/placeholder-images';
 
@@ -56,20 +57,26 @@ export default function SignupPage() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
     try {
-      initiateEmailSignUp(auth, values.email, values.password)
-      // The user object is not immediately available, so we can't update the profile here directly.
-      // This would ideally be handled by a listener or a cloud function after sign-up.
-      // For now, we'll navigate and trust the auth state listener to pick up the new user.
+      const userCredential = await createUserWithEmailAndPassword(auth, values.email, values.password);
+      if (userCredential.user) {
+        await updateProfile(userCredential.user, { displayName: values.name });
+      }
       toast({
         title: 'Account Created!',
         description: 'Welcome to CareerCompass.',
       });
       router.push('/dashboard');
     } catch (error: any) {
+        let description = "An unexpected error occurred. Please try again.";
+        if (error.code === 'auth/email-already-in-use') {
+            description = "This email is already in use. Please log in or use a different email.";
+        } else {
+            description = error.message;
+        }
       toast({
         variant: 'destructive',
         title: 'Uh oh! Something went wrong.',
-        description: error.message,
+        description: description,
       });
     } finally {
       setIsLoading(false);
