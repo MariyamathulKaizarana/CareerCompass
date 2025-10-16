@@ -12,7 +12,7 @@ export const careers: Career[] = [
     skills: ['Programming (Python, Java, C++)', 'Data Structures & Algorithms', 'Version Control (Git)', 'Problem Solving'],
     courses: ['B.Tech in Computer Science', 'BCA', 'Online Coding Bootcamps'],
     roadmap: 'Education (B.Tech) -> Internships -> Junior Developer -> Senior Developer/Architect',
-    avgSalary: '$110,000/year',
+    avgSalary: '₹8 - 20 LPA',
     futureScope: 'Extremely high demand with growth in AI, Machine Learning, and Cybersecurity.',
   },
   {
@@ -25,7 +25,7 @@ export const careers: Career[] = [
     skills: ['Figma/Sketch', 'User Research', 'Wireframing & Prototyping', 'Visual Design'],
     courses: ['B.Des in Design', 'Certified Courses in UX/UI', 'Portfolio Development'],
     roadmap: 'Learn Design Tools -> Build Portfolio -> Internship -> UI/UX Designer -> Product Designer',
-    avgSalary: '$95,000/year',
+    avgSalary: '₹6 - 15 LPA',
     futureScope: 'Growing rapidly as businesses prioritize user-centric products.',
   },
   {
@@ -38,7 +38,7 @@ export const careers: Career[] = [
     skills: ['Python/R', 'SQL', 'Machine Learning', 'Statistics', 'Data Visualization'],
     courses: ['B.Tech in Data Science/AI', 'M.Sc in Statistics', 'Data Science Certifications'],
     roadmap: 'Degree in relevant field -> Learn programming & stats -> Projects -> Data Analyst -> Data Scientist',
-    avgSalary: '$120,000/year',
+    avgSalary: '₹10 - 25 LPA',
     futureScope: 'One of the fastest-growing fields, integral to AI and business intelligence.',
   },
   {
@@ -51,7 +51,7 @@ export const careers: Career[] = [
     skills: ['Medical Knowledge', 'Attention to Detail', 'Empathy', 'Communication'],
     courses: ['MBBS (Bachelor of Medicine, Bachelor of Surgery)', 'NEET exam for entry'],
     roadmap: 'Clear NEET -> 5.5 years of MBBS -> Internship -> MD/MS for specialization',
-    avgSalary: '$208,000+/year',
+    avgSalary: '₹12 - 30+ LPA',
     futureScope: 'Consistently high demand worldwide with opportunities for specialization and research.',
   },
   {
@@ -64,7 +64,7 @@ export const careers: Career[] = [
     skills: ['SEO/SEM', 'Content Strategy', 'Social Media Marketing', 'Data Analysis'],
     courses: ['MBA in Marketing', 'BBA', 'Digital Marketing Certifications'],
     roadmap: 'Bachelor\'s Degree -> Entry-level marketing role -> Marketing Specialist -> Marketing Manager',
-    avgSalary: '$105,000/year',
+    avgSalary: '₹10 - 25 LPA',
     futureScope: 'Strong growth, especially in digital and data-driven marketing roles.',
   },
   {
@@ -77,7 +77,7 @@ export const careers: Career[] = [
     skills: ['Financial Modeling', 'Excel', 'Valuation', 'Statistics'],
     courses: ['B.Com/BBA in Finance', 'CFA (Chartered Financial Analyst)', 'MBA in Finance'],
     roadmap: 'Finance Degree -> Internship -> Junior Analyst -> Senior Analyst -> Portfolio Manager',
-    avgSalary: '$92,000/year',
+    avgSalary: '₹5 - 15 LPA',
     futureScope: 'Stable demand in corporate finance, investment banking, and asset management.',
   },
   {
@@ -90,7 +90,7 @@ export const careers: Career[] = [
     skills: ['AutoCAD/Revit', 'Design Principles', 'Project Management', 'Building Codes'],
     courses: ['B.Arch (Bachelor of Architecture)', 'M.Arch', 'State Licensure'],
     roadmap: 'B.Arch Degree -> Internship -> Licensure Exam -> Licensed Architect -> Firm Partner',
-    avgSalary: '$88,000/year',
+    avgSalary: '₹5 - 12 LPA',
     futureScope: 'Growth tied to construction industry, with a rising focus on sustainable design.',
   },
   {
@@ -103,7 +103,7 @@ export const careers: Career[] = [
     skills: ['Legal Research', 'Argumentation', 'Negotiation', 'Attention to Detail'],
     courses: ['LLB (Bachelor of Laws)', 'LLM (Master of Laws)', 'Bar Examination'],
     roadmap: 'Undergraduate Degree -> Law School (JD/LLB) -> Bar Exam -> Associate at a firm -> Partner or Corporate Counsel',
-    avgSalary: '$135,000/year',
+    avgSalary: '₹6 - 20 LPA',
     futureScope: 'Consistent demand with specialization opportunities in tech, environmental, and corporate law.',
   },
   {
@@ -116,7 +116,7 @@ export const careers: Career[] = [
     skills: ['Adobe Creative Suite', 'Typography', 'Color Theory', 'Layout Design'],
     courses: ['B.Des in Graphic Design', 'Diploma in Graphic Design', 'Online Design Courses'],
     roadmap: 'Build a Strong Portfolio -> Freelance/Intern -> Junior Designer -> Senior Designer/Art Director',
-    avgSalary: '$58,000/year',
+    avgSalary: '₹3 - 8 LPA',
     futureScope: 'High demand in digital media, advertising, and branding agencies.',
   },
   {
@@ -129,7 +129,7 @@ export const careers: Career[] = [
     skills: ['Accounting Standards', 'Taxation Laws', 'Auditing', 'Financial Management', 'Ethical Judgement'],
     courses: ['CA Foundation, Intermediate, Final', 'B.Com as a base degree'],
     roadmap: 'Clear CA Foundation -> Intermediate -> 3 years of Articleship -> Clear CA Final',
-    avgSalary: '$98,000/year',
+    avgSalary: '₹7 - 20 LPA',
     futureScope: 'Evergreen profession with critical roles in all sectors of the economy.',
   },
   {
@@ -142,7 +142,7 @@ export const careers: Career[] = [
     skills: ['Anatomy & Physiology Knowledge', 'Manual Therapy', 'Patient Assessment', 'Empathy', 'Rehabilitation Planning'],
     courses: ['Bachelor of Physiotherapy (BPT)', 'Master of Physiotherapy (MPT)'],
     roadmap: 'Bachelor\'s Degree (BPT) -> Internship -> License to practice -> Specialization (MPT) -> Clinical Practice or Research',
-    avgSalary: '$75,000/year',
+    avgSalary: '₹3 - 8 LPA',
     futureScope: 'Growing demand due to an aging population and increasing focus on non-invasive treatment methods.',
   },
   {
@@ -155,7 +155,7 @@ export const careers: Career[] = [
     skills: ['Network Security', 'SIEM Tools', 'Threat Analysis', 'Ethical Hacking', 'Cryptography'],
     courses: ['B.Tech in Cybersecurity', 'CompTIA Security+', 'Certified Ethical Hacker (CEH)'],
     roadmap: 'IT or CS Degree -> Security Certifications -> SOC Analyst -> Senior Analyst/Security Engineer',
-    avgSalary: '$102,000/year',
+    avgSalary: '₹8 - 20 LPA',
     futureScope: 'Extremely high demand as cyber threats become more sophisticated.',
   },
   {
@@ -168,7 +168,7 @@ export const careers: Career[] = [
     skills: ['User Research', 'Roadmap Planning', 'Agile Methodologies', 'Leadership', 'Data Analysis'],
     courses: ['MBA', 'B.Tech/BBA', 'Certified Product Manager (CPM)'],
     roadmap: 'Experience in a related field (dev, design, marketing) -> Associate PM -> Product Manager -> Senior PM/Director',
-    avgSalary: '$130,000/year',
+    avgSalary: '₹15 - 40 LPA',
     futureScope: 'Very strong. Every tech company needs skilled product managers to drive their growth.',
   },
   {
@@ -181,7 +181,7 @@ export const careers: Career[] = [
     skills: ['SEO', 'Content Writing/Editing', 'Analytics', 'Audience Research', 'Content Management Systems (CMS)'],
     courses: ['BA in Journalism/English/Communications', 'Digital Marketing courses'],
     roadmap: 'Writer/Editor Role -> Content Creator -> Content Strategist -> Content Director',
-    avgSalary: '$75,000/year',
+    avgSalary: '₹6 - 15 LPA',
     futureScope: 'High demand as "content is king" in the digital marketing landscape.',
   },
   {
@@ -194,7 +194,7 @@ export const careers: Career[] = [
     skills: ['Communication', 'Conflict Resolution', 'Recruitment', 'Labor Law Knowledge', 'Organizational Skills'],
     courses: ['MBA in HR', 'BBA', 'SHRM Certification'],
     roadmap: 'HR Assistant/Generalist -> HR Specialist -> HR Manager -> HR Director',
-    avgSalary: '$113,000/year',
+    avgSalary: '₹8 - 20 LPA',
     futureScope: 'Stable and essential role in all industries, with a growing focus on culture and employee well-being.',
   },
   {
@@ -207,7 +207,7 @@ export const careers: Career[] = [
     skills: ['Python', 'TensorFlow/PyTorch', 'Natural Language Processing (NLP)', 'Computer Vision', 'Big Data Technologies'],
     courses: ['MS in AI/ML', 'B.Tech in AI/Data Science', 'Advanced ML Certifications'],
     roadmap: 'CS/Data Science Degree -> Projects in AI -> Data Scientist/ML Engineer -> Senior ML Engineer/AI Architect',
-    avgSalary: '$140,000/year',
+    avgSalary: '₹12 - 35 LPA',
     futureScope: 'At the forefront of technological innovation with explosive growth and demand.',
   },
   {
@@ -220,7 +220,7 @@ export const careers: Career[] = [
     skills: ['Solidity/Rust', 'Cryptography', 'Smart Contracts', 'Web3.js/Ethers.js', 'Distributed Systems'],
     courses: ['CS Degree', 'Certified Blockchain Developer courses', 'Hands-on projects'],
     roadmap: 'Software Dev Experience -> Learn Blockchain Fundamentals -> Build dApps -> Blockchain Developer -> Lead Architect',
-    avgSalary: '$125,000/year',
+    avgSalary: '₹10 - 30 LPA',
     futureScope: 'High-growth emerging field with applications expanding beyond cryptocurrency to finance, supply chain, and more.',
   },
   {
@@ -233,7 +233,7 @@ export const careers: Career[] = [
     skills: ['AWS/Azure/GCP', 'Networking', 'Security', 'Infrastructure as Code (Terraform)', 'DevOps'],
     courses: ['Cloud Certifications (AWS Certified Solutions Architect)', 'IT/CS Degree'],
     roadmap: 'IT Admin/Dev -> Cloud Engineer -> Senior Cloud Engineer -> Cloud Architect',
-    avgSalary: '$155,000/year',
+    avgSalary: '₹18 - 45 LPA',
     futureScope: 'Extremely high demand as nearly all businesses move to the cloud.',
   },
   {
@@ -246,7 +246,7 @@ export const careers: Career[] = [
     skills: ['CI/CD (Jenkins, GitLab)', 'Containerization (Docker, Kubernetes)', 'Scripting (Bash, Python)', 'Cloud Platforms'],
     courses: ['B.Tech in CS/IT', 'DevOps Certifications (e.g., Docker Certified Associate)'],
     roadmap: 'SysAdmin or Developer -> Learn Automation & CI/CD -> DevOps Engineer -> Senior DevOps Engineer',
-    avgSalary: '$115,000/year',
+    avgSalary: '₹10 - 25 LPA',
     futureScope: 'Essential role in modern software development, with demand growing continuously.',
   },
   {
@@ -259,7 +259,7 @@ export const careers: Career[] = [
     skills: ['Biology & Anatomy', 'Medical Device Design', 'Biomaterials', 'CAD Software', 'Research'],
     courses: ['B.Tech/BE in Biomedical Engineering', 'M.Tech for specialization'],
     roadmap: 'B.Tech Degree -> Internship -> R&D or Clinical Role -> Specialization (e.g., in biomechanics)',
-    avgSalary: '$97,000/year',
+    avgSalary: '₹5 - 12 LPA',
     futureScope: 'Strong growth due to advances in medical technology and an aging population.',
   },
   {
@@ -272,7 +272,7 @@ export const careers: Career[] = [
     skills: ['Data Collection & Analysis', 'Environmental Regulations', 'GIS Software', 'Field Research', 'Chemistry/Biology'],
     courses: ['BS in Environmental Science/Engineering', 'MS for advanced roles'],
     roadmap: 'Science Degree -> Fieldwork/Internship -> Environmental Scientist/Consultant -> Policy Advisor',
-    avgSalary: '$76,000/year',
+    avgSalary: '₹4 - 10 LPA',
     futureScope: 'Growing importance and demand due to climate change and sustainability initiatives.',
   },
   {
@@ -285,7 +285,7 @@ export const careers: Career[] = [
     skills: ['C++/C#', 'Game Engines (Unity, Unreal)', '3D Math', 'Creativity', 'Problem Solving'],
     courses: ['B.Tech in CS with game dev specialization', 'Specialized game design courses'],
     roadmap: 'Learn a game engine -> Build a portfolio of small games -> Junior Game Dev -> Senior/Lead Developer',
-    avgSalary: '$85,000/year',
+    avgSalary: '₹5 - 18 LPA',
     futureScope: 'Massive, ever-growing entertainment industry with opportunities in indie and AAA studios.',
   },
   {
@@ -298,7 +298,7 @@ export const careers: Career[] = [
     skills: ['Financial Modeling', 'Valuation', 'Negotiation', 'High-Pressure Work Ethic', 'Networking'],
     courses: ['MBA in Finance', 'Degrees in Finance, Economics, or Accounting'],
     roadmap: 'Prestigious University -> Internship -> Analyst -> Associate -> VP -> Managing Director',
-    avgSalary: '$150,000+ (highly variable with bonuses)',
+    avgSalary: '₹15 - 50+ LPA (highly variable)',
     futureScope: 'Highly competitive and cyclical, but extremely lucrative. Tied to market performance.',
   },
   {
@@ -311,7 +311,7 @@ export const careers: Career[] = [
     skills: ['Problem Solving', 'Data Analysis', 'Communication', 'Project Management', 'Client Relations'],
     courses: ['MBA from a top business school', 'Any analytical undergraduate degree'],
     roadmap: 'Top University -> Analyst role -> MBA -> Consultant -> Partner',
-    avgSalary: '$145,000/year',
+    avgSalary: '₹18 - 50 LPA',
     futureScope: 'High demand as companies constantly seek to optimize and adapt. Excellent exit opportunities.',
   },
   {
@@ -324,7 +324,7 @@ export const careers: Career[] = [
     skills: ['Logistics', 'Inventory Management', 'Negotiation', 'Forecasting', 'ERP Systems'],
     courses: ['Degree in Supply Chain Management or Business', 'APICS Certifications (e.g., CSCP)'],
     roadmap: 'Entry-level logistics role -> Analyst -> Supply Chain Manager -> Director of Operations',
-    avgSalary: '$117,000/year',
+    avgSalary: '₹12 - 30 LPA',
     futureScope: 'Critically important field, especially with the growth of global e-commerce. High demand.',
   },
   {
@@ -337,7 +337,7 @@ export const careers: Career[] = [
     skills: ['Advanced Mathematics & Statistics', 'Probability', 'Financial Theory', 'Risk Analysis', 'Programming'],
     courses: ['Degree in Actuarial Science, Math, or Statistics', 'Series of professional exams'],
     roadmap: 'Degree -> Pass initial actuarial exams -> Entry-level job -> Continue exams to become a fellow',
-    avgSalary: '$113,000/year',
+    avgSalary: '₹10 - 25 LPA',
     futureScope: 'Highly respected and stable profession with excellent compensation and work-life balance.',
   },
   {
@@ -350,7 +350,7 @@ export const careers: Career[] = [
     skills: ['Data Analysis', 'Statistics (SPSS/R)', 'Surveys', 'Communication', 'Critical Thinking'],
     courses: ['Degree in Marketing, Business, or Statistics', 'Certifications in market research'],
     roadmap: 'Bachelor\'s Degree -> Junior Analyst -> Market Research Analyst -> Research Manager',
-    avgSalary: '$68,000/year',
+    avgSalary: '₹5 - 12 LPA',
     futureScope: 'Solid demand as data-driven decision making becomes more critical for businesses.',
   },
   {
@@ -363,7 +363,7 @@ export const careers: Career[] = [
     skills: ['Writing & Communication', 'Media Relations', 'Crisis Management', 'Social Media', 'Storytelling'],
     courses: ['BA in Communications, Journalism, or Public Relations'],
     roadmap: 'PR Internship/Assistant -> PR Coordinator -> PR Specialist -> PR Manager',
-    avgSalary: '$67,000/year',
+    avgSalary: '₹4 - 10 LPA',
     futureScope: 'Ever-evolving field with strong demand in the digital age.',
   },
   {
@@ -376,7 +376,7 @@ export const careers: Career[] = [
     skills: ['Maya/Blender', 'Adobe After Effects', 'Drawing', 'Timing and Spacing', 'Creativity'],
     courses: ['BFA in Animation', 'Online animation schools (e.g., Animation Mentor)'],
     roadmap: 'Develop a strong demo reel -> Junior Animator -> Animator -> Senior/Lead Animator',
-    avgSalary: '$78,000/year',
+    avgSalary: '₹4 - 12 LPA',
     futureScope: 'Growing demand in entertainment, advertising, and even educational content.',
   },
   {
@@ -389,7 +389,7 @@ export const careers: Career[] = [
     skills: ['Writing & Editing', 'Interviewing', 'Research', 'Ethics', 'Multimedia Storytelling'],
     courses: ['BA in Journalism or Communications'],
     roadmap: 'Work for student paper -> Internship -> Reporter -> Editor/Anchor',
-    avgSalary: '$55,000/year',
+    avgSalary: '₹3 - 9 LPA',
     futureScope: 'Challenging but essential field. Digital media provides new opportunities.',
   },
   {
@@ -402,7 +402,7 @@ export const careers: Career[] = [
     skills: ['Research', 'Critical Thinking', 'Writing', 'Archival Skills', 'Analysis of primary sources'],
     courses: ['MA or PhD in History is often required'],
     roadmap: 'BA in History -> MA/PhD -> Archivist/Curator/Professor',
-    avgSalary: '$63,000/year',
+    avgSalary: '₹5 - 12 LPA (in academia/research)',
     futureScope: 'Niche field, with roles in academia, government, and cultural institutions.',
   },
   {
@@ -415,7 +415,7 @@ export const careers: Career[] = [
     skills: ['Sketching & 3D Modeling (CAD)', 'Prototyping', 'Material Knowledge', 'User-Centric Design', 'Problem Solving'],
     courses: ['Bachelor of Industrial Design (BID)'],
     roadmap: 'Design Degree -> Portfolio -> Junior Designer -> Senior Designer -> Design Director',
-    avgSalary: '$77,000/year',
+    avgSalary: '₹6 - 18 LPA',
     futureScope: 'Stable demand, evolving with new technologies like 3D printing and sustainable materials.',
   },
   {
@@ -428,7 +428,7 @@ export const careers: Career[] = [
     skills: ['Drawing/Sketching', 'Sewing & Pattern Making', 'Fabric Knowledge', 'Trend Awareness', 'Creativity'],
     courses: ['Degree in Fashion Design from a reputable institute (e.g., NIFT, Parsons)'],
     roadmap: 'Fashion School -> Internship -> Assistant Designer -> Designer -> Head of a brand',
-    avgSalary: '$77,000/year',
+    avgSalary: '₹4 - 15+ LPA (highly variable)',
     futureScope: 'Highly competitive, but with global opportunities and the rise of sustainable fashion.',
   },
   {
@@ -441,7 +441,7 @@ export const careers: Career[] = [
     skills: ['Nutritional Science', 'Counseling', 'Biochemistry', 'Meal Planning', 'Empathy'],
     courses: ['BS in Dietetics/Nutrition', 'Completion of a dietetic internship', 'Licensure/Registration exam'],
     roadmap: 'Degree & Internship -> Pass RD Exam -> Clinical or Community Nutritionist -> Specialization',
-    avgSalary: '$66,000/year',
+    avgSalary: '₹3 - 7 LPA',
     futureScope: 'Growing demand due to increased public interest in health, wellness, and preventative care.',
   },
   {
@@ -454,7 +454,7 @@ export const careers: Career[] = [
     skills: ['Patient Care', 'Therapeutic Exercises', 'Rehabilitation', 'Empathy', 'Problem Solving'],
     courses: ['Master\'s or Doctorate in Occupational Therapy'],
     roadmap: 'Bachelor\'s Degree -> Master\'s/OTD Program -> Pass NBCOT exam -> Licensed OT',
-    avgSalary: '$93,000/year',
+    avgSalary: '₹4 - 9 LPA',
     futureScope: 'Very strong demand, especially with an aging population and in pediatric care.',
   },
   {
@@ -467,7 +467,7 @@ export const careers: Career[] = [
     skills: ['GIS Software', 'Public Policy', 'Community Engagement', 'Data Analysis', 'Project Management'],
     courses: ['Master\'s in Urban Planning (MUP)'],
     roadmap: 'Undergrad Degree (Geography, Econ) -> Master\'s Program -> Planner for city/private firm -> Senior Planner',
-    avgSalary: '$78,000/year',
+    avgSalary: '₹6 - 15 LPA',
     futureScope: 'Growing need for sustainable and smart city development drives demand for this role.',
   },
   {
@@ -480,7 +480,7 @@ export const careers: Career[] = [
     skills: ['Animal Biology & Anatomy', 'Surgical Skills', 'Diagnostic Abilities', 'Empathy (for animals and owners)', 'Communication'],
     courses: ['Doctor of Veterinary Medicine (DVM)'],
     roadmap: 'Bachelor\'s Degree -> Veterinary School (4 years) -> Pass NAVLE exam -> Licensed Veterinarian',
-    avgSalary: '$103,000/year',
+    avgSalary: '₹5 - 12 LPA',
     futureScope: 'Consistent demand as pet ownership and spending on pet care continue to rise.',
   },
   {
@@ -493,7 +493,7 @@ export const careers: Career[] = [
     skills: ['HTML/CSS/JS', 'React/Angular/Vue', 'Node.js/Python/Java', 'Databases (SQL, MongoDB)', 'Git'],
     courses: ['B.Tech in CS', 'Coding Bootcamps'],
     roadmap: 'Learn front-end -> Learn back-end -> Build full-stack projects -> Junior Full Stack Dev -> Senior Developer',
-    avgSalary: '$115,000/year',
+    avgSalary: '₹7 - 22 LPA',
     futureScope: 'Extremely versatile and in high demand, especially in startups and smaller companies.',
   },
   {
@@ -506,7 +506,7 @@ export const careers: Career[] = [
     skills: ['ETL Processes', 'Big Data (Spark, Hadoop)', 'SQL/NoSQL Databases', 'Python/Scala/Java', 'Cloud Platforms'],
     courses: ['B.Tech in CS/IT', 'Certifications in Big Data technologies'],
     roadmap: 'Software Eng/DBA background -> Learn ETL & Big Data tools -> Data Engineer -> Senior Data Engineer/Architect',
-    avgSalary: '$127,000/year',
+    avgSalary: '₹10 - 30 LPA',
     futureScope: 'Foundation of any data-driven organization. Very high demand as companies scale their data operations.',
   },
   {
@@ -519,7 +519,7 @@ export const careers: Career[] = [
     skills: ['Sales & Negotiation', 'Networking', 'Strategic Planning', 'Communication', 'Market Analysis'],
     courses: ['BBA or MBA'],
     roadmap: 'Sales or Marketing role -> Business Development Executive -> Business Development Manager -> Head of Biz Dev',
-    avgSalary: '$128,000/year',
+    avgSalary: '₹8 - 25 LPA',
     futureScope: 'Crucial role for any company looking to expand. Strong demand across all industries.',
   },
   {
@@ -532,7 +532,7 @@ export const careers: Career[] = [
     skills: ['Content Creation', 'Social Media Platforms (Instagram, TikTok, etc.)', 'Analytics', 'Copywriting', 'Community Management'],
     courses: ['Degree in Marketing/Communications', 'Digital Marketing certifications'],
     roadmap: 'Personal projects/Internship -> Social Media Coordinator -> Social Media Manager -> Head of Social',
-    avgSalary: '$64,000/year',
+    avgSalary: '₹4 - 10 LPA',
     futureScope: 'Essential for modern marketing. The field is constantly evolving with new platforms and trends.',
   },
   {
@@ -545,7 +545,7 @@ export const careers: Career[] = [
     skills: ['Organization', 'Budgeting', 'Vendor Management', 'Problem Solving', 'Communication'],
     courses: ['Degree in Hospitality, Marketing, or Communications'],
     roadmap: 'Event Assistant/Coordinator -> Event Planner/Manager -> Senior Event Manager',
-    avgSalary: '$52,000/year',
+    avgSalary: '₹4 - 12 LPA',
     futureScope: 'Demand is recovering post-pandemic, with a growing focus on hybrid and virtual events.',
   },
   {
@@ -558,7 +558,7 @@ export const careers: Career[] = [
     skills: ['Storytelling', 'Leadership', 'Visual Composition', 'Communication', 'Knowledge of all aspects of filmmaking'],
     courses: ['Film School (e.g., FTII, NYU Tisch)', 'Hands-on experience'],
     roadmap: 'Make short films -> Work on film sets (any role) -> Direct independent films -> Direct studio films',
-    avgSalary: 'Highly variable, from $0 to millions.',
+    avgSalary: 'Highly variable',
     futureScope: 'Extremely competitive. The rise of streaming platforms has created more opportunities.',
   },
   {
@@ -571,7 +571,7 @@ export const careers: Career[] = [
     skills: ['Clear Writing', 'Ability to understand complex topics', 'Audience Analysis', 'Documentation Tools (e.g., MadCap Flare)', 'Attention to Detail'],
     courses: ['Degree in English, Communications, or a technical field'],
     roadmap: 'Degree -> Internship -> Junior Technical Writer -> Senior Technical Writer/Documentation Manager',
-    avgSalary: '$78,000/year',
+    avgSalary: '₹5 - 15 LPA',
     futureScope: 'Strong and steady demand in the tech, medical, and engineering industries.',
   },
   {
@@ -584,7 +584,7 @@ export const careers: Career[] = [
     skills: ['Space Planning', 'Color Theory', 'CAD Software', 'Project Management', 'Client Communication'],
     courses: ['Degree in Interior Design'],
     roadmap: 'Design School -> Internship -> Junior Designer -> Senior Designer/Own a firm',
-    avgSalary: '$61,000/year',
+    avgSalary: '₹3 - 10 LPA',
     futureScope: 'Demand tied to real estate and construction. Growing interest in sustainable and smart home design.',
   },
   {
@@ -597,7 +597,7 @@ export const careers: Career[] = [
     skills: ['Phonetics & Linguistics', 'Patient Assessment', 'Therapy Techniques', 'Empathy', 'Patience'],
     courses: ['Master\'s Degree in Speech-Language Pathology'],
     roadmap: 'Bachelor\'s Degree -> Master\'s Program -> Clinical Fellowship -> Pass Praxis exam for ASHA certification',
-    avgSalary: '$84,000/year',
+    avgSalary: '₹4 - 8 LPA',
     futureScope: 'Excellent job outlook due to growing awareness and an aging population.',
   },
   {
@@ -610,7 +610,7 @@ export const careers: Career[] = [
     skills: ['Research & Analysis', 'Statistics', 'Economics', 'Writing', 'Public Speaking'],
     courses: ['Master\'s in Public Policy (MPP) or Public Administration (MPA)'],
     roadmap: 'Bachelor\'s Degree -> Master\'s Program -> Policy Analyst -> Senior Analyst/Policy Director',
-    avgSalary: '$82,000/year',
+    avgSalary: '₹6 - 15 LPA',
     futureScope: 'Important role in governance and advocacy, with opportunities in various sectors.',
   },
   {
@@ -623,7 +623,7 @@ export const careers: Career[] = [
     skills: ['Fluency in multiple languages', 'Cultural knowledge', 'Excellent listening/reading and writing skills', 'Specialized vocabulary (e.g., legal, medical)'],
     courses: ['Bachelor\'s degree in the language', 'Certification from organizations like the ATA'],
     roadmap: 'Become fluent -> Get certified -> Freelance or work for an agency -> Specialize in a field',
-    avgSalary: '$54,000/year',
+    avgSalary: '₹3 - 10 LPA',
     futureScope: 'Good demand in a globalized world, especially for less common languages and specialized fields.',
   },
   {
@@ -636,7 +636,7 @@ export const careers: Career[] = [
     skills: ['Counseling', 'Child Development', 'Active Listening', 'Empathy', 'Knowledge of academic/career paths'],
     courses: ['Master\'s in School Counseling'],
     roadmap: 'Bachelor\'s Degree -> Master\'s Program -> State Licensure/Certification -> School Counselor',
-    avgSalary: '$60,000/year',
+    avgSalary: '₹4 - 8 LPA',
     futureScope: 'Growing recognition of the importance of mental health in schools is increasing demand.',
   },
   {
@@ -649,7 +649,7 @@ export const careers: Career[] = [
     skills: ['Mechanical & Electrical Skills', 'Troubleshooting', 'Safety Procedures', 'Blueprint Reading'],
     courses: ['Associate\'s degree or vocational training in renewable energy'],
     roadmap: 'Technical School/Associate\'s Degree -> Apprenticeship/Entry-level Technician -> Senior Technician/Site Manager',
-    avgSalary: '$57,000/year',
+    avgSalary: '₹4 - 9 LPA',
     futureScope: 'One of the fastest-growing job sectors globally due to the push for clean energy.',
   },
   {
@@ -662,7 +662,7 @@ export const careers: Career[] = [
     skills: ['Digital Marketing (SEO, SEM)', 'Platform knowledge (Shopify, Magento)', 'Web Analytics', 'Conversion Rate Optimization (CRO)', 'Project Management'],
     courses: ['Degree in Business or Marketing', 'Experience in digital marketing'],
     roadmap: 'Digital Marketing role -> E-commerce Specialist -> E-commerce Manager -> Director of E-commerce',
-    avgSalary: '$95,000/year',
+    avgSalary: '₹8 - 20 LPA',
     futureScope: 'Extremely high demand as retail continues to shift online.',
   },
   {
@@ -675,7 +675,7 @@ export const careers: Career[] = [
     skills: ['Rock & Mineral Identification', 'Field Mapping', 'Data Analysis', 'GIS', 'Geophysics'],
     courses: ['BS in Geology', 'MS or PhD for research or specialized roles'],
     roadmap: 'Geology Degree -> Field Assistant -> Geologist -> Senior Geologist/Project Manager',
-    avgSalary: '$95,000/year',
+    avgSalary: '₹6 - 18 LPA',
     futureScope: 'Demand is tied to the energy and resource sectors, with growing opportunities in environmental geology.',
   },
   {
@@ -688,7 +688,7 @@ export const careers: Career[] = [
     skills: ['Attention to Detail', 'Analytical Chemistry', 'Biology (DNA Analysis)', 'Lab Procedures', 'Integrity'],
     courses: ['Degree in a natural science (Chemistry, Biology) with a forensic specialization'],
     roadmap: 'Science Degree -> Lab Technician -> Forensic Scientist -> Crime Lab Supervisor',
-    avgSalary: '$62,000/year',
+    avgSalary: '₹4 - 10 LPA',
     futureScope: 'Stable demand in law enforcement and government agencies.',
   },
   {
@@ -701,7 +701,7 @@ export const careers: Career[] = [
     skills: ['Emergency Medical Procedures', 'Quick Thinking', 'Calm under pressure', 'Physical Stamina', 'Communication'],
     courses: ['Paramedic certification program (often an Associate\'s degree)'],
     roadmap: 'EMT-Basic training -> Paramedic Program -> National Registry certification -> Paramedic',
-    avgSalary: '$50,000/year',
+    avgSalary: '₹3 - 7 LPA',
     futureScope: 'Consistent and growing demand for emergency medical services nationwide.',
   },
   {
@@ -714,7 +714,7 @@ export const careers: Career[] = [
     skills: ['Subject Matter Expertise', 'Research', 'Writing', 'Project Management', 'Public Speaking'],
     courses: ['Master\'s or PhD in a relevant field (e.g., Art History, History, Archaeology)'],
     roadmap: 'Relevant advanced degree -> Internship/Assistant role -> Assistant Curator -> Curator -> Chief Curator',
-    avgSalary: '$60,000/year',
+    avgSalary: '₹4 - 10 LPA',
     futureScope: 'Competitive field, but essential for cultural and historical preservation.',
   },
   {
@@ -727,7 +727,7 @@ export const careers: Career[] = [
     skills: ['Information Organization', 'Research', 'Customer Service', 'Database Management', 'Literacy Promotion'],
     courses: ['Master of Library and Information Science (MLIS)'],
     roadmap: 'Bachelor\'s Degree -> MLIS Program -> Librarian -> Department Head/Library Director',
-    avgSalary: '$62,000/year',
+    avgSalary: '₹4 - 9 LPA',
     futureScope: 'The role is evolving with technology, focusing more on digital literacy and community programming.',
   },
   {
@@ -740,7 +740,7 @@ export const careers: Career[] = [
     skills: ['Statistical Analysis (Econometrics)', 'Economic Theory', 'Data Analysis (Stata/R)', 'Writing', 'Critical Thinking'],
     courses: ['Master\'s or PhD in Economics is typically required'],
     roadmap: 'Bachelor\'s in Econ -> Master\'s/PhD -> Research Assistant/Analyst -> Economist',
-    avgSalary: '$113,000/year',
+    avgSalary: '₹10 - 25 LPA',
     futureScope: 'Strong demand in government, finance, and consulting for experts who can interpret complex data.',
   },
   {
@@ -753,7 +753,7 @@ export const careers: Career[] = [
     skills: ['Aviation Knowledge', 'Spatial Awareness', 'Communication', 'Problem Solving', 'Attention to Detail'],
     courses: ['Flight School for licenses (PPL, CPL, ATPL)', 'Bachelor\'s degree often preferred by major airlines'],
     roadmap: 'Flight training to build hours -> Certified Flight Instructor -> Regional Airline Pilot -> Major Airline Pilot',
-    avgSalary: '$148,000/year',
+    avgSalary: '₹12 - 40 LPA',
     futureScope: 'Global demand for pilots is expected to be very high over the next two decades.',
   },
   {
@@ -766,7 +766,7 @@ export const careers: Career[] = [
     skills: ['AutoCAD', 'Project Management', 'Structural Analysis', 'Physics & Math', 'Problem Solving'],
     courses: ['B.Tech/BE in Civil Engineering', 'Professional Engineer (PE) license'],
     roadmap: 'Engineering Degree -> Entry-level Engineer (EIT) -> Pass PE exam -> Project Engineer/Manager',
-    avgSalary: '$89,000/year',
+    avgSalary: '₹5 - 15 LPA',
     futureScope: 'Constant demand due to the need to maintain and upgrade aging infrastructure and build new projects.',
   },
   {
@@ -779,7 +779,7 @@ export const careers: Career[] = [
     skills: ['Pharmacology', 'Chemistry', 'Attention to Detail', 'Patient Counseling', 'Accuracy'],
     courses: ['Doctor of Pharmacy (Pharm.D.)'],
     roadmap: 'Pre-pharmacy coursework -> Pharmacy School (Pharm.D.) -> Pass NAPLEX/MPJE exams -> Licensed Pharmacist',
-    avgSalary: '$128,000/year',
+    avgSalary: '₹3 - 7 LPA',
     futureScope: 'Stable demand, with an expanding role in patient care and medication management.',
   },
   {
@@ -792,7 +792,7 @@ export const careers: Career[] = [
     skills: ['Active Listening', 'Psychological Assessment', 'Therapeutic Techniques', 'Empathy', 'Research'],
     courses: ['PhD or PsyD in Psychology for clinical practice'],
     roadmap: 'Bachelor\'s in Psychology -> PhD/PsyD Program -> Internship/Postdoc -> State Licensure -> Practicing Psychologist',
-    avgSalary: '$85,000/year',
+    avgSalary: '₹5 - 15 LPA',
     futureScope: 'Growing demand as awareness of mental health increases.',
   }
 ];
@@ -1283,7 +1283,7 @@ export const quizQuestions: Question[] = [
           { text: 'The lives of great artists.', value: 'creative_artists' },
           { text: 'Major historical events and their impact.', value: 'humanities_events' },
           { text: 'Social justice and human rights.', value: 'social_justice' },
-          { text: 'The inner workings of the legal system.', value: 'humanities_legal' },
+          { text: 'The inner workings of the legal system.', value: 'humanities_legalstory' },
       ],
   },
   {
