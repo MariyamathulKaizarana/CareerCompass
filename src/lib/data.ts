@@ -298,7 +298,7 @@ export const careers: Career[] = [
     skills: ['Financial Modeling', 'Valuation', 'Negotiation', 'High-Pressure Work Ethic', 'Networking'],
     courses: ['MBA in Finance', 'Degrees in Finance, Economics, or Accounting'],
     roadmap: 'Prestigious University -> Internship -> Analyst -> Associate -> VP -> Managing Director',
-    avgSalary: '₹15 - 50+ LPA (highly variable)',
+    avgSalary: '₹15 - 50+ LPA',
     futureScope: 'Highly competitive and cyclical, but extremely lucrative. Tied to market performance.',
   },
   {
@@ -402,7 +402,7 @@ export const careers: Career[] = [
     skills: ['Research', 'Critical Thinking', 'Writing', 'Archival Skills', 'Analysis of primary sources'],
     courses: ['MA or PhD in History is often required'],
     roadmap: 'BA in History -> MA/PhD -> Archivist/Curator/Professor',
-    avgSalary: '₹5 - 12 LPA (in academia/research)',
+    avgSalary: '₹5 - 12 LPA',
     futureScope: 'Niche field, with roles in academia, government, and cultural institutions.',
   },
   {
@@ -428,7 +428,7 @@ export const careers: Career[] = [
     skills: ['Drawing/Sketching', 'Sewing & Pattern Making', 'Fabric Knowledge', 'Trend Awareness', 'Creativity'],
     courses: ['Degree in Fashion Design from a reputable institute (e.g., NIFT, Parsons)'],
     roadmap: 'Fashion School -> Internship -> Assistant Designer -> Designer -> Head of a brand',
-    avgSalary: '₹4 - 15+ LPA (highly variable)',
+    avgSalary: '₹4 - 15+ LPA',
     futureScope: 'Highly competitive, but with global opportunities and the rise of sustainable fashion.',
   },
   {
