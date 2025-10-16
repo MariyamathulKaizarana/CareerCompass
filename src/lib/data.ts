@@ -1,3 +1,4 @@
+
 import type { Career, Question } from './types';
 
 export const careers: Career[] = [
@@ -813,10 +814,10 @@ export const quizQuestions: Question[] = [
     category: 'science',
     text: 'Which of these subjects excites you the most?',
     options: [
-      { text: 'Physics - understanding the fundamental laws of the universe.', value: 'analytical' },
-      { text: 'Biology - exploring the complexities of living organisms.', value: 'caring' },
-      { text: 'Computer Science - building applications and solving problems with code.', value: 'technical' },
-      { text: 'Chemistry - experimenting with substances and their properties.', value: 'analytical' },
+      { text: 'Physics - understanding the fundamental laws of the universe.', value: 'analytical_physics' },
+      { text: 'Biology - exploring the complexities of living organisms.', value: 'caring_bio' },
+      { text: 'Computer Science - building applications and solving problems with code.', value: 'technical_cs' },
+      { text: 'Chemistry - experimenting with substances and their properties.', value: 'analytical_chem' },
     ],
   },
   {
@@ -824,10 +825,10 @@ export const quizQuestions: Question[] = [
     category: 'science',
     text: 'You are most drawn to...',
     options: [
-      { text: 'Designing and building structures or machines.', value: 'technical' },
-      { text: 'Conducting research and analyzing data to discover new things.', value: 'analytical' },
-      { text: 'Caring for the health and well-being of others.', value: 'caring' },
-      { text: 'Using technology to create innovative digital solutions.', value: 'technical' },
+      { text: 'Designing and building structures or machines.', value: 'technical_design' },
+      { text: 'Conducting research and analyzing data to discover new things.', value: 'analytical_research' },
+      { text: 'Caring for the health and well-being of others.', value: 'caring_health' },
+      { text: 'Using technology to create innovative digital solutions.', value: 'technical_digital' },
     ],
   },
    {
@@ -835,10 +836,10 @@ export const quizQuestions: Question[] = [
     category: 'science',
     text: 'In a hospital setting, would you rather be...',
     options: [
-      { text: 'The doctor diagnosing patients.', value: 'caring' },
-      { text: 'The lab technician analyzing samples.', value: 'analytical' },
-      { text: 'The therapist helping patients recover movement.', value: 'caring' },
-      { text: 'The engineer maintaining medical equipment.', value: 'technical' },
+      { text: 'The doctor diagnosing patients.', value: 'caring_doctor' },
+      { text: 'The lab technician analyzing samples.', value: 'analytical_lab' },
+      { text: 'The therapist helping patients recover movement.', value: 'caring_therapist' },
+      { text: 'The engineer maintaining medical equipment.', value: 'technical_medical' },
     ],
   },
   // Commerce Questions
@@ -847,10 +848,10 @@ export const quizQuestions: Question[] = [
     category: 'commerce',
     text: 'What aspect of business interests you the most?',
     options: [
-      { text: 'Analyzing financial statements and market trends.', value: 'analytical' },
-      { text: 'Developing strategies to promote and sell products.', value: 'business' },
-      { text: 'Managing company finances and ensuring compliance.', value: 'business' },
-      { text: 'Understanding consumer behavior and market dynamics.', value: 'social' },
+      { text: 'Analyzing financial statements and market trends.', value: 'analytical_finance' },
+      { text: 'Developing strategies to promote and sell products.', value: 'business_marketing' },
+      { text: 'Managing company finances and ensuring compliance.', value: 'business_management' },
+      { text: 'Understanding consumer behavior and market dynamics.', value: 'social_consumer' },
     ],
   },
   {
@@ -858,10 +859,10 @@ export const quizQuestions: Question[] = [
     category: 'commerce',
     text: 'Your ideal task for the day would be...',
     options: [
-      { text: 'Creating a detailed financial model in Excel.', value: 'analytical' },
-      { text: 'Designing a creative advertising campaign.', value: 'creative' },
-      { text: 'Negotiating a major business deal.', value: 'business' },
-      { text: 'Auditing company accounts to ensure accuracy.', value: 'analytical' },
+      { text: 'Creating a detailed financial model in Excel.', value: 'analytical_excel' },
+      { text: 'Designing a creative advertising campaign.', value: 'creative_ad' },
+      { text: 'Negotiating a major business deal.', value: 'business_negotiate' },
+      { text: 'Auditing company accounts to ensure accuracy.', value: 'analytical_audit' },
     ],
   },
   {
@@ -869,10 +870,10 @@ export const quizQuestions: Question[] = [
     category: 'commerce',
     text: 'When thinking about a company, you are most curious about...',
     options: [
-      { text: 'Its stock performance and valuation.', value: 'analytical' },
-      { text: 'Its brand story and customer perception.', value: 'creative' },
-      { text: 'Its internal structure and employee satisfaction.', value: 'social' },
-      { text: 'Its overall business strategy and market position.', value: 'business' },
+      { text: 'Its stock performance and valuation.', value: 'analytical_stock' },
+      { text: 'Its brand story and customer perception.', value: 'creative_brand' },
+      { text: 'Its internal structure and employee satisfaction.', value: 'social_hr' },
+      { text: 'Its overall business strategy and market position.', value: 'business_strategy' },
     ],
   },
   // Arts Questions
@@ -881,10 +882,10 @@ export const quizQuestions: Question[] = [
     category: 'arts',
     text: 'You express yourself best through...',
     options: [
-      { text: 'Visuals - drawing, painting, or digital design.', value: 'creative' },
-      { text: 'Words - writing stories, articles, or arguments.', value: 'creative' },
-      { text: 'Performance - acting, music, or public speaking.', value: 'social' },
-      { text: 'Analysis - interpreting history, society, or literature.', value: 'humanities' },
+      { text: 'Visuals - drawing, painting, or digital design.', value: 'creative_visual' },
+      { text: 'Words - writing stories, articles, or arguments.', value: 'creative_writing' },
+      { text: 'Performance - acting, music, or public speaking.', value: 'social_performance' },
+      { text: 'Analysis - interpreting history, society, or literature.', value: 'humanities_analysis' },
     ],
   },
   {
@@ -892,10 +893,10 @@ export const quizQuestions: Question[] = [
     category: 'arts',
     text: 'What kind of impact do you want to make?',
     options: [
-      { text: 'Create work that is aesthetically beautiful and moves people.', value: 'creative' },
-      { text: 'Inform and persuade people through powerful arguments.', value: 'humanities' },
-      { text: 'Shape public opinion and build relationships.', value: 'social' },
-      { text: 'Advocate for justice and uphold the law.', value: 'humanities' },
+      { text: 'Create work that is aesthetically beautiful and moves people.', value: 'creative_impact' },
+      { text: 'Inform and persuade people through powerful arguments.', value: 'humanities_persuade' },
+      { text: 'Shape public opinion and build relationships.', value: 'social_opinion' },
+      { text: 'Advocate for justice and uphold the law.', value: 'humanities_justice' },
     ],
   },
    {
@@ -903,10 +904,10 @@ export const quizQuestions: Question[] = [
     category: 'arts',
     text: 'Your ideal project would involve...',
     options: [
-      { text: 'Designing the brand identity for a new company.', value: 'creative' },
-      { text: 'Writing a compelling narrative for a marketing campaign.', value: 'creative' },
-      { text: 'Representing a client in a legal negotiation.', value: 'humanities' },
-      { text: 'Analyzing ancient texts to uncover historical insights.', value: 'humanities' },
+      { text: 'Designing the brand identity for a new company.', value: 'creative_identity' },
+      { text: 'Writing a compelling narrative for a marketing campaign.', value: 'creative_narrative' },
+      { text: 'Representing a client in a legal negotiation.', value: 'humanities_legal' },
+      { text: 'Analyzing ancient texts to uncover historical insights.', value: 'humanities_historical' },
     ],
   },
 ];
