@@ -71,7 +71,7 @@ export default function AdminCareersPage() {
                 <TableBody>
                     {careers.map(career => (
                         <TableRow key={career.id}>
-                            <TableCell className="font-medium">{career.title}</TableCell>
+                            <TableCell className="font-medium max-w-sm truncate">{career.title}</TableCell>
                             <TableCell>
                                 <Badge variant="outline">{career.stream}</Badge>
                             </TableCell>

@@ -31,7 +31,8 @@ type Action =
   | { type: 'SUBMIT' }
   | { type: 'COMPLETE' };
 
-const TIMER_SECONDS = 10;
+const TIMER_SECONDS = 15;
+const TOTAL_QUESTIONS = 10;
 
 const initialState: State = {
   status: 'loading',
@@ -49,7 +50,7 @@ function quizReducer(state: State, action: Action): State {
         return { ...state, timeLeft: state.timeLeft - 1 };
       }
       // Time's up, move to next question
-      if (state.currentQuestionIndex < 4) {
+      if (state.currentQuestionIndex < TOTAL_QUESTIONS - 1) {
         return {
           ...state,
           currentQuestionIndex: state.currentQuestionIndex + 1,
@@ -58,7 +59,7 @@ function quizReducer(state: State, action: Action): State {
       }
       return { ...state, status: 'submitting' };
     case 'ANSWER_QUESTION':
-      const isLastQuestion = state.currentQuestionIndex === 4;
+      const isLastQuestion = state.currentQuestionIndex === TOTAL_QUESTIONS - 1;
       return {
         ...state,
         answers: [...state.answers, action.payload],

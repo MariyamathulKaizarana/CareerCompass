@@ -19,37 +19,49 @@
       "imageHint": "data charts"
     },
     {
-      "id": "engineering",
-      "description": "A modern bridge with complex architecture, representing engineering.",
-      "imageUrl": "https://picsum.photos/seed/engineering-field/600/400",
-      "imageHint": "bridge architecture"
+      "id": "software",
+      "description": "Code on a computer screen.",
+      "imageUrl": "https://picsum.photos/seed/software-code/600/400",
+      "imageHint": "code screen"
     },
     {
-      "id": "medicine",
-      "description": "A doctor in a lab coat examining a medical slide.",
-      "imageUrl": "https://picsum.photos/seed/medicine-field/600/400",
-      "imageHint": "doctor lab"
-    },
-    {
-      "id": "arts",
-      "description": "A colorful abstract painting on an easel in an art studio.",
-      "imageUrl": "https://picsum.photos/seed/arts-field/600/400",
-      "imageHint": "painting studio"
-    },
-    {
-      "id": "commerce",
-      "description": "A bustling stock market floor with digital tickers.",
-      "imageUrl": "https://picsum.photos/seed/commerce-field/600/400",
-      "imageHint": "stock market"
-    },
-    {
-      "id": "design",
+      "id": "ux/ui",
       "description": "A designer's desk with a laptop showing UI/UX designs and color swatches.",
       "imageUrl": "https://picsum.photos/seed/design-field/600/400",
       "imageHint": "designer desk"
     },
     {
-      "id": "law",
+      "id": "data",
+      "description": "Abstract data visualization with glowing lines.",
+      "imageUrl": "https://picsum.photos/seed/data-science-viz/600/400",
+      "imageHint": "data visualization"
+    },
+    {
+      "id": "doctor",
+      "description": "A doctor in a lab coat examining a medical slide.",
+      "imageUrl": "https://picsum.photos/seed/medicine-field/600/400",
+      "imageHint": "doctor lab"
+    },
+    {
+      "id": "marketing",
+      "description": "A whiteboard with a marketing funnel and strategy notes.",
+      "imageUrl": "https://picsum.photos/seed/marketing-strategy/600/400",
+      "imageHint": "marketing strategy"
+    },
+    {
+      "id": "financial",
+      "description": "Stock market charts on a screen.",
+      "imageUrl": "https://picsum.photos/seed/financial-charts/600/400",
+      "imageHint": "stock charts"
+    },
+    {
+      "id": "architect",
+      "description": "An architectural model of a modern building on a desk.",
+      "imageUrl": "https://picsum.photos/seed/architect-model/600/400",
+      "imageHint": "architect model"
+    },
+    {
+      "id": "lawyer",
       "description": "A gavel and law books on a wooden desk.",
       "imageUrl": "https://picsum.photos/seed/law-field/600/400",
       "imageHint": "gavel books"
