@@ -17,54 +17,59 @@ interface QuizClientProps {
   questions: Question[];
 }
 
+type QuizStatus = 'loading' | 'selecting_stream' | 'in_progress' | 'submitting' | 'completed';
+
 type State = {
-  status: 'loading' | 'active' | 'submitting' | 'completed';
+  status: QuizStatus;
+  stream: 'science' | 'commerce' | 'arts' | null;
   currentQuestionIndex: number;
   answers: QuizResponse[];
-  timeLeft: number;
+  filteredQuestions: Question[];
 };
 
 type Action =
-  | { type: 'START_QUIZ' }
+  | { type: 'START_QUIZ'; payload: { questions: Question[] } }
+  | { type: 'SELECT_STREAM'; payload: { stream: 'science' | 'commerce' | 'arts'; questions: Question[] } }
   | { type: 'ANSWER_QUESTION'; payload: QuizResponse }
-  | { type: 'TICK' }
   | { type: 'SUBMIT' }
   | { type: 'COMPLETE' };
 
-const TIMER_SECONDS = 15;
-const TOTAL_QUESTIONS = 10;
-
 const initialState: State = {
   status: 'loading',
+  stream: null,
   currentQuestionIndex: 0,
   answers: [],
-  timeLeft: TIMER_SECONDS,
+  filteredQuestions: [],
 };
 
 function quizReducer(state: State, action: Action): State {
   switch (action.type) {
     case 'START_QUIZ':
-      return { ...initialState, status: 'active' };
-    case 'TICK':
-      if (state.timeLeft > 0) {
-        return { ...state, timeLeft: state.timeLeft - 1 };
-      }
-      // Time's up, move to next question
-      if (state.currentQuestionIndex < TOTAL_QUESTIONS - 1) {
-        return {
-          ...state,
-          currentQuestionIndex: state.currentQuestionIndex + 1,
-          timeLeft: TIMER_SECONDS,
+        const streamQuestion = action.payload.questions.find(q => q.category === 'initial');
+        return { 
+            ...initialState,
+            status: 'selecting_stream',
+            filteredQuestions: streamQuestion ? [streamQuestion] : []
         };
-      }
-      return { ...state, status: 'submitting' };
+    case 'SELECT_STREAM':
+      const streamQuestions = action.payload.questions.filter(q => q.category === action.payload.stream);
+      return {
+        ...state,
+        status: 'in_progress',
+        stream: action.payload.stream,
+        answers: [
+          ...state.answers,
+          { questionId: 'q_stream', selectedOption: action.payload.stream }
+        ],
+        currentQuestionIndex: 0,
+        filteredQuestions: streamQuestions,
+      };
     case 'ANSWER_QUESTION':
-      const isLastQuestion = state.currentQuestionIndex === TOTAL_QUESTIONS - 1;
+      const isLastQuestion = state.currentQuestionIndex === state.filteredQuestions.length - 1;
       return {
         ...state,
         answers: [...state.answers, action.payload],
         currentQuestionIndex: isLastQuestion ? state.currentQuestionIndex : state.currentQuestionIndex + 1,
-        timeLeft: isLastQuestion ? state.timeLeft : TIMER_SECONDS,
         status: isLastQuestion ? 'submitting' : state.status,
       };
     case 'SUBMIT':
@@ -83,25 +88,13 @@ export function QuizClient({ questions }: QuizClientProps) {
   const { user } = useUser();
   
   useEffect(() => {
-    dispatch({ type: 'START_QUIZ' });
-  }, []);
-
-  useEffect(() => {
-    if (state.status !== 'active') return;
-
-    const timer = setInterval(() => {
-      dispatch({ type: 'TICK' });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [state.status, state.timeLeft, state.currentQuestionIndex]);
+    dispatch({ type: 'START_QUIZ', payload: { questions } });
+  }, [questions]);
 
   useEffect(() => {
     if (state.status === 'submitting') {
       const submitAnswers = async () => {
         try {
-          // This is a placeholder for student interests and strengths.
-          // In a real app, this might come from a profile or a pre-quiz form.
           const studentInterests = "Likes technology and creative problem solving.";
           const studentStrengths = "Analytical thinking and teamwork.";
 
@@ -111,7 +104,6 @@ export function QuizClient({ questions }: QuizClientProps) {
             studentStrengths
           });
           
-          // Store results in localStorage to pass to the results page
           localStorage.setItem('careerSuggestions', JSON.stringify(suggestions));
           dispatch({ type: 'COMPLETE' });
           router.push('/results');
@@ -122,12 +114,20 @@ export function QuizClient({ questions }: QuizClientProps) {
             title: "Analysis Failed",
             description: "Could not get career suggestions. Please try again.",
           });
-          dispatch({ type: 'START_QUIZ' }); // Reset quiz
+          dispatch({ type: 'START_QUIZ', payload: { questions } });
         }
       };
       submitAnswers();
     }
-  }, [state.status, state.answers, router, toast, user]);
+  }, [state.status, state.answers, router, toast, user, questions]);
+
+  const handleStreamSelect = (stream: 'science' | 'commerce' | 'arts') => {
+    dispatch({ type: 'SELECT_STREAM', payload: { stream, questions } });
+  };
+  
+  const handleAnswerSelect = (response: QuizResponse) => {
+    dispatch({ type: 'ANSWER_QUESTION', payload: response });
+  };
 
   if (state.status === 'loading') {
     return <Card><CardContent className="p-6 text-center"><Loader2 className="h-8 w-8 animate-spin mx-auto" /></CardContent></Card>;
@@ -147,27 +147,28 @@ export function QuizClient({ questions }: QuizClientProps) {
     );
   }
 
-  const currentQuestion = questions[state.currentQuestionIndex];
-  const progress = ((state.currentQuestionIndex) / questions.length) * 100;
+  const currentQuestion = state.filteredQuestions[state.currentQuestionIndex];
+  if (!currentQuestion) {
+     return <Card><CardContent className="p-6 text-center">No questions available for this stream.</CardContent></Card>;
+  }
+
+  const progress = state.status === 'in_progress' ? ((state.currentQuestionIndex) / state.filteredQuestions.length) * 100 : 0;
+  const questionNumber = state.status === 'in_progress' ? state.currentQuestionIndex + 1 : 1;
+  const totalQuestions = state.status === 'in_progress' ? state.filteredQuestions.length : 1;
 
   return (
     <Card className="w-full overflow-hidden">
       <CardHeader>
-        <Progress value={progress} className="mb-4 h-2" />
+        {state.status === 'in_progress' && <Progress value={progress} className="mb-4 h-2" />}
         <CardTitle className="font-headline text-2xl">
-          Question {state.currentQuestionIndex + 1} of {questions.length}
+          {state.status === 'selecting_stream' ? 'Let\'s Get Started' : `Question ${questionNumber} of ${totalQuestions}`}
         </CardTitle>
-        <div className="flex items-center justify-between">
-          <CardDescription>Choose the option that best describes you.</CardDescription>
-          <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-primary/10 text-lg font-bold text-primary">
-            {state.timeLeft}
-          </div>
-        </div>
+        <CardDescription>{state.status === 'selecting_stream' ? 'First, help us understand your background.' : 'Choose the option that best describes you.'}</CardDescription>
       </CardHeader>
       <CardContent>
         <AnimatePresence mode="wait">
           <motion.div
-            key={state.currentQuestionIndex}
+            key={state.currentQuestionIndex + (state.stream || '')}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -180,7 +181,13 @@ export function QuizClient({ questions }: QuizClientProps) {
                   key={option.value}
                   variant="outline"
                   className="h-auto min-h-[4rem] whitespace-normal justify-start p-4 text-left text-base"
-                  onClick={() => dispatch({ type: 'ANSWER_QUESTION', payload: { questionId: currentQuestion.id, selectedOption: option.value } })}
+                  onClick={() => {
+                    if (state.status === 'selecting_stream') {
+                      handleStreamSelect(option.value as 'science' | 'commerce' | 'arts');
+                    } else {
+                      handleAnswerSelect({ questionId: currentQuestion.id, selectedOption: option.value });
+                    }
+                  }}
                 >
                   {option.text}
                 </Button>
