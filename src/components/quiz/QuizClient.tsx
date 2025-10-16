@@ -52,7 +52,7 @@ function quizReducer(state: State, action: Action): State {
             filteredQuestions: streamQuestion ? [streamQuestion] : []
         };
     case 'SELECT_STREAM':
-      const streamQuestions = action.payload.questions.filter(q => q.category === action.payload.stream);
+      const streamQuestions = action.payload.questions.filter(q => q.category === action.payload.stream).slice(0, 15);
       return {
         ...state,
         status: 'in_progress',
@@ -81,6 +81,46 @@ function quizReducer(state: State, action: Action): State {
   }
 }
 
+function analyzeAnswers(answers: QuizResponse[], questions: Question[]) {
+    const interestMapping: Record<string, string> = {
+        analytical: 'Analytical thinking and problem-solving',
+        technical: 'Technology and building things',
+        creative: 'Creative expression and design',
+        caring: 'Helping and caring for others',
+        business: 'Business strategy and management',
+        humanities: 'Understanding human culture and society',
+        social: 'Interacting with and understanding people'
+    };
+
+    const interestCounts: Record<string, number> = {};
+    const strengths: Set<string> = new Set();
+
+    answers.forEach(answer => {
+        const question = questions.find(q => q.id === answer.questionId);
+        const option = question?.options.find(o => o.value === answer.selectedOption);
+        if (option) {
+            const [interest, strength] = option.value.split('_');
+            if (interest) {
+                interestCounts[interest] = (interestCounts[interest] || 0) + 1;
+            }
+            if (strength) {
+                strengths.add(strength);
+            }
+        }
+    });
+
+    const sortedInterests = Object.entries(interestCounts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 3)
+        .map(([key]) => interestMapping[key] || key);
+
+    const studentInterests = sortedInterests.length > 0 ? sortedInterests.join(', ') + '.' : 'A wide range of interests.';
+    const studentStrengths = strengths.size > 0 ? Array.from(strengths).join(', ') + '.' : 'Diverse set of skills.';
+
+    return { studentInterests, studentStrengths };
+}
+
+
 export function QuizClient({ questions }: QuizClientProps) {
   const [state, dispatch] = useReducer(quizReducer, initialState);
   const router = useRouter();
@@ -95,8 +135,7 @@ export function QuizClient({ questions }: QuizClientProps) {
     if (state.status === 'submitting') {
       const submitAnswers = async () => {
         try {
-          const studentInterests = "Likes technology and creative problem solving.";
-          const studentStrengths = "Analytical thinking and teamwork.";
+          const { studentInterests, studentStrengths } = analyzeAnswers(state.answers, questions);
 
           const suggestions: CareerSuggestion[] = await analyzeQuizResponsesAndSuggestCareers({ 
             quizResponses: state.answers,
