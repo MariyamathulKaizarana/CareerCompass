@@ -67,6 +67,48 @@
       "imageHint": "gavel books"
     },
     {
+      "id": "graphic",
+      "description": "A colorful graphic design composition on a tablet.",
+      "imageUrl": "https://picsum.photos/seed/graphic-design/600/400",
+      "imageHint": "graphic design"
+    },
+    {
+      "id": "chartered",
+      "description": "A professional accountant working with ledgers and a calculator.",
+      "imageUrl": "https://picsum.photos/seed/accountant-work/600/400",
+      "imageHint": "accountant work"
+    },
+    {
+      "id": "physiotherapist",
+      "description": "A physiotherapist helping a patient with stretching exercises.",
+      "imageUrl": "https://picsum.photos/seed/physiotherapy-session/600/400",
+      "imageHint": "physiotherapy session"
+    },
+    {
+      "id": "cybersecurity",
+      "description": "A digital padlock on a screen with binary code in the background.",
+      "imageUrl": "https://picsum.photos/seed/cybersecurity-lock/600/400",
+      "imageHint": "digital security"
+    },
+    {
+      "id": "product",
+      "description": "Post-it notes on a whiteboard showing a product development process.",
+      "imageUrl": "https://picsum.photos/seed/product-management/600/400",
+      "imageHint": "product roadmap"
+    },
+    {
+      "id": "content",
+      "description": "A person writing on a laptop in a creative workspace.",
+      "imageUrl": "https://picsum.photos/seed/content-writer/600/400",
+      "imageHint": "writing laptop"
+    },
+    {
+      "id": "human",
+      "description": "A group of diverse professionals in a meeting.",
+      "imageUrl": "https://picsum.photos/seed/human-resources-team/600/400",
+      "imageHint": "team meeting"
+    },
+    {
       "id": "auth-background",
       "description": "A bright and abstract background with geometric shapes.",
       "imageUrl": "https://picsum.photos/seed/auth-bg/1200/800",
