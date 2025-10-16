@@ -1,0 +1,295 @@
+{
+  "entities": {
+    "UserProfile": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "UserProfile",
+      "type": "object",
+      "description": "Represents a user profile in the CareerCompass app.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the UserProfile entity."
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address.",
+          "format": "email"
+        },
+        "name": {
+          "type": "string",
+          "description": "User's full name."
+        },
+        "registrationDate": {
+          "type": "string",
+          "description": "Date and time the user registered.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "name",
+        "registrationDate"
+      ]
+    },
+    "QuizQuestion": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "QuizQuestion",
+      "type": "object",
+      "description": "Represents a quiz question in the CareerCompass app.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the QuizQuestion entity."
+        },
+        "text": {
+          "type": "string",
+          "description": "The text of the quiz question."
+        },
+        "options": {
+          "type": "array",
+          "description": "Array of possible answer options for the question.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "correctAnswerIndex": {
+          "type": "number",
+          "description": "Index of the correct answer in the options array."
+        },
+        "interestArea": {
+          "type": "string",
+          "description": "The area of interest this question assesses (e.g., analytical, creative, social)."
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "options",
+        "correctAnswerIndex",
+        "interestArea"
+      ]
+    },
+    "QuizResponse": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "QuizResponse",
+      "type": "object",
+      "description": "Represents a user's response to a quiz question.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the QuizResponse entity."
+        },
+        "userProfileId": {
+          "type": "string",
+          "description": "Reference to UserProfile. (Relationship: UserProfile 1:N QuizResponse)"
+        },
+        "quizQuestionId": {
+          "type": "string",
+          "description": "Reference to QuizQuestion. (Relationship: QuizQuestion 1:N QuizResponse)"
+        },
+        "selectedOptionIndex": {
+          "type": "number",
+          "description": "The index of the option selected by the user."
+        },
+        "responseTimestamp": {
+          "type": "string",
+          "description": "Timestamp of when the user submitted the response.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "userProfileId",
+        "quizQuestionId",
+        "selectedOptionIndex",
+        "responseTimestamp"
+      ]
+    },
+    "CareerPath": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "CareerPath",
+      "type": "object",
+      "description": "Represents a career path option for students.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the CareerPath entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the career path (e.g., Engineering, Medicine)."
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the career path."
+        },
+        "requiredSkills": {
+          "type": "array",
+          "description": "List of required skills for this career path.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "requiredCourses": {
+          "type": "array",
+          "description": "List of recommended courses for this career path.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "careerRoadmap": {
+          "type": "string",
+          "description": "Career roadmap (education -> internships -> job roles)."
+        },
+        "averageSalary": {
+          "type": "string",
+          "description": "Average salary expectations for this career path."
+        },
+        "futureScope": {
+          "type": "string",
+          "description": "Future scope and outlook for this career path."
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "requiredSkills",
+        "requiredCourses",
+        "careerRoadmap",
+        "averageSalary",
+        "futureScope"
+      ]
+    },
+    "UserCareerPreference": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "UserCareerPreference",
+      "type": "object",
+      "description": "Represents a user's saved career path preference.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the UserCareerPreference entity."
+        },
+        "userProfileId": {
+          "type": "string",
+          "description": "Reference to UserProfile. (Relationship: UserProfile 1:N UserCareerPreference)"
+        },
+        "careerPathId": {
+          "type": "string",
+          "description": "Reference to CareerPath. (Relationship: CareerPath 1:N UserCareerPreference)"
+        },
+        "isFavorite": {
+          "type": "boolean",
+          "description": "Indicates if the user marked this career path as a favorite."
+        }
+      },
+      "required": [
+        "id",
+        "userProfileId",
+        "careerPathId",
+        "isFavorite"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "UserProfile",
+          "schema": {
+            "$ref": "#/backend/entities/UserProfile"
+          },
+          "description": "Stores user profile information.  The path `/users/{userId}` enforces ownership; only the authenticated user can read/write their own profile.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier for the user, corresponding to their Firebase Authentication UID."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/quiz_responses/{quizResponseId}",
+        "definition": {
+          "entityName": "QuizResponse",
+          "schema": {
+            "$ref": "#/backend/entities/QuizResponse"
+          },
+          "description": "Stores quiz responses for a specific user. The path `/users/{userId}/quiz_responses/{quizResponseId}` enforces ownership; only the authenticated user can read/write their own responses.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier for the user, corresponding to their Firebase Authentication UID."
+            },
+            {
+              "name": "quizResponseId",
+              "description": "The unique identifier for the quiz response."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/career_paths/{careerPathId}",
+        "definition": {
+          "entityName": "CareerPath",
+          "schema": {
+            "$ref": "#/backend/entities/CareerPath"
+          },
+          "description": "Stores information about different career paths.  This collection is globally readable, assuming the admin dashboard manages the data.",
+          "params": [
+            {
+              "name": "careerPathId",
+              "description": "The unique identifier for the career path."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/career_preferences/{careerPreferenceId}",
+        "definition": {
+          "entityName": "UserCareerPreference",
+          "schema": {
+            "$ref": "#/backend/entities/UserCareerPreference"
+          },
+          "description": "Stores user's career path preferences (e.g., saved/favorite career paths).The path `/users/{userId}/career_preferences/{careerPreferenceId}` enforces ownership; only the authenticated user can read/write their own preferences.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier for the user, corresponding to their Firebase Authentication UID."
+            },
+            {
+              "name": "careerPreferenceId",
+              "description": "The unique identifier for the user's career preference."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/quiz_questions/{quizQuestionId}",
+        "definition": {
+          "entityName": "QuizQuestion",
+          "schema": {
+            "$ref": "#/backend/entities/QuizQuestion"
+          },
+          "description": "Stores the quiz questions.  This collection is globally readable, assuming the admin dashboard manages the data.",
+          "params": [
+            {
+              "name": "quizQuestionId",
+              "description": "The unique identifier for the quiz question."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure is designed to ensure security, scalability, and ease of debugging, following the principles of Authorization Independence, Clarity of Intent, and DBAC. It leverages denormalization and structural segregation to simplify security rules and enable secure list operations. The primary strategy is to create hierarchical paths for user-owned data and to use membership maps for collaborative data when needed (although the current application doesn't present a clear collaborative model).  Since there is no collaborative content the membership map strategy is not used. The design assumes that Firebase Authentication provides the user's identity (`request.auth.uid`).\n\n**Authorization Independence (CRITICAL):** All subcollections requiring access control based on parent data include denormalized fields. For example, `QuizResponse` documents under `/users/{userId}/quiz_responses/{quizResponseId}` inherently inherit authorization context through the path structure, eliminating the need for `get()` calls in security rules. This is achieved through path-based ownership which implicitly ties the data to the authenticated user.\n\n**Clarity of Intent (Debuggability):** The structure clearly reflects the relationships between entities. User profiles are stored in a dedicated collection (`/users/{userId}`), and user-specific data like quiz responses are nested under the user's document (`/users/{userId}/quiz_responses/{quizResponseId}`). The naming conventions are explicit (e.g., `userProfileId` in `QuizResponse` documents).\n\n**DBAC (No Custom Claims):** Roles are not explicitly modeled in the database according to the instructions. Authorization is based on `request.auth.uid` and the path structure.\n\n**QAPs (Rules are not Filters):** The structure supports secure `list` operations. For instance, listing quiz responses for a specific user is done via `/users/{userId}/quiz_responses`, which allows filtering based on the authenticated user's ID in security rules, preventing unauthorized access to other users' data.\n\n**Invariants:** The structure supports the integrity of ownership, timestamps, and denormalized data. Ownership is enforced through path-based access control. Timestamps (e.g., `responseTimestamp` in `QuizResponse`) are stored directly within the documents.  No denormalized data outside of the path is needed given the data model."
+  }
+}
