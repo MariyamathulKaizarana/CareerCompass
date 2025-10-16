@@ -11,6 +11,7 @@ import {
   LayoutDashboard,
   LogOut,
   User as UserIcon,
+  GraduationCap,
 } from 'lucide-react';
 import { signOut } from 'firebase/auth';
 
@@ -41,6 +42,7 @@ const navItems = [
   { href: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
   { href: '/quiz', icon: HelpCircle, label: 'Take Quiz' },
   { href: '/careers', icon: Book, label: 'Explore Careers' },
+  { href: '/courses', icon: GraduationCap, label: 'Explore Courses' },
   { href: '/favorites', icon: Heart, label: 'My Favorites' },
 ];
 
