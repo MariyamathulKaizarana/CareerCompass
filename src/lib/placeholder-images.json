@@ -113,6 +113,258 @@
       "description": "A bright and abstract background with geometric shapes.",
       "imageUrl": "https://picsum.photos/seed/auth-bg/1200/800",
       "imageHint": "abstract geometric"
+    },
+    {
+      "id": "ai/ml",
+      "description": "A futuristic neural network visualization.",
+      "imageUrl": "https://picsum.photos/seed/ai-ml/600/400",
+      "imageHint": "neural network"
+    },
+    {
+      "id": "blockchain",
+      "description": "A visualization of interconnected blocks in a chain.",
+      "imageUrl": "https://picsum.photos/seed/blockchain/600/400",
+      "imageHint": "blockchain network"
+    },
+    {
+      "id": "cloud",
+      "description": "Server racks in a data center with cloud graphics overlaid.",
+      "imageUrl": "https://picsum.photos/seed/cloud-architect/600/400",
+      "imageHint": "data center"
+    },
+    {
+      "id": "devops",
+      "description": "An infinity loop diagram representing the DevOps lifecycle.",
+      "imageUrl": "https://picsum.photos/seed/devops/600/400",
+      "imageHint": "devops cycle"
+    },
+    {
+      "id": "biomedical",
+      "description": "A prosthetic arm being tested in a laboratory.",
+      "imageUrl": "https://picsum.photos/seed/biomedical/600/400",
+      "imageHint": "prosthetic arm"
+    },
+    {
+      "id": "environmental",
+      "description": "A scientist taking a water sample from a river.",
+      "imageUrl": "https://picsum.photos/seed/environmental-scientist/600/400",
+      "imageHint": "water sample"
+    },
+    {
+      "id": "game",
+      "description": "A character model from a video game in a 3D modeling software.",
+      "imageUrl": "https://picsum.photos/seed/game-developer/600/400",
+      "imageHint": "game character"
+    },
+    {
+      "id": "investment",
+      "description": "A busy financial trading floor with screens showing stock data.",
+      "imageUrl": "https://picsum.photos/seed/investment-banker/600/400",
+      "imageHint": "trading floor"
+    },
+    {
+      "id": "management",
+      "description": "Two professionals discussing charts on a glass wall.",
+      "imageUrl": "https://picsum.photos/seed/management-consultant/600/400",
+      "imageHint": "business strategy"
+    },
+    {
+      "id": "supply",
+      "description": "A large warehouse with automated robots moving packages.",
+      "imageUrl": "https://picsum.photos/seed/supply-chain/600/400",
+      "imageHint": "warehouse logistics"
+    },
+    {
+      "id": "actuary",
+      "description": "A complex mathematical graph showing risk probabilities.",
+      "imageUrl": "https://picsum.photos/seed/actuary/600/400",
+      "imageHint": "risk graph"
+    },
+    {
+      "id": "market",
+      "description": "A collection of consumer survey results and demographic charts.",
+      "imageUrl": "https://picsum.photos/seed/market-research/600/400",
+      "imageHint": "consumer data"
+    },
+    {
+      "id": "public",
+      "description": "A person speaking at a press conference podium.",
+      "imageUrl": "https://picsum.photos/seed/public-relations/600/400",
+      "imageHint": "press conference"
+    },
+    {
+      "id": "animator",
+      "description": "A digital artist's tablet showing a character animation timeline.",
+      "imageUrl": "https://picsum.photos/seed/animator/600/400",
+      "imageHint": "animation timeline"
+    },
+    {
+      "id": "journalist",
+      "description": "An old-fashioned reporter's notepad and a vintage camera.",
+      "imageUrl": "https://picsum.photos/seed/journalist/600/400",
+      "imageHint": "reporter tools"
+    },
+    {
+      "id": "historian",
+      "description": "A scholar examining an ancient manuscript with a magnifying glass.",
+      "imageUrl": "https://picsum.photos/seed/historian/600/400",
+      "imageHint": "ancient manuscript"
+    },
+    {
+      "id": "industrial",
+      "description": "A clay model of a new car design on a workbench.",
+      "imageUrl": "https://picsum.photos/seed/industrial-designer/600/400",
+      "imageHint": "product design"
+    },
+    {
+      "id": "fashion",
+      "description": "A mannequin draped with fabric and design sketches on a wall.",
+      "imageUrl": "https://picsum.photos/seed/fashion-designer/600/400",
+      "imageHint": "fashion studio"
+    },
+    {
+      "id": "dietitian/nutritionist",
+      "description": "A colorful array of fresh fruits and vegetables on a wooden table.",
+      "imageUrl": "https://picsum.photos/seed/dietitian/600/400",
+      "imageHint": "healthy food"
+    },
+    {
+      "id": "occupational",
+      "description": "A child learning to write with the help of a therapist.",
+      "imageUrl": "https://picsum.photos/seed/occupational-therapist/600/400",
+      "imageHint": "child therapy"
+    },
+    {
+      "id": "urban",
+      "description": "A miniature model of a city plan with green spaces and buildings.",
+      "imageUrl": "https://picsum.photos/seed/urban-planner/600/400",
+      "imageHint": "city model"
+    },
+    {
+      "id": "veterinarian",
+      "description": "A vet listening to a dog's heartbeat with a stethoscope.",
+      "imageUrl": "https://picsum.photos/seed/veterinarian/600/400",
+      "imageHint": "vet checkup"
+    },
+    {
+      "id": "full",
+      "description": "A split screen showing front-end code on one side and back-end code on the other.",
+      "imageUrl": "https://picsum.photos/seed/full-stack/600/400",
+      "imageHint": "fullstack code"
+    },
+    {
+      "id": "business",
+      "description": "Two people shaking hands over a signed contract.",
+      "imageUrl": "https://picsum.photos/seed/business-dev/600/400",
+      "imageHint": "business deal"
+    },
+    {
+      "id": "social",
+      "description": "A phone screen showing a brand's engaging Instagram feed.",
+      "imageUrl": "https://picsum.photos/seed/social-media/600/400",
+      "imageHint": "social feed"
+    },
+    {
+      "id": "event",
+      "description": "A beautifully decorated hall set up for a large corporate event.",
+      "imageUrl": "https://picsum.photos/seed/event-manager/600/400",
+      "imageHint": "corporate event"
+    },
+    {
+      "id": "film",
+      "description": "A director looking through a camera viewfinder on a film set.",
+      "imageUrl": "https://picsum.photos/seed/film-director/600/400",
+      "imageHint": "film set"
+    },
+    {
+      "id": "technical",
+      "description": "A page from a clear, well-structured user manual with diagrams.",
+      "imageUrl": "https://picsum.photos/seed/technical-writer/600/400",
+      "imageHint": "user manual"
+    },
+    {
+      "id": "interior",
+      "description": "A stylishly decorated modern living room with elegant furniture.",
+      "imageUrl": "https://picsum.photos/seed/interior-designer/600/400",
+      "imageHint": "modern interior"
+    },
+    {
+      "id": "speech-language-pathologist",
+      "description": "A therapist using flashcards to help a child with speech.",
+      "imageUrl": "https://picsum.photos/seed/speech-therapist/600/400",
+      "imageHint": "speech therapy"
+    },
+    {
+      "id": "renewable",
+      "description": "A technician in a hard hat working on a large wind turbine.",
+      "imageUrl": "https://picsum.photos/seed/renewable-energy/600/400",
+      "imageHint": "wind turbine"
+    },
+    {
+      "id": "e-commerce",
+      "description": "A person shopping online with a credit card next to their laptop.",
+      "imageUrl": "https://picsum.photos/seed/ecommerce/600/400",
+      "imageHint": "online shopping"
+    },
+    {
+      "id": "geologist",
+      "description": "A geologist in the field examining a rock formation with a hammer.",
+      "imageUrl": "https://picsum.photos/seed/geologist/600/400",
+      "imageHint": "rock formation"
+    },
+    {
+      "id": "forensic",
+      "description": "A gloved hand using tweezers to collect evidence at a crime scene.",
+      "imageUrl": "https://picsum.photos/seed/forensic-scientist/600/400",
+      "imageHint": "crime scene"
+    },
+    {
+      "id": "paramedic",
+      "description": "A paramedic team loading a patient into an ambulance.",
+      "imageUrl": "https://picsum.photos/seed/paramedic/600/400",
+      "imageHint": "ambulance emergency"
+    },
+    {
+      "id": "curator",
+      "description": "A person carefully arranging an artifact in a museum display case.",
+      "imageUrl": "https://picsum.photos/seed/curator/600/400",
+      "imageHint": "museum display"
+    },
+    {
+      "id": "librarian",
+      "description": "A modern library with rows of books and people studying quietly.",
+      "imageUrl": "https://picsum.photos/seed/librarian/600/400",
+      "imageHint": "library books"
+    },
+    {
+      "id": "economist",
+      "description": "A complex graph showing supply and demand curves.",
+      "imageUrl": "https://picsum.photos/seed/economist/600/400",
+      "imageHint": "economic graph"
+    },
+    {
+      "id": "pilot",
+      "description": "The cockpit of an airplane with a view of the clouds outside.",
+      "imageUrl": "https://picsum.photos/seed/pilot/600/400",
+      "imageHint": "airplane cockpit"
+    },
+    {
+      "id": "civil",
+      "description": "A large suspension bridge under construction.",
+      "imageUrl": "https://picsum.photos/seed/civil-engineer/600/400",
+      "imageHint": "bridge construction"
+    },
+    {
+      "id": "pharmacist",
+      "description": "A pharmacist in a white coat organizing prescription bottles on a shelf.",
+      "imageUrl": "https://picsum.photos/seed/pharmacist/600/400",
+      "imageHint": "pharmacy work"
+    },
+    {
+      "id": "psychologist",
+      "description": "A calm and welcoming therapy office with two chairs.",
+      "imageUrl": "https://picsum.photos/seed/psychologist/600/400",
+      "imageHint": "therapy office"
     }
   ]
 }
