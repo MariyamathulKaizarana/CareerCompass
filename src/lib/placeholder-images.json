@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "A diverse group of young students looking thoughtfully towards their future.",
+      "imageUrl": "https://picsum.photos/seed/hero-students/1200/800",
+      "imageHint": "students future"
+    },
+    {
+      "id": "quiz",
+      "description": "A student focused on a tablet screen, taking a quiz.",
+      "imageUrl": "https://picsum.photos/seed/quiz-taking/1200/800",
+      "imageHint": "student tablet"
+    },
+    {
+      "id": "report",
+      "description": "An abstract visualization of data and charts representing a career report.",
+      "imageUrl": "https://picsum.photos/seed/career-report/1200/800",
+      "imageHint": "data charts"
+    },
+    {
+      "id": "engineering",
+      "description": "A modern bridge with complex architecture, representing engineering.",
+      "imageUrl": "https://picsum.photos/seed/engineering-field/600/400",
+      "imageHint": "bridge architecture"
+    },
+    {
+      "id": "medicine",
+      "description": "A doctor in a lab coat examining a medical slide.",
+      "imageUrl": "https://picsum.photos/seed/medicine-field/600/400",
+      "imageHint": "doctor lab"
+    },
+    {
+      "id": "arts",
+      "description": "A colorful abstract painting on an easel in an art studio.",
+      "imageUrl": "https://picsum.photos/seed/arts-field/600/400",
+      "imageHint": "painting studio"
+    },
+    {
+      "id": "commerce",
+      "description": "A bustling stock market floor with digital tickers.",
+      "imageUrl": "https://picsum.photos/seed/commerce-field/600/400",
+      "imageHint": "stock market"
+    },
+    {
+      "id": "design",
+      "description": "A designer's desk with a laptop showing UI/UX designs and color swatches.",
+      "imageUrl": "https://picsum.photos/seed/design-field/600/400",
+      "imageHint": "designer desk"
+    },
+    {
+      "id": "law",
+      "description": "A gavel and law books on a wooden desk.",
+      "imageUrl": "https://picsum.photos/seed/law-field/600/400",
+      "imageHint": "gavel books"
+    },
+    {
+      "id": "auth-background",
+      "description": "A bright and abstract background with geometric shapes.",
+      "imageUrl": "https://picsum.photos/seed/auth-bg/1200/800",
+      "imageHint": "abstract geometric"
+    }
+  ]
 }
