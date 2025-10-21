@@ -11,6 +11,7 @@ export interface Career {
   longDescription: string;
   skills: string[];
   courses: string[];
+  exams?: string[];
   roadmap: string;
   avgSalary: string;
   futureScope: string;

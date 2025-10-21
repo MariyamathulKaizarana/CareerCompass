@@ -5,7 +5,7 @@ import { careers } from '@/lib/data';
 import { placeholderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Briefcase, CheckCircle, DollarSign, GraduationCap, Map, TrendingUp } from 'lucide-react';
+import { Briefcase, CheckCircle, DollarSign, GraduationCap, Map, TrendingUp, Trophy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -43,7 +43,11 @@ export default function CareerDetailPage({ params }: CareerDetailPageProps) {
     { icon: <Map className="h-6 w-6 text-accent" />, title: "Career Roadmap", content: career.roadmap },
     { icon: <DollarSign className="h-6 w-6 text-accent" />, title: "Average Salary", content: career.avgSalary },
     { icon: <TrendingUp className="h-6 w-6 text-accent" />, title: "Future Scope", content: career.futureScope },
-  ]
+  ];
+
+  if (career.exams && career.exams.length > 0) {
+    detailCards.push({ icon: <Trophy className="h-6 w-6 text-accent" />, title: "Competitive Exams", content: career.exams.join(', ') });
+  }
 
   return (
     <AppShell>
