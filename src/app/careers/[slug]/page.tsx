@@ -1,27 +1,19 @@
-'use client';
-
-import { useEffect } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AppShell } from '@/components/AppShell';
 import { careers } from '@/lib/data';
-import { placeholderImages } from '@/lib/placeholder-images';
+import { placeholderImages } from '@/lib/placeholder-images.json';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Briefcase, CheckCircle, DollarSign, GraduationCap, Map, TrendingUp, Trophy, University, BookOpen } from 'lucide-react';
-import type { ActivityItem } from '@/lib/types';
+import { BookOpen, CheckCircle, DollarSign, GraduationCap, Map, TrendingUp, Trophy, University } from 'lucide-react';
+import CareerDetailClient from './CareerDetailClient';
 
 
 interface CareerDetailPageProps {
   params: { slug: string };
 }
-
-// This needs to be a Client Component to use useEffect, but we still want Next.js 
-// to be able to generate static pages. We can't use generateStaticParams in a 
-// client component, so we will remove it. The app will still work, but pages
-// will be generated on-demand. In a real app, you might fetch this data from a CMS.
 
 const getCareerBySlug = (slug: string) => {
   return careers.find((career) => career.slug === slug);
@@ -34,36 +26,6 @@ const findImage = (careerTitle: string) => {
 
 export default function CareerDetailPage({ params }: CareerDetailPageProps) {
   const career = getCareerBySlug(params.slug);
-
-  useEffect(() => {
-    if (career) {
-      try {
-        const history = localStorage.getItem('activityHistory');
-        const historyItems: ActivityItem[] = history ? JSON.parse(history) : [];
-
-        // Avoid adding duplicate career views, or update timestamp if it exists
-        const existingIndex = historyItems.findIndex(h => h.type === 'career' && h.item.id === career.id);
-        if (existingIndex > -1) {
-            historyItems.splice(existingIndex, 1);
-        }
-
-        const newHistoryItem: ActivityItem = {
-          type: 'career',
-          item: { id: career.id, title: career.title, slug: career.slug },
-          viewedAt: new Date().toISOString(),
-        };
-
-        const updatedHistory = [newHistoryItem, ...historyItems];
-        if (updatedHistory.length > 50) {
-            updatedHistory.pop();
-        }
-        localStorage.setItem('activityHistory', JSON.stringify(updatedHistory));
-      } catch (error) {
-        console.error('Could not update history in localStorage', error);
-      }
-    }
-  }, [career]);
-
 
   if (!career) {
     notFound();
@@ -93,6 +55,7 @@ export default function CareerDetailPage({ params }: CareerDetailPageProps) {
 
   return (
     <AppShell>
+      <CareerDetailClient career={career} />
       <div className="w-full">
         <div className="mb-8">
             <Button variant="outline" asChild>
