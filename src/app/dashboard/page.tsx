@@ -21,6 +21,12 @@ const shuffleAndSlice = <T,>(array: T[], size: number): T[] => {
   return shuffled.slice(0, size);
 };
 
+export interface HistoryItem {
+  type: 'news' | 'scholarship';
+  item: NewsItem | Scholarship;
+  viewedAt: string;
+}
+
 export default function DashboardPage() {
     const { user } = useUser();
     const [displayedNews, setDisplayedNews] = useState<NewsItem[]>([]);
@@ -40,6 +46,38 @@ export default function DashboardPage() {
         // Clean up interval on component unmount
         return () => clearInterval(intervalId);
     }, []);
+    
+    const handleLinkClick = (item: NewsItem | Scholarship, type: 'news' | 'scholarship') => {
+        try {
+            const history = localStorage.getItem('activityHistory');
+            const historyItems: HistoryItem[] = history ? JSON.parse(history) : [];
+            
+            // Avoid adding duplicates, or update timestamp if already exists
+            const existingIndex = historyItems.findIndex(h => h.item.id === item.id && h.type === type);
+            if (existingIndex > -1) {
+                historyItems.splice(existingIndex, 1);
+            }
+
+            const newHistoryItem: HistoryItem = {
+                type,
+                item,
+                viewedAt: new Date().toISOString(),
+            };
+
+            // Add new item to the beginning
+            const updatedHistory = [newHistoryItem, ...historyItems];
+            
+            // Limit history to 50 items
+            if (updatedHistory.length > 50) {
+                updatedHistory.pop();
+            }
+
+            localStorage.setItem('activityHistory', JSON.stringify(updatedHistory));
+        } catch (error) {
+            console.error('Could not update history in localStorage', error);
+        }
+    };
+
 
     const getFirstName = (displayName: string | null | undefined) => {
         if (!displayName) return 'Welcome';
@@ -106,7 +144,12 @@ export default function DashboardPage() {
                 {displayedNews.map(item => (
                   <div key={item.id} className="flex items-start gap-4">
                     <div className="flex-1">
-                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:underline">
+                      <a 
+                        href={item.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="font-semibold text-foreground hover:underline"
+                        onClick={() => handleLinkClick(item, 'news')}>
                         {item.title}
                       </a>
                       <p className="text-sm text-muted-foreground">{item.source} - {item.date}</p>
@@ -142,7 +185,11 @@ export default function DashboardPage() {
                       <span className='font-medium text-foreground'>Deadline:</span> {scholarship.deadline}
                     </p>
                     <Button variant="link" size="sm" asChild className="p-0 h-auto">
-                        <a href={scholarship.url} target="_blank" rel="noopener noreferrer">
+                        <a 
+                            href={scholarship.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            onClick={() => handleLinkClick(scholarship, 'scholarship')}>
                             Apply Now <ArrowRight className="ml-1 h-3 w-3" />
                         </a>
                     </Button>
