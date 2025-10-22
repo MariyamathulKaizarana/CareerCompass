@@ -782,7 +782,7 @@ export const careers: Career[] = [
         description: 'Assesses the creditworthiness of individuals and businesses.',
         longDescription: 'Credit analysts determine the risk involved in lending money to a person or business. They analyze financial statements and other data to assess the likelihood of a borrower repaying a loan. They work for banks, credit card companies, and other financial institutions.',
         skills: ['Financial Statement Analysis', 'Risk Assessment', 'Data Analysis', 'Decision Making', 'Industry Knowledge'],
-        courses: ['B.Com', 'MBA in Finance', 'CA'],
+        courses: ['B.Com', 'BBA', 'CA'],
         topColleges: ['SRCC', 'Narsee Monjee', 'Top MBA colleges'],
         admissionProcess: 'A strong background in commerce or finance is required. An MBA or CA qualification is often preferred.',
         roadmap: 'Degree -> Credit Analyst -> Senior Analyst -> Credit Manager',
