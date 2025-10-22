@@ -1,20 +1,45 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { AppShell } from '@/components/AppShell';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Newspaper, GraduationCap, Award } from 'lucide-react';
+import { ArrowRight, Newspaper, Award } from 'lucide-react';
 import Image from 'next/image';
 import { placeholderImages } from '@/lib/placeholder-images';
 import { latestNews, scholarships } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { useUser } from '@/firebase';
+import type { NewsItem, Scholarship } from '@/lib/types';
 
 const quizImage = placeholderImages.find((p) => p.id === 'quiz');
 
+// Function to shuffle an array and return a slice
+const shuffleAndSlice = <T,>(array: T[], size: number): T[] => {
+  const shuffled = [...array].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, size);
+};
+
 export default function DashboardPage() {
     const { user } = useUser();
+    const [displayedNews, setDisplayedNews] = useState<NewsItem[]>([]);
+    const [displayedScholarships, setDisplayedScholarships] = useState<Scholarship[]>([]);
+
+    useEffect(() => {
+        // Initial load
+        setDisplayedNews(shuffleAndSlice(latestNews, 5));
+        setDisplayedScholarships(shuffleAndSlice(scholarships, 3));
+
+        // Set up interval to refresh data every 4 minutes
+        const intervalId = setInterval(() => {
+            setDisplayedNews(shuffleAndSlice(latestNews, 5));
+            setDisplayedScholarships(shuffleAndSlice(scholarships, 3));
+        }, 4 * 60 * 1000); // 4 minutes
+
+        // Clean up interval on component unmount
+        return () => clearInterval(intervalId);
+    }, []);
 
     const getFirstName = (displayName: string | null | undefined) => {
         if (!displayName) return 'Welcome';
@@ -78,7 +103,7 @@ export default function DashboardPage() {
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                {latestNews.map(item => (
+                {displayedNews.map(item => (
                   <div key={item.id} className="flex items-start gap-4">
                     <div className="flex-1">
                       <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:underline">
@@ -104,7 +129,7 @@ export default function DashboardPage() {
             </CardHeader>
             <CardContent>
                <div className="space-y-4">
-                {scholarships.map(scholarship => (
+                {displayedScholarships.map(scholarship => (
                   <div key={scholarship.id}>
                     <h3 className="font-semibold">{scholarship.title}</h3>
                     <p className="text-sm text-muted-foreground">
