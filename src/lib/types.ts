@@ -47,7 +47,7 @@ export interface NewsItem {
   source: string;
   date: string;
   url: string;
-  category: 'Admissions' | 'Exams' | 'Policy' | 'Careers';
+  category: 'Admissions' | 'Exams' | 'Policy' | 'Careers' | 'Courses';
 }
 
 export interface Scholarship {

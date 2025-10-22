@@ -51,7 +51,7 @@ export default function DashboardPage() {
             const id = 'id' in item ? item.id : 'title' in item ? item.title : '';
 
             // Avoid adding duplicates, or update timestamp if already exists
-            const existingIndex = historyItems.findIndex(h => 'item' in h && 'id' in h.item && h.item.id === id);
+            const existingIndex = historyItems.findIndex(h => h.type === type && 'item' in h && 'id' in h.item && h.item.id === id);
             if (existingIndex > -1) {
                 historyItems.splice(existingIndex, 1);
             }
