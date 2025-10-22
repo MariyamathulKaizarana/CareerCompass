@@ -17,7 +17,7 @@ import { Separator } from '@/components/ui/separator';
 import { KeyRound, Mail, Pencil, User, Calendar, Loader2 } from 'lucide-react';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
+import { Input, PasswordInput } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 
 const profileFormSchema = z.object({
@@ -269,7 +269,7 @@ export default function ProfilePage() {
                                 <FormItem>
                                     <FormLabel>Current Password</FormLabel>
                                     <FormControl>
-                                    <Input type="password" {...field} />
+                                    <PasswordInput {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -282,7 +282,7 @@ export default function ProfilePage() {
                                 <FormItem>
                                     <FormLabel>New Password</FormLabel>
                                     <FormControl>
-                                    <Input type="password" {...field} />
+                                    <PasswordInput {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -295,7 +295,7 @@ export default function ProfilePage() {
                                 <FormItem>
                                     <FormLabel>Confirm New Password</FormLabel>
                                     <FormControl>
-                                    <Input type="password" {...field} />
+                                    <PasswordInput {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
