@@ -12,6 +12,8 @@ export interface Career {
   skills: string[];
   courses: string[];
   exams?: string[];
+  topColleges?: string[];
+  admissionProcess?: string;
   roadmap: string;
   avgSalary: string;
   futureScope: string;

@@ -5,7 +5,7 @@ import { careers } from '@/lib/data';
 import { placeholderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Briefcase, CheckCircle, DollarSign, GraduationCap, Map, TrendingUp, Trophy } from 'lucide-react';
+import { Briefcase, CheckCircle, DollarSign, GraduationCap, Map, TrendingUp, Trophy, University, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -47,6 +47,14 @@ export default function CareerDetailPage({ params }: CareerDetailPageProps) {
 
   if (career.exams && career.exams.length > 0) {
     detailCards.push({ icon: <Trophy className="h-6 w-6 text-accent" />, title: "Competitive Exams", content: career.exams.join(', ') });
+  }
+
+  if (career.topColleges && career.topColleges.length > 0) {
+    detailCards.push({ icon: <University className="h-6 w-6 text-accent" />, title: "Top Colleges in India", content: career.topColleges.join(', ') });
+  }
+
+  if (career.admissionProcess) {
+    detailCards.push({ icon: <BookOpen className="h-6 w-6 text-accent" />, title: "Admission Process", content: career.admissionProcess });
   }
 
   return (
