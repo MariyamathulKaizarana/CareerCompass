@@ -159,6 +159,9 @@ export function QuizClient({ questions }: QuizClientProps) {
         try {
           const { studentInterests, studentStrengths } = analyzeAnswers(state.answers, questions);
 
+          // Save interests for the dynamic report page
+          localStorage.setItem('userInterests', studentInterests);
+
           const suggestions: CareerSuggestion[] = await analyzeQuizResponsesAndSuggestCareers({ 
             quizResponses: state.answers.map(a => ({questionId: a.questionId, selectedOption: a.selectedOption})),
             studentInterests,

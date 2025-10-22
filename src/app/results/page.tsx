@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -67,6 +66,9 @@ export default function ResultsPage() {
           <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
             {suggestions.map((suggestion, index) => {
                 const careerSlug = findCareerSlug(suggestion.careerPath);
+                // The URL should be URI-encoded to handle special characters in career paths
+                const dynamicReportHref = `/report/${encodeURIComponent(suggestion.careerPath)}`;
+
                 return (
                     <Card key={index} className="flex flex-col">
                         <CardHeader>
@@ -86,15 +88,11 @@ export default function ResultsPage() {
                             </div>
                         </CardContent>
                         <CardFooter>
-                           {careerSlug ? (
-                             <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                                 <Link href={`/careers/${careerSlug}`}>
-                                     Explore Path <ArrowRight className="ml-2 h-4 w-4" />
-                                 </Link>
-                             </Button>
-                           ) : (
-                            <Button disabled className="w-full">Details Coming Soon</Button>
-                           )}
+                           <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                               <Link href={careerSlug ? `/careers/${careerSlug}` : dynamicReportHref}>
+                                   Explore Path <ArrowRight className="ml-2 h-4 w-4" />
+                               </Link>
+                           </Button>
                         </CardFooter>
                     </Card>
                 )
@@ -127,5 +125,3 @@ export default function ResultsPage() {
     </AppShell>
   );
 }
-
-    
