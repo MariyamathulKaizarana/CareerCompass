@@ -22,7 +22,7 @@ const CareerSuggestionSchema = z.object({
   requiredSkills: z.array(z.string()).describe('List of required skills for the career.'),
   requiredCourses: z.array(z.string()).describe('List of required courses for the career.'),
   careerRoadmap: z.string().describe('The career roadmap (education -> internships -> job roles).'),
-  averageSalary: z.string().describe('The average salary for this career path.'),
+  averageSalary: z.string().describe('The average salary for this career path in Indian Rupees (INR), formatted as "₹X-Y LPA".'),
   futureScope: z.string().describe('The future scope and outlook for this career.'),
 });
 export type CareerSuggestion = z.infer<typeof CareerSuggestionSchema>;
@@ -47,7 +47,7 @@ const prompt = ai.definePrompt({
   name: 'analyzeQuizResponsesPrompt',
   input: {schema: AnalyzeQuizResponsesInputSchema},
   output: {schema: AnalyzeQuizResponsesOutputSchema},
-  prompt: `You are an AI career counselor. Analyze the student's quiz responses to suggest suitable career paths.
+  prompt: `You are an AI career counselor for students in India. Analyze the student's quiz responses to suggest suitable career paths.
 
 Consider the student's interests and strengths.
 
@@ -65,7 +65,7 @@ Each career suggestion should include:
 - requiredSkills: List of required skills for the career.
 - requiredCourses: List of required courses for the career.
 - careerRoadmap: The career roadmap (education -> internships -> job roles).
-- averageSalary: The average salary for this career path.
+- averageSalary: The average salary for this career path in Indian Rupees (INR), formatted as "₹X-Y LPA". For example: "₹8-12 LPA".
 - futureScope: The future scope and outlook for this career.`,
 });
 

@@ -24,7 +24,7 @@ const GenerateCareerReportOutputSchema = z.object({
   careerRoadmap: z
     .string()
     .describe('The career roadmap, including education, internships, and job roles.'),
-  averageSalary: z.string().describe('The average salary for the career path.'),
+  averageSalary: z.string().describe('The average salary for the career path in Indian Rupees (INR), formatted as "₹X-Y LPA".'),
   futureScope: z.string().describe('The future scope of the career path.'),
 });
 export type GenerateCareerReportOutput = z.infer<typeof GenerateCareerReportOutputSchema>;
@@ -39,13 +39,13 @@ const prompt = ai.definePrompt({
   name: 'generateCareerReportPrompt',
   input: {schema: GenerateCareerReportInputSchema},
   output: {schema: GenerateCareerReportOutputSchema},
-  prompt: `You are an expert career counselor. Generate a detailed career report for the career path: {{{careerPath}}}. The user has the following interests: {{{interests}}}. Include the following sections:
+  prompt: `You are an expert career counselor for students in India. Generate a detailed career report for the career path: {{{careerPath}}}. The user has the following interests: {{{interests}}}. Include the following sections:
 
 Description: A short description of the career path.
 Required Skills: The required skills for the career path.
 Courses: The courses required for the career path.
 Career Roadmap: The career roadmap, including education, internships, and job roles.
-Average Salary: The average salary for the career path.
+Average Salary: The average salary for the career path in Indian Rupees (INR), formatted as "₹X-Y LPA". For example: "₹8-12 LPA".
 Future Scope: The future scope of the career path.
 
 Format each section clearly and concisely.
