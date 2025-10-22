@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useReducer } from 'react';
 import { useRouter } from 'next/navigation';
-import dynamic from 'next/dynamic';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import type { Question, QuizResponse, CareerSuggestion, ActivityItem } from '@/lib/types';
 import { Button } from '@/components/ui/button';
@@ -12,10 +12,6 @@ import { Loader2 } from 'lucide-react';
 import { analyzeQuizResponsesAndSuggestCareers } from '@/ai/flows/analyze-quiz-responses-and-suggest-careers';
 import { useToast } from '@/hooks/use-toast';
 import { useUser } from '@/firebase';
-
-const motion = dynamic(() => import('framer-motion').then(mod => mod.motion));
-const AnimatePresence = dynamic(() => import('framer-motion').then(mod => mod.AnimatePresence));
-
 
 interface QuizClientProps {
   questions: Question[];
