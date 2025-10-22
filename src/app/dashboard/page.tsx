@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { ArrowRight, Newspaper, Award } from 'lucide-react';
 import Image from 'next/image';
 import { placeholderImages } from '@/lib/placeholder-images';
-import { latestNews, scholarships } from '@/lib/data';
+import { latestNews, scholarships } from '@/lib/dashboard-data';
 import { Badge } from '@/components/ui/badge';
 import { useUser } from '@/firebase';
 import type { NewsItem, Scholarship, ActivityItem } from '@/lib/types';

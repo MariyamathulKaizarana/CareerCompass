@@ -1,6 +1,6 @@
 import { AppShell } from '@/components/AppShell';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { careers } from '@/lib/data';
+import { careers } from '@/lib/career-data';
 import { GraduationCap } from 'lucide-react';
 import Link from 'next/link';
 

@@ -10,7 +10,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import type { CareerSuggestion } from '@/lib/types';
 import { ArrowRight, FileText, Loader2, RefreshCw } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { careers } from '@/lib/data';
+import { careers } from '@/lib/career-data';
 
 export default function ResultsPage() {
   const [suggestions, setSuggestions] = useState<CareerSuggestion[]>([]);

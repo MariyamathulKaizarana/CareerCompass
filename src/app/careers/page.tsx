@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { AppShell } from '@/components/AppShell';
-import { careers } from '@/lib/data';
+import { careers } from '@/lib/career-data';
 import { placeholderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
