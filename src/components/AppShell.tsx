@@ -12,6 +12,7 @@ import {
   LogOut,
   User as UserIcon,
   GraduationCap,
+  History,
 } from 'lucide-react';
 import { signOut } from 'firebase/auth';
 
@@ -44,6 +45,7 @@ const navItems = [
   { href: '/careers', icon: Book, label: 'Explore Careers' },
   { href: '/courses', icon: GraduationCap, label: 'Explore Courses' },
   { href: '/favorites', icon: Heart, label: 'My Favorites' },
+  { href: '/history', icon: History, label: 'History' },
 ];
 
 function FullScreenLoader() {
