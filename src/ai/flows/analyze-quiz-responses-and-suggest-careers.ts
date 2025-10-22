@@ -49,9 +49,13 @@ const prompt = ai.definePrompt({
   output: {schema: AnalyzeQuizResponsesOutputSchema},
   prompt: `You are an AI career counselor for students in India. Analyze the student's quiz responses to suggest suitable career paths.
 
-Consider the student's interests and strengths.
+The quiz responses are provided as a JSON array. Each object in the array contains a 'questionId' and the 'selectedOption' which represents the user's answer. The 'selectedOption' value is a composite string like 'interest_strength' (e.g., 'analytical_problemsolving'). Use these values to understand the user's inclinations.
 
-Quiz Responses: {{{quizResponses}}}
+Consider the student's interests and strengths as summarized below.
+
+Quiz Responses:
+{{{JSONstringify quizResponses}}}
+
 Student Interests: {{{studentInterests}}}
 Student Strengths: {{{studentStrengths}}}
 
