@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import { format } from 'date-fns';
 import { useUser, useAuth } from '@/firebase';
-import { updateProfile, sendPasswordResetEmail } from 'firebase/auth';
+import { updateProfile, sendPasswordResetEmail, EmailAuthProvider, reauthenticateWithCredential, updatePassword } from 'firebase/auth';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -24,34 +24,59 @@ const profileFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
 });
 
+const passwordFormSchema = z.object({
+  currentPassword: z.string().min(1, "Current password is required."),
+  newPassword: z.string().min(8, { message: 'Password must be at least 8 characters.' })
+    .regex(/[A-Z]/, { message: 'Password must contain at least one uppercase letter.' })
+    .regex(/[a-z]/, { message: 'Password must contain at least one lowercase letter.' })
+    .regex(/[0-9]/, { message: 'Password must contain at least one number.' })
+    .regex(/[^A-Za-z0-9]/, { message: 'Password must contain at least one special character.' }),
+  confirmPassword: z.string(),
+}).refine(data => data.newPassword === data.confirmPassword, {
+    message: "New passwords don't match.",
+    path: ["confirmPassword"],
+});
+
+
 export default function ProfilePage() {
   const { user } = useUser();
   const auth = useAuth();
   const { toast } = useToast();
   
-  // Local state to immediately reflect name change
   const [displayName, setDisplayName] = useState(user?.displayName);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isPasswordSubmitting, setIsPasswordSubmitting] = useState(false);
+  const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false);
+  const [isPasswordDialogOpen, setIsPasswordDialogOpen] = useState(false);
 
-  const form = useForm<z.infer<typeof profileFormSchema>>({
+  const profileForm = useForm<z.infer<typeof profileFormSchema>>({
     resolver: zodResolver(profileFormSchema),
-    defaultValues: {
-      name: user?.displayName || '',
+    values: { // Use values to dynamically update form
+      name: displayName || '',
     },
   });
+  
+  const passwordForm = useForm<z.infer<typeof passwordFormSchema>>({
+    resolver: zodResolver(passwordFormSchema),
+    defaultValues: {
+        currentPassword: '',
+        newPassword: '',
+        confirmPassword: '',
+    }
+  });
+
 
   async function handleProfileUpdate(values: z.infer<typeof profileFormSchema>) {
     if (!user) return;
     setIsSubmitting(true);
     try {
       await updateProfile(user, { displayName: values.name });
-      setDisplayName(values.name); // Update local state
+      setDisplayName(values.name); 
       toast({
         title: 'Success!',
         description: 'Your profile has been updated.',
       });
-      setIsDialogOpen(false); // Close dialog on success
+      setIsProfileDialogOpen(false); 
     } catch (error: any) {
       toast({
         variant: 'destructive',
@@ -63,28 +88,47 @@ export default function ProfilePage() {
     }
   }
 
-  async function handleChangePassword() {
+  async function handlePasswordUpdate(values: z.infer<typeof passwordFormSchema>) {
     if (!user || !user.email) {
-        toast({ variant: 'destructive', title: 'Error', description: 'Could not find user email.' });
-        return;
+      toast({ variant: 'destructive', title: 'Error', description: 'Could not find user email.' });
+      return;
     }
+    setIsPasswordSubmitting(true);
     try {
-        await sendPasswordResetEmail(auth, user.email);
+        const credential = EmailAuthProvider.credential(user.email, values.currentPassword);
+        await reauthenticateWithCredential(user, credential);
+        await updatePassword(user, values.newPassword);
+
         toast({
-            title: 'Password Reset Email Sent',
-            description: `A link to reset your password has been sent to ${user.email}.`,
+            title: 'Password Updated!',
+            description: 'Your password has been changed successfully.',
         });
+        setIsPasswordDialogOpen(false);
+        passwordForm.reset();
+
     } catch (error: any) {
+        let description = "An unexpected error occurred.";
+        if (error.code === 'auth/wrong-password') {
+            description = "The current password you entered is incorrect. Please try again.";
+        } else if (error.code === 'auth/weak-password') {
+            description = "The new password is too weak. Please choose a stronger one.";
+        } else {
+            description = error.message;
+        }
+
         toast({
             variant: 'destructive',
-            title: 'Error Sending Email',
-            description: error.message,
+            title: 'Password Change Failed',
+            description,
         });
+    } finally {
+        setIsPasswordSubmitting(false);
     }
   }
 
+
   if (!user) {
-    return null; // Or a loading skeleton
+    return null;
   }
 
   const getInitials = (name?: string | null) => {
@@ -162,7 +206,7 @@ export default function ProfilePage() {
                 <CardTitle>Profile Management</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+                <Dialog open={isProfileDialogOpen} onOpenChange={setIsProfileDialogOpen}>
                   <DialogTrigger asChild>
                     <Button variant="outline" className="w-full justify-start">
                       <Pencil className="mr-2 h-4 w-4" />
@@ -176,10 +220,10 @@ export default function ProfilePage() {
                         Make changes to your profile here. Click save when you're done.
                       </DialogDescription>
                     </DialogHeader>
-                    <Form {...form}>
-                        <form onSubmit={form.handleSubmit(handleProfileUpdate)} className="space-y-4">
+                    <Form {...profileForm}>
+                        <form onSubmit={profileForm.handleSubmit(handleProfileUpdate)} className="space-y-4">
                             <FormField
-                                control={form.control}
+                                control={profileForm.control}
                                 name="name"
                                 render={({ field }) => (
                                 <FormItem>
@@ -201,10 +245,73 @@ export default function ProfilePage() {
                     </Form>
                   </DialogContent>
                 </Dialog>
-                <Button variant="outline" className="w-full justify-start" onClick={handleChangePassword}>
-                  <KeyRound className="mr-2 h-4 w-4" />
-                  Change Password
-                </Button>
+                
+                <Dialog open={isPasswordDialogOpen} onOpenChange={setIsPasswordDialogOpen}>
+                  <DialogTrigger asChild>
+                    <Button variant="outline" className="w-full justify-start">
+                      <KeyRound className="mr-2 h-4 w-4" />
+                      Change Password
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle>Change Password</DialogTitle>
+                        <DialogDescription>
+                            Enter your current password and a new password below.
+                        </DialogDescription>
+                      </DialogHeader>
+                       <Form {...passwordForm}>
+                        <form onSubmit={passwordForm.handleSubmit(handlePasswordUpdate)} className="space-y-4">
+                             <FormField
+                                control={passwordForm.control}
+                                name="currentPassword"
+                                render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Current Password</FormLabel>
+                                    <FormControl>
+                                    <Input type="password" {...field} />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                                )}
+                            />
+                             <FormField
+                                control={passwordForm.control}
+                                name="newPassword"
+                                render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>New Password</FormLabel>
+                                    <FormControl>
+                                    <Input type="password" {...field} />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                                )}
+                            />
+                            <FormField
+                                control={passwordForm.control}
+                                name="confirmPassword"
+                                render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Confirm New Password</FormLabel>
+                                    <FormControl>
+                                    <Input type="password" {...field} />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                                )}
+                            />
+                             <DialogFooter>
+                                <Button type="submit" disabled={isPasswordSubmitting}>
+                                    {isPasswordSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                                    Update Password
+                                </Button>
+                            </DialogFooter>
+                        </form>
+                    </Form>
+                  </DialogContent>
+                </Dialog>
+
               </CardContent>
             </Card>
           </div>
@@ -213,3 +320,5 @@ export default function ProfilePage() {
     </AppShell>
   );
 }
+
+    
