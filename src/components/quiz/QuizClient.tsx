@@ -174,11 +174,14 @@ export function QuizClient({ questions }: QuizClientProps) {
           router.push('/results');
 
         } catch (error) {
+          console.error("Quiz submission failed:", error);
           toast({
             variant: "destructive",
             title: "Analysis Failed",
-            description: "Could not get career suggestions. Please try again.",
+            description: "Could not get career suggestions at this time. The AI model may be busy. Please try again in a few moments.",
+            duration: 5000,
           });
+          // Reset the quiz to the beginning
           dispatch({ type: 'START_QUIZ', payload: { questions } });
         }
       };
@@ -226,7 +229,7 @@ export function QuizClient({ questions }: QuizClientProps) {
       <CardHeader>
         {state.status === 'in_progress' && <Progress value={progress} className="mb-4 h-2" />}
         <CardTitle className="font-headline text-2xl">
-          {state.status === 'selecting_stream' ? 'Let\'s Get Started' : `Question ${questionNumber} of ${totalQuestions}`}
+          {state.status === 'selecting_stream' ? "Let's Get Started" : `Question ${questionNumber} of ${totalQuestions}`}
         </CardTitle>
         <CardDescription>{state.status === 'selecting_stream' ? 'First, help us understand your background.' : 'Choose the option that best describes you.'}</CardDescription>
       </CardHeader>
