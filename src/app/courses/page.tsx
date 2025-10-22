@@ -1,3 +1,4 @@
+
 import { AppShell } from '@/components/AppShell';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { careers } from '@/lib/career-data';
@@ -47,3 +48,5 @@ export default function CoursesPage() {
     </AppShell>
   );
 }
+
+    

@@ -1,3 +1,4 @@
+
 import { AppShell } from '@/components/AppShell';
 import { QuizClient } from '@/components/quiz/QuizClient';
 import { quizQuestions } from '@/lib/quiz-data';
@@ -11,3 +12,5 @@ export default function QuizPage() {
     </AppShell>
   );
 }
+
+    

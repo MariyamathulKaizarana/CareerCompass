@@ -9,3 +9,5 @@ export const careers: Career[] = [];
 export const quizQuestions: Question[] = [];
 export const latestNews: NewsItem[] = [];
 export const scholarships: Scholarship[] = [];
+
+    

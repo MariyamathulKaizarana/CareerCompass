@@ -164,7 +164,7 @@ export function QuizClient({ questions }: QuizClientProps) {
           const { studentInterests, studentStrengths } = analyzeAnswers(state.answers, questions);
 
           const suggestions: CareerSuggestion[] = await analyzeQuizResponsesAndSuggestCareers({ 
-            quizResponses: state.answers,
+            quizResponses: state.answers.map(a => ({questionId: a.questionId, selectedOption: a.selectedOption})),
             studentInterests,
             studentStrengths
           });

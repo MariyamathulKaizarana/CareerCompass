@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { AppShell } from '@/components/AppShell';
@@ -63,3 +64,5 @@ export default function CareersPage() {
     </AppShell>
   );
 }
+
+    
