@@ -28,13 +28,13 @@ export default function DashboardPage() {
 
     useEffect(() => {
         // Initial load
-        setDisplayedNews(shuffleAndSlice(latestNews, 5));
-        setDisplayedScholarships(shuffleAndSlice(scholarships, 3));
+        setDisplayedNews(shuffleAndSlice(latestNews, 7));
+        setDisplayedScholarships(shuffleAndSlice(scholarships, 7));
 
         // Set up interval to refresh data every 4 minutes
         const intervalId = setInterval(() => {
-            setDisplayedNews(shuffleAndSlice(latestNews, 5));
-            setDisplayedScholarships(shuffleAndSlice(scholarships, 3));
+            setDisplayedNews(shuffleAndSlice(latestNews, 7));
+            setDisplayedScholarships(shuffleAndSlice(scholarships, 7));
         }, 4 * 60 * 1000); // 4 minutes
 
         // Clean up interval on component unmount
