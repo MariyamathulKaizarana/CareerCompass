@@ -3,368 +3,392 @@
     {
       "id": "hero",
       "description": "A diverse group of young students looking thoughtfully towards their future.",
-      "imageUrl": "https://picsum.photos/seed/hero-students/1200/800",
+      "imageUrl": "https://images.unsplash.com/photo-1598546549869-9507a4b8d96a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3R1ZGVudHMlMjBmdXR1cmV8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "students future"
     },
     {
       "id": "quiz",
       "description": "A student focused on a tablet screen, taking a quiz.",
-      "imageUrl": "https://picsum.photos/seed/quiz-taking/1200/800",
+      "imageUrl": "https://images.unsplash.com/photo-1758525861586-1c8c8e424dc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdHVkZW50JTIwdGFibGV0fGVufDB8fHx8MTc2MTA5MDM4OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "student tablet"
     },
     {
       "id": "report",
       "description": "An abstract visualization of data and charts representing a career report.",
-      "imageUrl": "https://picsum.photos/seed/career-report/1200/800",
+      "imageUrl": "https://images.unsplash.com/photo-1579226905180-636b76d96082?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkYXRhJTIwY2hhcnRzfGVufDB8fHx8MTc2MTA2ODU0MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "data charts"
+    },
+    {
+      "id": "auth-background",
+      "description": "A bright and abstract background with geometric shapes.",
+      "imageUrl": "https://images.unsplash.com/photo-1709626011485-6fe000ea2dbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhYnN0cmFjdCUyMGdlb21ldHJpY3xlbnwwfHx8fDE3NjEwNzcwMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract geometric"
     },
     {
       "id": "software",
       "description": "Code on a computer screen.",
-      "imageUrl": "https://picsum.photos/seed/software-code/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1593086784152-b060f8109e0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb2RlJTIwc2NyZWVufGVufDB8fHx8MTc2MTA4MDMxMnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "code screen"
-    },
-    {
-      "id": "ux/ui",
-      "description": "A designer's desk with a laptop showing UI/UX designs and color swatches.",
-      "imageUrl": "https://picsum.photos/seed/design-field/600/400",
-      "imageHint": "designer desk"
     },
     {
       "id": "data",
       "description": "Abstract data visualization with glowing lines.",
-      "imageUrl": "https://picsum.photos/seed/data-science-viz/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1728995025396-b5141e209455?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkYXRhJTIwdmlzdWFsaXphdGlvbnxlbnwwfHx8fDE3NjEwOTcxODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "data visualization"
     },
     {
       "id": "doctor",
       "description": "A doctor in a lab coat examining a medical slide.",
-      "imageUrl": "https://picsum.photos/seed/medicine-field/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1576669801775-ff43c5ab079d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkb2N0b3IlMjBsYWJ8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "doctor lab"
+    },
+    {
+      "id": "ux",
+      "description": "A designer's desk with a laptop showing UI/UX designs and color swatches.",
+      "imageUrl": "https://images.unsplash.com/photo-1535957998253-26ae1ef29506?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZXNpZ25lciUyMGRlc2t8ZW58MHx8fHwxNzYxMDgzNTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "designer desk"
+    },
+    {
+      "id": "chartered",
+      "description": "A professional accountant working with ledgers and a calculator.",
+      "imageUrl": "https://images.unsplash.com/photo-1636819483716-854492c76683?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhY2NvdW50YW50JTIwd29ya3xlbnwwfHx8fDE3NjExNDQxODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "accountant work"
     },
     {
       "id": "marketing",
       "description": "A whiteboard with a marketing funnel and strategy notes.",
-      "imageUrl": "https://picsum.photos/seed/marketing-strategy/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1607703703520-bb638e84caf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXJrZXRpbmclMjBzdHJhdGVneXxlbnwwfHx8fDE3NjExMjAxODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "marketing strategy"
-    },
-    {
-      "id": "financial",
-      "description": "Stock market charts on a screen.",
-      "imageUrl": "https://picsum.photos/seed/financial-charts/600/400",
-      "imageHint": "stock charts"
     },
     {
       "id": "architect",
       "description": "An architectural model of a modern building on a desk.",
-      "imageUrl": "https://picsum.photos/seed/architect-model/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1617902944265-d54ae33cc2c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcmNoaXRlY3QlMjBtb2RlbHxlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "architect model"
     },
     {
       "id": "lawyer",
       "description": "A gavel and law books on a wooden desk.",
-      "imageUrl": "https://picsum.photos/seed/law-field/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1691458593726-bf55569be467?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxnYXZlbCUyMGJvb2tzfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "gavel books"
-    },
-    {
-      "id": "graphic",
-      "description": "A colorful graphic design composition on a tablet.",
-      "imageUrl": "https://picsum.photos/seed/graphic-design/600/400",
-      "imageHint": "graphic design"
-    },
-    {
-      "id": "chartered",
-      "description": "A professional accountant working with ledgers and a calculator.",
-      "imageUrl": "https://picsum.photos/seed/accountant-work/600/400",
-      "imageHint": "accountant work"
-    },
-    {
-      "id": "physiotherapist",
-      "description": "A physiotherapist helping a patient with stretching exercises.",
-      "imageUrl": "https://picsum.photos/seed/physiotherapy-session/600/400",
-      "imageHint": "physiotherapy session"
-    },
-    {
-      "id": "cybersecurity",
-      "description": "A digital padlock on a screen with binary code in the background.",
-      "imageUrl": "https://picsum.photos/seed/cybersecurity-lock/600/400",
-      "imageHint": "digital security"
-    },
-    {
-      "id": "product",
-      "description": "Post-it notes on a whiteboard showing a product development process.",
-      "imageUrl": "https://picsum.photos/seed/product-management/600/400",
-      "imageHint": "product roadmap"
-    },
-    {
-      "id": "content",
-      "description": "A person writing on a laptop in a creative workspace.",
-      "imageUrl": "https://picsum.photos/seed/content-writer/600/400",
-      "imageHint": "writing laptop"
-    },
-    {
-      "id": "human",
-      "description": "A group of diverse professionals in a meeting.",
-      "imageUrl": "https://picsum.photos/seed/human-resources-team/600/400",
-      "imageHint": "team meeting"
-    },
-    {
-      "id": "auth-background",
-      "description": "A bright and abstract background with geometric shapes.",
-      "imageUrl": "https://picsum.photos/seed/auth-bg/1200/800",
-      "imageHint": "abstract geometric"
-    },
-    {
-      "id": "ai/ml",
-      "description": "A futuristic neural network visualization.",
-      "imageUrl": "https://picsum.photos/seed/ai-ml/600/400",
-      "imageHint": "neural network"
-    },
-    {
-      "id": "blockchain",
-      "description": "A visualization of interconnected blocks in a chain.",
-      "imageUrl": "https://picsum.photos/seed/blockchain/600/400",
-      "imageHint": "blockchain network"
-    },
-    {
-      "id": "cloud",
-      "description": "Server racks in a data center with cloud graphics overlaid.",
-      "imageUrl": "https://picsum.photos/seed/cloud-architect/600/400",
-      "imageHint": "data center"
-    },
-    {
-      "id": "devops",
-      "description": "An infinity loop diagram representing the DevOps lifecycle.",
-      "imageUrl": "https://picsum.photos/seed/devops/600/400",
-      "imageHint": "devops cycle"
-    },
-    {
-      "id": "biomedical",
-      "description": "A prosthetic arm being tested in a laboratory.",
-      "imageUrl": "https://picsum.photos/seed/biomedical/600/400",
-      "imageHint": "prosthetic arm"
-    },
-    {
-      "id": "environmental",
-      "description": "A scientist taking a water sample from a river.",
-      "imageUrl": "https://picsum.photos/seed/environmental-scientist/600/400",
-      "imageHint": "water sample"
-    },
-    {
-      "id": "game",
-      "description": "A character model from a video game in a 3D modeling software.",
-      "imageUrl": "https://picsum.photos/seed/game-developer/600/400",
-      "imageHint": "game character"
-    },
-    {
-      "id": "investment",
-      "description": "A busy financial trading floor with screens showing stock data.",
-      "imageUrl": "https://picsum.photos/seed/investment-banker/600/400",
-      "imageHint": "trading floor"
-    },
-    {
-      "id": "management",
-      "description": "Two professionals discussing charts on a glass wall.",
-      "imageUrl": "https://picsum.photos/seed/management-consultant/600/400",
-      "imageHint": "business strategy"
-    },
-    {
-      "id": "supply",
-      "description": "A large warehouse with automated robots moving packages.",
-      "imageUrl": "https://picsum.photos/seed/supply-chain/600/400",
-      "imageHint": "warehouse logistics"
-    },
-    {
-      "id": "actuary",
-      "description": "A complex mathematical graph showing risk probabilities.",
-      "imageUrl": "https://picsum.photos/seed/actuary/600/400",
-      "imageHint": "risk graph"
-    },
-    {
-      "id": "market",
-      "description": "A collection of consumer survey results and demographic charts.",
-      "imageUrl": "https://picsum.photos/seed/market-research/600/400",
-      "imageHint": "consumer data"
-    },
-    {
-      "id": "public",
-      "description": "A person speaking at a press conference podium.",
-      "imageUrl": "https://picsum.photos/seed/public-relations/600/400",
-      "imageHint": "press conference"
-    },
-    {
-      "id": "animator",
-      "description": "A digital artist's tablet showing a character animation timeline.",
-      "imageUrl": "https://picsum.photos/seed/animator/600/400",
-      "imageHint": "animation timeline"
-    },
-    {
-      "id": "journalist",
-      "description": "An old-fashioned reporter's notepad and a vintage camera.",
-      "imageUrl": "https://picsum.photos/seed/journalist/600/400",
-      "imageHint": "reporter tools"
-    },
-    {
-      "id": "historian",
-      "description": "A scholar examining an ancient manuscript with a magnifying glass.",
-      "imageUrl": "https://picsum.photos/seed/historian/600/400",
-      "imageHint": "ancient manuscript"
-    },
-    {
-      "id": "industrial",
-      "description": "A clay model of a new car design on a workbench.",
-      "imageUrl": "https://picsum.photos/seed/industrial-designer/600/400",
-      "imageHint": "product design"
-    },
-    {
-      "id": "fashion",
-      "description": "A mannequin draped with fabric and design sketches on a wall.",
-      "imageUrl": "https://picsum.photos/seed/fashion-designer/600/400",
-      "imageHint": "fashion studio"
-    },
-    {
-      "id": "dietitian/nutritionist",
-      "description": "A colorful array of fresh fruits and vegetables on a wooden table.",
-      "imageUrl": "https://picsum.photos/seed/dietitian/600/400",
-      "imageHint": "healthy food"
-    },
-    {
-      "id": "occupational",
-      "description": "A child learning to write with the help of a therapist.",
-      "imageUrl": "https://picsum.photos/seed/occupational-therapist/600/400",
-      "imageHint": "child therapy"
-    },
-    {
-      "id": "urban",
-      "description": "A miniature model of a city plan with green spaces and buildings.",
-      "imageUrl": "https://picsum.photos/seed/urban-planner/600/400",
-      "imageHint": "city model"
-    },
-    {
-      "id": "veterinarian",
-      "description": "A vet listening to a dog's heartbeat with a stethoscope.",
-      "imageUrl": "https://picsum.photos/seed/veterinarian/600/400",
-      "imageHint": "vet checkup"
-    },
-    {
-      "id": "full",
-      "description": "A split screen showing front-end code on one side and back-end code on the other.",
-      "imageUrl": "https://picsum.photos/seed/full-stack/600/400",
-      "imageHint": "fullstack code"
-    },
-    {
-      "id": "business",
-      "description": "Two people shaking hands over a signed contract.",
-      "imageUrl": "https://picsum.photos/seed/business-dev/600/400",
-      "imageHint": "business deal"
-    },
-    {
-      "id": "social",
-      "description": "A phone screen showing a brand's engaging Instagram feed.",
-      "imageUrl": "https://picsum.photos/seed/social-media/600/400",
-      "imageHint": "social feed"
-    },
-    {
-      "id": "event",
-      "description": "A beautifully decorated hall set up for a large corporate event.",
-      "imageUrl": "https://picsum.photos/seed/event-manager/600/400",
-      "imageHint": "corporate event"
-    },
-    {
-      "id": "film",
-      "description": "A director looking through a camera viewfinder on a film set.",
-      "imageUrl": "https://picsum.photos/seed/film-director/600/400",
-      "imageHint": "film set"
-    },
-    {
-      "id": "technical",
-      "description": "A page from a clear, well-structured user manual with diagrams.",
-      "imageUrl": "https://picsum.photos/seed/technical-writer/600/400",
-      "imageHint": "user manual"
-    },
-    {
-      "id": "interior",
-      "description": "A stylishly decorated modern living room with elegant furniture.",
-      "imageUrl": "https://picsum.photos/seed/interior-designer/600/400",
-      "imageHint": "modern interior"
-    },
-    {
-      "id": "speech-language-pathologist",
-      "description": "A therapist using flashcards to help a child with speech.",
-      "imageUrl": "https://picsum.photos/seed/speech-therapist/600/400",
-      "imageHint": "speech therapy"
-    },
-    {
-      "id": "renewable",
-      "description": "A technician in a hard hat working on a large wind turbine.",
-      "imageUrl": "https://picsum.photos/seed/renewable-energy/600/400",
-      "imageHint": "wind turbine"
-    },
-    {
-      "id": "e-commerce",
-      "description": "A person shopping online with a credit card next to their laptop.",
-      "imageUrl": "https://picsum.photos/seed/ecommerce/600/400",
-      "imageHint": "online shopping"
-    },
-    {
-      "id": "geologist",
-      "description": "A geologist in the field examining a rock formation with a hammer.",
-      "imageUrl": "https://picsum.photos/seed/geologist/600/400",
-      "imageHint": "rock formation"
-    },
-    {
-      "id": "forensic",
-      "description": "A gloved hand using tweezers to collect evidence at a crime scene.",
-      "imageUrl": "https://picsum.photos/seed/forensic-scientist/600/400",
-      "imageHint": "crime scene"
-    },
-    {
-      "id": "paramedic",
-      "description": "A paramedic team loading a patient into an ambulance.",
-      "imageUrl": "https://picsum.photos/seed/paramedic/600/400",
-      "imageHint": "ambulance emergency"
-    },
-    {
-      "id": "curator",
-      "description": "A person carefully arranging an artifact in a museum display case.",
-      "imageUrl": "https://picsum.photos/seed/curator/600/400",
-      "imageHint": "museum display"
-    },
-    {
-      "id": "librarian",
-      "description": "A modern library with rows of books and people studying quietly.",
-      "imageUrl": "https://picsum.photos/seed/librarian/600/400",
-      "imageHint": "library books"
-    },
-    {
-      "id": "economist",
-      "description": "A complex graph showing supply and demand curves.",
-      "imageUrl": "https://picsum.photos/seed/economist/600/400",
-      "imageHint": "economic graph"
-    },
-    {
-      "id": "pilot",
-      "description": "The cockpit of an airplane with a view of the clouds outside.",
-      "imageUrl": "https://picsum.photos/seed/pilot/600/400",
-      "imageHint": "airplane cockpit"
     },
     {
       "id": "civil",
       "description": "A large suspension bridge under construction.",
-      "imageUrl": "https://picsum.photos/seed/civil-engineer/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1633363961301-4f100a78e92d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxicmlkZ2UlMjBjb25zdHJ1Y3Rpb258ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bridge construction"
     },
     {
       "id": "pharmacist",
       "description": "A pharmacist in a white coat organizing prescription bottles on a shelf.",
-      "imageUrl": "https://picsum.photos/seed/pharmacist/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1652295372392-3171ab2c0e01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaGFybWFjeSUyMHdvcmt8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pharmacy work"
     },
     {
       "id": "psychologist",
       "description": "A calm and welcoming therapy office with two chairs.",
-      "imageUrl": "https://picsum.photos/seed/psychologist/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0aGVyYXB5JTIwb2ZmaWNlfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "therapy office"
+    },
+    {
+      "id": "graphic",
+      "description": "A colorful graphic design composition on a tablet.",
+      "imageUrl": "https://images.unsplash.com/photo-1561070791-2526d30994b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxncmFwaGljJTIwZGVzaWdufGVufDB8fHx8MTc2MTExNzEyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "graphic design"
+    },
+    {
+      "id": "investment",
+      "description": "A busy financial trading floor with screens showing stock data.",
+      "imageUrl": "https://images.unsplash.com/photo-1518245078939-75312b6f72c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0cmFkaW5nJTIwZmxvb3J8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "trading floor"
+    },
+    {
+      "id": "journalist",
+      "description": "An old-fashioned reporter's notepad and a vintage camera.",
+      "imageUrl": "https://images.unsplash.com/photo-1564648995771-54ef348ae3fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyZXBvcnRlciUyMHRvb2xzfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "reporter tools"
+    },
+    {
+      "id": "ai/ml",
+      "description": "A futuristic neural network visualization.",
+      "imageUrl": "https://images.unsplash.com/photo-1597733336794-12d05021d510?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc2MTA2MDg2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neural network"
+    },
+    {
+      "id": "product",
+      "description": "Post-it notes on a whiteboard showing a product development process.",
+      "imageUrl": "https://images.unsplash.com/photo-1590402494587-44b71d7772f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9kdWN0JTIwcm9hZG1hcHxlbnwwfHx8fDE3NjExMjQ1NTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "product roadmap"
+    },
+    {
+      "id": "management",
+      "description": "Two professionals discussing charts on a glass wall.",
+      "imageUrl": "https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YnVzaW5lc3MlMjBzdHJhdGVneXxlbnwwfHx8fDE3NjEwODQ1NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business strategy"
+    },
+    {
+      "id": "social",
+      "description": "A phone screen showing a brand's engaging Instagram feed.",
+      "imageUrl": "https://images.unsplash.com/photo-1706515524433-25855ddc32bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzb2NpYWwlMjBmZWVkfGVufDB8fHx8MTc2MTEzNTczM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "social feed"
+    },
+    {
+      "id": "fashion",
+      "description": "A mannequin draped with fabric and design sketches on a wall.",
+      "imageUrl": "https://images.unsplash.com/photo-1474666488182-66ec723476c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmYXNoaW9uJTIwc3R1ZGlvfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fashion studio"
+    },
+    {
+      "id": "veterinarian",
+      "description": "A vet listening to a dog's heartbeat with a stethoscope.",
+      "imageUrl": "https://images.unsplash.com/photo-1606619788441-a9a360e8f685?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx2ZXQlMjBjaGVja3VwfGVufDB8fHx8MTc2MTE0NDE5MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vet checkup"
+    },
+    {
+      "id": "mechanical",
+      "description": "Close-up of gears and cogs in a complex machine.",
+      "imageUrl": "https://images.unsplash.com/photo-1721036265601-f0cbc1346057?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWNoaW5lJTIwZ2VhcnN8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "machine gears"
+    },
+    {
+      "id": "economist",
+      "description": "A complex graph showing supply and demand curves.",
+      "imageUrl": "https://images.unsplash.com/photo-1736751035793-353baaa416cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxlY29ub21pYyUyMGdyYXBofGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "economic graph"
+    },
+    {
+      "id": "company",
+      "description": "A formal boardroom with a large table and chairs.",
+      "imageUrl": "https://images.unsplash.com/photo-1758691736493-aa6d22c0f8a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb3Jwb3JhdGUlMjBib2FyZHJvb218ZW58MHx8fHwxNzYxMTQ0MTkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "corporate boardroom"
+    },
+    {
+      "id": "pilot",
+      "description": "The cockpit of an airplane with a view of the clouds outside.",
+      "imageUrl": "https://images.unsplash.com/photo-1518566107615-f7267099eced?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhaXJwbGFuZSUyMGNvY2twaXR8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "airplane cockpit"
+    },
+    {
+      "id": "biotechnologist",
+      "description": "A scientist looking at a petri dish in a modern laboratory.",
+      "imageUrl": "https://images.unsplash.com/photo-1606206873764-fd15e242df52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzY2llbmNlJTIwbGFifGVufDB8fHx8MTc2MTA4NjQzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "science lab"
+    },
+    {
+      "id": "hotel",
+      "description": "The luxurious lobby of a modern hotel.",
+      "imageUrl": "https://images.unsplash.com/photo-1546967900-1bea5f16b69d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aG90ZWwlMjBsb2JieXxlbnwwfHx8fDE3NjEwNjMxNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hotel lobby"
+    },
+    {
+      "id": "actuary",
+      "description": "A complex mathematical graph showing risk probabilities.",
+      "imageUrl": "https://images.unsplash.com/photo-1634542984003-e0fb8e200e91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cmlzayUyMGdyYXBofGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "risk graph"
+    },
+    {
+      "id": "interior",
+      "description": "A stylishly decorated modern living room with elegant furniture.",
+      "imageUrl": "https://images.unsplash.com/photo-1648536474504-7bbf8a1ee3ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBpbnRlcmlvcnxlbnwwfHx8fDE3NjEwODY3Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern interior"
+    },
+    {
+      "id": "chef",
+      "description": "A chef meticulously plating a gourmet dish in a professional kitchen.",
+      "imageUrl": "https://images.unsplash.com/photo-1616669944447-d65d41a222bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnb3VybWV0JTIwZm9vZHxlbnwwfHx8fDE3NjExMDQ2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gourmet food"
+    },
+    {
+      "id": "physiotherapist",
+      "description": "A physiotherapist helping a patient with stretching exercises.",
+      "imageUrl": "https://images.unsplash.com/photo-1609113160023-4e31f3765fd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwaHlzaW90aGVyYXB5JTIwc2Vzc2lvbnxlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "physiotherapy session"
+    },
+    {
+      "id": "animator",
+      "description": "A digital artist's tablet showing a character animation timeline.",
+      "imageUrl": "https://images.unsplash.com/photo-1724342388536-7ec21aa75af0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbmltYXRpb24lMjB0aW1lbGluZXxlbnwwfHx8fDE3NjExNDQxOTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "animation timeline"
+    },
+    {
+      "id": "human",
+      "description": "A group of diverse professionals in a meeting.",
+      "imageUrl": "https://images.unsplash.com/photo-1568992687947-868a62a9f521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwbWVldGluZ3xlbnwwfHx8fDE3NjEwODIwNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team meeting"
+    },
+    {
+      "id": "microbiologist",
+      "description": "A scientist observing samples through a powerful microscope.",
+      "imageUrl": "https://images.unsplash.com/photo-1743792930023-774d74a015cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtaWNyb3Njb3BlJTIwc2NpZW5jZXxlbnwwfHx8fDE3NjExMDI3MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "microscope science"
+    },
+    {
+      "id": "archaeologist",
+      "description": "An archaeologist carefully brushing dirt from an ancient artifact at a dig site.",
+      "imageUrl": "https://images.unsplash.com/photo-1760544470620-66ae16291e54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhcmNoYWVvbG9neSUyMGRpZ3xlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "archaeology dig"
+    },
+    {
+      "id": "cost",
+      "description": "A calculator and pen on top of financial spreadsheets with cost analysis charts.",
+      "imageUrl": "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmaW5hbmNpYWwlMjBhbmFseXNpc3xlbnwwfHx8fDE3NjEwNzcxMjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "financial analysis"
+    },
+    {
+      "id": "electrical",
+      "description": "A complex electronic circuit board with glowing components.",
+      "imageUrl": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzYxMDYyNzY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "circuit board"
+    },
+    {
+      "id": "librarian",
+      "description": "A modern library with rows of books and people studying quietly.",
+      "imageUrl": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGlicmFyeSUyMGJvb2tzfGVufDB8fHx8MTc2MTA3MzgyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "library books"
+    },
+    {
+      "id": "financial",
+      "description": "Stock market charts on a screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1621264448270-9ef00e88a935?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdG9jayUyMGNoYXJ0c3xlbnwwfHx8fDE3NjExMjg0MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stock charts"
+    },
+    {
+      "id": "dentist",
+      "description": "A modern, clean dentist's office with an examination chair.",
+      "imageUrl": "https://images.unsplash.com/photo-1704455306251-b4634215d98f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkZW50aXN0JTIwb2ZmaWNlfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dentist office"
+    },
+    {
+      "id": "cinematographer",
+      "description": "A professional cinema camera on a tripod on a film set.",
+      "imageUrl": "https://images.unsplash.com/photo-1497008323932-4f726e0f13f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmaWxtJTIwY2FtZXJhfGVufDB8fHx8MTc2MTA2MjA4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "film camera"
+    },
+    {
+      "id": "business",
+      "description": "A person presenting charts and graphs to a team in a meeting.",
+      "imageUrl": "https://images.unsplash.com/photo-1688380692117-63178554d76d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzYxMDQ5NzUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business meeting"
+    },
+    {
+      "id": "geologist",
+      "description": "A geologist in the field examining a rock formation with a hammer.",
+      "imageUrl": "https://images.unsplash.com/photo-1580963713395-4bfe2863106a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyb2NrJTIwZm9ybWF0aW9ufGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rock formation"
+    },
+    {
+      "id": "sociologist",
+      "description": "A diverse crowd of people, representing society.",
+      "imageUrl": "https://images.unsplash.com/photo-1717944097660-352ec0dc5c1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkaXZlcnNlJTIwY3Jvd2R8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "diverse crowd"
+    },
+    {
+      "id": "logistics",
+      "description": "A large cargo ship being loaded with containers at a busy port.",
+      "imageUrl": "https://images.unsplash.com/photo-1678182451047-196f22a4143e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXJnbyUyMHBvcnR8ZW58MHx8fHwxNzYxMTQ0MTkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cargo port"
+    },
+    {
+      "id": "chemical",
+      "description": "Glass beakers and flasks with colorful liquids in a chemistry lab.",
+      "imageUrl": "https://images.unsplash.com/photo-1608037222022-62649819f8aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGVtaXN0cnklMjBsYWJ8ZW58MHx8fHwxNzYxMTIwNDk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chemistry lab"
+    },
+    {
+      "id": "historian",
+      "description": "A scholar examining an ancient manuscript with a magnifying glass.",
+      "imageUrl": "https://images.unsplash.com/photo-1562164914-f71b2835e86b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbmNpZW50JTIwbWFudXNjcmlwdHxlbnwwfHx8fDE3NjEwODU5NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ancient manuscript"
+    },
+    {
+      "id": "auditor",
+      "description": "A person's hands using a magnifying glass to inspect a financial document.",
+      "imageUrl": "https://images.unsplash.com/photo-1693801874720-05ae2c89ede1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmaW5hbmNpYWwlMjBpbnNwZWN0aW9ufGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "financial inspection"
+    },
+    {
+      "id": "aerospace",
+      "description": "A rocket launching into space.",
+      "imageUrl": "https://images.unsplash.com/photo-1614728263952-84ea256f9679?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2NrZXQlMjBsYXVuY2h8ZW58MHx8fHwxNzYxMDg3ODAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rocket launch"
+    },
+    {
+      "id": "anthropologist",
+      "description": "A collage of artifacts from different cultures around the world.",
+      "imageUrl": "https://images.unsplash.com/photo-1760679674606-cd621fb5bfed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjdWx0dXJhbCUyMGFydGlmYWN0c3xlbnwwfHx8fDE3NjEwNDYxODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cultural artifacts"
+    },
+    {
+      "id": "credit",
+      "description": "A hand stamping a document with an 'Approved' stamp.",
+      "imageUrl": "https://images.unsplash.com/photo-1702825328124-dab63d85490e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhcHByb3ZlZCUyMHN0YW1wfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "approved stamp"
+    },
+    {
+      "id": "agricultural",
+      "description": "A scientist in a lab coat examining a plant sprout in a modern greenhouse.",
+      "imageUrl": "https://images.unsplash.com/photo-1726923153023-3cc61adf9284?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGxhbnQlMjBzY2llbmNlfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "plant science"
+    },
+    {
+      "id": "political",
+      "description": "The exterior of a parliament or government building.",
+      "imageUrl": "https://images.unsplash.com/photo-1625516581237-3d9d0a31538c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxnb3Zlcm5tZW50JTIwYnVpbGRpbmd8ZW58MHx8fHwxNzYxMDgwOTcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "government building"
+    },
+    {
+      "id": "tax",
+      "description": "A desk with tax forms, a calculator, and glasses.",
+      "imageUrl": "https://images.unsplash.com/photo-1636038197596-28e7dce070e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0YXglMjBmb3Jtc3xlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tax forms"
+    },
+    {
+      "id": "astrophysicist",
+      "description": "A stunning image of a distant nebula from a space telescope.",
+      "imageUrl": "https://images.unsplash.com/photo-1642635715930-b3a1eba9c99f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzcGFjZSUyMG5lYnVsYXxlbnwwfHx8fDE3NjEwNzQxODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "space nebula"
+    },
+    {
+      "id": "filmmaker",
+      "description": "A director looking through a camera viewfinder on a film set.",
+      "imageUrl": "https://images.unsplash.com/photo-1632187981988-40f3cbaeef5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmaWxtJTIwc2V0fGVufDB8fHx8MTc2MTEyMzQ4MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "film set"
+    },
+    {
+      "id": "insurance",
+      "description": "A family protected under a large umbrella, symbolizing insurance.",
+      "imageUrl": "https://images.unsplash.com/photo-1581056771188-021d4a0f8ec0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBwcm90ZWN0aW9ufGVufDB8fHx8MTc2MTA1NDE4OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "family protection"
+    },
+    {
+      "id": "food",
+      "description": "A food scientist inspecting food quality in a sterile laboratory.",
+      "imageUrl": "https://images.unsplash.com/photo-1615690055356-14dc400892d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmb29kJTIwbGFifGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "food lab"
+    },
+    {
+      "id": "curator",
+      "description": "A person carefully arranging an artifact in a museum display case.",
+      "imageUrl": "https://images.unsplash.com/photo-1674074070126-42f0a5def8f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtdXNldW0lMjBkaXNwbGF5fGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "museum display"
+    },
+    {
+      "id": "certified",
+      "description": "A financial planner discussing charts with a client.",
+      "imageUrl": "https://images.unsplash.com/photo-1506784881475-0e408bbca849?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmluYW5jaWFsJTIwcGxhbm5pbmd8ZW58MHx8fHwxNzYxMDMzMTI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "financial planning"
+    },
+    {
+      "id": "geneticist",
+      "description": "A visualization of a DNA double helix strand.",
+      "imageUrl": "https://images.unsplash.com/photo-1738944910373-811b7b417762?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkbmElMjBoZWxpeHxlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dna helix"
+    },
+    {
+      "id": "technical",
+      "description": "A page from a clear, well-structured user manual with diagrams.",
+      "imageUrl": "https://images.unsplash.com/photo-1616861771635-49063a4636ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx1c2VyJTIwbWFudWFsfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "user manual"
     }
   ]
 }

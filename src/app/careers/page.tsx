@@ -11,7 +11,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CareersPage() {
   const findImage = (careerTitle: string) => {
-    const searchTerm = careerTitle.split(' ')[0].toLowerCase();
+    const searchTerm = careerTitle.split(' ')[0].toLowerCase().replace('/', '-');
     return placeholderImages.find(p => p.id === searchTerm) || placeholderImages.find(p => p.id === 'report');
   }
 
