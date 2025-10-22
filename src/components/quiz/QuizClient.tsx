@@ -240,7 +240,7 @@ export function QuizClient({ questions }: QuizClientProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.2 }}
           >
             <h2 className="mb-8 text-2xl font-semibold text-foreground">{currentQuestion.text}</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
