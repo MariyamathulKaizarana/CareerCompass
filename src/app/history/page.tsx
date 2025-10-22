@@ -1,17 +1,121 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { AppShell } from '@/components/AppShell';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { History, Newspaper, Award, ExternalLink } from 'lucide-react';
-import type { HistoryItem } from '@/app/dashboard/page';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { formatDistanceToNow } from 'date-fns';
 
+import { AppShell } from '@/components/AppShell';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { History, Newspaper, Award, ExternalLink, Book, HelpCircle, FileText } from 'lucide-react';
+import type { ActivityItem } from '@/lib/types';
+
+
+const renderActivityItem = (activity: ActivityItem, index: number) => {
+    const timeAgo = formatDistanceToNow(new Date(activity.viewedAt), { addSuffix: true });
+    
+    switch (activity.type) {
+        case 'news':
+            return (
+                <Card key={`${activity.item.id}-${index}`} className="flex flex-col sm:flex-row items-start gap-4 p-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted flex-shrink-0">
+                        <Newspaper className="h-6 w-6 text-muted-foreground" />
+                    </div>
+                    <div className="flex-1">
+                        <a href={activity.item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:underline">
+                            {activity.item.title}
+                        </a>
+                        <p className="text-sm text-muted-foreground">Viewed {timeAgo}</p>
+                        <p className="text-sm text-muted-foreground">Source: {activity.item.source}</p>
+                    </div>
+                    <div className="flex flex-col items-start sm:items-end gap-2 self-start sm:self-center">
+                         <Badge variant='secondary'>News</Badge>
+                         <Button variant="ghost" size="sm" asChild>
+                            <a href={activity.item.url} target="_blank" rel="noopener noreferrer">
+                                Visit Link <ExternalLink className="ml-2 h-3 w-3" />
+                            </a>
+                        </Button>
+                    </div>
+                </Card>
+            );
+        case 'scholarship':
+            return (
+                <Card key={`${activity.item.id}-${index}`} className="flex flex-col sm:flex-row items-start gap-4 p-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted flex-shrink-0">
+                        <Award className="h-6 w-6 text-muted-foreground" />
+                    </div>
+                    <div className="flex-1">
+                        <a href={activity.item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:underline">
+                            {activity.item.title}
+                        </a>
+                        <p className="text-sm text-muted-foreground">Viewed {timeAgo}</p>
+                        <p className="text-sm text-muted-foreground">Provider: {activity.item.provider}</p>
+                    </div>
+                    <div className="flex flex-col items-start sm:items-end gap-2 self-start sm:self-center">
+                         <Badge variant='default'>Scholarship</Badge>
+                          <Button variant="ghost" size="sm" asChild>
+                            <a href={activity.item.url} target="_blank" rel="noopener noreferrer">
+                                Visit Link <ExternalLink className="ml-2 h-3 w-3" />
+                            </a>
+                         </Button>
+                    </div>
+                </Card>
+            );
+        case 'career':
+            return (
+                <Card key={`${activity.item.id}-${index}`} className="flex flex-col sm:flex-row items-start gap-4 p-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted flex-shrink-0">
+                        <Book className="h-6 w-6 text-muted-foreground" />
+                    </div>
+                    <div className="flex-1">
+                        <Link href={`/careers/${activity.item.slug}`} className="font-semibold text-foreground hover:underline">
+                           Viewed career: {activity.item.title}
+                        </Link>
+                        <p className="text-sm text-muted-foreground">Viewed {timeAgo}</p>
+                    </div>
+                    <div className="flex flex-col items-start sm:items-end gap-2 self-start sm:self-center">
+                        <Badge variant='outline'>Career</Badge>
+                        <Button variant="ghost" size="sm" asChild>
+                            <Link href={`/careers/${activity.item.slug}`}>
+                                View Details <ExternalLink className="ml-2 h-3 w-3" />
+                            </Link>
+                        </Button>
+                    </div>
+                </Card>
+            );
+        case 'quiz':
+            return (
+                <Card key={`quiz-${index}`} className="flex flex-col sm:flex-row items-start gap-4 p-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted flex-shrink-0">
+                        <FileText className="h-6 w-6 text-muted-foreground" />
+                    </div>
+                    <div className="flex-1">
+                        <Link href="/results" className="font-semibold text-foreground hover:underline">
+                            Completed a quiz
+                        </Link>
+                        <p className="text-sm text-muted-foreground">Taken {timeAgo}</p>
+                        <p className="mt-2 text-sm text-foreground">
+                            Top suggestion: <span className="font-medium">{activity.item.suggestions[0]?.careerPath || 'N/A'}</span>
+                        </p>
+                    </div>
+                    <div className="flex flex-col items-start sm:items-end gap-2 self-start sm:self-center">
+                        <Badge className='bg-accent text-accent-foreground'>Quiz Result</Badge>
+                        <Button variant="ghost" size="sm" asChild>
+                            <Link href="/results">
+                                View Results <ExternalLink className="ml-2 h-3 w-3" />
+                            </Link>
+                        </Button>
+                    </div>
+                </Card>
+            )
+        default:
+            return null;
+    }
+}
+
 export default function HistoryPage() {
-  const [history, setHistory] = useState<HistoryItem[]>([]);
+  const [history, setHistory] = useState<ActivityItem[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -45,7 +149,7 @@ export default function HistoryPage() {
           Activity History
         </h1>
         <p className="mt-2 text-lg text-muted-foreground">
-          Your recently viewed news and scholarships.
+          Your recently viewed items and completed activities.
         </p>
 
         {history.length === 0 ? (
@@ -62,7 +166,7 @@ export default function HistoryPage() {
                 </CardHeader>
                 <CardContent>
                     <p className="text-muted-foreground max-w-md mx-auto">
-                        Head over to the dashboard to check out the latest news and scholarships. Your viewed items will be saved here for easy access.
+                        Head over to the dashboard to check out the latest news and scholarships, or take the career quiz. Your activity will be saved here.
                     </p>
                     <Button asChild className="mt-6">
                         <Link href="/dashboard">Go to Dashboard</Link>
@@ -72,43 +176,7 @@ export default function HistoryPage() {
           </div>
         ) : (
           <div className="mt-8 space-y-6">
-            {history.map((activityItem, index) => (
-              <Card key={`${activityItem.item.id}-${index}`} className="flex items-start gap-4 p-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted">
-                  {activityItem.type === 'news' ? 
-                    <Newspaper className="h-6 w-6 text-muted-foreground" /> : 
-                    <Award className="h-6 w-6 text-muted-foreground" />}
-                </div>
-                <div className="flex-1">
-                  <a href={activityItem.item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:underline">
-                    {activityItem.item.title}
-                  </a>
-                  <p className="text-sm text-muted-foreground">
-                    Viewed {formatDistanceToNow(new Date(activityItem.viewedAt), { addSuffix: true })}
-                  </p>
-                  {activityItem.type === 'news' && 'source' in activityItem.item && (
-                     <p className="text-sm text-muted-foreground">
-                        Source: {activityItem.item.source}
-                     </p>
-                  )}
-                   {activityItem.type === 'scholarship' && 'provider' in activityItem.item && (
-                     <p className="text-sm text-muted-foreground">
-                        Provider: {activityItem.item.provider}
-                     </p>
-                  )}
-                </div>
-                <div className="flex flex-col items-end gap-2">
-                    <Badge variant={activityItem.type === 'news' ? 'secondary' : 'default'}>
-                        {activityItem.type === 'news' ? 'News' : 'Scholarship'}
-                    </Badge>
-                     <Button variant="ghost" size="sm" asChild>
-                        <a href={activityItem.item.url} target="_blank" rel="noopener noreferrer">
-                            Visit Link <ExternalLink className="ml-2 h-3 w-3" />
-                        </a>
-                     </Button>
-                </div>
-              </Card>
-            ))}
+            {history.map(renderActivityItem)}
           </div>
         )}
       </div>

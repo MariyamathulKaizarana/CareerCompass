@@ -11,7 +11,7 @@ import { placeholderImages } from '@/lib/placeholder-images';
 import { latestNews, scholarships } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { useUser } from '@/firebase';
-import type { NewsItem, Scholarship } from '@/lib/types';
+import type { NewsItem, Scholarship, ActivityItem } from '@/lib/types';
 
 const quizImage = placeholderImages.find((p) => p.id === 'quiz');
 
@@ -21,11 +21,6 @@ const shuffleAndSlice = <T,>(array: T[], size: number): T[] => {
   return shuffled.slice(0, size);
 };
 
-export interface HistoryItem {
-  type: 'news' | 'scholarship';
-  item: NewsItem | Scholarship;
-  viewedAt: string;
-}
 
 export default function DashboardPage() {
     const { user } = useUser();
@@ -50,19 +45,21 @@ export default function DashboardPage() {
     const handleLinkClick = (item: NewsItem | Scholarship, type: 'news' | 'scholarship') => {
         try {
             const history = localStorage.getItem('activityHistory');
-            const historyItems: HistoryItem[] = history ? JSON.parse(history) : [];
+            const historyItems: ActivityItem[] = history ? JSON.parse(history) : [];
             
+            const id = 'id' in item ? item.id : 'title' in item ? item.title : '';
+
             // Avoid adding duplicates, or update timestamp if already exists
-            const existingIndex = historyItems.findIndex(h => h.item.id === item.id && h.type === type);
+            const existingIndex = historyItems.findIndex(h => 'item' in h && 'id' in h.item && h.item.id === id);
             if (existingIndex > -1) {
                 historyItems.splice(existingIndex, 1);
             }
-
-            const newHistoryItem: HistoryItem = {
+            
+            const newHistoryItem: ActivityItem = {
                 type,
                 item,
                 viewedAt: new Date().toISOString(),
-            };
+            } as ActivityItem;
 
             // Add new item to the beginning
             const updatedHistory = [newHistoryItem, ...historyItems];

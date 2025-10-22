@@ -58,3 +58,20 @@ export interface Scholarship {
     deadline: string;
     url: string;
 }
+
+
+export type ActivityItem = {
+  viewedAt: string;
+} & (
+  | { type: 'news'; item: NewsItem }
+  | { type: 'scholarship'; item: Scholarship }
+  | { type: 'career'; item: { id: string; title: string; slug: string } }
+  | { type: 'quiz'; item: { suggestions: CareerSuggestion[] } }
+);
+
+// This is the old type, we are replacing it with ActivityItem
+export interface HistoryItem {
+  type: 'news' | 'scholarship';
+  item: NewsItem | Scholarship;
+  viewedAt: string;
+}

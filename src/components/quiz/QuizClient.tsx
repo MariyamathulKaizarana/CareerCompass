@@ -4,7 +4,7 @@ import { useState, useEffect, useReducer } from 'react';
 import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 
-import type { Question, QuizResponse, CareerSuggestion } from '@/lib/types';
+import type { Question, QuizResponse, CareerSuggestion, ActivityItem } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -124,6 +124,28 @@ function analyzeAnswers(answers: QuizResponse[], questions: Question[]) {
     return { studentInterests, studentStrengths };
 }
 
+const addQuizToHistory = (suggestions: CareerSuggestion[]) => {
+    try {
+        const history = localStorage.getItem('activityHistory');
+        const historyItems: ActivityItem[] = history ? JSON.parse(history) : [];
+
+        // Unlike other items, we don't deduplicate quiz results. We always add the new one.
+        const newHistoryItem: ActivityItem = {
+            type: 'quiz',
+            item: { suggestions },
+            viewedAt: new Date().toISOString(),
+        };
+
+        const updatedHistory = [newHistoryItem, ...historyItems];
+        if (updatedHistory.length > 50) {
+            updatedHistory.pop();
+        }
+        localStorage.setItem('activityHistory', JSON.stringify(updatedHistory));
+    } catch (error) {
+        console.error('Could not update history in localStorage', error);
+    }
+};
+
 
 export function QuizClient({ questions }: QuizClientProps) {
   const [state, dispatch] = useReducer(quizReducer, initialState);
@@ -148,6 +170,7 @@ export function QuizClient({ questions }: QuizClientProps) {
           });
           
           localStorage.setItem('careerSuggestions', JSON.stringify(suggestions));
+          addQuizToHistory(suggestions);
           dispatch({ type: 'COMPLETE' });
           router.push('/results');
 
