@@ -1,5 +1,5 @@
 
-import type { Career, Question } from './types';
+import type { Career, Question, NewsItem, Scholarship } from './types';
 
 export const careers: Career[] = [
   {
@@ -585,7 +585,7 @@ export const careers: Career[] = [
     longDescription: 'Full Stack Developers have a broad skillset that allows them to build a complete web application from start to finish. They are proficient in front-end technologies like HTML, CSS, and JavaScript frameworks (React, Angular), as well as back-end technologies like Node.js, Python, or Java and databases (SQL, NoSQL).',
     skills: ['HTML/CSS/JS', 'React/Angular/Vue', 'Node.js/Python/Java', 'Databases (SQL, MongoDB)', 'Git'],
     courses: ['B.Tech in CS', 'Coding Bootcamps'],
-    topColleges: ['IITs, NITs, IIITs, and top private universities for a strong CS foundation.'],
+    topColleges: ["IITs, NITs, IIITs, and top private universities for a strong CS foundation."],
     admissionProcess: 'A computer science degree from a top engineering college (via JEE) is a strong foundation. Many also enter the field through intensive coding bootcamps and self-study.',
     roadmap: 'Learn front-end -> Learn back-end -> Build full-stack projects -> Junior Full Stack Dev -> Senior Developer',
     avgSalary: '₹7 - 22 LPA',
@@ -1451,4 +1451,19 @@ export const quizQuestions: Question[] = [
           { text: 'A cultural museum that explores different societies.', value: 'social_culturalmuseum' },
       ],
   },
+];
+
+export const latestNews: NewsItem[] = [
+    { id: '1', title: 'JEE Main 2024 Session 2 results declared. Check scores now.', source: 'Times of India', date: '2024-04-24', url: '#', category: 'Exams' },
+    { id: '2', title: 'CUET-UG 2024 admit cards to be released soon. Exam dates announced.', source: 'Hindustan Times', date: '2024-04-23', url: '#', category: 'Admissions' },
+    { id: '3', title: 'UGC introduces new guidelines for internships in undergraduate programs.', source: 'Ministry of Education', date: '2024-04-22', url: '#', category: 'Policy' },
+    { id: '4', title: 'Top 5 emerging careers in Artificial Intelligence for 2025.', source: 'India Today', date: '2024-04-21', url: '#', category: 'Careers' },
+    { id: '5', title: 'Delhi University admissions to start from May. Know the process.', source: 'NDTV Education', date: '2024-04-20', url: '#', category: 'Admissions' },
+];
+
+export const scholarships: Scholarship[] = [
+    { id: '1', title: 'Reliance Foundation Undergraduate Scholarships', provider: 'Reliance Foundation', eligibility: 'Class 12th students, first-year degree students', deadline: '2024-10-15', url: '#' },
+    { id: '2', title: 'HDFC Bank Parivartan\'s ECSS Programme', provider: 'HDFC Bank', eligibility: 'School, UG, and PG students facing financial crisis', deadline: '2024-09-30', url: '#' },
+    { id: '3', title: 'Tata Capital Pankh Scholarship Programme', provider: 'Tata Capital', eligibility: 'Students from Class 6 to professional degree courses', deadline: '2024-11-30', url: '#' },
+    { id: '4', title: 'Keep India Smiling Foundational Scholarship & Mentorship Programme', provider: 'Colgate-Palmolive (India) Ltd.', eligibility: 'Students in Class 11, Diploma, UG, or sportspersons', deadline: '2024-07-31', url: '#' },
 ];

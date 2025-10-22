@@ -40,3 +40,21 @@ export interface CareerSuggestion {
   averageSalary: string;
   futureScope: string;
 }
+
+export interface NewsItem {
+  id: string;
+  title: string;
+  source: string;
+  date: string;
+  url: string;
+  category: 'Admissions' | 'Exams' | 'Policy' | 'Careers';
+}
+
+export interface Scholarship {
+    id: string;
+    title: string;
+    provider: string;
+    eligibility: string;
+    deadline: string;
+    url: string;
+}
