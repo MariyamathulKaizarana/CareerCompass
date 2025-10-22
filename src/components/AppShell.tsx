@@ -46,6 +46,7 @@ const navItems = [
   { href: '/courses', icon: GraduationCap, label: 'Explore Courses' },
   { href: '/favorites', icon: Heart, label: 'My Favorites' },
   { href: '/history', icon: History, label: 'History' },
+  { href: '/profile', icon: UserIcon, label: 'My Profile' },
 ];
 
 function FullScreenLoader() {
@@ -135,9 +136,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <DropdownMenuContent side="right" align="start">
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                  <UserIcon className="mr-2 h-4 w-4" />
-                  <span>Profile</span>
+                <DropdownMenuItem asChild>
+                  <Link href="/profile">
+                    <UserIcon className="mr-2 h-4 w-4" />
+                    <span>Profile</span>
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={handleLogout}>
                   <LogOut className="mr-2 h-4 w-4" />
