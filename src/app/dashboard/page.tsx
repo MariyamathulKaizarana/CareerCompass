@@ -17,8 +17,15 @@ import type { NewsItem, Scholarship, ActivityItem } from '@/lib/types';
 const quizImage = placeholderImages.find((p) => p.id === 'quiz');
 
 // Function to shuffle an array and return a slice
-const shuffleAndSlice = <T,>(array: T[], size: number): T[] => {
-  const shuffled = [...array].sort(() => 0.5 - Math.random());
+// Using a deterministic seed to avoid SSR hydration mismatch
+const shuffleAndSlice = <T,>(array: T[], size: number, seed: number = 0): T[] => {
+  // Simple seeded shuffle for consistent results
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    seed = (seed * 9301 + 49297) % 233280;
+    const j = Math.floor((seed / 233280) * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
   return shuffled.slice(0, size);
 };
 
@@ -29,14 +36,16 @@ export default function DashboardPage() {
     const [displayedScholarships, setDisplayedScholarships] = useState<Scholarship[]>([]);
 
     useEffect(() => {
-        // Initial load
-        setDisplayedNews(shuffleAndSlice(latestNews, 7));
-        setDisplayedScholarships(shuffleAndSlice(scholarships, 7));
+        // Use current time as seed to vary initial load but keep consistent
+        const initialSeed = Math.floor(Date.now() / 1000 / 60); // Change every minute
+        setDisplayedNews(shuffleAndSlice(latestNews, 7, initialSeed));
+        setDisplayedScholarships(shuffleAndSlice(scholarships, 7, initialSeed));
 
         // Set up interval to refresh data every 4 minutes
         const intervalId = setInterval(() => {
-            setDisplayedNews(shuffleAndSlice(latestNews, 7));
-            setDisplayedScholarships(shuffleAndSlice(scholarships, 7));
+            const newSeed = Math.floor(Date.now() / 1000 / 60);
+            setDisplayedNews(shuffleAndSlice(latestNews, 7, newSeed));
+            setDisplayedScholarships(shuffleAndSlice(scholarships, 7, newSeed));
         }, 4 * 60 * 1000); // 4 minutes
 
         // Clean up interval on component unmount
