@@ -1,20 +1,19 @@
+"use client";
 
-'use client';
+import { AppShell } from "@/components/AppShell";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useUser } from "@/firebase";
+import { latestNews, scholarships } from "@/lib/dashboard-data";
+import { placeholderImages } from "@/lib/placeholder-images";
+import type { ActivityItem, NewsItem, Scholarship } from "@/lib/types";
+import { ArrowRight, Award, Newspaper } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { AppShell } from '@/components/AppShell';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Newspaper, Award } from 'lucide-react';
-import Image from 'next/image';
-import { placeholderImages } from '@/lib/placeholder-images';
-import { latestNews, scholarships } from '@/lib/dashboard-data';
-import { Badge } from '@/components/ui/badge';
-import { useUser } from '@/firebase';
-import type { NewsItem, Scholarship, ActivityItem } from '@/lib/types';
-
-const quizImage = placeholderImages.find((p) => p.id === 'quiz');
+const quizImage = placeholderImages.find((p) => p.id === "quiz");
 
 // Function to shuffle an array and return a slice
 // Using a deterministic seed to avoid SSR hydration mismatch
@@ -29,110 +28,91 @@ const shuffleAndSlice = <T,>(array: T[], size: number, seed: number = 0): T[] =>
   return shuffled.slice(0, size);
 };
 
-
 export default function DashboardPage() {
-    const { user } = useUser();
-    const [displayedNews, setDisplayedNews] = useState<NewsItem[]>([]);
-    const [displayedScholarships, setDisplayedScholarships] = useState<Scholarship[]>([]);
+  const { user } = useUser();
+  const [displayedNews, setDisplayedNews] = useState<NewsItem[]>([]);
+  const [displayedScholarships, setDisplayedScholarships] = useState<Scholarship[]>([]);
 
-    useEffect(() => {
-        // Use current time as seed to vary initial load but keep consistent
-        const initialSeed = Math.floor(Date.now() / 1000 / 60); // Change every minute
-        setDisplayedNews(shuffleAndSlice(latestNews, 7, initialSeed));
-        setDisplayedScholarships(shuffleAndSlice(scholarships, 7, initialSeed));
+  useEffect(() => {
+    // Use current time as seed to vary initial load but keep consistent
+    const initialSeed = Math.floor(Date.now() / 1000 / 60); // Change every minute
+    setDisplayedNews(shuffleAndSlice(latestNews, 7, initialSeed));
+    setDisplayedScholarships(shuffleAndSlice(scholarships, 7, initialSeed));
 
-        // Set up interval to refresh data every 4 minutes
-        const intervalId = setInterval(() => {
-            const newSeed = Math.floor(Date.now() / 1000 / 60);
-            setDisplayedNews(shuffleAndSlice(latestNews, 7, newSeed));
-            setDisplayedScholarships(shuffleAndSlice(scholarships, 7, newSeed));
-        }, 4 * 60 * 1000); // 4 minutes
+    // Set up interval to refresh data every 4 minutes
+    const intervalId = setInterval(() => {
+      const newSeed = Math.floor(Date.now() / 1000 / 60);
+      setDisplayedNews(shuffleAndSlice(latestNews, 7, newSeed));
+      setDisplayedScholarships(shuffleAndSlice(scholarships, 7, newSeed));
+    }, 4 * 60 * 1000); // 4 minutes
 
-        // Clean up interval on component unmount
-        return () => clearInterval(intervalId);
-    }, []);
-    
-    const handleLinkClick = (item: NewsItem | Scholarship, type: 'news' | 'scholarship') => {
-        try {
-            const history = localStorage.getItem('activityHistory');
-            const historyItems: ActivityItem[] = history ? JSON.parse(history) : [];
-            
-            const id = 'id' in item ? item.id : 'title' in item ? item.title : '';
+    // Clean up interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
 
-            // Avoid adding duplicates, or update timestamp if already exists
-            const existingIndex = historyItems.findIndex(h => h.type === type && 'item' in h && 'id' in h.item && h.item.id === id);
-            if (existingIndex > -1) {
-                historyItems.splice(existingIndex, 1);
-            }
-            
-            const newHistoryItem: ActivityItem = {
-                type,
-                item,
-                viewedAt: new Date().toISOString(),
-            } as ActivityItem;
+  const handleLinkClick = (item: NewsItem | Scholarship, type: "news" | "scholarship") => {
+    try {
+      const history = localStorage.getItem("activityHistory");
+      const historyItems: ActivityItem[] = history ? JSON.parse(history) : [];
 
-            // Add new item to the beginning
-            const updatedHistory = [newHistoryItem, ...historyItems];
-            
-            // Limit history to 50 items
-            if (updatedHistory.length > 50) {
-                updatedHistory.pop();
-            }
+      const id = "id" in item ? item.id : "title" in item ? item.title : "";
 
-            localStorage.setItem('activityHistory', JSON.stringify(updatedHistory));
-        } catch (error) {
-            console.error('Could not update history in localStorage', error);
-        }
-    };
+      // Avoid adding duplicates, or update timestamp if already exists
+      const existingIndex = historyItems.findIndex((h) => h.type === type && "item" in h && "id" in h.item && h.item.id === id);
+      if (existingIndex > -1) {
+        historyItems.splice(existingIndex, 1);
+      }
 
+      const newHistoryItem: ActivityItem = {
+        type,
+        item,
+        viewedAt: new Date().toISOString(),
+      } as ActivityItem;
 
-    const getFirstName = (displayName: string | null | undefined) => {
-        if (!displayName) return 'Welcome';
-        return `Welcome, ${displayName.split(' ')[0]}`;
+      // Add new item to the beginning
+      const updatedHistory = [newHistoryItem, ...historyItems];
+
+      // Limit history to 50 items
+      if (updatedHistory.length > 50) {
+        updatedHistory.pop();
+      }
+
+      localStorage.setItem("activityHistory", JSON.stringify(updatedHistory));
+    } catch (error) {
+      console.error("Could not update history in localStorage", error);
     }
+  };
+
+  const getFirstName = (displayName: string | null | undefined) => {
+    if (!displayName) return "Welcome";
+    return `Welcome, ${displayName.split(" ")[0]}`;
+  };
 
   return (
     <AppShell>
       <div className="w-full space-y-8">
         <div>
-            <h1 className="font-headline text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            {getFirstName(user?.displayName)}
-            </h1>
-            <p className="mt-2 text-lg text-muted-foreground">
-            Ready to find the perfect career? Let's get started.
-            </p>
+          <h1 className="font-headline text-3xl font-bold tracking-tight text-foreground md:text-4xl">{getFirstName(user?.displayName)}</h1>
+          <p className="mt-2 text-lg text-muted-foreground">Ready to find the perfect career? Let's get started.</p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-5">
-            <Card className="lg:col-span-3">
-                <CardHeader>
-                    <CardTitle className="font-headline text-2xl">Your Journey Starts Here</CardTitle>
-                    <CardDescription>
-                    Our short, interactive quiz is the first step towards discovering a career you'll love. We'll analyze your answers to suggest paths that match your personality and interests.
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <p className='mb-6 text-muted-foreground'>The quiz is designed to be quick and intuitive. There are no wrong answers, so just go with what feels right. Your personalized report awaits!</p>
-                    <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                        <Link href="/quiz">
-                        Take the Quiz Now <ArrowRight className="ml-2 h-5 w-5" />
-                        </Link>
-                    </Button>
-                </CardContent>
-            </Card>
+          <Card className="lg:col-span-3">
+            <CardHeader>
+              <CardTitle className="font-headline text-2xl">Your Journey Starts Here</CardTitle>
+              <CardDescription>Our short, interactive quiz is the first step towards discovering a career you'll love. We'll analyze your answers to suggest paths that match your personality and interests.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="mb-6 text-muted-foreground">The quiz is designed to be quick and intuitive. There are no wrong answers, so just go with what feels right. Your personalized report awaits!</p>
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                <Link href="/quiz">
+                  Take the Quiz Now <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
 
-            <div className="lg:col-span-2 overflow-hidden rounded-xl">
-                 {quizImage && (
-                    <Image
-                    src={quizImage.imageUrl}
-                    alt={quizImage.description}
-                    data-ai-hint={quizImage.imageHint}
-                    width={600}
-                    height={400}
-                    className="h-full w-full object-cover"
-                    />
-                )}
-            </div>
+          <div className="lg:col-span-2 overflow-hidden rounded-xl">{quizImage && <Image src={quizImage.imageUrl} alt={quizImage.description} data-ai-hint={quizImage.imageHint} width={600} height={400} className="h-full w-full object-cover" />}</div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -142,24 +122,19 @@ export default function DashboardPage() {
                 <Newspaper className="h-6 w-6 text-primary" />
                 Latest News & Updates
               </CardTitle>
-              <CardDescription>
-                Stay informed about the latest in education and career development.
-              </CardDescription>
+              <CardDescription>Stay informed about the latest in education and career development.</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                {displayedNews.map(item => (
+                {displayedNews.map((item) => (
                   <div key={item.id} className="flex items-start gap-4">
                     <div className="flex-1">
-                      <a 
-                        href={item.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="font-semibold text-foreground hover:underline"
-                        onClick={() => handleLinkClick(item, 'news')}>
+                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:underline" onClick={() => handleLinkClick(item, "news")}>
                         {item.title}
                       </a>
-                      <p className="text-sm text-muted-foreground">{item.source} - {item.date}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {item.source} - {item.date}
+                      </p>
                     </div>
                     <Badge variant="outline">{item.category}</Badge>
                   </div>
@@ -173,43 +148,34 @@ export default function DashboardPage() {
                 <Award className="h-6 w-6 text-primary" />
                 Featured Scholarships
               </CardTitle>
-              <CardDescription>
-                Find funding opportunities for your education journey.
-              </CardDescription>
+              <CardDescription>Find funding opportunities for your education journey.</CardDescription>
             </CardHeader>
             <CardContent>
-               <div className="space-y-4">
-                {displayedScholarships.map(scholarship => (
+              <div className="space-y-4">
+                {displayedScholarships.map((scholarship) => (
                   <div key={scholarship.id}>
                     <h3 className="font-semibold">{scholarship.title}</h3>
                     <p className="text-sm text-muted-foreground">
-                      <span className='font-medium text-foreground'>Provider:</span> {scholarship.provider}
+                      <span className="font-medium text-foreground">Provider:</span> {scholarship.provider}
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      <span className='font-medium text-foreground'>Eligibility:</span> {scholarship.eligibility}
+                      <span className="font-medium text-foreground">Eligibility:</span> {scholarship.eligibility}
                     </p>
-                     <p className="text-sm text-muted-foreground">
-                      <span className='font-medium text-foreground'>Deadline:</span> {scholarship.deadline}
+                    <p className="text-sm text-muted-foreground">
+                      <span className="font-medium text-foreground">Deadline:</span> {scholarship.deadline}
                     </p>
                     <Button variant="link" size="sm" asChild className="p-0 h-auto">
-                        <a 
-                            href={scholarship.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            onClick={() => handleLinkClick(scholarship, 'scholarship')}>
-                            Apply Now <ArrowRight className="ml-1 h-3 w-3" />
-                        </a>
+                      <a href={scholarship.url} target="_blank" rel="noopener noreferrer" onClick={() => handleLinkClick(scholarship, "scholarship")}>
+                        Apply Now <ArrowRight className="ml-1 h-3 w-3" />
+                      </a>
                     </Button>
                   </div>
                 ))}
-               </div>
+              </div>
             </CardContent>
           </Card>
         </div>
-
       </div>
     </AppShell>
   );
 }
-
-    
