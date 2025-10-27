@@ -394,7 +394,7 @@
       "id": "audiologist-speech-pathologist",
       "description": "A speech pathologist working with a child in a therapy session.",
       "imageUrl": "https://images.unsplash.com/photo-1758691463331-2ac00e6f676f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGlsZCUyMHNwZWVjaCUyMHBhdGhvbG9naXN0fGVufDB8fHx8MTc2MTU4NTIyNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "children speech"
+      "imageHint": "child speech"
     },
     {
       "id": "radiotherapy",
@@ -405,8 +405,8 @@
     {
       "id": "optometrist",
       "description": "An optometrist's phoropter machine used for eye examinations.",
-      "imageUrl": "https://images.unsplash.com/photo-1541882332675-43a84615264b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxleWUlMjBleGFtfGVufDB8fHx8MTc2MTc3MzQyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "eye exam"
+      "imageUrl": "https://images.unsplash.com/photo-1758206524001-56b1b1ec72cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxleWUlMjBleGFtaW5hdGlvbnxlbnwwfHx8fDE3NjE1ODU0NzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye examination"
     }
   ]
 }
