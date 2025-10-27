@@ -963,6 +963,54 @@ export const careers: Career[] = [
         roadmap: 'Junior Technical Writer -> Technical Writer -> Senior Technical Writer -> Documentation Manager',
         avgSalary: '₹5-10 LPA',
         futureScope: 'High demand in the software and IT industry. Every product needs documentation, making this a stable and growing career.'
+    },
+    {
+        id: 'car_62',
+        slug: 'audiologist-speech-pathologist',
+        title: 'Audiologist & Speech Pathologist',
+        stream: 'Science',
+        description: 'Diagnoses and treats hearing, balance, and communication disorders.',
+        longDescription: 'Audiologists and Speech-Language Pathologists (ASLPs) are professionals who deal with disorders related to speech, language, communication, and hearing. They assess, diagnose, treat, and help to prevent these disorders in people of all ages.',
+        skills: ['Audiometry', 'Speech Therapy', 'Patient Counseling', 'Empathy', 'Communication'],
+        courses: ['Bachelor of Audiology and Speech-Language Pathology (BASLP)'],
+        exams: ['NEET (for top institutes like AIISH)', 'University-specific entrance exams'],
+        topColleges: ['All India Institute of Speech and Hearing (AIISH), Mysore', 'Manipal College of Health Professions', 'PGIMER, Chandigarh'],
+        admissionProcess: 'Admission is based on entrance exams. A RCI registration is required to practice.',
+        roadmap: 'BASLP -> Internship -> Clinical Practice or MASLP (Masters) -> Senior Pathologist/Researcher',
+        avgSalary: '₹4-7 LPA',
+        futureScope: 'Growing awareness and an aging population are increasing demand in hospitals, special schools, and private clinics.'
+    },
+    {
+        id: 'car_63',
+        slug: 'radiotherapy-technologist',
+        title: 'Radiotherapy Technologist',
+        stream: 'Science',
+        description: 'Administers radiation therapy to treat patients with cancer.',
+        longDescription: 'Radiotherapy Technologists are healthcare professionals who work with radiation oncologists to treat cancer. They operate advanced machines like Linear Accelerators to deliver radiation treatment, position patients accurately, and ensure the safety of both patient and staff.',
+        skills: ['Radiation Physics', 'Anatomy', 'Machine Operation', 'Patient Care', 'Safety Protocols'],
+        courses: ['B.Sc. in Radiotherapy Technology'],
+        exams: ['University/State-level CETs for paramedical courses'],
+        topColleges: ['Tata Memorial Hospital, Mumbai', 'CMC Vellore', 'Regional Cancer Centres (RCCs)'],
+        admissionProcess: 'Admission is typically through entrance exams for paramedical courses at various universities and medical colleges.',
+        roadmap: 'B.Sc in Radiotherapy -> Junior Technologist -> Senior Technologist -> Chief Technologist/Application Specialist',
+        avgSalary: '₹4-8 LPA',
+        futureScope: 'Crucial and high-demand role in cancer care. Opportunities in hospitals, cancer centers, and with equipment manufacturers.'
+    },
+    {
+        id: 'car_64',
+        slug: 'optometrist',
+        title: 'Optometrist',
+        stream: 'Science',
+        description: 'Provides primary vision care, from sight testing to diagnosing eye diseases.',
+        longDescription: 'Optometrists are primary healthcare professionals for the eye. They examine eyes to detect defects in vision, signs of injury, ocular diseases, and problems with general health. They prescribe eyeglasses, contact lenses, and may provide low vision aids and vision therapy.',
+        skills: ['Refraction', 'Ocular Examination', 'Dispensing Optics', 'Patient Communication', 'Attention to Detail'],
+        courses: ['Bachelor of Optometry (B.Optom)'],
+        exams: ['University/State-level CETs', 'Some institutes use NEET scores'],
+        topColleges: ['AIIMS, Delhi', 'Sankara Nethralaya, Chennai', 'LV Prasad Eye Institute, Hyderabad'],
+        admissionProcess: 'Admission is through entrance exams. The course is a 4-year degree program including a one-year internship.',
+        roadmap: 'B.Optom -> Internship -> Clinical Optometrist in hospital/retail -> Specialization/Private Practice',
+        avgSalary: '₹4-7 LPA',
+        futureScope: 'High demand due to increased screen time and lifestyle issues. Scope for private practice, working with ophthalmologists, or in optical retail chains.'
     }
 ];
 

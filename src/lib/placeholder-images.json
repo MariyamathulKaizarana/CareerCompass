@@ -389,6 +389,24 @@
       "description": "A page from a clear, well-structured user manual with diagrams.",
       "imageUrl": "https://images.unsplash.com/photo-1616861771635-49063a4636ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx1c2VyJTIwbWFudWFsfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "user manual"
+    },
+    {
+      "id": "audiologist-speech-pathologist",
+      "description": "An audiologist conducting a hearing test for a patient.",
+      "imageUrl": "https://images.unsplash.com/photo-1628328994463-7d72856a9357?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoZWFyaW5nJTIwdGVzdHxlbnwwfHx8fDE3NjE3NzM0MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hearing test"
+    },
+    {
+      "id": "radiotherapy",
+      "description": "A modern radiotherapy machine in a hospital room.",
+      "imageUrl": "https://images.unsplash.com/photo-1581092576024-9a7fb6635c60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyYWRpYXRpb24lMjB0aGVyYXB5fGVufDB8fHx8MTc2MTc3MzQyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "radiation therapy"
+    },
+    {
+      "id": "optometrist",
+      "description": "An optometrist's phoropter machine used for eye examinations.",
+      "imageUrl": "https://images.unsplash.com/photo-1541882332675-43a84615264b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxleWUlMjBleGFtfGVufDB8fHx8MTc2MTc3MzQyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eye exam"
     }
   ]
 }
