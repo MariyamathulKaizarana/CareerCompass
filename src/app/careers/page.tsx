@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight } from 'lucide-react';
+import FavoriteButton from '@/components/FavoriteButton';
 
 export default function CareersPage() {
   const findImage = (careerTitle: string) => {
@@ -49,12 +50,13 @@ export default function CareersPage() {
                   <CardDescription>{career.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-grow"></CardContent>
-                <CardFooter>
+                <CardFooter className='flex items-center gap-2'>
                   <Button asChild className="w-full">
                     <Link href={`/careers/${career.slug}`}>
                         Learn More <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
+                  <FavoriteButton career={career} />
                 </CardFooter>
               </Card>
             );
@@ -64,5 +66,3 @@ export default function CareersPage() {
     </AppShell>
   );
 }
-
-    

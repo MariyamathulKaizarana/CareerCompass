@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BookOpen, CheckCircle, DollarSign, GraduationCap, Map, TrendingUp, Trophy, University } from 'lucide-react';
 import CareerDetailClient from './CareerDetailClient';
+import FavoriteButton from '@/components/FavoriteButton';
 
 
 interface CareerDetailPageProps {
@@ -68,7 +69,10 @@ export default function CareerDetailPage({ params }: CareerDetailPageProps) {
              <Card>
                 <CardHeader>
                     <div className='flex justify-between items-start'>
-                        <CardTitle className="font-headline text-3xl md:text-4xl">{career.title}</CardTitle>
+                        <div className="flex items-center gap-4">
+                            <CardTitle className="font-headline text-3xl md:text-4xl">{career.title}</CardTitle>
+                             <FavoriteButton career={career} size="lg" />
+                        </div>
                         <Badge variant="default" className="text-lg">{career.stream}</Badge>
                     </div>
                 </CardHeader>
@@ -109,12 +113,9 @@ export default function CareerDetailPage({ params }: CareerDetailPageProps) {
                     <p className="mt-2 text-muted-foreground">If you enjoy problem-solving, continuous learning, and creating impactful solutions, {career.title} could be your ideal path.</p>
                 </CardContent>
             </Card>
-            {/* Favorite button can be added here */}
           </div>
         </div>
       </div>
     </AppShell>
   );
 }
-
-    

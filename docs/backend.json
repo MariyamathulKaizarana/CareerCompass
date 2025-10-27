@@ -166,29 +166,39 @@
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "UserCareerPreference",
       "type": "object",
-      "description": "Represents a user's saved career path preference.",
+      "description": "Represents a user's saved career path preference. Denormalizes some career data for efficient reads on the 'Favorites' page.",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Unique identifier for the UserCareerPreference entity."
+          "description": "The ID of the career, copied from the CareerPath entity. Used as the document ID."
         },
-        "userProfileId": {
+        "slug": {
           "type": "string",
-          "description": "Reference to UserProfile. (Relationship: UserProfile 1:N UserCareerPreference)"
+          "description": "Denormalized slug of the career for URL generation."
         },
-        "careerPathId": {
+        "title": {
           "type": "string",
-          "description": "Reference to CareerPath. (Relationship: CareerPath 1:N UserCareerPreference)"
+          "description": "Denormalized title of the career."
+        },
+        "stream": {
+            "type": "string",
+            "description": "Denormalized stream of the career (e.g., Science, Commerce)."
+        },
+        "description": {
+            "type": "string",
+            "description": "Denormalized short description of the career."
         },
         "isFavorite": {
           "type": "boolean",
-          "description": "Indicates if the user marked this career path as a favorite."
+          "description": "Indicates if the user marked this career path as a favorite. Always true for documents in this collection."
         }
       },
       "required": [
         "id",
-        "userProfileId",
-        "careerPathId",
+        "slug",
+        "title",
+        "stream",
+        "description",
         "isFavorite"
       ]
     }
@@ -254,21 +264,21 @@
         }
       },
       {
-        "path": "/users/{userId}/career_preferences/{careerPreferenceId}",
+        "path": "/users/{userId}/career_preferences/{careerId}",
         "definition": {
           "entityName": "UserCareerPreference",
           "schema": {
             "$ref": "#/backend/entities/UserCareerPreference"
           },
-          "description": "Stores user's career path preferences (e.g., saved/favorite career paths).The path `/users/{userId}/career_preferences/{careerPreferenceId}` enforces ownership; only the authenticated user can read/write their own preferences.",
+          "description": "Stores user's career path preferences. The path enforces ownership; only the authenticated user can read/write their own preferences. The document ID is the same as the career ID for easy lookups.",
           "params": [
             {
               "name": "userId",
               "description": "The unique identifier for the user, corresponding to their Firebase Authentication UID."
             },
             {
-              "name": "careerPreferenceId",
-              "description": "The unique identifier for the user's career preference."
+              "name": "careerId",
+              "description": "The unique identifier for the career path, copied from the CareerPath entity."
             }
           ]
         }
@@ -290,6 +300,6 @@
         }
       }
     ],
-    "reasoning": "The Firestore structure is designed to ensure security, scalability, and ease of debugging, following the principles of Authorization Independence, Clarity of Intent, and DBAC. It leverages denormalization and structural segregation to simplify security rules and enable secure list operations. The primary strategy is to create hierarchical paths for user-owned data and to use membership maps for collaborative data when needed (although the current application doesn't present a clear collaborative model).  Since there is no collaborative content the membership map strategy is not used. The design assumes that Firebase Authentication provides the user's identity (`request.auth.uid`).\n\n**Authorization Independence (CRITICAL):** All subcollections requiring access control based on parent data include denormalized fields. For example, `QuizResponse` documents under `/users/{userId}/quiz_responses/{quizResponseId}` inherently inherit authorization context through the path structure, eliminating the need for `get()` calls in security rules. This is achieved through path-based ownership which implicitly ties the data to the authenticated user.\n\n**Clarity of Intent (Debuggability):** The structure clearly reflects the relationships between entities. User profiles are stored in a dedicated collection (`/users/{userId}`), and user-specific data like quiz responses are nested under the user's document (`/users/{userId}/quiz_responses/{quizResponseId}`). The naming conventions are explicit (e.g., `userProfileId` in `QuizResponse` documents).\n\n**DBAC (No Custom Claims):** Roles are not explicitly modeled in the database according to the instructions. Authorization is based on `request.auth.uid` and the path structure.\n\n**QAPs (Rules are not Filters):** The structure supports secure `list` operations. For instance, listing quiz responses for a specific user is done via `/users/{userId}/quiz_responses`, which allows filtering based on the authenticated user's ID in security rules, preventing unauthorized access to other users' data.\n\n**Invariants:** The structure supports the integrity of ownership, timestamps, and denormalized data. Ownership is enforced through path-based access control. Timestamps (e.g., `responseTimestamp` in `QuizResponse`) are stored directly within the documents.  No denormalized data outside of the path is needed given the data model."
+    "reasoning": "The Firestore structure is designed to ensure security, scalability, and ease of debugging, following the principles of Authorization Independence, Clarity of Intent, and DBAC. It leverages denormalization and structural segregation to simplify security rules and enable secure list operations. The primary strategy is to create hierarchical paths for user-owned data and to use membership maps for collaborative data when needed (although the current application doesn't present a clear collaborative model).  Since there is no collaborative content the membership map strategy is not used. The design assumes that Firebase Authentication provides the user's identity (`request.auth.uid`).\n\n**Authorization Independence (CRITICAL):** All subcollections requiring access control based on parent data include denormalized fields. For example, `QuizResponse` documents under `/users/{userId}/quiz_responses/{quizResponseId}` inherently inherit authorization context through the path structure, eliminating the need for `get()` calls in security rules. This is achieved through path-based ownership which implicitly ties the data to the authenticated user.\n\n**Clarity of Intent (Debuggability):** The structure clearly reflects the relationships between entities. User profiles are stored in a dedicated collection (`/users/{userId}`), and user-specific data like quiz responses and career preferences are nested under the user's document. The naming conventions are explicit.\n\n**DBAC (No Custom Claims):** Roles are not explicitly modeled in the database according to the instructions. Authorization is based on `request.auth.uid` and the path structure.\n\n**QAPs (Rules are not Filters):** The structure supports secure `list` operations. For instance, listing favorites for a user is done via `/users/{userId}/career_preferences`, which allows filtering based on the authenticated user's ID in security rules, preventing unauthorized access to other users' data.\n\n**Invariants:** The structure supports the integrity of ownership. The `/users/{userId}/career_preferences/{careerId}` collection uses the ID of the career as the document ID for quick 'is-favorite' checks. It also stores denormalized career data (title, slug, etc.) to avoid expensive joins when listing favorites, making the 'My Favorites' page faster and more efficient."
   }
 }
