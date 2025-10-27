@@ -1,3 +1,4 @@
+
 import type { Question } from './types';
 
 export const quizQuestions: Question[] = [
@@ -563,7 +564,7 @@ export const quizQuestions: Question[] = [
         category: 'arts',
         options: [
             { text: "The creative director, shaping the vision and aesthetics.", value: "creative_concept" },
-            { text: "The researcher, digging deep to find all the necessary information.", value:_researcher" },
+            { text: "The researcher, digging deep to find all the necessary information.", value: "analytical_researcher" },
             { text: "The writer/presenter, communicating our ideas clearly and effectively.", value: "humanities_communication" },
             { text: "The mediator, making sure everyone is heard and working together harmoniously.", value: "social_organizing" },
         ],
@@ -690,3 +691,5 @@ export const quizQuestions: Question[] = [
         ],
     }
 ];
+
+    
