@@ -37,8 +37,11 @@ const navItems = [
 
 function FullScreenLoader() {
   return (
-    <div className="flex h-screen w-screen items-center justify-center bg-background">
-      <Compass className="h-12 w-12 animate-spin text-primary" />
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm">
+      <div className="flex flex-col items-center gap-4">
+        <Compass className="h-12 w-12 animate-pulse-spin text-primary" />
+        <p className="text-muted-foreground">Loading Admin Panel...</p>
+      </div>
     </div>
   );
 }

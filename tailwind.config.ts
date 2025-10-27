@@ -95,10 +95,25 @@ export default {
             height: '0',
           },
         },
+        'pulse-spin': {
+          '0%': {
+            transform: 'scale(0.95) rotate(0deg)',
+            opacity: '0.7',
+          },
+          '50%': {
+            transform: 'scale(1.1) rotate(180deg)',
+            opacity: '1',
+          },
+          '100%': {
+            transform: 'scale(0.95) rotate(360deg)',
+            opacity: '0.7',
+          },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-spin': 'pulse-spin 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
     },
   },

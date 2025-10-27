@@ -43,9 +43,9 @@ const navItems = [
 
 function FullScreenLoader() {
   return (
-    <div className="flex h-screen w-screen items-center justify-center bg-background">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm">
       <div className="flex flex-col items-center gap-4">
-        <Compass className="h-12 w-12 animate-spin text-primary" />
+        <Compass className="h-12 w-12 animate-pulse-spin text-primary" />
         <p className="text-muted-foreground">Loading your experience...</p>
       </div>
     </div>
@@ -103,15 +103,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               CareerCompass
             </span>
           </Link>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="ml-auto lg:hidden"
-            onClick={() => setIsSidebarOpen(false)}
-          >
-            <X className="h-6 w-6" />
-            <span className="sr-only">Close sidebar</span>
-          </Button>
         </div>
         <nav className="flex-1 overflow-y-auto px-4 py-4">
           <ul className="space-y-1">
@@ -156,10 +147,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             variant="ghost"
             size="icon"
             className="lg:hidden"
-            onClick={() => setIsSidebarOpen(true)}
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           >
-            <Menu className="h-6 w-6" />
-            <span className="sr-only">Open sidebar</span>
+             {isSidebarOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <span className="sr-only">{isSidebarOpen ? 'Close sidebar' : 'Open sidebar'}</span>
           </Button>
           <div className="flex w-full items-center gap-4">
             <Search />
