@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Heart } from 'lucide-react';
-import { useUser, useFirestore, useDoc, useMemoFirebase } from '@/firebase';
+import { useUser, useFirestore, useDoc, useMemoFirebase, errorEmitter, FirestorePermissionError } from '@/firebase';
 import { doc, setDoc, deleteDoc } from 'firebase/firestore';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
@@ -58,8 +58,15 @@ export default function FavoriteButton({ career, size, className }: FavoriteButt
     if (!favoriteRef) return;
 
     if (isFavorite) {
-      // Non-blocking delete
-      deleteDoc(favoriteRef).catch(e => console.error("Failed to unfavorite", e));
+      // Non-blocking delete with contextual error handling
+      deleteDoc(favoriteRef).catch(serverError => {
+        const permissionError = new FirestorePermissionError({
+          path: favoriteRef.path,
+          operation: 'delete',
+        });
+        errorEmitter.emit('permission-error', permissionError);
+      });
+
       toast({
         title: 'Unfavorited!',
         description: `${career.title} removed from your favorites.`,
@@ -73,8 +80,15 @@ export default function FavoriteButton({ career, size, className }: FavoriteButt
         description: career.description,
         isFavorite: true,
       };
-      // Non-blocking set
-      setDoc(favoriteRef, careerDataToSave).catch(e => console.error("Failed to favorite", e));
+      // Non-blocking set with contextual error handling
+      setDoc(favoriteRef, careerDataToSave).catch(serverError => {
+        const permissionError = new FirestorePermissionError({
+          path: favoriteRef.path,
+          operation: 'create',
+          requestResourceData: careerDataToSave,
+        });
+        errorEmitter.emit('permission-error', permissionError);
+      });
       toast({
         title: 'Favorited!',
         description: `${career.title} added to your favorites.`,
