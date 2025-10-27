@@ -98,7 +98,7 @@ const analyzeQuizResponsesAndSuggestCareersFlow = ai.defineFlow(
         return output!;
       } catch (e: any) {
         attempt++;
-        if (attempt >= maxRetries || !e.message?.includes('503')) {
+        if (attempt >= maxRetries || !e.message?.includes('Service Unavailable')) {
           // If it's the last attempt or not a 503 error, re-throw.
           throw e;
         }
