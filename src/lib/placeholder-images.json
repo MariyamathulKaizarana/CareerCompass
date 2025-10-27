@@ -8,9 +8,9 @@
     },
     {
       "id": "quiz",
-      "description": "A winding path leading through a vibrant, sunlit forest, symbolizing a journey of discovery.",
-      "imageUrl": "https://images.unsplash.com/photo-1505244783389-c92333d45464?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwYXRoJTIwam91cm5leXxlbnwwfHx8fDE3NjE3NDI5NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "path journey"
+      "description": "A person silhouetted against a sunrise, looking towards a mountain peak, symbolizing aspiration and goals.",
+      "imageUrl": "https://images.unsplash.com/photo-1594493594742-b569b92d9b65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOXx8QXNwaXJhdGlvbnxlbnwwfHx8fDE3NjE1ODMwMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "aspiration goals"
     },
     {
       "id": "report",
