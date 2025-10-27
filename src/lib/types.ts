@@ -23,7 +23,7 @@ export interface Question {
   id: string;
   text: string;
   options: { text: string; value: string }[];
-  category: 'initial' | 'science' | 'commerce' | 'arts';
+  category: 'initial' | 'stream_select_science' | 'science_pcm' | 'science_pcb' | 'commerce' | 'arts';
 }
 
 export interface QuizResponse {
@@ -59,6 +59,15 @@ export interface Scholarship {
     url: string;
 }
 
+export interface FavoriteCareer {
+    id: string;
+    slug: string;
+    title: string;
+    stream: string;
+    description: string;
+    imageUrl?: string;
+    imageHint?: string;
+}
 
 export type ActivityItem = {
   viewedAt: string;

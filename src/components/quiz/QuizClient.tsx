@@ -17,11 +17,11 @@ interface QuizClientProps {
   questions: Question[];
 }
 
-type QuizStatus = 'loading' | 'selecting_stream' | 'in_progress' | 'submitting' | 'completed';
+type QuizStatus = 'loading' | 'selecting_stream' | 'selecting_science_stream' | 'in_progress' | 'submitting' | 'completed';
 
 type State = {
   status: QuizStatus;
-  stream: 'science' | 'commerce' | 'arts' | null;
+  stream: 'science' | 'commerce' | 'arts' | 'science_pcm' | 'science_pcb' | null;
   currentQuestionIndex: number;
   answers: QuizResponse[];
   filteredQuestions: Question[];
@@ -30,6 +30,7 @@ type State = {
 type Action =
   | { type: 'START_QUIZ'; payload: { questions: Question[] } }
   | { type: 'SELECT_STREAM'; payload: { stream: 'science' | 'commerce' | 'arts'; questions: Question[] } }
+  | { type: 'SELECT_SCIENCE_STREAM', payload: { stream: 'science_pcm' | 'science_pcb', questions: Question[] } }
   | { type: 'ANSWER_QUESTION'; payload: QuizResponse }
   | { type: 'SUBMIT' }
   | { type: 'COMPLETE' };
@@ -45,25 +46,43 @@ const initialState: State = {
 function quizReducer(state: State, action: Action): State {
   switch (action.type) {
     case 'START_QUIZ':
-        const streamQuestion = action.payload.questions.find(q => q.category === 'initial');
+        const initialQuestion = action.payload.questions.find(q => q.category === 'initial');
         return { 
             ...initialState,
             status: 'selecting_stream',
-            filteredQuestions: streamQuestion ? [streamQuestion] : []
+            filteredQuestions: initialQuestion ? [initialQuestion] : []
         };
     case 'SELECT_STREAM':
-      const streamQuestions = action.payload.questions.filter(q => q.category === action.payload.stream).slice(0, 15);
+      const { stream, questions } = action.payload;
+      if (stream === 'science') {
+          const scienceStreamQuestion = questions.find(q => q.category === 'stream_select_science');
+          return {
+              ...state,
+              status: 'selecting_science_stream',
+              answers: [...state.answers, { questionId: 'q_stream', selectedOption: stream }],
+              currentQuestionIndex: 0,
+              filteredQuestions: scienceStreamQuestion ? [scienceStreamQuestion] : []
+          }
+      }
+      const streamQuestions = questions.filter(q => q.category === stream).slice(0, 15);
       return {
         ...state,
         status: 'in_progress',
-        stream: action.payload.stream,
-        answers: [
-          ...state.answers,
-          { questionId: 'q_stream', selectedOption: action.payload.stream }
-        ],
+        stream: stream,
+        answers: [...state.answers, { questionId: 'q_stream', selectedOption: stream }],
         currentQuestionIndex: 0,
         filteredQuestions: streamQuestions,
       };
+    case 'SELECT_SCIENCE_STREAM':
+        const scienceStreamQuestions = action.payload.questions.filter(q => q.category === action.payload.stream).slice(0, 15);
+        return {
+            ...state,
+            status: 'in_progress',
+            stream: action.payload.stream,
+            answers: [...state.answers, { questionId: 'q_science_subject', selectedOption: action.payload.stream }],
+            currentQuestionIndex: 0,
+            filteredQuestions: scienceStreamQuestions
+        }
     case 'ANSWER_QUESTION':
       const isLastQuestion = state.currentQuestionIndex === state.filteredQuestions.length - 1;
       return {
@@ -193,6 +212,10 @@ export function QuizClient({ questions }: QuizClientProps) {
     dispatch({ type: 'SELECT_STREAM', payload: { stream, questions } });
   };
   
+  const handleScienceStreamSelect = (stream: 'science_pcm' | 'science_pcb') => {
+    dispatch({ type: 'SELECT_SCIENCE_STREAM', payload: { stream, questions } });
+  };
+
   const handleAnswerSelect = (response: QuizResponse) => {
     dispatch({ type: 'ANSWER_QUESTION', payload: response });
   };
@@ -224,19 +247,43 @@ export function QuizClient({ questions }: QuizClientProps) {
   const questionNumber = state.status === 'in_progress' ? state.currentQuestionIndex + 1 : 1;
   const totalQuestions = state.status === 'in_progress' ? state.filteredQuestions.length : 1;
 
+  const getTitle = () => {
+    switch (state.status) {
+        case 'selecting_stream':
+            return "Let's Get Started";
+        case 'selecting_science_stream':
+            return "Science Stream";
+        case 'in_progress':
+            return `Question ${questionNumber} of ${totalQuestions}`;
+        default:
+            return "Quiz";
+    }
+  }
+
+  const getDescription = () => {
+    switch (state.status) {
+        case 'selecting_stream':
+            return 'First, help us understand your background.';
+        case 'selecting_science_stream':
+            return 'Which subjects did you focus on?';
+        case 'in_progress':
+            return 'Choose the option that best describes you.';
+        default:
+            return '';
+    }
+  }
+
   return (
     <Card className="w-full overflow-hidden">
       <CardHeader>
         {state.status === 'in_progress' && <Progress value={progress} className="mb-4 h-2" />}
-        <CardTitle className="font-headline text-2xl">
-          {state.status === 'selecting_stream' ? "Let's Get Started" : `Question ${questionNumber} of ${totalQuestions}`}
-        </CardTitle>
-        <CardDescription>{state.status === 'selecting_stream' ? 'First, help us understand your background.' : 'Choose the option that best describes you.'}</CardDescription>
+        <CardTitle className="font-headline text-2xl">{getTitle()}</CardTitle>
+        <CardDescription>{getDescription()}</CardDescription>
       </CardHeader>
       <CardContent>
         <AnimatePresence mode="wait">
           <motion.div
-            key={state.currentQuestionIndex + (state.stream || '')}
+            key={state.currentQuestionIndex + state.stream}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -252,6 +299,8 @@ export function QuizClient({ questions }: QuizClientProps) {
                   onClick={() => {
                     if (state.status === 'selecting_stream') {
                       handleStreamSelect(option.value as 'science' | 'commerce' | 'arts');
+                    } else if (state.status === 'selecting_science_stream') {
+                      handleScienceStreamSelect(option.value as 'science_pcm' | 'science_pcb');
                     } else {
                       handleAnswerSelect({ questionId: currentQuestion.id, selectedOption: option.value });
                     }

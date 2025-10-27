@@ -1,4 +1,3 @@
-
 import type { Career } from './types';
 
 export const careers: Career[] = [
@@ -737,7 +736,7 @@ export const careers: Career[] = [
         courses: ['Chartered Accountancy (CA)'],
         exams: ['CA Foundation, Intermediate, Final'],
         topColleges: ['ICAI is the professional body.'],
-        admissionProcess: 'Becoming a Chartered Accountant is the primary route to a career in auditing.',
+        admissionProcess: 'Becoming a Chartered Accountant is the most direct path to a career in auditing.',
         roadmap: 'Qualify as CA -> Audit Associate -> Senior Auditor -> Audit Manager -> Partner',
         avgSalary: '₹8-15 LPA',
         futureScope: 'Constant demand as it is a legally required function. Specializations in IT audit or forensic audit are growing.'

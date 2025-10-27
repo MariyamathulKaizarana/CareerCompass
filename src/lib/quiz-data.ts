@@ -1,4 +1,3 @@
-
 import type { Question } from './types';
 
 export const quizQuestions: Question[] = [
@@ -12,115 +11,125 @@ export const quizQuestions: Question[] = [
             { text: "Arts / Humanities", value: "arts" },
         ],
     },
-    // Science Questions
     {
-        id: "q_sci_1",
+        id: "q_science_subject",
+        text: "Which subject combination did you have in Science?",
+        category: 'stream_select_science',
+        options: [
+            { text: "PCM (Physics, Chemistry, Maths)", value: "science_pcm" },
+            { text: "PCB (Physics, Chemistry, Biology)", value: "science_pcb" },
+        ],
+    },
+    // Science PCM Questions
+    {
+        id: "q_sci_pcm_1",
         text: "When faced with a complex problem, I prefer to:",
-        category: 'science',
+        category: 'science_pcm',
         options: [
-            { text: "Break it down into smaller, logical steps.", value: "analytical_problemsolving" },
-            { text: "Experiment with different components to see what works.", value: "technical_hands-on" },
-            { text: "Research existing theories and principles.", value: "analytical_research" },
-            { text: "Collaborate with others to brainstorm solutions.", value: "social_collaboration" },
+            { text: "Break it down into smaller, logical steps to create an algorithm.", value: "analytical_problemsolving" },
+            { text: "Experiment with different physical or digital components to see what works.", value: "technical_hands-on" },
+            { text: "Use mathematical models to predict the outcome.", value: "analytical_modeling" },
+            { text: "Design a visual representation or blueprint of the solution.", value: "creative_design" },
         ],
     },
     {
-        id: "q_sci_2",
+        id: "q_sci_pcm_2",
         text: "I am most fascinated by:",
-        category: 'science',
+        category: 'science_pcm',
         options: [
-            { text: "How machines and computers work.", value: "technical_systems" },
-            { text: "The fundamental laws of the universe (Physics, Chemistry).", value: "analytical_fundamental" },
-            { text: "The intricacies of living organisms.", value: "caring_biology" },
-            { text: "Using mathematical models to predict outcomes.", value: "analytical_modeling" },
+            { text: "How computers and software are built.", value: "technical_systems" },
+            { text: "The fundamental laws of the universe, like gravity and electromagnetism.", value: "analytical_fundamental" },
+            { text: "The design and construction of large structures like bridges and buildings.", value: "technical_structures" },
+            { text: "Using data to build intelligent systems (AI).", value: "analytical_ai" },
         ],
     },
     {
-        id: "q_sci_3",
-        text: "In a group project, I am the one who:",
-        category: 'science',
+        id: "q_sci_pcm_3",
+        text: "Which of these projects sounds most exciting?",
+        category: 'science_pcm',
         options: [
-            { text: "Writes the code or builds the prototype.", value: "technical_building" },
-            { text: "Analyzes the data and draws conclusions.", value: "analytical_analysis" },
-            { text: "Ensures the project meets the required specifications and is well-documented.", value: "technical_process" },
-            { text: "Explains our findings to a non-technical audience.", value: "social_communication" },
+            { text: "Building a mobile app from scratch.", value: "technical_building" },
+            { text: "Designing an efficient engine for a car.", value: "technical_engineering" },
+            { text: "Analyzing stock market data to predict trends.", value: "analytical_data" },
+            { text: "Developing a new algorithm for data compression.", value: "analytical_algorithm" },
         ],
     },
     {
-        id: "q_sci_4",
+        id: "q_sci_pcm_4",
         text: "I enjoy learning about:",
-        category: 'science',
+        category: 'science_pcm',
         options: [
             { text: "New programming languages and software tools.", value: "technical_tools" },
-            { text: "Abstract mathematical concepts.", value: "analytical_abstract" },
-            { text: "Human anatomy and how the body fights disease.", value: "caring_medicine" },
-            { text: "Environmental issues and sustainable solutions.", value: "caring_environment" },
+            { text: "Advanced mathematical concepts and theories.", value: "analytical_abstract" },
+            { text: "How electronic circuits work.", value: "technical_electronics" },
+            { text: "The principles of aerodynamics and space travel.", value: "analytical_aerospace" },
         ],
     },
     {
-        id: "q_sci_5",
+        id: "q_sci_pcm_5",
+        text: "My ideal work involves:",
+        category: 'science_pcm',
+        options: [
+            { text: "Logical thinking and problem-solving.", value: "analytical_logical" },
+            { text: "Creativity and design.", value: "creative_design" },
+            { text: "Building and creating tangible things.", value: "technical_creation" },
+            { text: "Analyzing and interpreting data.", value: "analytical_analysis" },
+        ],
+    },
+    // Science PCB Questions
+    {
+        id: "q_sci_pcb_1",
+        text: "I am most curious about:",
+        category: 'science_pcb',
+        options: [
+            { text: "How the human body works and fights diseases.", value: "caring_humanbody" },
+            { text: "The diversity of life on Earth, from microbes to mammals.", value: "analytical_biology" },
+            { text: "How medicines are created and how they affect the body.", value: "analytical_pharma" },
+            { text: "Helping animals and ensuring their well-being.", value: "caring_animals" },
+        ],
+    },
+    {
+        id: "q_sci_pcb_2",
         text: "Which activity sounds most appealing?",
-        category: 'science',
+        category: 'science_pcb',
         options: [
-            { text: "Designing and building a robot.", value: "technical_robotics" },
-            { text: "Solving a complex set of differential equations.", value: "analytical_math" },
-            { text: "Conducting a lab experiment to test a hypothesis.", value: "analytical_experiment" },
-            { text: "Diagnosing a patient's illness based on symptoms.", value: "caring_diagnosis" },
+            { text: "Diagnosing a patient's illness based on symptoms and tests.", value: "caring_diagnosis" },
+            { text: "Conducting a lab experiment to develop a new drug.", value: "analytical_experiment" },
+            { text: "Helping a patient recover from an injury through exercise.", value: "caring_rehabilitation" },
+            { text: "Studying the genetic makeup of an organism.", value: "analytical_genetics" },
         ],
     },
     {
-        id: "q_sci_6",
-        text: "I prefer a career that involves:",
-        category: 'science',
+        id: "q_sci_pcb_3",
+        text: "I have a natural talent for:",
+        category: 'science_pcb',
         options: [
-            { text: "Creating tangible products or systems.", value: "technical_creation" },
-            { text: "Deep thinking and theoretical exploration.", value: "analytical_theory" },
-            { text: "Directly helping people with their health and well-being.", value: "caring_helping" },
-            { text: "Working with large datasets to find patterns.", value: "analytical_data" },
+            { text: "Being precise and careful with my hands.", value: "technical_dexterity" },
+            { text: "Empathizing with others and understanding their pain.", value: "caring_empathy" },
+            { text: "Memorizing complex biological terms and processes.", value: "analytical_memory" },
+            { text: "Observing details and noticing small changes.", value: "analytical_observation" },
         ],
     },
-     {
-        id: "q_sci_7",
+    {
+        id: "q_sci_pcb_4",
+        text: "I would prefer a career where I can:",
+        category: 'science_pcb',
+        options: [
+            { text: "Directly help and care for people or animals.", value: "caring_helping" },
+            { text: "Conduct research and contribute to scientific knowledge.", value: "analytical_research" },
+            { text: "Work in a healthcare setting like a hospital or clinic.", value: "caring_hospital" },
+            { text: "Use technology to solve biological problems.", value: "technical_biotech" },
+        ],
+    },
+    {
+        id: "q_sci_pcb_5",
         text: "What kind of documentary would you watch?",
-        category: 'science',
+        category: 'science_pcb',
         options: [
-            { text: "One about the rise of Artificial Intelligence.", value: "technical_ai" },
-            { text: "A biography of a famous scientist like Einstein or Marie Curie.", value: "analytical_biography" },
             { text: "A series on modern medical breakthroughs.", value: "caring_medicaldoc" },
-            { text: "A film about space exploration and cosmology.", value: "analytical_space" },
-        ],
-    },
-    {
-        id: "q_sci_8",
-        text: "I'm good at:",
-        category: 'science',
-        options: [
-            { text: "Fixing things and understanding how they are put together.", value: "technical_fixing" },
-            { text: "Spotting patterns and inconsistencies in data.", value: "analytical_patterns" },
-            { text: "Remembering and recalling detailed information.", value: "caring_memory" },
-            { text: "Thinking step-by-step and logically.", value: "analytical_logical" },
-        ],
-    },
-     {
-        id: "q_sci_9",
-        text: "I would rather spend an afternoon:",
-        category: 'science',
-        options: [
-            { text: "Learning a new software or coding skill online.", value: "technical_learning" },
-            { text: "Reading a book on a complex scientific topic.", value: "analytical_reading" },
-            { text: "Volunteering at a health clinic or hospital.", value: "caring_volunteering" },
-            { text: "Solving puzzles like Sudoku or chess.", value: "analytical_puzzles" },
-        ],
-    },
-    {
-        id: "q_sci_10",
-        text: "My ideal work environment is:",
-        category: 'science',
-        options: [
-            { text: "A collaborative lab or tech office.", value: "technical_collaborative" },
-            { text: "A quiet library or research institution.", value: "analytical_quiet" },
-            { text: "A busy hospital or clinic.", value: "caring_hospital" },
-            { text: "A mix of independent work and team meetings.", value: "analytical_mix" },
+            { text: "A film about wildlife conservation.", value: "caring_wildlife" },
+            { text: "A documentary on the development of vaccines.", value: "analytical_vaccines" },
+            { text: "An exposé on the food production industry.", value: "analytical_food" },
         ],
     },
 
@@ -180,62 +189,6 @@ export const quizQuestions: Question[] = [
             { text: "Develop long-term strategies for an organization.", value: "business_strategy" },
         ],
     },
-     {
-        id: "q_com_6",
-        text: "I'm naturally good at:",
-        category: 'commerce',
-        options: [
-            { text: "Being organized and paying attention to detail.", value: "analytical_detail" },
-            { text: "Coming up with catchy slogans or ideas.", value: "creative_ideas" },
-            { text: "Understanding what motivates people.", value: "social_motivation" },
-            { text: "Seeing the big picture and planning ahead.", value: "business_planning" },
-        ],
-    },
-    {
-        id: "q_com_7",
-        text: "Which TV show would you prefer to watch?",
-        category: 'commerce',
-        options: [
-            { text: "Shark Tank (business pitches and investment).", value: "business_investment" },
-            { text: "A documentary about a famous advertising agency.", value: "creative_advertising" },
-            { text: "A series about stock market analysis.", value: "analytical_stocks" },
-            { text: "A show about managing a large team or company.", value: "social_management" },
-        ],
-    },
-    {
-        id: "q_com_8",
-        text: "I like to stay updated on:",
-        category: 'commerce',
-        options: [
-            { text: "The latest business and stock market news.", value: "business_news" },
-            { text: "The newest social media trends and ad campaigns.", value: "creative_trends" },
-            { text: "Changes in tax laws and financial regulations.", value: "analytical_laws" },
-            { text: "Global economic policies and their impact.", value: "analytical_economics" },
-        ],
-    },
-    {
-        id: "q_com_9",
-        text: "My communication style is more:",
-        category: 'commerce',
-        options: [
-            { text: "Data-driven and precise.", value: "analytical_communication" },
-            { text: "Persuasive and engaging.", value: "creative_communication" },
-            { text: "Empathetic and understanding.", value: "social_communication" },
-            { text: "Direct and strategic.", value: "business_communication" },
-        ],
-    },
-    {
-        id: "q_com_10",
-        text: "The most important factor in a business's success is:",
-        category: 'commerce',
-        options: [
-            { text: "Solid financial management.", value: "business_finance" },
-            { text: "A strong brand and marketing strategy.", value: "creative_branding" },
-            { text: "Efficient operations and supply chain.", value: "analytical_operations" },
-            { text: "A positive work culture and motivated employees.", value: "social_culture" },
-        ],
-    },
-
 
     // Arts/Humanities Questions
     {
@@ -292,62 +245,5 @@ export const quizQuestions: Question[] = [
             { text: "How past events shape the present.", value: "humanities_past" },
             { text: "The complexities of human psychology and behavior.", value: "social_psychology" },
         ],
-    },
-    {
-        id: "q_art_6",
-        text: "A fulfilling career for me would involve:",
-        category: 'arts',
-        options: [
-            { text: "A lot of creative freedom and self-expression.", value: "creative_freedom" },
-            { text: "Helping to solve social problems.", value: "social_helping" },
-            { text: "Deep investigation and discovery of facts.", value: "analytical_investigation" },
-            { text: "Educating or informing the public.", value: "humanities_educating" },
-        ],
-    },
-    {
-        id: "q_art_7",
-        text: "I prefer tasks that are:",
-        category: 'arts',
-        options: [
-            { text: "Open-ended and allow for interpretation.", value: "creative_openended" },
-            { text: "Structured and require methodical work.", value: "analytical_structured" },
-            { text: "Collaborative and involve teamwork.", value: "social_teamwork" },
-            { text: "Focused on advocacy and making a case.", value: "humanities_advocacy" },
-        ],
-    },
-    {
-        id: "q_art_8",
-        text: "Which profession sounds most appealing?",
-        category: 'arts',
-        options: [
-            { text: "Graphic Designer or Animator.", value: "creative_designer" },
-            { text: "Journalist or Content Writer.", value: "humanities_journalist" },
-            { text: "Lawyer or Policy Advisor.", value: "humanities_lawyer" },
-            { text: "Social Worker or Psychologist.", value: "social_worker" },
-        ],
-    },
-    {
-        id: "q_art_9",
-        text: "I am good at:",
-        category: 'arts',
-        options: [
-            { text: "Empathizing with others' situations.", value: "social_empathy" },
-            { text: "Thinking outside the box.", value: "creative_thinking" },
-            { text: "Constructing logical arguments.", value: "analytical_arguments" },
-            { text: "Telling a compelling story.", value: "humanities_storytelling" },
-        ],
-    },
-    {
-        id: "q_art_10",
-        text: "I feel most energized when I am:",
-        category: 'arts',
-        options: [
-            { text: "Creating something new from scratch.", value: "creative_creating" },
-            { text: "Learning about a different culture or time period.", value: "humanities_learning" },
-            { text: "Helping someone navigate a difficult situation.", value: "social_helping" },
-            { text: "Winning a debate or argument.", value: "analytical_debating" },
-        ],
     }
 ];
-
-    
