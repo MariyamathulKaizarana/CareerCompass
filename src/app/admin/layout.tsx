@@ -90,15 +90,6 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               Admin Panel
             </span>
           </Link>
-           <Button
-            variant="ghost"
-            size="icon"
-            className="ml-auto h-12 w-12 lg:hidden"
-            onClick={() => setIsSidebarOpen(false)}
-          >
-            <X className="h-7 w-7" />
-            <span className="sr-only">Close sidebar</span>
-          </Button>
         </div>
         <nav className="flex-1 overflow-y-auto px-4 py-4">
           <ul className="space-y-1">
@@ -138,10 +129,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             variant="ghost"
             size="icon"
             className="lg:hidden"
-            onClick={() => setIsSidebarOpen(true)}
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           >
-            <Menu className="h-6 w-6" />
-            <span className="sr-only">Open sidebar</span>
+            {isSidebarOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+            <span className="sr-only">{isSidebarOpen ? 'Close sidebar' : 'Open sidebar'}</span>
           </Button>
           <div className="ml-auto">
              <DropdownMenu>
