@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import {
   GoogleAuthProvider,
-  signInWithPopup,
+  getRedirectResult,
+  signInWithRedirect,
   updateProfile,
   createUserWithEmailAndPassword,
 } from 'firebase/auth';
@@ -47,7 +48,34 @@ export default function SignupPage() {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+  const [isCheckingRedirect, setIsCheckingRedirect] = useState(true);
   const auth = useAuth();
+
+  useEffect(() => {
+    const checkRedirectResult = async () => {
+      try {
+        const result = await getRedirectResult(auth);
+        if (result) {
+          toast({
+            title: 'Account Created!',
+            description: "You've been signed up with Google.",
+          });
+          router.push('/dashboard');
+        } else {
+          setIsCheckingRedirect(false);
+        }
+      } catch (error: any) {
+        toast({
+          variant: 'destructive',
+          title: 'Google Sign-Up Failed',
+          description: error.message,
+        });
+        setIsCheckingRedirect(false);
+      }
+    };
+
+    checkRedirectResult();
+  }, [auth, router, toast]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -91,21 +119,26 @@ export default function SignupPage() {
     setIsGoogleLoading(true);
     const provider = new GoogleAuthProvider();
     try {
-      await signInWithPopup(auth, provider);
-      toast({
-        title: 'Success!',
-        description: "You've been signed up with Google.",
-      });
-      router.push('/dashboard');
+      await signInWithRedirect(auth, provider);
     } catch (error: any) {
       toast({
         variant: 'destructive',
         title: 'Google Sign-In Failed',
         description: error.message,
       });
-    } finally {
       setIsGoogleLoading(false);
     }
+  }
+  
+  if (isCheckingRedirect) {
+    return (
+        <div className="flex h-screen w-screen items-center justify-center bg-background">
+            <div className="flex flex-col items-center gap-4">
+                <Compass className="h-12 w-12 animate-pulse-spin text-primary" />
+                <p className="text-muted-foreground">Checking for sign-up information...</p>
+            </div>
+        </div>
+    );
   }
 
   return (
