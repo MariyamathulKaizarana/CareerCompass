@@ -2,104 +2,93 @@
  * @fileoverview Firestore Security Rules for CareerCompass application.
  *
  * Core Philosophy:
- * This ruleset enforces a strict user-ownership model for user profiles, quiz responses, and career preferences,
- * ensuring that only authenticated users can access their own data. Public read access is granted to career paths
- * and quiz questions, assuming these are managed by an admin.
+ * This ruleset enforces a strict user-ownership model for user profiles, quiz responses, and career preferences.
+ * Public read access is granted to career paths and quiz questions.
  *
  * Data Structure:
- * - /users/{userId}: Stores user profile information, accessible only to the authenticated user.
- * - /users/{userId}/quiz_responses/{quizResponseId}: Stores quiz responses, accessible only to the user.
- * - /users/{userId}/career_preferences/{careerId}: Stores career preferences, accessible only to the user.
+ * - /users/{userId}: Stores user profile information, accessible only by the user.
+ * - /users/{userId}/quiz_responses/{quizResponseId}: Stores quiz responses, accessible only by the user.
+ * - /users/{userId}/career_preferences/{careerId}: Stores career preferences, accessible only by the user.
  * - /career_paths/{careerPathId}: Stores career path information, publicly readable.
  * - /quiz_questions/{quizQuestionId}: Stores quiz questions, publicly readable.
  *
  * Key Security Decisions:
- * - User listing is implicitly disallowed.
- * - Career paths and quiz questions are considered public data.
- * - The default security posture for ambiguous relationships is strict owner-only access.
+ * - User data (profiles, responses, preferences) is strictly controlled by user ownership.
+ * - Listing all users is disallowed to prevent information harvesting.
+ * - Career paths and quiz questions are publicly readable, assuming they are managed by an admin interface.
  *
  * Denormalization for Authorization:
- * - The /users/{userId}/career_preferences/{careerId} collection denormalizes career data
- *   (title, slug, etc.) to avoid expensive reads on the CareerPath collection during 'My Favorites' listing.
+ * - The /users/{userId}/career_preferences/{careerId} collection leverages the career ID as the document ID to enable efficient lookups.
  */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
     /**
-     * @description Secure user profiles. Only the authenticated user can read/write their own profile.
+     * @description Enforces that only the authenticated user can access their own profile.
      * @path /users/{userId}
-     * @allow (create) User with ID 'user123' creates their profile.
-     * @deny (create) User with ID 'user123' tries to create profile for 'user456'.
-     * @allow (get) User with ID 'user123' reads their profile.
-     * @deny (get) User with ID 'user123' tries to read profile for 'user456'.
-     * @allow (update) User with ID 'user123' updates their profile.
-     * @deny (update) User with ID 'user123' tries to update profile for 'user456'.
-     * @allow (delete) User with ID 'user123' deletes their profile.
-     * @deny (delete) User with ID 'user123' tries to delete profile for 'user456'.
+     * @allow (create) - User with UID 'user123' can create their profile with id: 'user123'.
+     * @deny (create) - User with UID 'user123' cannot create a profile with id: 'user456'.
+     * @allow (get) - User with UID 'user123' can read their profile.
+     * @deny (get) - User with UID 'user123' cannot read user 'user456' profile.
+     * @allow (update) - User with UID 'user123' can update their profile.
+     * @deny (update) - User with UID 'user123' cannot update user 'user456' profile.
+     * @allow (delete) - User with UID 'user123' can delete their profile.
+     * @deny (delete) - User with UID 'user123' cannot delete user 'user456' profile.
      * @principle Enforces document ownership for all operations.
      */
     match /users/{userId} {
-      function isSignedIn() {
-        return request.auth != null;
-      }
-
       function isOwner(userId) {
-        return isSignedIn() && request.auth.uid == userId;
+        return request.auth != null && request.auth.uid == userId;
       }
-
       function isExistingOwner(userId) {
         return isOwner(userId) && resource != null;
       }
 
       allow get: if isOwner(userId);
-      allow list: if false;
-      allow create: if isOwner(userId);
-      allow update: if isExistingOwner(userId);
+      allow list: if false; // Listing users is not permitted.
+      allow create: if isOwner(userId) && request.resource.data.id == userId;
+      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
       allow delete: if isExistingOwner(userId);
     }
 
     /**
-     * @description Secure quiz responses. Only the authenticated user can read/write their own quiz responses.
+     * @description Enforces that only the authenticated user can access their own quiz responses.
      * @path /users/{userId}/quiz_responses/{quizResponseId}
-     * @allow (create) User with ID 'user123' creates a quiz response.
-     * @deny (create) User with ID 'user123' tries to create a quiz response for 'user456'.
-     * @allow (get) User with ID 'user123' reads their quiz response.
-     * @deny (get) User with ID 'user123' tries to read a quiz response for 'user456'.
-     * @allow (update) User with ID 'user123' updates their quiz response.
-     * @deny (update) User with ID 'user123' tries to update a quiz response for 'user456'.
-     * @allow (delete) User with ID 'user123' deletes their quiz response.
-     * @deny (delete) User with ID 'user123' tries to delete a quiz response for 'user456'.
-     * @principle Enforces document ownership and prevents unauthorized data modification.
+     * @allow (create) - User with UID 'user123' can create a quiz response under their profile.
+     * @deny (create) - User with UID 'user123' cannot create a quiz response under user 'user456' profile.
+     * @allow (get) - User with UID 'user123' can read their quiz responses.
+     * @deny (get) - User with UID 'user123' cannot read quiz responses under user 'user456' profile.
+     * @allow (update) - User with UID 'user123' can update their quiz responses.
+     * @deny (update) - User with UID 'user123' cannot update quiz responses under user 'user456' profile.
+     * @allow (delete) - User with UID 'user123' can delete their quiz responses.
+     * @deny (delete) - User with UID 'user123' cannot delete quiz responses under user 'user456' profile.
+     * @principle Enforces document ownership for all operations.
      */
     match /users/{userId}/quiz_responses/{quizResponseId} {
-        function isSignedIn() {
-            return request.auth != null;
-        }
+      function isOwner(userId) {
+        return request.auth != null && request.auth.uid == userId;
+      }
+      function isExistingOwner(userId) {
+        return isOwner(userId) && resource != null;
+      }
 
-        function isOwner(userId) {
-            return isSignedIn() && request.auth.uid == userId;
-        }
-
-        function isExistingOwner(userId) {
-            return isOwner(userId) && resource != null;
-        }
-
-        allow get: if isOwner(userId);
-        allow list: if isOwner(userId);
-        allow create: if isOwner(userId);
-        allow update: if isExistingOwner(userId);
-        allow delete: if isExistingOwner(userId);
+      allow get: if isOwner(userId);
+      allow list: if isOwner(userId);
+      allow create: if isOwner(userId) && request.resource.data.userProfileId == userId;
+      allow update: if isExistingOwner(userId) && request.resource.data.userProfileId == resource.data.userProfileId;
+      allow delete: if isExistingOwner(userId);
     }
 
     /**
-     * @description Allow public read access to career paths.
+     * @description Allows public read access to career path information.
      * @path /career_paths/{careerPathId}
-     * @allow (get) Any user can read career path data.
-     * @deny (create) No user can create career path data (admin only).
-     * @deny (update) No user can update career path data (admin only).
-     * @deny (delete) No user can delete career path data (admin only).
-     * @principle Allows public read access while restricting write access.
+     * @allow (get) - Any user can read career path information.
+     * @allow (list) - Any user can list career path information.
+     * @deny (create) - No one can create career path documents through the client.
+     * @deny (update) - No one can update career path documents through the client.
+     * @deny (delete) - No one can delete career path documents through the client.
+     * @principle Grants public read access with restricted write access.
      */
     match /career_paths/{careerPathId} {
       allow get, list: if true;
@@ -107,46 +96,42 @@ service cloud.firestore {
     }
 
     /**
-     * @description Secure user career preferences. Only the authenticated user can read/write their own preferences.
+     * @description Enforces that only the authenticated user can access their own career preferences.
      * @path /users/{userId}/career_preferences/{careerId}
-     * @allow (create) User with ID 'user123' creates a career preference.
-     * @deny (create) User with ID 'user123' tries to create a career preference for 'user456'.
-     * @allow (get) User with ID 'user123' reads their career preference.
-     * @deny (get) User with ID 'user123' tries to read a career preference for 'user456'.
-     * @allow (update) User with ID 'user123' updates their career preference.
-     * @deny (update) User with ID 'user123' tries to update a career preference for 'user456'.
-     * @allow (delete) User with ID 'user123' deletes their career preference.
-     * @deny (delete) User with ID 'user123' tries to delete a career preference for 'user456'.
-     * @principle Enforces document ownership and prevents unauthorized data modification.
+     * @allow (create) - User with UID 'user123' can create a career preference under their profile.
+     * @deny (create) - User with UID 'user123' cannot create a career preference under user 'user456' profile.
+     * @allow (get) - User with UID 'user123' can read their career preferences.
+     * @deny (get) - User with UID 'user123' cannot read career preferences under user 'user456' profile.
+     * @allow (update) - User with UID 'user123' can update their career preferences.
+     * @deny (update) - User with UID 'user123' cannot update career preferences under user 'user456' profile.
+     * @allow (delete) - User with UID 'user123' can delete their career preferences.
+     * @deny (delete) - User with UID 'user123' cannot delete career preferences under user 'user456' profile.
+     * @principle Enforces document ownership for all operations.
      */
     match /users/{userId}/career_preferences/{careerId} {
-      function isSignedIn() {
-        return request.auth != null;
-      }
-
       function isOwner(userId) {
-        return isSignedIn() && request.auth.uid == userId;
+        return request.auth != null && request.auth.uid == userId;
       }
-
-       function isExistingOwner(userId) {
-            return isOwner(userId) && resource != null;
-        }
+      function isExistingOwner(userId) {
+        return isOwner(userId) && resource != null;
+      }
 
       allow get: if isOwner(userId);
       allow list: if isOwner(userId);
-      allow create: if isOwner(userId);
-      allow update: if isExistingOwner(userId);
+      allow create: if isOwner(userId) && request.resource.data.id == careerId;
+      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
       allow delete: if isExistingOwner(userId);
     }
 
     /**
-     * @description Allow public read access to quiz questions.
+     * @description Allows public read access to quiz questions.
      * @path /quiz_questions/{quizQuestionId}
-     * @allow (get) Any user can read quiz question data.
-     * @deny (create) No user can create quiz question data (admin only).
-     * @deny (update) No user can update quiz question data (admin only).
-     * @deny (delete) No user can delete quiz question data (admin only).
-     * @principle Allows public read access while restricting write access.
+     * @allow (get) - Any user can read quiz questions.
+     * @allow (list) - Any user can list quiz questions.
+     * @deny (create) - No one can create quiz questions through the client.
+     * @deny (update) - No one can update quiz questions through the client.
+     * @deny (delete) - No one can delete quiz questions through the client.
+     * @principle Grants public read access with restricted write access.
      */
     match /quiz_questions/{quizQuestionId} {
       allow get, list: if true;
