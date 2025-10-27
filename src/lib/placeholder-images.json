@@ -8,9 +8,9 @@
     },
     {
       "id": "quiz",
-      "description": "A student focused on a tablet screen, taking a quiz.",
-      "imageUrl": "https://images.unsplash.com/photo-1758525861586-1c8c8e424dc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdHVkZW50JTIwdGFibGV0fGVufDB8fHx8MTc2MTA5MDM4OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "student tablet"
+      "description": "A winding path leading through a vibrant, sunlit forest, symbolizing a journey of discovery.",
+      "imageUrl": "https://images.unsplash.com/photo-1505244783389-c92333d45464?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwYXRoJTIwam91cm5leXxlbnwwfHx8fDE3NjE3NDI5NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "path journey"
     },
     {
       "id": "report",
@@ -20,9 +20,9 @@
     },
     {
       "id": "auth-background",
-      "description": "A bright and abstract background with geometric shapes.",
-      "imageUrl": "https://images.unsplash.com/photo-1709626011485-6fe000ea2dbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhYnN0cmFjdCUyMGdlb21ldHJpY3xlbnwwfHx8fDE3NjEwNzcwMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract geometric"
+      "description": "A clean, modern abstract background with soft gradients and subtle shapes.",
+      "imageUrl": "https://images.unsplash.com/photo-1698848435133-b0975a8a4198?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMG1vZGVybiUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzYxNzQzMDUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract modern"
     },
     {
       "id": "software",
@@ -75,7 +75,7 @@
     {
       "id": "civil",
       "description": "A large suspension bridge under construction.",
-      "imageUrl": "https://images.unsplash.com/photo-1633363961301-4f100a78e92d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxicmlkZ2UlMjBjb25zdHJ1Y3Rpb258ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1633363961301-4f100a78e92d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHwicmlkZ2UlMjBjb25zdHJ1Y3Rpb258ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bridge construction"
     },
     {
