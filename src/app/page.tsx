@@ -51,7 +51,7 @@ export default function Home() {
           <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="space-y-6">
               <h1 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl">
-                The Clarity You Need for the Future You Deserve.
+                Find Your Deserved Future.
               </h1>
               <p className="max-w-xl text-lg text-muted-foreground">
                 Don't know what to do after school? CareerCompass helps you
