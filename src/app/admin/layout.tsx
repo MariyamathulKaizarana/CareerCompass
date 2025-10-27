@@ -12,7 +12,6 @@ import {
   LayoutDashboard,
   LogOut,
   User as UserIcon,
-  Users,
   FileQuestion,
   Shield,
 } from 'lucide-react';
@@ -38,6 +37,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarInset,
+  SidebarTrigger,
 } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
 
@@ -119,6 +119,42 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           </SidebarFooter>
         </Sidebar>
         <SidebarInset>
+            <header className="sticky top-0 z-10 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+              <SidebarTrigger className="sm:hidden" />
+              <div className="ml-auto">
+                 <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="outline" size="icon" className="overflow-hidden rounded-full">
+                        <Avatar>
+                          {user.photoURL && <AvatarImage src={user.photoURL} alt={user.displayName || 'User'} />}
+                          <AvatarFallback>{getInitials(user.displayName)}</AvatarFallback>
+                        </Avatar>
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem asChild>
+                        <Link href="/profile">
+                          <UserIcon className="mr-2 h-4 w-4" />
+                          <span>Profile</span>
+                        </Link>
+                      </DropdownMenuItem>
+                       <DropdownMenuItem asChild>
+                        <Link href="/dashboard">
+                          <Compass className="mr-2 h-4 w-4" />
+                          <span>Main App</span>
+                        </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem onClick={handleLogout}>
+                        <LogOut className="mr-2 h-4 w-4" />
+                        <span>Log out</span>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+              </div>
+            </header>
             <main className="flex-1 p-4 sm:p-6 md:p-8 bg-muted/40">{children}</main>
         </SidebarInset>
       </div>
