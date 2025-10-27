@@ -93,10 +93,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
            <Button
             variant="ghost"
             size="icon"
-            className="ml-auto lg:hidden"
+            className="ml-auto h-12 w-12 lg:hidden"
             onClick={() => setIsSidebarOpen(false)}
           >
-            <X className="h-6 w-6" />
+            <X className="h-7 w-7" />
             <span className="sr-only">Close sidebar</span>
           </Button>
         </div>
