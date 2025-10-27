@@ -392,14 +392,14 @@
     },
     {
       "id": "audiologist-speech-pathologist",
-      "description": "An audiologist conducting a hearing test for a patient.",
-      "imageUrl": "https://images.unsplash.com/photo-1628328994463-7d72856a9357?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoZWFyaW5nJTIwdGVzdHxlbnwwfHx8fDE3NjE3NzM0MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "hearing test"
+      "description": "A speech pathologist working with a child in a therapy session.",
+      "imageUrl": "https://images.unsplash.com/photo-1758691463331-2ac00e6f676f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHNwZWVjaCUyMHBhdGhvbG9naXN0fGVufDB8fHx8MTc2MTU4NDk4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "children speech"
     },
     {
       "id": "radiotherapy",
       "description": "A modern radiotherapy machine in a hospital room.",
-      "imageUrl": "https://images.unsplash.com/photo-1581092576024-9a7fb6635c60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyYWRpYXRpb24lMjB0aGVyYXB5fGVufDB8fHx8MTc2MTc3MzQyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1587010580103-fd86b8ea14ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjByYWRpb3RoZXJhcHklMjBtYWNoaW5lJTIwaW4lMjBhJTIwaG9zcGl0YWwlMjByb29tfGVufDB8fHx8MTc2MTU4NDkwNnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "radiation therapy"
     },
     {
