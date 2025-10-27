@@ -38,13 +38,13 @@ export const careers: Career[] = [
         title: "Doctor (MBBS)",
         stream: "Science",
         description: "Diagnoses and treats illnesses and injuries, and provides preventive care.",
-        longDescription: "Physicians and surgeons diagnose and treat injuries or illnesses. Physicians examine patients; take medical histories; prescribe medications; and order, perform, and interpret diagnostic tests. Surgeons operate on patients to treat injuries, such as broken bones; diseases, such as cancerous tumors; and deformities, such as cleft palates. Specializations like Ophthalmology (eye specialist) require further study (MD/MS) after MBBS.",
+        longDescription: "Physicians and surgeons diagnose and treat injuries or illnesses. Physicians examine patients; take medical histories; prescribe medications; and order, perform, and interpret diagnostic tests. Surgeons operate on patients to treat injuries, such as broken bones; diseases, such as cancerous tumors; and deformities, such as cleft palates. After MBBS, one can specialize in fields like Gynecology, Pediatrics, Cardiology, or Ophthalmology through MD/MS degrees.",
         skills: ["Medical Knowledge", "Empathy", "Communication", "Attention to Detail", "Problem-Solving"],
         courses: ["MBBS (Bachelor of Medicine, Bachelor of Surgery)"],
         exams: ["NEET (National Eligibility cum Entrance Test)"],
         topColleges: ["AIIMS (Delhi)", "CMC (Vellore)", "JIPMER (Puducherry)"],
         admissionProcess: "Clearing the NEET exam is mandatory for admission to MBBS courses in India, followed by national and state-level counseling.",
-        roadmap: "NEET -> MBBS -> Internship -> MD/MS Specialization -> Practice/Hospital Role",
+        roadmap: "NEET -> MBBS -> Internship -> MD/MS Specialization (e.g., Gynecology) -> Practice/Hospital Role",
         avgSalary: "₹12-25 LPA (after specialization)",
         futureScope: "Consistently high demand. Opportunities in private practice, hospitals, research, and healthcare management."
     },
@@ -965,3 +965,5 @@ export const careers: Career[] = [
         futureScope: 'High demand in the software and IT industry. Every product needs documentation, making this a stable and growing career.'
     }
 ];
+
+    
