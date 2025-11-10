@@ -30,7 +30,7 @@ export const quizQuestions: Question[] = [
             { text: "Break it into small, logical steps.", value: "analytical_problemsolving" },
             { text: "Experiment with different parts to see what works.", value: "technical_hands-on" },
             { text: "Use math to predict what will happen.", value: "analytical_modeling" },
-            { text: "Draw or design a plan for the solution.", value: "creative_design" },
+            { text: "Design a plan or blueprint for the solution.", value: "creative_design" },
         ],
     },
     {
@@ -39,9 +39,9 @@ export const quizQuestions: Question[] = [
         category: 'science_pcm',
         options: [
             { text: "How computers and software work.", value: "technical_systems" },
-            { text: "The basic laws of the universe (like gravity).", value: "analytical_fundamental" },
-            { text: "How large structures like bridges and buildings are built.", value: "technical_structures" },
-            { text: "Using data to build intelligent systems like AI.", value: "analytical_ai" },
+            { text: "The laws of the universe (like gravity and energy).", value: "analytical_physics" },
+            { text: "How large structures like bridges are built.", value: "technical_structures" },
+            { text: "How chemicals react to create new materials.", value: "analytical_chemistry" },
         ],
     },
     {
@@ -50,9 +50,9 @@ export const quizQuestions: Question[] = [
         category: 'science_pcm',
         options: [
             { text: "Building a mobile app or a video game.", value: "technical_building" },
-            { text: "Designing a more efficient engine for a car or rocket.", value: "technical_engineering" },
-            { text: "Using algorithms to predict stock market trends.", value: "analytical_data" },
-            { text: "Launching a satellite to study a distant planet.", value: "analytical_aerospace" },
+            { text: "Designing a more efficient engine for a car.", value: "technical_engineering" },
+            { text: "Analyzing data with algorithms to predict trends.", value: "analytical_data" },
+            { text: "Developing a new, stronger type of plastic.", value: "analytical_materials" },
         ],
     },
     {
@@ -62,8 +62,8 @@ export const quizQuestions: Question[] = [
         options: [
             { text: "New programming languages and software tools.", value: "technical_tools" },
             { text: "Advanced math concepts and theories.", value: "analytical_abstract" },
-            { text: "How electronic circuits and computer chips work.", value: "technical_electronics" },
-            { text: "The chemistry used to create new materials or fuels.", value: "analytical_chemistry" },
+            { text: "How electronic circuits and power grids work.", value: "technical_electronics" },
+            { text: "How to design and run large-scale chemical manufacturing processes.", value: "analytical_process" },
         ],
     },
     {
@@ -74,7 +74,7 @@ export const quizQuestions: Question[] = [
             { text: "Solving abstract problems with pure logic.", value: "analytical_logical" },
             { text: "A mix of creative design and technical work.", value: "creative_technical" },
             { text: "Building real, physical things you can touch.", value: "technical_creation" },
-            { text: "Finding hidden patterns in complex data.", value: "analytical_analysis" },
+            { text: "Working with the fundamental particles and forces of nature.", value: "analytical_fundamental" },
         ],
     },
     {
@@ -83,7 +83,7 @@ export const quizQuestions: Question[] = [
         category: 'science_pcm',
         options: [
             { text: "Writes the code to make the system work.", value: "technical_doer" },
-            { text: "Develops the theory or mathematical proof behind it.", value: "analytical_theorist" },
+            { text: "Checks the math and physics to make sure the plan is sound.", value: "analytical_theorist" },
             { text: "Manages the project, timeline, and people.", value: "business_manager" },
             { text: "Designs how the final product will look and feel.", value: "creative_designer" },
         ],
@@ -116,7 +116,7 @@ export const quizQuestions: Question[] = [
         category: 'science_pcm',
         options: [
             { text: "Mostly at a desk, coding or analyzing data.", value: "technical_desk" },
-            { text: "A mix of desk work and hands-on work in a lab or field.", value: "technical_field" },
+            { text: "A mix of desk work and hands-on work in a lab or factory.", value: "technical_field" },
             { text: "Highly collaborative with lots of team meetings.", value: "social_collaborative" },
             { text: "Independent, letting you focus deeply on your own.", value: "analytical_independent" },
         ],
@@ -127,7 +127,7 @@ export const quizQuestions: Question[] = [
         category: 'science_pcm',
         options: [
             { text: "How fast and efficient it is.", value: "technical_performance" },
-            { text: "How good it looks and how easy it is to use.", value: "creative_ux" },
+            { text: "How easy it is for people to use.", value: "creative_ux" },
             { text: "Its potential to solve a major world problem.", value: "social_impact" },
             { text: "The scientific breakthrough that made it possible.", value: "analytical_theory" },
         ],
@@ -139,8 +139,8 @@ export const quizQuestions: Question[] = [
         options: [
             { text: "Solving a puzzle that no one else could.", value: "analytical_challenge" },
             { text: "Building something that many people will find useful.", value: "technical_utility" },
-            { text: "Creating something beautiful and functional.", value: "creative_aesthetics" },
-            { text: "The excitement of learning something new.", value: "analytical_discovery" },
+            { text: "Discovering something new about the universe.", value: "analytical_discovery" },
+            { text: "Optimizing a process to make it safer and cheaper.", value: "analytical_optimization" },
         ],
     },
     {
@@ -151,7 +151,7 @@ export const quizQuestions: Question[] = [
             { text: "Take it apart to see how it works and try to fix it.", value: "technical_tinker" },
             { text: "Read the manual and follow the instructions carefully.", value: "analytical_methodical" },
             { text: "Search online for different ways to fix it.", value: "analytical_research" },
-            { text: "Imagine a totally new and better thing to replace it.", value: "creative_replacement" },
+            { text: "Analyze why it broke based on its design.", value: "analytical_failure_analysis" },
         ],
     },
     {
@@ -170,9 +170,9 @@ export const quizQuestions: Question[] = [
         text: "Which future technology excites you most?",
         category: 'science_pcm',
         options: [
-            { text: "True Artificial Intelligence (like in movies).", value: "analytical_agi" },
+            { text: "True Artificial Intelligence (like in movies).", value: "analytical_ai" },
             { text: "Space travel and living on other planets.", value: "technical_space" },
-            { text: "Extremely powerful quantum computers.", value: "analytical_quantum" },
+            { text: "Limitless clean energy from nuclear fusion.", value: "analytical_energy" },
             { text: "Connecting brains directly to computers.", value: "technical_bci" },
         ],
     },
@@ -183,7 +183,7 @@ export const quizQuestions: Question[] = [
         options: [
             { text: "Software projects (apps, websites, AI).", value: "technical_software" },
             { text: "Hardware projects (machines, electronics, robots).", value: "technical_hardware" },
-            { text: "Large infrastructure projects (buildings, energy grids).", value: "technical_infrastructure" },
+            { text: "Large industrial processes (refineries, power plants).", value: "technical_infrastructure" },
             { text: "Purely theoretical or research projects.", value: "analytical_research_projects" },
         ],
     },

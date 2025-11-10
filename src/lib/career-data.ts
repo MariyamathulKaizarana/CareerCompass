@@ -1013,5 +1013,3 @@ export const careers: Career[] = [
         futureScope: 'High demand due to increased screen time and lifestyle issues. Scope for private practice, working with ophthalmologists, or in optical retail chains.'
     }
 ];
-
-    
