@@ -41,7 +41,7 @@ export const quizQuestions: Question[] = [
             { text: "How computers and software work.", value: "technical_systems" },
             { text: "The laws of the universe (like gravity and energy).", value: "analytical_physics" },
             { text: "How large structures like bridges are built.", value: "technical_structures" },
-            { text: "How chemicals react to create new materials.", value: "analytical_chemistry" },
+            { text: "How electricity is generated and used.", value: "technical_power" },
         ],
     },
     {
@@ -74,7 +74,7 @@ export const quizQuestions: Question[] = [
             { text: "Solving abstract problems with pure logic.", value: "analytical_logical" },
             { text: "A mix of creative design and technical work.", value: "creative_technical" },
             { text: "Building real, physical things you can touch.", value: "technical_creation" },
-            { text: "Working with the fundamental particles and forces of nature.", value: "analytical_fundamental" },
+            { text: "Understanding the universe through physics and math.", value: "analytical_fundamental" },
         ],
     },
     {
@@ -173,7 +173,7 @@ export const quizQuestions: Question[] = [
             { text: "True Artificial Intelligence (like in movies).", value: "analytical_ai" },
             { text: "Space travel and living on other planets.", value: "technical_space" },
             { text: "Limitless clean energy from nuclear fusion.", value: "analytical_energy" },
-            { text: "Connecting brains directly to computers.", value: "technical_bci" },
+            { text: "Exploring the deepest parts of the universe.", value: "analytical_astrophysics" },
         ],
     },
     {
@@ -195,8 +195,8 @@ export const quizQuestions: Question[] = [
         category: 'science_pcb',
         options: [
             { text: "How the human body works and how to treat diseases.", value: "caring_humanbody" },
-            { text: "How all living things in an ecosystem are connected.", value: "analytical_biology" },
             { text: "How medicines are made and how they affect our cells.", value: "analytical_pharma" },
+            { text: "How to use science to improve food production.", value: "technical_food" },
             { text: "The health of animals and how to care for them.", value: "caring_animals" },
         ],
     },
@@ -208,7 +208,7 @@ export const quizQuestions: Question[] = [
             { text: "Diagnosing a patient's complex illness.", value: "caring_diagnosis" },
             { text: "Doing a delicate lab experiment to change a gene.", value: "analytical_experiment" },
             { text: "Helping a patient walk again after a serious injury.", value: "caring_rehabilitation" },
-            { text: "Working with plants to grow better crops.", value: "technical_agriculture" },
+            { text: "Developing a new food product in a laboratory.", value: "analytical_food_dev" },
         ],
     },
     {
@@ -219,7 +219,7 @@ export const quizQuestions: Question[] = [
             { text: "Tasks that require steady hands and precision.", value: "technical_dexterity" },
             { text: "Listening patiently and understanding others' problems.", value: "caring_empathy" },
             { text: "Memorizing complex biological terms and processes.", value: "analytical_memory" },
-            { text: "Noticing small details that others often miss.", value: "analytical_observation" },
+            { text: "Following a recipe or chemical formula exactly.", value: "technical_formula" },
         ],
     },
     {
@@ -229,7 +229,7 @@ export const quizQuestions: Question[] = [
         options: [
             { text: "Directly care for sick people or animals.", value: "caring_helping" },
             { text: "Work in a research lab on new scientific discoveries.", value: "analytical_research" },
-            { text: "Advise people on health, diet, and lifestyle.", value: "caring_advisory" },
+            { text: "Ensure food products are safe and high-quality.", value: "analytical_quality" },
             { text: "Use technology with living things to create new products.", value: "technical_biotech" },
         ],
     },
@@ -239,7 +239,7 @@ export const quizQuestions: Question[] = [
         category: 'science_pcb',
         options: [
             { text: "A show about surgeons in a busy operating room.", value: "caring_medicaldoc" },
-            { text: "A film about protecting endangered wildlife.", value: "caring_wildlife" },
+            { text: "An investigation into how modern medicines are developed.", value: "analytical_pharma_doc" },
             { text: "A story about the race to cure a genetic disease.", value: "analytical_geneticsdoc" },
             { text: "An investigation into food science and the future of food.", value: "analytical_food" },
         ],
@@ -252,7 +252,7 @@ export const quizQuestions: Question[] = [
             { text: "Calm and focused, making quick decisions under pressure.", value: "caring_pressure" },
             { text: "Curious about the biological cause of the emergency.", value: "analytical_cause" },
             { text: "Good at comforting the patient and their family.", value: "caring_comfort" },
-            { text: "Preferring to be in a lab, away from the stress.", value: "analytical_lab" },
+            { text: "Thinking about which medications would be most effective.", value: "analytical_medication" },
         ],
     },
     {
@@ -274,7 +274,7 @@ export const quizQuestions: Question[] = [
             { text: "Seeing a patient get better because of your care.", value: "caring_recovery" },
             { text: "Publishing a research paper with a new discovery.", value: "analytical_publication" },
             { text: "Creating a more sustainable way to grow food.", value: "technical_sustainability" },
-            { text: "Mastering a difficult technique in the laboratory.", value: "technical_technique" },
+            { text: "Developing a new drug that could save lives.", value: "analytical_drug_dev" },
         ],
     },
     {
@@ -283,9 +283,9 @@ export const quizQuestions: Question[] = [
         category: 'science_pcb',
         options: [
             { text: "The details of teeth and oral health.", value: "caring_dentistry" },
-            { text: "How diet affects human health.", value: "caring_nutrition" },
+            { text: "The effects of diet on human health.", value: "caring_nutrition" },
             { text: "The structure and function of the eye.", value: "caring_ophthalmology" },
-            { text: "How to use technology to create artificial limbs.", value: "technical_prosthetics" },
+            { text: "The chemical composition of foods and medicines.", value: "analytical_composition" },
         ],
     },
     {
@@ -317,7 +317,7 @@ export const quizQuestions: Question[] = [
         options: [
             { text: "A busy hospital or clinic.", value: "caring_hospital_env" },
             { text: "A quiet, focused research lab.", value: "analytical_lab_env" },
-            { text: "Outdoors, in nature.", value: "technical_outdoors" },
+            { text: "A food production or quality control facility.", value: "technical_food_plant" },
             { text: "A large pharmaceutical or biotech company.", value: "business_corporate" },
         ],
     },
@@ -340,7 +340,7 @@ export const quizQuestions: Question[] = [
             { text: "Improving the quality of life for many people.", value: "caring_qualityoflife" },
             { text: "Discovering a new species or biological process.", value: "analytical_discovery" },
             { text: "Developing a profitable and useful biotech product.", value: "business_product" },
-            { text: "Creating a new and better surgical technique.", value: "technical_surgery" },
+            { text: "Improving the safety and shelf-life of food.", value: "technical_food_safety" },
         ],
     },
     {
@@ -351,7 +351,7 @@ export const quizQuestions: Question[] = [
             { text: "A career that requires many years of higher education.", value: "analytical_longstudy" },
             { text: "A career that involves working with sick or injured people/animals.", value: "caring_sickness" },
             { text: "A career that is a mix of science and business.", value: "business_science" },
-            { text: "A career that needs you to be physically strong.", value: "technical_stamina" },
+            { text: "A career that requires strict adherence to safety and quality rules.", value: "analytical_rules" },
         ],
     },
 
