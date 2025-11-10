@@ -170,7 +170,7 @@ export default function LoginPage() {
                   <FormItem>
                     <FormLabel>Password</FormLabel>
                     <FormControl>
-                      <PasswordInput placeholder="••••••••" {...field} />
+                      <PasswordInput placeholder="Password" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

@@ -327,7 +327,7 @@ export default function ProfilePage() {
                                     <FormItem>
                                         <FormLabel>Current Password</FormLabel>
                                         <FormControl>
-                                        <PasswordInput {...field} />
+                                        <PasswordInput placeholder="Current Password" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -340,7 +340,7 @@ export default function ProfilePage() {
                                     <FormItem>
                                         <FormLabel>New Password</FormLabel>
                                         <FormControl>
-                                        <PasswordInput {...field} />
+                                        <PasswordInput placeholder="New Password" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -353,7 +353,7 @@ export default function ProfilePage() {
                                     <FormItem>
                                         <FormLabel>Confirm New Password</FormLabel>
                                         <FormControl>
-                                        <PasswordInput {...field} />
+                                        <PasswordInput placeholder="Confirm New Password" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -408,7 +408,7 @@ export default function ProfilePage() {
                                         <FormItem>
                                             <FormLabel>Current Password</FormLabel>
                                             <FormControl>
-                                            <PasswordInput placeholder='Enter your password to confirm' {...field} />
+                                            <PasswordInput placeholder='Enter password to confirm' {...field} />
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
