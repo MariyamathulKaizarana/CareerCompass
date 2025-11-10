@@ -27,7 +27,7 @@ const findImage = (careerTitle: string) => {
 }
 
 const Roadmap = ({ roadmap }: { roadmap: string }) => {
-    const steps = roadmap.split(/\s*\d\.\s*/).filter(step => step);
+    const steps = roadmap.split(';').map(s => s.trim()).filter(step => step);
     return (
         <ol className="list-decimal list-inside space-y-2">
             {steps.map((step, index) => (
