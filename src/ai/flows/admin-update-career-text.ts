@@ -30,13 +30,14 @@ const prompt = ai.definePrompt({
   name: 'updateCareerTextPrompt',
   input: {schema: UpdateCareerTextInputSchema},
   output: {schema: UpdateCareerTextOutputSchema},
-  prompt: `You are an expert career counselor. Your task is to improve the description of a given career.
+  prompt: `You are an expert career counselor. Your task is to improve the description of a given career. The description should be engaging, concise, and give a clear overview of the role.
 
 Career Name: {{{careerName}}}
 
 Current Description: {{{currentDescription}}}
 
-Revised Description:`, // Removed triple curly braces
+Rewrite the description to be more professional and appealing to students exploring career options.
+`,
 });
 
 const updateCareerTextFlow = ai.defineFlow(

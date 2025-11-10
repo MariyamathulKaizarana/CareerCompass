@@ -2,23 +2,19 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { SearchIcon, Loader2, Book, GraduationCap, Trophy } from 'lucide-react';
+import { SearchIcon, Loader2, Book, GraduationCap, Trophy, ServerCrash } from 'lucide-react';
 import { useDebounce } from '@/hooks/use-debounce';
-import { careers } from '@/lib/career-data';
 import { Input } from '@/components/ui/input';
+import { searchCareers, type SearchCareersOutput } from '@/ai/flows/search-careers';
 
-type SearchResult = {
-  type: 'Career' | 'Course' | 'Exam';
-  title: string;
-  slug: string;
-  context: string;
-};
+type SearchResult = SearchCareersOutput[0];
 
 export function Search() {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const router = useRouter();
 
   const debouncedQuery = useDebounce(query, 300);
@@ -30,51 +26,31 @@ export function Search() {
       return;
     }
 
-    setIsLoading(true);
-    const lowerCaseQuery = debouncedQuery.toLowerCase();
+    const performSearch = async () => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        const searchResults = await searchCareers({ query: debouncedQuery });
+        setResults(searchResults);
+        setIsOpen(searchResults.length > 0);
+      } catch (e) {
+        console.error("Search failed:", e);
+        setError("Search is currently unavailable. Please try again later.");
+        setIsOpen(true); // Keep open to show the error
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    
+    performSearch();
 
-    const careerResults: SearchResult[] = careers
-      .filter(
-        (c) =>
-          c.title.toLowerCase().includes(lowerCaseQuery) ||
-          c.skills.some((s) => s.toLowerCase().includes(lowerCaseQuery))
-      )
-      .map((c) => ({
-        type: 'Career',
-        title: c.title,
-        slug: `/careers/${c.slug}`,
-        context: c.description,
-      }));
-
-    const courseResults: SearchResult[] = [
-      ...new Set(careers.flatMap((c) => c.courses)),
-    ]
-      .filter((course) => course.toLowerCase().includes(lowerCaseQuery))
-      .map((course) => ({
-        type: 'Course',
-        title: course,
-        slug: `/courses`, // All courses link to the main courses page
-        context: `Recommended for various careers.`,
-      }));
-
-    const examResults: SearchResult[] = [...new Set(careers.flatMap(c => c.exams || []))]
-      .filter(exam => exam.toLowerCase().includes(lowerCaseQuery))
-      .map(exam => ({
-        type: 'Exam',
-        title: exam,
-        slug: '/careers', // Link to general careers as exams apply to many
-        context: 'Competitive entrance exam.'
-      }));
-
-    setResults([...careerResults, ...courseResults, ...examResults]);
-    setIsLoading(false);
-    setIsOpen(true);
   }, [debouncedQuery]);
   
   const handleSelect = useCallback((slug: string) => {
     router.push(slug);
     setQuery('');
     setIsOpen(false);
+    setResults([]);
   }, [router]);
   
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -104,7 +80,7 @@ export function Search() {
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
           onFocus={() => {
-            if (results.length > 0) setIsOpen(true);
+            if (results.length > 0 || error) setIsOpen(true);
           }}
           onBlur={() => setTimeout(() => setIsOpen(false), 150)}
         />
@@ -113,10 +89,24 @@ export function Search() {
         )}
       </div>
       
-      {isOpen && results.length > 0 && (
+      {isOpen && (
          <div className="absolute top-full mt-2 w-full rounded-lg border bg-card text-card-foreground shadow-lg z-50 overflow-hidden">
             <ul className="max-h-96 overflow-y-auto">
-              {results.map((item, index) => (
+              {error && (
+                <li className="p-4 text-center text-destructive-foreground bg-destructive/90">
+                   <div className="flex items-center gap-4">
+                    <ServerCrash className="h-5 w-5" />
+                    <div>
+                      <p className="font-semibold">Search Error</p>
+                      <p className="text-sm text-destructive-foreground/80">{error}</p>
+                    </div>
+                  </div>
+                </li>
+              )}
+              {!isLoading && !error && results.length === 0 && debouncedQuery.length >= 3 && (
+                <li className="p-4 text-center text-muted-foreground">No results found.</li>
+              )}
+              {!error && results.map((item, index) => (
                 <li
                   key={`${item.slug}-${index}`}
                   onMouseDown={(e) => {
@@ -129,7 +119,7 @@ export function Search() {
                     {getIcon(item.type)}
                     <div>
                       <p className="font-semibold">{item.title}</p>
-                      <p className="text-sm text-muted-foreground">{item.context}</p>
+                      <p className="text-sm text-muted-foreground line-clamp-1">{item.context}</p>
                     </div>
                   </div>
                 </li>
