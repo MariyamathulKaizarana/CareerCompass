@@ -26,6 +26,17 @@ const findImage = (careerTitle: string) => {
     return placeholderImages.find(p => p.id === searchTerm) || placeholderImages.find(p => p.id === 'report');
 }
 
+const Roadmap = ({ roadmap }: { roadmap: string }) => {
+    const steps = roadmap.split(/\s*\d\.\s*/).filter(step => step);
+    return (
+        <ol className="list-decimal list-inside space-y-2">
+            {steps.map((step, index) => (
+                <li key={index} className="text-lg font-semibold text-foreground">{step}</li>
+            ))}
+        </ol>
+    );
+};
+
 export default function CareerDetailPage({ params }: CareerDetailPageProps) {
   const career = getCareerBySlug(params.slug);
 
@@ -38,7 +49,7 @@ export default function CareerDetailPage({ params }: CareerDetailPageProps) {
   const detailCards = [
     { icon: <GraduationCap className="h-6 w-6 text-accent" />, title: "Required Courses", content: career.courses.join(', ') },
     { icon: <CheckCircle className="h-6 w-6 text-accent" />, title: "Key Skills", content: career.skills.join(', ') },
-    { icon: <Map className="h-6 w-6 text-accent" />, title: "Career Roadmap", content: career.roadmap },
+    { icon: <Map className="h-6 w-6 text-accent" />, title: "Career Roadmap", content: career.roadmap, isRoadmap: true },
     { icon: <DollarSign className="h-6 w-6 text-accent" />, title: "Average Salary", content: career.avgSalary },
     { icon: <TrendingUp className="h-6 w-6 text-accent" />, title: "Future Scope", content: career.futureScope },
   ];
@@ -89,7 +100,11 @@ export default function CareerDetailPage({ params }: CareerDetailPageProps) {
                             {item.icon}
                         </CardHeader>
                         <CardContent>
-                            <div className="text-lg font-semibold text-foreground">{item.content}</div>
+                            {item.isRoadmap ? (
+                                <Roadmap roadmap={item.content} />
+                            ) : (
+                                <div className="text-lg font-semibold text-foreground">{item.content}</div>
+                            )}
                         </CardContent>
                     </Card>
                 ))}
