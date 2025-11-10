@@ -31,7 +31,7 @@ const Roadmap = ({ roadmap }: { roadmap: string }) => {
     return (
         <ol className="list-decimal list-inside space-y-2">
             {steps.map((step, index) => (
-                <li key={index} className="text-lg font-semibold text-foreground">{step}</li>
+                <li key={index} className="text-lg text-foreground">{step}</li>
             ))}
         </ol>
     );
