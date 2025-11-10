@@ -109,7 +109,7 @@ export default function CareerDetailPage({ params }: CareerDetailPageProps) {
                 />
                 )}
                 <CardContent className="p-6">
-                    <h3 className="font-headline text-xl">Who is this career for?</h3>
+                    <h3 className="font-headline text-xl">Could This Be Your Calling?</h3>
                     <p className="mt-2 text-muted-foreground">If you enjoy problem-solving, continuous learning, and creating impactful solutions, {career.title} could be your ideal path.</p>
                 </CardContent>
             </Card>
