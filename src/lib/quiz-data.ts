@@ -262,7 +262,7 @@ export const quizQuestions: Question[] = [
         options: [
             { text: "Human anatomy and physiology.", value: "caring_anatomy" },
             { text: "Microbiology and immunology.", value: "analytical_microbiology" },
-            { text: "How drugs affect the body.", value: "analytical_pharmacology" },
+            { text: "How medicine take affect in the body", value: "analytical_pharmacology" },
             { text: "Genetics and DNA.", value: "analytical_genetics" },
         ],
     },
