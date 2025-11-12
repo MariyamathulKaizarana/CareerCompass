@@ -59,24 +59,7 @@ const generateCareerReportFlow = ai.defineFlow(
     outputSchema: GenerateCareerReportOutputSchema,
   },
   async (input) => {
-    const maxRetries = 3;
-    let attempt = 0;
-    while (attempt < maxRetries) {
-      try {
-        const { output } = await prompt(input);
-        return output!;
-      } catch (e: any) {
-        attempt++;
-        if (attempt >= maxRetries || !e.message?.includes('503')) {
-          // If it's the last attempt or not a 503 error, re-throw.
-          throw e;
-        }
-        // Wait for a short period before retrying (e.g., exponential backoff)
-        const delay = Math.pow(2, attempt) * 1000; // 2s, 4s
-        await new Promise(resolve => setTimeout(resolve, delay));
-      }
-    }
-    // This part should be unreachable, but it satisfies TypeScript's need for a return path.
-    throw new Error('Failed to generate career report after multiple retries.');
+    const { output } = await prompt(input);
+    return output!;
   }
 );
