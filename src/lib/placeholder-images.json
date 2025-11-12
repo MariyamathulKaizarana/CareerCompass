@@ -407,6 +407,24 @@
       "description": "An optometrist's phoropter machine used for eye examinations.",
       "imageUrl": "https://images.unsplash.com/photo-1758206524001-56b1b1ec72cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxleWUlMjBleGFtaW5hdGlvbnxlbnwwfHx8fDE3NjE1ODU0NzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "eye examination"
+    },
+    {
+      "id": "cybersecurity",
+      "description": "A digital lock on a circuit board background, symbolizing cybersecurity.",
+      "imageUrl": "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjeWJlcnNlY3VyaXR5fGVufDB8fHx8MTc2MTg0ODExOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cybersecurity lock"
+    },
+    {
+      "id": "iot",
+      "description": "A network of connected smart devices in a home.",
+      "imageUrl": "https://images.unsplash.com/photo-1633458925325-1e3a6c230623?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzbWFydCUyMGhvbWUlMjBpb3R8ZW58MHx8fHwxNzYxODQ4MTc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smart home"
+    },
+    {
+      "id": "blockchain",
+      "description": "Abstract visualization of interconnected digital blocks.",
+      "imageUrl": "https://images.unsplash.com/photo-1639322537228-f710d846310a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxibG9ja2NoYWlufGVufDB8fHx8MTc2MTg0ODIxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blockchain blocks"
     }
   ]
 }

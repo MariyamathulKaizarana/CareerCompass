@@ -156,13 +156,13 @@ export const quizQuestions: Question[] = [
     },
     {
         id: "q_sci_pcm_13",
-        text: "Are you interested in the business side of tech?",
+        text: "Are you interested in cybersecurity or networks?",
         category: 'science_pcm',
         options: [
-            { text: "Yes, managing teams and projects.", value: "business_projectmanagement" },
-            { text: "Yes, analyzing market data for products.", value: "analytical_product" },
-            { text: "Yes, handling budgets and finances.", value: "business_finance" },
-            { text: "No, I prefer focusing only on technology.", value: "technical_focus" },
+            { text: "Yes, defending systems from attacks fascinates me.", value: "technical_security" },
+            { text: "Yes, I like understanding how data moves across networks.", value: "analytical_networks" },
+            { text: "Yes, I'm interested in secure, decentralized systems like blockchain.", value: "technical_blockchain" },
+            { text: "No, I prefer building applications.", value: "technical_apps" },
         ],
     },
     {
@@ -171,7 +171,7 @@ export const quizQuestions: Question[] = [
         category: 'science_pcm',
         options: [
             { text: "True Artificial Intelligence.", value: "analytical_agi" },
-            { text: "Space travel and colonization.", value: "technical_space" },
+            { text: "Millions of smart, connected devices (IoT).", value: "technical_iot" },
             { text: "Quantum computing.", value: "analytical_quantum" },
             { text: "Brain-computer interfaces.", value: "technical_bci" },
         ],
@@ -208,7 +208,7 @@ export const quizQuestions: Question[] = [
             { text: "Diagnosing a patient's complex illness.", value: "caring_diagnosis" },
             { text: "Doing a delicate lab experiment on genes.", value: "analytical_experiment" },
             { text: "Helping a patient walk again after an injury.", value: "caring_rehabilitation" },
-            { text: "Working with plants to improve crops.", value: "technical_agriculture" },
+            { text: "Work with plants to improve crops.", value: "technical_agriculture" },
         ],
     },
     {

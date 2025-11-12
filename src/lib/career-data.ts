@@ -8,13 +8,13 @@ export const careers: Career[] = [
         title: "Software Developer",
         stream: "Science",
         description: "Designs, develops, and maintains software applications.",
-        longDescription: "A Software Developer designs, develops, tests, and maintains software. This role involves using programming languages and engineering principles to create everything from mobile apps to large-scale enterprise systems.",
+        longDescription: "Software Developers design, develop, test, and maintain software. This role involves using programming languages and engineering principles to create everything from mobile apps to large-scale enterprise systems. They are the architects and builders of the digital world.",
         skills: ["Programming (Python, Java, C++)", "Data Structures & Algorithms", "Databases (SQL/NoSQL)", "Version Control (Git)", "Operating Systems", "Problem-Solving"],
         courses: ["B.Tech in Computer Science", "BCA", "MCA"],
         exams: ["JEE Main", "JEE Advanced", "State-level engineering entrances"],
         topColleges: ["IITs", "NITs", "IIITs", "BITS Pilani"],
         admissionProcess: "Admission is primarily through national-level entrance exams like JEE Main and Advanced, followed by counseling.",
-        roadmap: "Education: Pursue B.Tech in CSE/IT;Internships: Gain practical experience during college;Entry-Level: Start as a Junior Software Engineer;Progression: Advance to Senior Engineer or Tech Lead;Specialization: Specialize in AI/ML, Cloud, or Cybersecurity.",
+        roadmap: "1. Education: Pursue B.Tech/BE in CSE/IT from a reputed engineering college.;2. Skill Development: Focus on strong fundamentals in DSA, OOP, OS, and databases. Build projects to apply knowledge.;3. Internships: Secure multiple internships (2-3) during college years at tech companies to gain practical experience and industry exposure.;4. Entry-Level Role: Start as a Junior Software Engineer, Software Developer, or SDE-1 after graduation.;5. Growth: Progress to SDE-2, Senior SDE, Lead Engineer, Tech Lead, or Staff Engineer with experience and continuous learning.;6. Specialization: Opportunities to specialize in areas like AI/ML Engineering, DevOps, Cloud Engineering, Cybersecurity, or Full Stack Development.",
         avgSalary: "₹8-12 LPA",
         futureScope: "Extremely high demand across all industries. Specializations in AI, Cybersecurity, and Cloud Computing offer massive growth potential."
     },
@@ -29,7 +29,7 @@ export const careers: Career[] = [
         courses: ["B.Tech in Data Science/AI", "B.Sc in Statistics", "Masters in Data Science"],
         topColleges: ["IITs", "Indian Statistical Institute (ISI)", "Chennai Mathematical Institute (CMI)"],
         admissionProcess: "Varies by course; can include entrance exams like JEE for B.Tech or specific university exams for Masters programs.",
-        roadmap: "Education: Get a degree in CS, Statistics, or Math;Skill Up: Master Python/R, ML libraries, and SQL;Internships: Work on real-world data projects;Entry-Level: Start as a Data Analyst or Junior Data Scientist;Progression: Advance to Data Scientist, then Senior or Lead Data Scientist;Specialization: Focus on NLP, Computer Vision, or MLOps.",
+        roadmap: "1. Education: Complete a degree in CS, Statistics, or Math, preferably with a postgraduate qualification.;2. Core Skills: Master Python/R, SQL, and key libraries like Pandas, Scikit-learn, and TensorFlow/PyTorch.;3. Internships/Projects: Work on real-world datasets and build a portfolio of projects.;4. Entry-Level Role: Start as a Data Analyst or Junior Data Scientist.;5. Growth: Advance to Data Scientist, Senior Data Scientist, and then Principal Data Scientist or Head of Data Science.",
         avgSalary: "₹10-15 LPA",
         futureScope: "Explosive growth in all sectors as data becomes more critical. Specializations in AI/ML engineering are highly sought after."
     },
@@ -45,7 +45,7 @@ export const careers: Career[] = [
         exams: ["NEET (National Eligibility cum Entrance Test)"],
         topColleges: ["AIIMS (Delhi)", "CMC (Vellore)", "JIPMER (Puducherry)", "AFMC (Pune)"],
         admissionProcess: "Clearing the NEET exam with a high rank is mandatory for admission to all medical colleges in India, followed by national and state-level counseling.",
-        roadmap: "NEET Exam: Clear NEET UG with a high rank;MBBS Degree: Complete the 5.5-year MBBS course including internship;Specialization (Optional): Clear NEET PG for an MD/MS degree;Practice: Work in hospitals, clinics, or start a private practice.",
+        roadmap: "1. NEET Exam: Clear NEET UG with a high rank after Class 12.;2. MBBS Degree: Complete the 5.5-year MBBS course, including a mandatory one-year internship.;3. Specialization (Optional but Recommended): Clear NEET PG for a 3-year MD/MS degree in a chosen field.;4. Practice: Work in hospitals, clinics, or start a private practice as a specialist.",
         avgSalary: "₹12-25 LPA (after specialization)",
         futureScope: "Consistently high demand. Opportunities in private practice, hospitals, research, healthcare management, and public health."
     },
@@ -55,13 +55,13 @@ export const careers: Career[] = [
         title: "UX/UI Designer",
         stream: "Arts",
         description: "Focuses on the user experience and visual design of digital products.",
-        longDescription: "UX/UI designers make technology easy and enjoyable to use. UX Designers focus on the user's journey and research, while UI Designers focus on the product's visual layout and interactivity.",
+        longDescription: "UX/UI designers make technology easy and enjoyable to use. UX (User Experience) Designers focus on the user's journey and research, while UI (User Interface) Designers focus on the product's visual layout and interactivity.",
         skills: ["Figma/Sketch/Adobe XD", "User Research", "Wireframing", "Prototyping", "Visual Design", "Empathy"],
         courses: ["Bachelor of Design (B.Des)", "Certification courses in UX/UI"],
         exams: ["NID DAT", "UCEED", "NIFT Entrance Exam"],
         topColleges: ["National Institute of Design (NID)", "IIT Bombay (IDC)", "NIFT", "Srishti Manipal"],
         admissionProcess: "Entrance exams like NID DAT or UCEED are common for top design colleges. Many professionals also enter via online certifications and a strong portfolio.",
-        roadmap: "Education: Earn a design degree or certification;Portfolio: Build a strong portfolio with personal projects;Internships: Gain practical experience;Entry-Level: Start as a Junior UI/UX Designer;Progression: Advance to Senior Designer, then Product Design Lead or Manager.",
+        roadmap: "1. Education: Earn a design degree (B.Des) or gain skills through intensive certification courses.;2. Portfolio: Build a strong portfolio with 3-4 detailed case studies of personal or academic projects.;3. Internships: Gain practical experience by working with startups or design agencies.;4. Entry-Level Role: Start as a Junior UI/UX Designer or Product Designer.;5. Growth: Advance to Senior Designer, Lead Designer, and then to roles like Design Manager or Head of Design.",
         avgSalary: "₹7-11 LPA",
         futureScope: "A crucial role in all tech companies. Growing need in non-tech sectors as they become more digital."
     },
@@ -77,7 +77,7 @@ export const careers: Career[] = [
         exams: ["CA Foundation", "CA Intermediate", "CA Final"],
         topColleges: ["The Institute of Chartered Accountants of India (ICAI) is the sole governing body."],
         admissionProcess: "A three-level examination process (Foundation, Intermediate, Final) conducted by ICAI, along with mandatory practical training (articleship).",
-        roadmap: "CA Foundation: Clear the first level exam;CA Intermediate: Clear both groups of the second level;Articleship: Complete 3 years of mandatory practical training;CA Final: Clear the final level exam;Qualify: Become a qualified Chartered Accountant.",
+        roadmap: "1. CA Foundation: Clear the first level exam after Class 12.;2. CA Intermediate: Clear both groups of the second level.;3. Articleship: Complete 3 years of mandatory practical training under a practicing CA.;4. CA Final: Clear the final level exam during the last six months of articleship.;5. Qualify: Become a qualified Chartered Accountant and join a firm or start a practice.",
         avgSalary: "₹8-15 LPA (can be much higher with experience)",
         futureScope: "Stable and high demand in every industry. Opportunities in corporate finance, public practice (auditing), and consulting."
     },
@@ -92,7 +92,7 @@ export const careers: Career[] = [
         courses: ["BBA (Marketing)", "MBA (Marketing)"],
         topColleges: ["IIMs (Ahmedabad, Bangalore, Calcutta)", "FMS Delhi", "XLRI Jamshedpur"],
         admissionProcess: "For top MBA programs, a bachelor's degree followed by clearing exams like CAT, XAT, or GMAT is required.",
-        roadmap: "Education: Complete a Bachelor's degree (BBA/B.Com);MBA: Pursue an MBA in Marketing (highly recommended);Entry-Level: Start as a Marketing Executive or Analyst;Progression: Advance to Marketing Manager;Leadership: Move to Director of Marketing or Chief Marketing Officer (CMO).",
+        roadmap: "1. Education: Complete a Bachelor's degree (BBA/B.Com).;2. MBA (Recommended): Pursue an MBA in Marketing from a top B-school for the best opportunities.;3. Entry-Level Role: Start as a Marketing Executive, Brand Executive, or Digital Marketing Analyst.;4. Progression: Advance to Assistant Marketing Manager, then Marketing Manager.;5. Leadership: Move to roles like Head of Marketing, Director of Marketing, or Chief Marketing Officer (CMO).",
         avgSalary: "₹10-20 LPA (with MBA from a top B-school)",
         futureScope: "Evolving rapidly with digital trends. High demand for specialists in performance marketing, AI in marketing, and data analytics."
     },
@@ -108,7 +108,7 @@ export const careers: Career[] = [
         exams: ["NATA (National Aptitude Test in Architecture)", "JEE Main (Paper 2)"],
         topColleges: ["School of Planning and Architecture (SPA), Delhi", "IIT Kharagpur", "Sir J.J. College of Architecture, Mumbai"],
         admissionProcess: "Qualifying in NATA or JEE Main Paper 2 is mandatory for B.Arch admissions in India.",
-        roadmap: "Education: Complete a 5-year B.Arch degree;Internship: Gain practical experience during the course;Entry-Level: Start as a Junior Architect;Licensing: Become a licensed Architect with the Council of Architecture;Progression: Advance to Senior Architect or start your own practice.",
+        roadmap: "1. Entrance Exam: Clear NATA or JEE Main Paper 2 after Class 12.;2. Education: Complete a 5-year Bachelor of Architecture (B.Arch) degree.;3. Internship: Gain practical experience through the mandatory internship in the curriculum.;4. Licensing: Register with the Council of Architecture (CoA) to become a licensed Architect.;5. Career: Start as a Junior Architect, advance to a Senior Architect, or start your own practice.",
         avgSalary: "₹6-10 LPA",
         futureScope: "Growth is tied to real estate and infrastructure development. There is an increasing focus on sustainable and green architecture."
     },
@@ -124,7 +124,7 @@ export const careers: Career[] = [
         exams: ["CLAT (Common Law Admission Test)", "AILET", "LSAT India"],
         topColleges: ["National Law School of India University (NLSIU), Bangalore", "NALSAR, Hyderabad", "WBNUJS, Kolkata"],
         admissionProcess: "Admissions to top National Law Universities (NLUs) are through the CLAT exam. Other universities have their own entrance tests.",
-        roadmap: "Entrance Exam: Clear CLAT or other law entrance tests;Degree: Complete a 5-year Integrated LLB or a 3-year LLB after graduation;Bar Council Registration: Enroll with the State Bar Council;Practice: Start as a Junior Advocate or Corporate Counsel;Progression: Advance to Senior Advocate or a senior legal role in a company.",
+        roadmap: "1. Entrance Exam: Clear CLAT or other law entrance tests after Class 12.;2. Degree: Complete a 5-year Integrated LLB or a 3-year LLB after graduation.;3. Bar Council Registration: Enroll with a State Bar Council after clearing the All India Bar Examination (AIBE).;4. Practice: Start as a Junior Advocate in a law firm or with a senior lawyer, or join a company as a legal counsel.;5. Progression: Advance to Senior Advocate or a senior legal role in a company.",
         avgSalary: "₹7-15 LPA (highly variable based on specialization and firm)",
         futureScope: "Diverse opportunities in litigation, corporate firms, judiciary, and public policy. Emerging specializations like Tech Law and Environmental Law are growing."
     },
@@ -140,7 +140,7 @@ export const careers: Career[] = [
         exams: ['JEE Main', 'JEE Advanced', 'State CETs'],
         topColleges: ['IIT Bombay', 'IIT Delhi', 'IIT Madras', 'NIT Trichy'],
         admissionProcess: 'Admission is based on ranks in national-level entrance exams like JEE, followed by centralized counseling.',
-        roadmap: "Education: Complete a B.Tech in Civil Engineering;Entry-Level: Start as a Site Engineer or Graduate Engineer Trainee;Progression: Move to Project Engineer or Design Engineer;Advancement: Become a Project Manager or Chief Engineer.",
+        roadmap: "1. Education: Complete a B.Tech in Civil Engineering.;2. Entry-Level: Start as a Site Engineer or Graduate Engineer Trainee.;3. Progression: Move to Project Engineer or Design Engineer.;4. Advancement: Become a Project Manager or Chief Engineer.",
         avgSalary: '₹6-9 LPA',
         futureScope: 'Essential for infrastructure development. Key roles in government (PWD, Railways) and private construction firms. Focus on smart cities is growing.'
     },
@@ -156,7 +156,7 @@ export const careers: Career[] = [
         exams: ['NEET (for some institutes)', 'State Pharmacy Entrances (e.g., MHT-CET)', 'GPAT (for M.Pharm)'],
         topColleges: ['Jamia Hamdard', 'Panjab University', 'NIPER Mohali'],
         admissionProcess: 'Admissions are through national or state-level entrance exams. A license from the Pharmacy Council of India is required to practice.',
-        roadmap: "Education: Complete D.Pharm (2 years) or B.Pharm (4 years);Licensing: Register as a licensed Pharmacist;Practice: Work in a hospital, retail pharmacy, or an industrial role (R&D, manufacturing);Specialization (Optional): Pursue M.Pharm for specialization.",
+        roadmap: "1. Education: Complete D.Pharm (2 years) or B.Pharm (4 years).;2. Licensing: Register as a licensed Pharmacist.;3. Practice: Work in a hospital, retail pharmacy, or an industrial role (R&D, manufacturing).;4. Specialization (Optional): Pursue M.Pharm for specialization.",
         avgSalary: '₹3-5 LPA',
         futureScope: 'Stable demand in healthcare. Opportunities in retail, hospitals, and pharmaceutical industry (R&D, manufacturing).'
     },
@@ -171,7 +171,7 @@ export const careers: Career[] = [
         courses: ['BA in Psychology', 'MA/M.Sc in Psychology', 'M.Phil (Clinical Psychology)'],
         topColleges: ['Lady Shri Ram College (DU)', 'Christ University', 'TISS Mumbai', 'NIMHANS Bangalore'],
         admissionProcess: 'A license from the Rehabilitation Council of India (RCI) is needed for clinical practice, which requires an M.Phil.',
-        roadmap: "Education: Complete a BA and then an MA in Psychology;Licensing (for Clinical): Complete an M.Phil in Clinical Psychology and get an RCI license;Practice: Begin as a counselor, therapist, or researcher in various settings.",
+        roadmap: "1. Education: Complete a BA and then an MA in Psychology.;2. Licensing (for Clinical): Complete an M.Phil in Clinical Psychology and get an RCI license.;3. Practice: Begin as a counselor, therapist, or researcher in various settings.",
         avgSalary: '₹4-8 LPA (with a Masters/M.Phil)',
         futureScope: 'Increasing awareness about mental health is driving huge demand. Specializations in child, organizational, or sports psychology are growing.'
     },
@@ -187,7 +187,7 @@ export const careers: Career[] = [
         exams: ['NID DAT', 'UCEED', 'NIFT'],
         topColleges: ['National Institute of Design (NID)', 'MIT Institute of Design', 'Srishti Manipal Institute'],
         admissionProcess: 'Based on scores from design entrance exams, which include a portfolio review and interview. A strong portfolio is crucial.',
-        roadmap: "Education: Earn a degree in Design (B.Des);Portfolio: Build a strong portfolio through internships and projects;Entry-Level: Start as a Junior Designer;Progression: Advance to Senior Designer, then Art Director or Creative Director.",
+        roadmap: "1. Education: Earn a degree in Design (B.Des).;2. Portfolio: Build a strong portfolio through internships and projects.;3. Entry-Level: Start as a Junior Designer.;4. Progression: Advance to Senior Designer, then Art Director or Creative Director.",
         avgSalary: '₹4-7 LPA',
         futureScope: 'High demand in marketing, media, and tech. The rise of digital media has created many opportunities for UI and motion graphic designers.'
     },
@@ -202,7 +202,7 @@ export const careers: Career[] = [
         courses: ['BBA/B.Com', 'MBA in Finance', 'CA', 'CFA'],
         topColleges: ['IIMs (A, B, C)', 'ISB Hyderabad', 'FMS Delhi', 'XLRI'],
         admissionProcess: 'Typically requires an MBA from a top-tier business school. A strong academic background and internships in finance are crucial.',
-        roadmap: "Education: Complete a relevant UG degree (B.Tech, B.Com);MBA: Pursue an MBA in Finance from a top B-school;Entry-Level: Start as an Analyst;Progression: Move from Associate to Vice President, and eventually Managing Director.",
+        roadmap: "1. Education: Complete a relevant UG degree (B.Tech, B.Com).;2. MBA: Pursue an MBA in Finance from a top B-school.;3. Entry-Level: Start as an Analyst.;4. Progression: Move from Associate to Vice President, and eventually Managing Director.",
         avgSalary: '₹15-40 LPA+ (highly variable with bonuses)',
         futureScope: 'A high-pressure, high-reward field tied to economic growth. Excellent exit opportunities into private equity and venture capital.'
     },
@@ -217,7 +217,7 @@ export const careers: Career[] = [
         courses: ['Bachelor of Journalism and Mass Communication (BJMC)'],
         topColleges: ['Indian Institute of Mass Communication (IIMC)', 'Symbiosis Institute of Media & Communication', 'ACJ Chennai'],
         admissionProcess: 'Admission is through entrance exams conducted by individual universities and colleges.',
-        roadmap: "Education: Complete a degree in Journalism (BJMC/MA);Internships: Gain experience at media houses;Entry-Level: Start as a Reporter or Sub-editor;Progression: Advance to Senior Correspondent or Special Correspondent, then Editor.",
+        roadmap: "1. Education: Complete a degree in Journalism (BJMC/MA).;2. Internships: Gain experience at media houses.;3. Entry-Level: Start as a Reporter or Sub-editor.;4. Progression: Advance to Senior Correspondent or Special Correspondent, then Editor.",
         avgSalary: '₹4-8 LPA',
         futureScope: 'The media landscape is shifting to digital. Roles in data journalism, podcasting, and digital content creation are growing rapidly.'
     },
@@ -233,7 +233,7 @@ export const careers: Career[] = [
         exams: ['JEE Main', 'JEE Advanced', 'GATE'],
         topColleges: ['IITs', 'IIIT Hyderabad', 'NITs'],
         admissionProcess: 'Requires a strong foundation in computer science and mathematics. Admission is through competitive engineering entrance exams.',
-        roadmap: "Education: Earn a B.Tech in Computer Science or AI;Entry-Level: Start as an ML Engineer or Data Scientist;Progression: Advance to Senior ML Engineer;Leadership: Become an AI Scientist or ML Architect.",
+        roadmap: "1. Education: Earn a B.Tech in Computer Science or AI.;2. Entry-Level: Start as an ML Engineer or Data Scientist.;3. Progression: Advance to Senior ML Engineer.;4. Leadership: Become an AI Scientist or ML Architect.",
         avgSalary: '₹12-20 LPA',
         futureScope: 'One of the fastest-growing and highest-demand fields in technology, impacting every industry from healthcare to finance.'
     },
@@ -248,7 +248,7 @@ export const careers: Career[] = [
         courses: ['B.Tech', 'MBA'],
         topColleges: ['No specific degree, but IIMs/IITs are common backgrounds.'],
         admissionProcess: 'Often a mid-career role. People transition from engineering, design, or business analysis. An MBA can be a common entry point.',
-        roadmap: "Experience: Start in a related role like Software Engineer, Designer, or Analyst;Transition: Move to an Associate Product Manager role;Progression: Grow into Product Manager, then Senior Product Manager;Leadership: Advance to Director of Product or VP of Product.",
+        roadmap: "1. Experience: Start in a related role like Software Engineer, Designer, or Analyst.;2. Transition: Move to an Associate Product Manager role.;3. Progression: Grow into Product Manager, then Senior Product Manager.;4. Leadership: Advance to Director of Product or VP of Product.",
         avgSalary: '₹15-25 LPA',
         futureScope: 'A critical and high-paying role in any tech-driven company. The demand for skilled product managers is extremely high.'
     },
@@ -263,7 +263,7 @@ export const careers: Career[] = [
         courses: ['B.Tech', 'B.Com', 'MBA'],
         topColleges: ['IITs', 'IIMs (A, B, C)', 'ISB Hyderabad', 'SRCC'],
         admissionProcess: 'Recruitment is highly competitive, often from top-tier undergraduate and business schools. Involves rigorous case study interviews.',
-        roadmap: "Education: Graduate from a top-tier UG or MBA college;Entry-Level: Start as an Analyst;Progression: Advance to Consultant, then Project Lead;Leadership: Become a Partner in the firm.",
+        roadmap: "1. Education: Graduate from a top-tier UG or MBA college.;2. Entry-Level: Start as an Analyst.;3. Progression: Advance to Consultant, then Project Lead.;4. Leadership: Become a Partner in the firm.",
         avgSalary: '₹18-30 LPA (at top firms like McKinsey, BCG, Bain)',
         futureScope: 'Excellent career trajectory and exit opportunities into leadership roles in various industries.'
     },
@@ -278,7 +278,7 @@ export const careers: Career[] = [
         courses: ['BA in Mass Communication', 'BBA', 'Digital Marketing Certifications'],
         topColleges: ['No specific requirement; practical skills and portfolio are more important.'],
         admissionProcess: 'Entry is often based on demonstrated skills, portfolio of work, and certifications. Internships are a common starting point.',
-        roadmap: "Experience: Gain experience through internships;Entry-Level: Start as a Social Media Executive;Progression: Advance to Social Media Manager;Leadership: Become Head of Social Media or Digital Marketing.",
+        roadmap: "1. Experience: Gain experience through internships.;2. Entry-Level: Start as a Social Media Executive.;3. Progression: Advance to Social Media Manager.;4. Leadership: Become Head of Social Media or Digital Marketing.",
         avgSalary: '₹5-9 LPA',
         futureScope: 'An integral part of modern marketing. The role is constantly evolving with new platforms, algorithms, and AI tools.'
     },
@@ -294,7 +294,7 @@ export const careers: Career[] = [
         exams: ['NIFT Entrance Exam', 'NID DAT'],
         topColleges: ['National Institute of Fashion Technology (NIFT)', 'Pearl Academy', 'NID'],
         admissionProcess: 'Admission is through competitive entrance exams which test creativity, drawing skills, and general aptitude.',
-        roadmap: "Education: Complete a B.Des in Fashion Design;Experience: Work as an intern or assistant designer;Progression: Become a Fashion Designer for a brand;Advancement: Move to Senior Designer or launch your own label.",
+        roadmap: "1. Education: Complete a B.Des in Fashion Design.;2. Experience: Work as an intern or assistant designer.;3. Progression: Become a Fashion Designer for a brand.;4. Advancement: Move to Senior Designer or launch your own label.",
         avgSalary: '₹4-10 LPA (highly variable)',
         futureScope: 'A competitive field with opportunities in export houses, retail brands, and independent labels. Sustainable and ethical fashion is a growing niche.'
     },
@@ -310,7 +310,7 @@ export const careers: Career[] = [
         exams: ['NEET (in some states)', 'All India Pre-Veterinary Test (AIPVT)'],
         topColleges: ['Indian Veterinary Research Institute (IVRI)', 'Tamil Nadu Veterinary and Animal Sciences University (TANUVAS)'],
         admissionProcess: 'Based on scores in NEET or state-level veterinary entrance exams.',
-        roadmap: "Education: Complete the B.V.Sc & AH degree;Practice: Start as a Junior Veterinarian in a clinic;Specialization (Optional): Pursue a Master's degree (M.V.Sc);Advancement: Open a private practice or become a senior vet.",
+        roadmap: "1. Education: Complete the B.V.Sc & AH degree.;2. Practice: Start as a Junior Veterinarian in a clinic.;3. Specialization (Optional): Pursue a Master's degree (M.V.Sc).;4. Advancement: Open a private practice or become a senior vet.",
         avgSalary: '₹5-8 LPA',
         futureScope: 'Growing demand due to increased pet ownership and awareness. Opportunities in private practice, government services, and research.'
     },
@@ -326,7 +326,7 @@ export const careers: Career[] = [
         exams: ['JEE Main', 'JEE Advanced', 'State CETs'],
         topColleges: ['IITs (Madras, Bombay, Kanpur)', 'NITs (Trichy, Warangal)'],
         admissionProcess: 'Admission through national-level entrance exams like JEE followed by counseling.',
-        roadmap: "Education: Complete a B.Tech in Mechanical Engineering;Entry-Level: Start as a Graduate Engineer Trainee;Progression: Advance to Design Engineer or Production Engineer;Leadership: Become a Project Manager or Technical Lead.",
+        roadmap: "1. Education: Complete a B.Tech in Mechanical Engineering.;2. Entry-Level: Start as a Graduate Engineer Trainee.;3. Progression: Advance to Design Engineer or Production Engineer.;4. Leadership: Become a Project Manager or Technical Lead.",
         avgSalary: '₹6-9 LPA',
         futureScope: 'A core engineering field with stable demand. Growing opportunities in electric vehicles, robotics, and renewable energy systems.'
     },
@@ -341,7 +341,7 @@ export const careers: Career[] = [
         courses: ['BA in Economics', 'MA in Economics', 'PhD in Economics'],
         topColleges: ['Delhi School of Economics (DSE)', 'Jawaharlal Nehru University (JNU)', 'Indian Statistical Institute (ISI)'],
         admissionProcess: 'UG admissions are often merit-based. PG admissions are through rigorous entrance exams for Masters programs.',
-        roadmap: "Education: Complete a BA and MA in Economics;PhD: Obtain a PhD for senior academic or research roles;Career: Work as a Research Associate, Analyst for organizations like RBI, or as a Professor.",
+        roadmap: "1. Education: Complete a BA and MA in Economics.;2. PhD: Obtain a PhD for senior academic or research roles.;3. Career: Work as a Research Associate, Analyst for organizations like RBI, or as a Professor.",
         avgSalary: '₹9-18 LPA (with a Masters from a top institute)',
         futureScope: 'Opportunities in government (RBI, NITI Aayog), international organizations (World Bank, IMF), corporate sector, and academia.'
     },
@@ -357,7 +357,7 @@ export const careers: Career[] = [
         exams: ['CSEET', 'CS Executive', 'CS Professional'],
         topColleges: ['The Institute of Company Secretaries of India (ICSI) is the governing body.'],
         admissionProcess: 'A three-level examination process (CSEET, Executive, Professional) conducted by ICSI, along with practical training.',
-        roadmap: "CSEET: Clear the entrance exam;CS Executive: Clear the second level;Training: Complete practical training;CS Professional: Clear the final exam;Qualify: Become a qualified Company Secretary.",
+        roadmap: "1. CSEET: Clear the entrance exam.;2. CS Executive: Clear the second level.;3. Training: Complete practical training.;4. CS Professional: Clear the final exam.;5. Qualify: Become a qualified Company Secretary.",
         avgSalary: '₹6-10 LPA',
         futureScope: 'Mandatory for listed companies, ensuring consistent demand. A key and respected role in corporate governance.'
     },
@@ -373,7 +373,7 @@ export const careers: Career[] = [
         exams: ['DGCA Exams', 'Airline-specific entrance tests'],
         topColleges: ['Indira Gandhi Rashtriya Uran Akademi (IGRUA)', 'CAE Gondia', 'Various private flying schools'],
         admissionProcess: 'Must be 18+ with 10+2 in Physics & Maths. Involves clearing a DGCA Class 1 medical exam, then undergoing rigorous ground training and logging required flying hours.',
-        roadmap: "Training: Join a flying school for CPL training;Type Rating: Obtain a rating for a specific aircraft (e.g., Airbus A320);Entry-Level: Join an airline as a First Officer (Co-pilot);Progression: Gain experience to become a Captain.",
+        roadmap: "1. Training: Join a flying school for CPL training.;2. Type Rating: Obtain a rating for a specific aircraft (e.g., Airbus A320).;3. Entry-Level: Join an airline as a First Officer (Co-pilot).;4. Progression: Gain experience to become a Captain.",
         avgSalary: '₹12-30 LPA (highly variable based on airline and experience)',
         futureScope: 'The aviation industry is cyclical but has long-term growth potential. Demand is driven by fleet expansion of Indian and international airlines.'
     },
@@ -389,7 +389,7 @@ export const careers: Career[] = [
         exams: ['JEE Main', 'NEET', 'GATE', 'JAM'],
         topColleges: ['IITs (Delhi, Madras)', 'Vellore Institute of Technology (VIT)', 'Institute of Chemical Technology, Mumbai'],
         admissionProcess: 'For B.Tech, through engineering entrance exams. For B.Sc, often based on Class 12 merit. For postgraduate, through GATE or university-specific exams.',
-        roadmap: "Education: Complete a B.Tech or M.Sc in Biotechnology;Entry-Level: Start as a Research Assistant or Lab Technician;PhD (Optional): Pursue a PhD for senior research roles;Progression: Advance to a Scientist or R&D Manager.",
+        roadmap: "1. Education: Complete a B.Tech or M.Sc in Biotechnology.;2. Entry-Level: Start as a Research Assistant or Lab Technician.;3. PhD (Optional): Pursue a PhD for senior research roles.;4. Progression: Advance to a Scientist or R&D Manager.",
         avgSalary: '₹5-9 LPA',
         futureScope: 'Rapidly growing field with huge potential in pharmaceuticals, agriculture, and personalized medicine.'
     },
@@ -405,7 +405,7 @@ export const careers: Career[] = [
         exams: ['NCHMCT JEE', 'UGAT', 'Various university-level exams'],
         topColleges: ['Institute of Hotel Management (IHM) - Pusa, Mumbai, Bangalore', 'Welcomgroup Graduate School of Hotel Administration (WGSHA)'],
         admissionProcess: 'Based on performance in national or state-level hotel management entrance exams, followed by group discussions and interviews.',
-        roadmap: "Education: Complete a Bachelor of Hotel Management (BHM) degree;Entry-Level: Start as a Management Trainee in a hotel chain;Progression: Become a Department Manager (e.g., F&B Manager);Leadership: Advance to the role of General Manager.",
+        roadmap: "1. Education: Complete a Bachelor of Hotel Management (BHM) degree.;2. Entry-Level: Start as a Management Trainee in a hotel chain.;3. Progression: Become a Department Manager (e.g., F&B Manager).;4. Leadership: Advance to the role of General Manager.",
         avgSalary: '₹5-12 LPA',
         futureScope: 'The hospitality industry is growing with tourism. Excellent opportunities to work with international hotel chains.'
     },
@@ -421,7 +421,7 @@ export const careers: Career[] = [
         exams: ['ACET (Actuarial Common Entrance Test)', 'Series of professional exams from IAI'],
         topColleges: ['Institute of Actuaries of India (IAI) is the professional body. Many colleges offer UG/PG degrees.'],
         admissionProcess: 'Clear ACET to become a student member of IAI, then clear a series of 15 papers to become a qualified actuary. This is usually done alongside a degree.',
-        roadmap: "ACET Exam: Clear the entrance test to become a student member of IAI;Exams: Start clearing the core technical papers while pursuing a degree;Experience: Gain practical experience through internships;Qualify: Clear all required papers to become a Fellow Actuary.",
+        roadmap: "1. ACET Exam: Clear the entrance test to become a student member of IAI.;2. Exams: Start clearing the core technical papers while pursuing a degree.;3. Experience: Gain practical experience through internships.;4. Qualify: Clear all required papers to become a Fellow Actuary.",
         avgSalary: '₹10-20 LPA (increases significantly with number of papers cleared)',
         futureScope: 'Very high demand in insurance and pension industries. A niche, highly respected, and well-paying profession.'
     },
@@ -437,7 +437,7 @@ export const careers: Career[] = [
         exams: ['NID DAT', 'UCEED', 'NIFT'],
         topColleges: ['NID Ahmedabad', 'CEPT University', 'NIFT Delhi'],
         admissionProcess: 'Admission through design entrance exams which test creativity, spatial awareness, and drawing skills.',
-        roadmap: "Education: Earn a degree or diploma in Interior Design;Portfolio: Build a portfolio as a junior designer or intern;Progression: Advance to a Senior Designer role;Advancement: Start your own design studio or become a Lead Designer.",
+        roadmap: "1. Education: Earn a degree or diploma in Interior Design.;2. Portfolio: Build a portfolio as a junior designer or intern.;3. Progression: Advance to a Senior Designer role.;4. Advancement: Start your own design studio or become a Lead Designer.",
         avgSalary: '₹4-8 LPA',
         futureScope: 'Growing with the real estate and home renovation market. Specializations in sustainable design or smart homes are emerging.'
     },
@@ -453,7 +453,7 @@ export const careers: Career[] = [
         exams: ['NCHMCT JEE', 'UGAT'],
         topColleges: ['IHM Pusa, Mumbai, Bangalore', 'Culinary Academy of India, Hyderabad'],
         admissionProcess: 'Through hotel management entrance exams. Practical skills and experience are highly valued.',
-        roadmap: "Education: Attend culinary school (BHM or Diploma);Entry-Level: Start as a Commis Chef (trainee);Progression: Rise through the ranks: Chef de Partie, Sous Chef;Leadership: Become an Executive Chef;Entrepreneurship: Potentially open your own restaurant.",
+        roadmap: "1. Education: Attend culinary school (BHM or Diploma).;2. Entry-Level: Start as a Commis Chef (trainee).;3. Progression: Rise through the ranks: Chef de Partie, Sous Chef.;4. Leadership: Become an Executive Chef.;5. Entrepreneurship: Potentially open your own restaurant.",
         avgSalary: '₹4-10 LPA (highly variable based on establishment)',
         futureScope: 'Opportunities in hotels, restaurants, cruise lines, and food media. Entrepreneurship (owning a restaurant) is a common goal.'
     },
@@ -469,7 +469,7 @@ export const careers: Career[] = [
         exams: ['CETs conducted by state governments or universities'],
         topColleges: ['CMC Vellore', 'KEM Hospital, Mumbai', 'Seth GS Medical College, Mumbai'],
         admissionProcess: 'Admission is typically based on scores in a Common Entrance Test (CET). Some institutions may use NEET scores.',
-        roadmap: "Education: Complete a Bachelor of Physiotherapy (BPT) degree;Internship: Complete a mandatory internship;Practice: Start practicing as a Physiotherapist;Specialization (Optional): Pursue a Master's (MPT);Advancement: Open a private clinic or become a senior therapist.",
+        roadmap: "1. Education: Complete a Bachelor of Physiotherapy (BPT) degree.;2. Internship: Complete a mandatory internship.;3. Practice: Start practicing as a Physiotherapist.;4. Specialization (Optional): Pursue a Master's (MPT).;5. Advancement: Open a private clinic or become a senior therapist.",
         avgSalary: '₹3-6 LPA',
         futureScope: 'Growing demand with an aging population and increasing focus on sports and fitness.'
     },
@@ -485,7 +485,7 @@ export const careers: Career[] = [
         exams: ['NID DAT', 'UCEED', 'Various private college entrance tests'],
         topColleges: ['NID Ahmedabad', 'Industrial Design Centre (IDC), IIT Bombay', 'MAAC (private institute)'],
         admissionProcess: 'Based on scores from design entrance exams, which include a portfolio review. A strong portfolio is crucial.',
-        roadmap: "Education: Earn an animation degree or diploma;Entry-Level: Start in a junior role like Roto Artist or Junior Animator;Progression: Advance to an Animator role;Leadership: Become a Senior Animator, Lead Animator, or Animation Director.",
+        roadmap: "1. Education: Earn an animation degree or diploma.;2. Entry-Level: Start in a junior role like Roto Artist or Junior Animator.;3. Progression: Advance to an Animator role.;4. Leadership: Become a Senior Animator, Lead Animator, or Animation Director.",
         avgSalary: '₹4-8 LPA',
         futureScope: 'Booming industry with the growth of OTT platforms and the gaming industry. High demand for skilled 3D animators.'
     },
@@ -500,7 +500,7 @@ export const careers: Career[] = [
         courses: ['BBA', 'MBA in HR'],
         topColleges: ['XLRI Jamshedpur', 'TISS Mumbai', 'IIMs'],
         admissionProcess: 'An MBA in HR from a top business school is the most common route. Admission is through exams like CAT, XAT, etc.',
-        roadmap: "Education: Complete a UG degree, then pursue an MBA in HR;Entry-Level: Start as an HR Executive or HR Business Partner;Progression: Advance to HR Manager;Leadership: Become an HR Director or Chief Human Resources Officer (CHRO).",
+        roadmap: "1. Education: Complete a UG degree, then pursue an MBA in HR.;2. Entry-Level: Start as an HR Executive or HR Business Partner.;3. Progression: Advance to HR Manager.;4. Leadership: Become an HR Director or Chief Human Resources Officer (CHRO).",
         avgSalary: '₹8-15 LPA (with MBA)',
         futureScope: 'Essential function in every organization. The role is becoming more strategic, focusing on talent management and culture.'
     },
@@ -516,7 +516,7 @@ export const careers: Career[] = [
         exams: ['Merit-based for UG', 'University entrance tests or JAM for M.Sc'],
         topColleges: ['University of Delhi', 'Panjab University', 'St. Xavier\'s College, Mumbai'],
         admissionProcess: 'UG admissions are often based on Class 12 marks. PG admissions are through entrance exams like the IIT JAM or university-specific tests.',
-        roadmap: "Education: Complete a B.Sc and M.Sc in Microbiology;PhD: A PhD is often required for research roles;Career: Work as a Quality Control officer, Research Fellow, or Scientist.",
+        roadmap: "1. Education: Complete a B.Sc and M.Sc in Microbiology.;2. PhD: A PhD is often required for research roles.;3. Career: Work as a Quality Control officer, Research Fellow, or Scientist.",
         avgSalary: '₹4-7 LPA',
         futureScope: 'Important roles in pharmaceutical, food, and beverage industries, as well as in healthcare diagnostics and environmental agencies.'
     },
@@ -532,7 +532,7 @@ export const careers: Career[] = [
         exams: ['University-specific entrance exams'],
         topColleges: ['Deccan College, Pune', 'Banaras Hindu University (BHU)', 'University of Delhi'],
         admissionProcess: 'Admissions are typically through university-specific entrance tests for MA programs. A background in history or anthropology is helpful.',
-        roadmap: "Education: Complete a BA and MA in History or Archaeology;PhD: A PhD is usually required for senior roles;Career: Start as a Field Assistant, then work as an Archaeologist with the Archaeological Survey of India (ASI) or a university.",
+        roadmap: "1. Education: Complete a BA and MA in History or Archaeology.;2. PhD: A PhD is usually required for senior roles.;3. Career: Start as a Field Assistant, then work as an Archaeologist with the Archaeological Survey of India (ASI) or a university.",
         avgSalary: '₹5-8 LPA',
         futureScope: 'Primarily in government organizations like the Archaeological Survey of India (ASI) and in universities and museums.'
     },
@@ -548,7 +548,7 @@ export const careers: Career[] = [
         exams: ['CMA Foundation', 'CMA Intermediate', 'CMA Final'],
         topColleges: ['The Institute of Cost Accountants of India (ICAI) is the governing body.'],
         admissionProcess: 'A three-level examination process (Foundation, Intermediate, Final) conducted by the ICAI.',
-        roadmap: "CMA Foundation: Clear the first level exam;CMA Intermediate: Clear the second level;Training: Complete practical training;CMA Final: Clear the final exam;Qualify: Become a qualified Cost & Management Accountant.",
+        roadmap: "1. CMA Foundation: Clear the first level exam.;2. CMA Intermediate: Clear the second level.;3. Training: Complete practical training.;4. CMA Final: Clear the final exam.;5. Qualify: Become a qualified Cost & Management Accountant.",
         avgSalary: '₹7-12 LPA',
         futureScope: 'High demand in the manufacturing sector. A key role in strategic decision-making and improving operational efficiency.'
     },
@@ -564,7 +564,7 @@ export const careers: Career[] = [
         exams: ['JEE Main', 'JEE Advanced', 'State CETs'],
         topColleges: ['IITs (Delhi, Bombay, Madras)', 'NITs (Trichy, Warangal)'],
         admissionProcess: 'Admission through national-level entrance exams like JEE followed by counseling.',
-        roadmap: "Education: Complete a B.Tech in Electrical Engineering;Entry-Level: Start in a core sector job (e.g., power, electronics);Progression: Advance to Senior Engineer;Leadership: Become a Technical Lead or Manager.",
+        roadmap: "1. Education: Complete a B.Tech in Electrical Engineering.;2. Entry-Level: Start in a core sector job (e.g., power, electronics).;3. Progression: Advance to Senior Engineer.;4. Leadership: Become a Technical Lead or Manager.",
         avgSalary: '₹6-10 LPA',
         futureScope: 'Core field with opportunities in power, electronics, telecommunications, and the booming renewable energy sector.'
     },
@@ -580,7 +580,7 @@ export const careers: Career[] = [
         exams: ['University-specific entrance exams'],
         topColleges: ['University of Delhi', 'Jadavpur University', 'Panjab University'],
         admissionProcess: 'A bachelor\'s degree in any field is required for the B.Lib.I.Sc program. Admission is usually through an entrance test or merit-based.',
-        roadmap: "Education: Complete any Bachelor's degree, then earn a B.Lib.I.Sc degree;Specialization (Optional): Pursue an M.Lib.I.Sc for senior roles;Career: Work as a Librarian in a school, college, or public library.",
+        roadmap: "1. Education: Complete any Bachelor's degree, then earn a B.Lib.I.Sc degree.;2. Specialization (Optional): Pursue an M.Lib.I.Sc for senior roles.;3. Career: Work as a Librarian in a school, college, or public library.",
         avgSalary: '₹4-7 LPA',
         futureScope: 'The role is evolving to include digital resource management, data curation, and information literacy training.'
     },
@@ -596,7 +596,7 @@ export const careers: Career[] = [
         exams: ['CAT, XAT (for MBA)', 'CFA Level I, II, III'],
         topColleges: ['IIMs (A, B, C)', 'FMS Delhi', 'CFA Institute'],
         admissionProcess: 'An MBA or CFA charter is highly preferred. The CFA program involves three levels of self-study and exams.',
-        roadmap: "Education: Complete a relevant degree and pursue an MBA in Finance or clear CFA levels;Entry-Level: Start as an Equity Research Analyst;Progression: Advance to a Senior Analyst;Leadership: Become a Portfolio Manager or Head of Research.",
+        roadmap: "1. Education: Complete a relevant degree and pursue an MBA in Finance or clear CFA levels.;2. Entry-Level: Start as an Equity Research Analyst.;3. Progression: Advance to a Senior Analyst.;4. Leadership: Become a Portfolio Manager or Head of Research.",
         avgSalary: '₹8-18 LPA',
         futureScope: 'High demand in the financial services industry. Opportunities in equity research, portfolio management, and corporate finance.'
     },
@@ -612,7 +612,7 @@ export const careers: Career[] = [
         exams: ['NEET'],
         topColleges: ['Maulana Azad Institute of Dental Sciences, Delhi', 'Manipal College of Dental Sciences', 'Saveetha Institute, Chennai'],
         admissionProcess: 'Clearing the NEET exam is mandatory for admission to BDS courses in India, followed by counseling.',
-        roadmap: "NEET Exam: Clear the NEET UG exam;Degree: Complete the BDS degree and internship;Specialization (Optional): Pursue an MDS for specialization;Practice: Start a private practice or join a hospital.",
+        roadmap: "1. NEET Exam: Clear the NEET UG exam.;2. Degree: Complete the BDS degree and internship.;3. Specialization (Optional): Pursue an MDS for specialization.;4. Practice: Start a private practice or join a hospital.",
         avgSalary: '₹5-10 LPA',
         futureScope: 'Good scope for private practice. Specializations like orthodontics or cosmetic dentistry are highly lucrative.'
     },
@@ -628,7 +628,7 @@ export const careers: Career[] = [
         exams: ['FTII JET', 'SRFTI Entrance Exam'],
         topColleges: ['Film and Television Institute of India (FTII), Pune', 'Satyajit Ray Film and Television Institute (SRFTI), Kolkata'],
         admissionProcess: 'Admission to top film schools is through a competitive joint entrance test (JET) that includes a written exam and interview.',
-        roadmap: "Education: Attend film school or gain experience on film sets;Experience: Work as a Camera Assistant, then Assistant DP;Lead Role: Become a Director of Photography (DP) for independent or major films.",
+        roadmap: "1. Education: Attend film school or gain experience on film sets.;2. Experience: Work as a Camera Assistant, then Assistant DP.;3. Lead Role: Become a Director of Photography (DP) for independent or major films.",
         avgSalary: 'Project-based, highly variable. ₹50,000 to several lakhs per project.',
         futureScope: 'The rise of OTT platforms (Netflix, Amazon Prime) has significantly increased opportunities for cinematographers.'
     },
@@ -643,7 +643,7 @@ export const careers: Career[] = [
         courses: ['B.Tech', 'BBA', 'MBA'],
         topColleges: ['Any top engineering or business school provides a good foundation.'],
         admissionProcess: 'No specific entry route. Many BAs start in technical or business roles and then transition. An MBA can be a strong asset.',
-        roadmap: "Experience: Start in an entry-level technical or business role;Transition: Move to a Business Analyst role;Progression: Advance to Senior Business Analyst;Advancement: Become a Product Manager or Consultant.",
+        roadmap: "1. Experience: Start in an entry-level technical or business role.;2. Transition: Move to a Business Analyst role.;3. Progression: Advance to Senior Business Analyst.;4. Advancement: Become a Product Manager or Consultant.",
         avgSalary: '₹7-12 LPA',
         futureScope: 'Crucial role in digital transformation projects across all industries. High demand for BAs with technical skills.'
     },
@@ -659,7 +659,7 @@ export const careers: Career[] = [
         exams: ['JAM for M.Sc in IITs', 'University-specific entrance tests'],
         topColleges: ['IITs (Kharagpur, Bombay)', 'University of Delhi', 'Presidency University, Kolkata'],
         admissionProcess: 'UG admissions are merit-based. PG admissions in top institutes are through IIT JAM or other entrance exams.',
-        roadmap: "Education: Complete a B.Sc and M.Sc in Geology;Career: Work as a Geologist in government organizations (GSI, ONGC) or private mining companies;Progression: Advance to a Senior Geologist.",
+        roadmap: "1. Education: Complete a B.Sc and M.Sc in Geology.;2. Career: Work as a Geologist in government organizations (GSI, ONGC) or private mining companies.;3. Progression: Advance to a Senior Geologist.",
         avgSalary: '₹6-10 LPA (especially in PSUs)',
         futureScope: 'Opportunities in oil and gas, mining, and environmental consulting. Government roles in Geological Survey of India (GSI) are prestigious.'
     },
@@ -675,7 +675,7 @@ export const careers: Career[] = [
         exams: ['University-specific entrance exams'],
         topColleges: ['Jawaharlal Nehru University (JNU)', 'Delhi School of Economics (DSE)', 'TISS Mumbai'],
         admissionProcess: 'Admissions for MA programs are through competitive entrance exams. A strong background in social sciences is beneficial.',
-        roadmap: "Education: Complete a BA and MA in Sociology;PhD: Pursue a PhD for academic roles;Career: Work as a researcher, policy analyst for an NGO, or a professor.",
+        roadmap: "1. Education: Complete a BA and MA in Sociology.;2. PhD: Pursue a PhD for academic roles.;3. Career: Work as a researcher, policy analyst for an NGO, or a professor.",
         avgSalary: '₹5-9 LPA',
         futureScope: 'Careers in academia, NGOs, market research, and government policy think tanks. Growing need for social impact assessment.'
     },
@@ -690,7 +690,7 @@ export const careers: Career[] = [
         courses: ['BBA in Supply Chain Management', 'MBA in Operations/Supply Chain'],
         topColleges: ['IIMs (Bangalore, Calcutta)', 'NITIE Mumbai (now IIM Mumbai)', 'SP Jain'],
         admissionProcess: 'An MBA from a top institute is the preferred route. Admission through CAT, XAT, etc.',
-        roadmap: "Education: Complete a relevant degree, then an MBA in Supply Chain/Operations;Entry-Level: Start as a Logistics Coordinator or Analyst;Progression: Advance to Logistics Manager;Leadership: Become Head of Supply Chain.",
+        roadmap: "1. Education: Complete a relevant degree, then an MBA in Supply Chain/Operations.;2. Entry-Level: Start as a Logistics Coordinator or Analyst.;3. Progression: Advance to Logistics Manager.;4. Leadership: Become Head of Supply Chain.",
         avgSalary: '₹9-16 LPA (with MBA)',
         futureScope: 'The e-commerce boom has created huge demand for logistics professionals. A critical function for any company that moves physical goods.'
     },
@@ -706,7 +706,7 @@ export const careers: Career[] = [
         exams: ['JEE Main', 'JEE Advanced'],
         topColleges: ['IITs (Bombay, Delhi, Kanpur)', 'Institute of Chemical Technology (ICT), Mumbai'],
         admissionProcess: 'Through JEE Main and JEE Advanced ranks followed by counseling.',
-        roadmap: "Education: Complete a B.Tech in Chemical Engineering;Entry-Level: Start as a Process Engineer in a manufacturing plant;Progression: Advance to Senior Process Engineer;Leadership: Become a Plant Manager or a specialist consultant.",
+        roadmap: "1. Education: Complete a B.Tech in Chemical Engineering.;2. Entry-Level: Start as a Process Engineer in a manufacturing plant.;3. Progression: Advance to Senior Process Engineer.;4. Leadership: Become a Plant Manager or a specialist consultant.",
         avgSalary: '₹7-11 LPA',
         futureScope: 'Core opportunities in petroleum refining, fertilizers, pharmaceuticals, and specialty chemicals industries.'
     },
@@ -722,7 +722,7 @@ export const careers: Career[] = [
         exams: ['University entrance exams for PG/PhD'],
         topColleges: ['University of Delhi', 'JNU', 'Jadavpur University'],
         admissionProcess: 'A strong academic record and performance in entrance exams for postgraduate and doctoral programs.',
-        roadmap: "Education: Complete a BA and MA in History;PhD: A PhD is essential for most academic positions;Career: Work as a professor, archivist, or museum curator;Contribution: Contribute to research and publications.",
+        roadmap: "1. Education: Complete a BA and MA in History.;2. PhD: A PhD is essential for most academic positions.;3. Career: Work as a professor, archivist, or museum curator.;4. Contribution: Contribute to research and publications.",
         avgSalary: '₹6-9 LPA (in academia)',
         futureScope: 'Primarily in academia and research. Also opportunities in archives, museums, journalism, and policy research.'
     },
@@ -738,7 +738,7 @@ export const careers: Career[] = [
         exams: ['CA Foundation, Intermediate, Final'],
         topColleges: ['ICAI is the professional body that conducts the CA course.'],
         admissionProcess: 'Becoming a Chartered Accountant is the most direct path to a career in auditing.',
-        roadmap: "CA Qualification: Qualify as a Chartered Accountant;Entry-Level: Join an accounting firm as an Audit Associate;Progression: Advance to Senior Auditor, then Audit Manager;Leadership: Become a Partner in the firm.",
+        roadmap: "1. CA Qualification: Qualify as a Chartered Accountant.;2. Entry-Level: Join an accounting firm as an Audit Associate.;3. Progression: Advance to Senior Auditor, then Audit Manager.;4. Leadership: Become a Partner in the firm.",
         avgSalary: '₹8-15 LPA',
         futureScope: 'Constant demand as it is a legally required function. Specializations in IT audit or forensic audit are growing.'
     },
@@ -754,7 +754,7 @@ export const careers: Career[] = [
         exams: ['JEE Main', 'JEE Advanced'],
         topColleges: ['IITs (Bombay, Madras, Kharagpur)', 'Indian Institute of Space Science and Technology (IIST)'],
         admissionProcess: 'Through JEE ranks. IIST has a separate admission process for students aspiring to join ISRO.',
-        roadmap: "Education: Complete a B.Tech in Aerospace Engineering;Entry-Level: Secure a role at organizations like ISRO, DRDO, or HAL;Progression: Advance from Engineer to Scientist or Senior Engineer;Leadership: Lead projects in aircraft or spacecraft design.",
+        roadmap: "1. Education: Complete a B.Tech in Aerospace Engineering.;2. Entry-Level: Secure a role at organizations like ISRO, DRDO, or HAL.;3. Progression: Advance from Engineer to Scientist or Senior Engineer.;4. Leadership: Lead projects in aircraft or spacecraft design.",
         avgSalary: '₹8-15 LPA',
         futureScope: 'Prestigious opportunities in government organizations like ISRO and DRDO. Growing private sector with space-tech startups.'
     },
@@ -770,7 +770,7 @@ export const careers: Career[] = [
         exams: ['University-specific entrance exams'],
         topColleges: ['University of Delhi', 'Panjab University', 'University of Calcutta'],
         admissionProcess: 'MA admissions are through university entrance exams. A background in social sciences is helpful.',
-        roadmap: "Education: Complete a BA and MA in Anthropology;PhD: Pursue a PhD for academic roles;Career: Work as a professor, researcher for an NGO, or a user researcher for a tech company.",
+        roadmap: "1. Education: Complete a BA and MA in Anthropology.;2. PhD: Pursue a PhD for academic roles.;3. Career: Work as a professor, researcher for an NGO, or a user researcher for a tech company.",
         avgSalary: '₹5-8 LPA',
         futureScope: 'Mainly academic. Also opportunities in user research (for tech companies), NGOs, and corporate social responsibility (CSR).'
     },
@@ -786,7 +786,7 @@ export const careers: Career[] = [
         exams: ['No specific exam. Actuarial papers can help.'],
         topColleges: ['SRCC', 'Narsee Monjee', 'Top MBA colleges'],
         admissionProcess: 'Companies hire graduates and provide on-the-job training. A background in finance, business, or math is beneficial.',
-        roadmap: "Entry-Level: Start as a trainee in a bank or financial institution;Progression: Become a Junior, then Senior Credit Analyst;Leadership: Advance to Credit Manager or Head of Credit Risk.",
+        roadmap: "1. Entry-Level: Start as a trainee in a bank or financial institution.;2. Progression: Become a Junior, then Senior Credit Analyst.;3. Leadership: Advance to Credit Manager or Head of Credit Risk.",
         avgSalary: '₹5-9 LPA',
         futureScope: 'A stable and crucial role in the insurance industry. The rise of data analytics and AI is changing how underwriting is done.'
     },
@@ -802,7 +802,7 @@ export const careers: Career[] = [
         exams: ['ICAR AIEEA'],
         topColleges: ['Indian Agricultural Research Institute (IARI), Delhi', 'Punjab Agricultural University (PAU), Ludhiana'],
         admissionProcess: 'Admission to most agricultural universities is through the All India Entrance Examination for Admission (AIEEA) conducted by ICAR.',
-        roadmap: "Education: Complete a B.Sc in Agriculture, then an M.Sc for specialization;PhD: A PhD is required for senior research positions;Career: Work as a Scientist at ICAR, a state university, or an agri-tech company.",
+        roadmap: "1. Education: Complete a B.Sc in Agriculture, then an M.Sc for specialization.;2. PhD: A PhD is required for senior research positions.;3. Career: Work as a Scientist at ICAR, a state university, or an agri-tech company.",
         avgSalary: '₹6-10 LPA',
         futureScope: 'Growing importance with the rise of agri-tech startups and the need for sustainable farming.'
     },
@@ -818,7 +818,7 @@ export const careers: Career[] = [
         exams: ['University entrance exams for PG'],
         topColleges: ['JNU', 'University of Delhi', 'Lady Shri Ram College'],
         admissionProcess: 'MA admissions are through competitive entrance exams. A strong understanding of political and social issues is required.',
-        roadmap: "Education: Complete a BA and MA in Political Science;PhD: A PhD is often necessary for academic roles;Career: Work as a professor, policy analyst for a think tank, or a political journalist. Many also prepare for Civil Services.",
+        roadmap: "1. Education: Complete a BA and MA in Political Science.;2. PhD: A PhD is often necessary for academic roles.;3. Career: Work as a professor, policy analyst for a think tank, or a political journalist. Many also prepare for Civil Services.",
         avgSalary: '₹6-9 LPA',
         futureScope: 'Careers in academia, political consulting, policy think tanks, journalism, and the civil services.'
     },
@@ -834,7 +834,7 @@ export const careers: Career[] = [
         exams: ['CA exams'],
         topColleges: ['ICAI is the primary body that governs the CA profession.'],
         admissionProcess: 'Becoming a Chartered Accountant is the most direct path. Lawyers and MBAs can also specialize in tax.',
-        roadmap: "Qualification: Qualify as a Chartered Accountant;Entry-Level: Join the tax department of an accounting firm;Progression: Advance from Tax Associate to Senior Tax Consultant;Leadership: Become a Tax Manager and then Partner.",
+        roadmap: "1. Qualification: Qualify as a Chartered Accountant.;2. Entry-Level: Join the tax department of an accounting firm.;3. Progression: Advance from Tax Associate to Senior Tax Consultant.;4. Leadership: Become a Tax Manager and then Partner.",
         avgSalary: '₹7-14 LPA',
         futureScope: 'An evergreen field due to complex and changing tax laws. High demand for specialists in international taxation and GST.'
     },
@@ -850,7 +850,7 @@ export const careers: Career[] = [
         exams: ['JAM', 'JEST', 'GATE'],
         topColleges: ['Indian Institute of Astrophysics (IIA), Bangalore', 'IUCAA, Pune', 'TIFR, Mumbai', 'IITs'],
         admissionProcess: 'A strong performance in physics and math is crucial. Admission to top research institutes for a PhD is via exams like JEST and GATE.',
-        roadmap: "Education: Complete a B.Sc and M.Sc in Physics;PhD: Clear exams like JEST/GATE to enter a PhD program;Research: Do post-doctoral research;Career: Become a professor or a scientist at a research institute like ISRO or IIA.",
+        roadmap: "1. Education: Complete a B.Sc and M.Sc in Physics.;2. PhD: Clear exams like JEST/GATE to enter a PhD program.;3. Research: Do post-doctoral research.;4. Career: Become a professor or a scientist at a research institute like ISRO or IIA.",
         avgSalary: '₹8-15 LPA (in research)',
         futureScope: 'Primarily a research-focused career in academia and government research labs. Highly prestigious and intellectually stimulating.'
     },
@@ -866,7 +866,7 @@ export const careers: Career[] = [
         exams: ['FTII JET', 'SRFTI Entrance Exam'],
         topColleges: ['Film and Television Institute of India (FTII), Pune', 'Satyajit Ray Film and Television Institute (SRFTI), Kolkata'],
         admissionProcess: 'Admission to premier film schools is highly competitive, based on an entrance test that evaluates creative aptitude and film knowledge.',
-        roadmap: "Education: Attend film school or gain experience on film sets;Experience: Work as an Assistant Director on several projects;Portfolio: Direct independent short films;Career: Direct a feature film or series.",
+        roadmap: "1. Education: Attend film school or gain experience on film sets.;2. Experience: Work as an Assistant Director on several projects.;3. Portfolio: Direct independent short films.;4. Career: Direct a feature film or series.",
         avgSalary: 'Highly project-dependent, no fixed salary. Can range from nothing to crores.',
         futureScope: 'The boom in OTT platforms has created numerous opportunities for new directors and storytellers.'
     },
@@ -882,7 +882,7 @@ export const careers: Career[] = [
         exams: ['No specific exam. Actuarial papers can help.'],
         topColleges: ['Any good commerce college provides a solid foundation.'],
         admissionProcess: 'Companies hire graduates and provide on-the-job training. A background in finance, business, or math is beneficial.',
-        roadmap: "Entry-Level: Start as a Trainee Underwriter in an insurance company;Progression: Advance to Junior, then Senior Underwriter;Leadership: Become an Underwriting Manager.",
+        roadmap: "1. Entry-Level: Start as a Trainee Underwriter in an insurance company.;2. Progression: Advance to Junior, then Senior Underwriter.;3. Leadership: Become an Underwriting Manager.",
         avgSalary: '₹5-9 LPA',
         futureScope: 'A stable and crucial role in the insurance industry. The rise of data analytics and AI is changing how underwriting is done.'
     },
@@ -898,7 +898,7 @@ export const careers: Career[] = [
         exams: ['JEE Main', 'ICAR AIEEA'],
         topColleges: ['Institute of Chemical Technology (ICT), Mumbai', 'National Dairy Research Institute (NDRI), Karnal', 'CFTRI, Mysore'],
         admissionProcess: 'Admission to B.Tech programs is through engineering entrance exams. For B.Sc courses, it\'s often merit-based.',
-        roadmap: "Education: Complete a degree in Food Technology/Science;Entry-Level: Start as a Quality Assurance Officer or R&D Executive;Progression: Advance to Production Manager or R&D Manager;Leadership: Lead product development at a major food company.",
+        roadmap: "1. Education: Complete a degree in Food Technology/Science.;2. Entry-Level: Start as a Quality Assurance Officer or R&D Executive.;3. Progression: Advance to Production Manager or R&D Manager.;4. Leadership: Lead product development at a major food company.",
         avgSalary: '₹5-8 LPA',
         futureScope: 'High demand in the massive food processing industry. Roles in R&D, quality assurance, and manufacturing at companies like Nestle, ITC, and Britannia.'
     },
@@ -914,7 +914,7 @@ export const careers: Career[] = [
         exams: ['University-specific entrance exams'],
         topColleges: ['National Museum Institute, Delhi', 'MS University, Baroda', 'JNU'],
         admissionProcess: 'A Master\'s degree in a relevant field like Museology, Art History, or History is required. A PhD is often needed for senior roles.',
-        roadmap: "Education: Complete an MA in a relevant field (e.g., Museology);PhD: A PhD is often required for senior roles;Entry-Level: Start as a Curatorial Assistant;Progression: Advance to Assistant Curator, then Chief Curator.",
+        roadmap: "1. Education: Complete an MA in a relevant field (e.g., Museology).;2. PhD: A PhD is often required for senior roles.;3. Entry-Level: Start as a Curatorial Assistant.;4. Progression: Advance to Assistant Curator, then Chief Curator.",
         avgSalary: '₹5-9 LPA',
         futureScope: 'A specialized and prestigious field. Opportunities in government and private museums and art galleries are growing.'
     },
@@ -930,7 +930,7 @@ export const careers: Career[] = [
         exams: ['CFP Exam (5 modules)'],
         topColleges: ['Financial Planning Standards Board India (FPSB) is the certifying body.'],
         admissionProcess: 'Can be pursued after 12th or graduation. Requires passing a series of exams conducted by the FPSB India.',
-        roadmap: "Certification: Complete the CFP certification exams;Experience: Start by working with a bank or wealth management firm;Practice: Gain clients and experience, then become an Independent Financial Advisor (IFA).",
+        roadmap: "1. Certification: Complete the CFP certification exams.;2. Experience: Start by working with a bank or wealth management firm.;3. Practice: Gain clients and experience, then become an Independent Financial Advisor (IFA).",
         avgSalary: '₹4-10 LPA (can be higher with commissions on assets managed)',
         futureScope: 'Growing demand as financial literacy increases. A shift towards fee-based advisory provides great entrepreneurial scope.'
     },
@@ -946,7 +946,7 @@ export const careers: Career[] = [
         exams: ['University entrance tests for UG/PG', 'NET/GATE for PhD'],
         topColleges: ['University of Delhi', 'BHU', 'Osmania University'],
         admissionProcess: 'A strong background in biology and chemistry is essential. Admission to PG and PhD programs is highly competitive.',
-        roadmap: "Education: Complete a B.Sc and M.Sc in Genetics or a related field;PhD: A PhD is almost always required;Research: Do post-doctoral research;Career: Work as a Scientist, Professor, or Genetic Counselor.",
+        roadmap: "1. Education: Complete a B.Sc and M.Sc in Genetics or a related field.;2. PhD: A PhD is almost always required.;3. Research: Do post-doctoral research.;4. Career: Work as a Scientist, Professor, or Genetic Counselor.",
         avgSalary: '₹6-12 LPA (in research/counseling)',
         futureScope: 'Massive potential with advancements in gene editing (CRISPR) and personalized medicine. Roles in research, diagnostics, and counseling are expanding.'
     },
@@ -962,7 +962,7 @@ export const careers: Career[] = [
         exams: ['Not applicable'],
         topColleges: ['Any college with a strong writing program. Skills are more important than college name.'],
         admissionProcess: 'Entry is based on writing skills. A portfolio of writing samples is crucial. A degree in a technical field is a major advantage.',
-        roadmap: "Entry-Level: Start as a Junior Technical Writer, often after an internship;Progression: Advance to a Technical Writer role, then Senior Technical Writer;Leadership: Become a Documentation Manager or Information Architect.",
+        roadmap: "1. Entry-Level: Start as a Junior Technical Writer, often after an internship.;2. Progression: Advance to a Technical Writer role, then Senior Technical Writer.;3. Leadership: Become a Documentation Manager or Information Architect.",
         avgSalary: '₹5-10 LPA',
         futureScope: 'High demand in the software and IT industry. Every product needs good documentation, making this a stable career.'
     },
@@ -978,7 +978,7 @@ export const careers: Career[] = [
         exams: ['NEET (for top institutes like AIISH)', 'University-specific entrance exams'],
         topColleges: ['All India Institute of Speech and Hearing (AIISH), Mysore', 'Manipal College of Health Professions', 'PGIMER, Chandigarh'],
         admissionProcess: 'Admission is based on entrance exams. A Rehabilitation Council of India (RCI) registration is required to practice.',
-        roadmap: "Education: Complete the BASLP degree and internship;License: Register with the RCI to practice;Career: Work as a clinical audiologist or speech pathologist;Specialization (Optional): Pursue a Master's (MASLP).",
+        roadmap: "1. Education: Complete the BASLP degree and internship.;2. License: Register with the RCI to practice.;3. Career: Work as a clinical audiologist or speech pathologist.;4. Specialization (Optional): Pursue a Master's (MASLP).",
         avgSalary: '₹4-7 LPA',
         futureScope: 'Growing awareness and an aging population are increasing demand in hospitals, special schools, and private clinics.'
     },
@@ -994,7 +994,7 @@ export const careers: Career[] = [
         exams: ['University/State-level CETs for paramedical courses'],
         topColleges: ['Tata Memorial Hospital, Mumbai', 'CMC Vellore', 'Regional Cancer Centres (RCCs)'],
         admissionProcess: 'Admission is typically through entrance exams for paramedical courses at various universities and medical colleges.',
-        roadmap: "Education: Complete a B.Sc in Radiotherapy Technology;Entry-Level: Start as a Junior Technologist in a hospital's oncology department;Progression: Advance to Senior Technologist;Leadership: Become Chief Technologist or an Application Specialist.",
+        roadmap: "1. Education: Complete a B.Sc in Radiotherapy Technology.;2. Entry-Level: Start as a Junior Technologist in a hospital's oncology department.;3. Progression: Advance to Senior Technologist.;4. Leadership: Become Chief Technologist or an Application Specialist.",
         avgSalary: '₹4-8 LPA',
         futureScope: 'A crucial and high-demand role in cancer care. Opportunities in hospitals, cancer centers, and with equipment manufacturers.'
     },
@@ -1010,8 +1010,56 @@ export const careers: Career[] = [
         exams: ['University/State-level CETs', 'Some institutes use NEET scores'],
         topColleges: ['AIIMS, Delhi', 'Sankara Nethralaya, Chennai', 'LV Prasad Eye Institute, Hyderabad'],
         admissionProcess: 'Admission is through entrance exams. The course is a 4-year degree program including a one-year internship.',
-        roadmap: "Education: Complete the Bachelor of Optometry (B.Optom) degree and internship;Career: Work as a Clinical Optometrist in a hospital or optical chain;Advancement: Open a private practice or pursue a Master's degree for specialization.",
+        roadmap: "1. Education: Complete the Bachelor of Optometry (B.Optom) degree and internship.;2. Career: Work as a Clinical Optometrist in a hospital or optical chain.;3. Advancement: Open a private practice or pursue a Master's degree for specialization.",
         avgSalary: '₹4-7 LPA',
         futureScope: 'High demand due to increased screen time and lifestyle issues. Scope for private practice, working with ophthalmologists, or in optical retail chains.'
+    },
+    {
+        id: "car_65",
+        slug: "cybersecurity-analyst",
+        title: "Cybersecurity Analyst",
+        stream: "Science",
+        description: "Protects computer networks and systems from security threats.",
+        longDescription: "Cybersecurity Analysts are the digital guardians of an organization. They monitor networks for security breaches, investigate cyber attacks, and implement security measures like firewalls and encryption to protect sensitive data.",
+        skills: ["Network Security", "Ethical hacking", "Intrusion Detection", "Cryptography", "Risk Analysis", "Problem-Solving"],
+        courses: ["B.Tech in Computer Science (with specialization)", "Certified Ethical Hacker (CEH)", "CISSP"],
+        exams: ["JEE Main", "JEE Advanced"],
+        topColleges: ["IITs", "NITs", "IIITs"],
+        admissionProcess: "A degree in computer science or a related field is the typical starting point. Professional certifications like CEH or CISSP are highly valued.",
+        roadmap: "1. Education: Earn a B.Tech in Computer Science or IT.;2. Certifications: Obtain foundational certifications like CompTIA Security+ or CEH.;3. Entry-Level Role: Start as a Security Analyst or SOC Analyst.;4. Progression: Advance to Senior Analyst, Penetration Tester, or Security Consultant.;5. Leadership: Become a Security Manager or Chief Information Security Officer (CISO).",
+        avgSalary: "₹7-12 LPA",
+        futureScope: "Extremely high and growing demand across all industries as cyber threats become more sophisticated. A critical and well-paying career path."
+    },
+    {
+        id: "car_66",
+        slug: "iot-engineer",
+        title: "IoT Engineer",
+        stream: "Science",
+        description: "Designs and develops connected devices and systems.",
+        longDescription: "IoT (Internet of Things) Engineers work at the intersection of hardware and software. They design, develop, and manage networks of connected devices, collecting data from sensors and enabling devices to communicate with each other.",
+        skills: ["Embedded Systems (C/C++)", "Python", "Networking Protocols (MQTT, HTTP)", "Cloud Platforms (AWS/Azure)", "Sensor Technology", "Data Analysis"],
+        courses: ["B.Tech in ECE/CSE/IT"],
+        exams: ["JEE Main", "JEE Advanced", "State CETs"],
+        topColleges: ["IITs", "NITs", "BITS Pilani"],
+        admissionProcess: "A strong background in Electronics, Communication, or Computer Science engineering is required. Admission is through competitive engineering entrance exams.",
+        roadmap: "1. Education: Complete a B.Tech in ECE, CSE, or a related field.;2. Skill Building: Learn about microcontrollers (Arduino, Raspberry Pi), sensors, and cloud IoT platforms.;3. Entry-Level: Start as an Embedded Engineer or IoT Developer.;4. Progression: Advance to Senior IoT Engineer or IoT Solutions Architect.;5. Specialization: Focus on areas like IoT security, data analytics, or edge computing.",
+        avgSalary: "₹6-11 LPA",
+        futureScope: "A rapidly expanding field with applications in smart homes, smart cities, industrial automation, and healthcare. High demand for engineers who can bridge the gap between hardware and software."
+    },
+    {
+        id: "car_67",
+        slug: "blockchain-developer",
+        title: "Blockchain Developer",
+        stream: "Science",
+        description: "Builds and maintains decentralized applications and systems.",
+        longDescription: "Blockchain Developers design and build applications using blockchain technology. They create smart contracts, develop decentralized applications (dApps), and work on the architecture of blockchain systems to ensure they are secure and efficient.",
+        skills: ["Solidity/Rust", "Data Structures", "Cryptography", "Web Development (React, Node.js)", "Smart Contracts", "Decentralized Systems"],
+        courses: ["B.Tech in Computer Science", "Online Blockchain Certifications"],
+        exams: ["JEE Main", "JEE Advanced"],
+        topColleges: ["IITs", "NITs", "IIIT Hyderabad"],
+        admissionProcess: "A strong computer science foundation is essential. Most skills are learned through specialized online courses and self-study, as university curriculum is still catching up.",
+        roadmap: "1. Foundation: Master core computer science concepts and a language like Python or JavaScript.;2. Blockchain Skills: Learn Solidity for Ethereum, understand smart contracts, and explore blockchain concepts.;3. Build Projects: Create your own dApps or contribute to open-source blockchain projects.;4. Entry-Level: Start as a Junior Blockchain Developer.;5. Growth: Advance to a Senior Blockchain Developer or Blockchain Architect.",
+        avgSalary: "₹8-20 LPA",
+        futureScope: "A high-growth, high-paying niche within software development. Opportunities are expanding beyond cryptocurrency into supply chain management, finance, and healthcare."
     }
 ];
