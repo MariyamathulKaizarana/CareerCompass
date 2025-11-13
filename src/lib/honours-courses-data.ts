@@ -28,7 +28,7 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Data Base Management System', description: 'Taught by Prof. Partha Pratim Das, Prof. Samiran Chattopadhyay.', stream: 'Computer Science & Engineering', credits: 4 },
     { title: 'Cloud computing', description: 'Taught by Prof. Soumya Kanti Ghosh.', stream: 'Computer Science & Engineering', credits: 4 },
     { title: 'Programming, Data Structures And Algorithms Using Python', description: 'Taught by Prof. Madhavan Mukund.', stream: 'Computer Science & Engineering', credits: 4 },
-    { title: 'Software Testing', description: 'Taught by Prof. Meenakshi D\'souza.', stream: 'Computer Science & Engineering', credits: 3 },
+    { title: 'Software Testing', description: 'Taught by Prof. Meenakshi D\'souza.', stream: 'Computer Science & Engineering', credits: 4 },
     { title: 'Python for Data Science', description: 'Taught by Prof. Rengasamy.', stream: 'Computer Science & Engineering', credits: 4 },
 
 
@@ -63,13 +63,13 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Introductory Neuroscience & Neuro-Instrumentation', description: 'Taught by Prof. Mahesh Jayachandra.', stream: 'Electronics & Communication Engineering', credits: 4 },
     { title: 'Advanced Linear Continuous Control Systems: Applications with MATLAB Programming and Simulink', description: 'Taught by Prof. Yogesh Vijay Hote.', stream: 'Electronics & Communication Engineering', credits: 4 },
     { title: 'Fundamentals of Electronic Device Fabrication', description: 'Taught by Prof. Parasuraman Swaminathan.', stream: 'Electronics & Communication Engineering', credits: 4 },
-    { title: 'Introduction to Smart Grid', description: 'Taught by Prof. N.P. Padhy.', stream: 'Electrical Engineering', credits: 3 },
+    { title: 'Introduction to Smart Grid', description: 'Taught by Prof. N.P. Padhy.', stream: 'Electrical Engineering', credits: 4 },
 
 
     // Chemistry & Chemical Engineering
     { title: 'Spectroscopic Techniques for Pharmaceutical and Biopharmaceutical Industries', description: 'Taught by Prof. Shashank Deep.', stream: 'Chemistry', credits: 4 },
     { title: 'Chemical Process Safety', description: 'Taught by Prof. Shishir Sinha.', stream: 'Chemical Engineering', credits: 4 },
-    { title: 'Technologies for Clean and Renewable Energy Production', description: 'Taught by Prof. P. Mondal.', stream: 'Chemical Engineering', credits: 3 },
+    { title: 'Technologies for Clean and Renewable Energy Production', description: 'Taught by Prof. P. Mondal.', stream: 'Chemical Engineering', credits: 4 },
 
     // Biotechnology and Bioengineering
     { title: 'Drug Delivery: Principles and Applications', description: 'Taught by Prof. Rachit Agarwal.', stream: 'Biotechnology', credits: 4 },
@@ -105,8 +105,8 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Managing Intellectual Property in Universities', description: 'Taught by Prof. Feroz Ali.', stream: 'Humanities', credits: 4 },
     { title: 'Patent Drafting for Beginners', description: 'Taught by Prof. Feroz Ali.', stream: 'Humanities', credits: 4 },
     { title: 'Body language: Key to Professional Success', description: 'Taught by Prof. Rashmi Gaur.', stream: 'Humanities', credits: 4 },
-    { title: 'Developing Soft Skills and Personality', description: 'Taught by Prof. T. Ravichandran.', stream: 'Humanities', credits: 3 },
-    { title: 'Educational Leadership', description: 'Taught by Prof. Atasi Mohanty.', stream: 'Humanities', credits: 3 },
+    { title: 'Developing Soft Skills and Personality', description: 'Taught by Prof. T. Ravichandran.', stream: 'Humanities', credits: 4 },
+    { title: 'Educational Leadership', description: 'Taught by Prof. Atasi Mohanty.', stream: 'Humanities', credits: 4 },
 
 
     // Management

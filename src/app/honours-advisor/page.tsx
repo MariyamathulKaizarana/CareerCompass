@@ -128,11 +128,11 @@ export default function HonoursAdvisorPage() {
                          <>
                             <CardHeader>
                                 <CardTitle>Step 2: Credit Budget</CardTitle>
-                                <CardDescription>How many credits are you aiming to complete for your Honours degree?</CardDescription>
+                                <CardDescription>What is your target credit count for your Honours degree? You can select courses to meet this goal.</CardDescription>
                             </CardHeader>
                             <CardContent className="space-y-4">
-                                <Label htmlFor="credits">Total Credits</Label>
-                                <Input id="credits" type="number" placeholder="e.g., 12" value={credits} onChange={e => setCredits(e.target.value)} />
+                                <Label htmlFor="credits">Target Credits</Label>
+                                <Input id="credits" type="number" placeholder="e.g., 12 or 16" value={credits} onChange={e => setCredits(e.target.value)} />
                                 <div className="flex gap-2">
                                     <Button variant="outline" onClick={() => setStep('stream')} className="w-full">Back</Button>
                                     <Button onClick={handleBudgetNext} disabled={!credits} className="w-full">Next</Button>

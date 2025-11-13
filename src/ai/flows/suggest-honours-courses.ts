@@ -56,7 +56,7 @@ const prompt = ai.definePrompt(
     Available Courses (JSON format):
     {{{courseData}}}
 
-    Based on the student's stream and interests, select a combination of around 8-10 relevant courses from the provided list. The total credits for your suggested courses should ideally be close to, but not exceed, the student's credit budget. For each recommendation, provide a compelling, one-sentence description explaining WHY it's a good fit for the student's specific interests.
+    Based on the student's stream and interests, select a combination of around 8-10 relevant courses from the provided list. The student will choose from your suggestions to meet their credit budget. For each recommendation, provide a compelling, one-sentence description explaining WHY it's a good fit for the student's specific interests.
     `,
   },
 );
