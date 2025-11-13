@@ -68,7 +68,6 @@ const suggestHonoursCoursesFlow = ai.defineFlow(
     outputSchema: SuggestHonoursCoursesOutputSchema,
   },
   async ({ stream, creditBudget, interests }) => {
-
     const relevantCourses = honoursCourses.filter(c => c.stream === stream);
     
     const courseDataForPrompt = relevantCourses.map(c => ({ 
@@ -77,13 +76,33 @@ const suggestHonoursCoursesFlow = ai.defineFlow(
         credits: c.credits
     }));
 
-    const { output } = await prompt({
-        stream,
-        creditBudget,
-        interests,
-        courseData: JSON.stringify(courseDataForPrompt),
-    });
+    const maxRetries = 3;
+    let attempt = 0;
+    let delay = 1000;
 
-    return output ?? [];
+    while (attempt < maxRetries) {
+      try {
+        const { output } = await prompt({
+            stream,
+            creditBudget,
+            interests,
+            courseData: JSON.stringify(courseDataForPrompt),
+        });
+        return output ?? [];
+      } catch (error: any) {
+        if (error.message.includes('503') && attempt < maxRetries - 1) {
+          console.warn(`Attempt ${attempt + 1} failed with 503 error. Retrying in ${delay}ms...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+          delay *= 2; // exponential backoff
+          attempt++;
+        } else {
+          console.error(`Failed after ${attempt + 1} attempts.`);
+          throw error;
+        }
+      }
+    }
+    
+    // This should not be reached if the loop exits successfully
+    throw new Error('Failed to get course suggestions after multiple retries.');
   }
 );
