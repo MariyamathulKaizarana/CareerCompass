@@ -75,10 +75,13 @@ export default function HonoursAdvisorPage() {
     
     const handleCourseSelection = (course: HonoursCourseSuggestion) => {
         setSelectedCourses(prev => {
+            const courseWithWeeks = honoursCourses.find(c => c.title === course.title);
+            const courseToToggle = { ...course, weeks: courseWithWeeks?.weeks || 12 };
+
             if (prev.some(c => c.title === course.title)) {
                 return prev.filter(c => c.title !== course.title);
             }
-            return [...prev, course];
+            return [...prev, courseToToggle];
         });
     };
 
@@ -89,6 +92,7 @@ export default function HonoursAdvisorPage() {
     }
 
     const totalSelectedCredits = selectedCourses.reduce((sum, course) => sum + course.credits, 0);
+    const totalSelectedWeeks = selectedCourses.reduce((sum, course) => sum + (course.weeks || 0), 0);
 
     return (
         <AppShell>
@@ -211,12 +215,13 @@ export default function HonoursAdvisorPage() {
                                 <ul className="space-y-3 list-disc list-inside">
                                     {selectedCourses.map(course => (
                                         <li key={course.title} className="text-lg">
-                                            <span className="font-semibold">{course.title}</span> ({course.credits} credits)
+                                            <span className="font-semibold">{course.title}</span> ({course.credits} credits / {course.weeks} weeks)
                                         </li>
                                     ))}
                                 </ul>
                                 <div className="pt-4 border-t">
                                     <p className="text-xl font-bold text-right">Total Credits: {totalSelectedCredits}</p>
+                                    <p className="text-md font-medium text-right text-muted-foreground">Total Duration: {totalSelectedWeeks} weeks</p>
                                 </div>
                                 <Button variant="outline" onClick={() => setStep('suggestions')} className="w-full">Back to Selections</Button>
                             </CardContent>

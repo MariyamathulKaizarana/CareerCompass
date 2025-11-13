@@ -48,12 +48,14 @@ const prompt = ai.definePrompt(
     output: { schema: SuggestHonoursCoursesOutputSchema },
     prompt: `You are an expert academic advisor for B.Tech students in India. Your task is to recommend a set of Honours courses.
 
+    The credit system is as follows: 4-week courses are 1 credit, 8-week courses are 2 credits, and 12-week courses are 3 credits.
+
     Student Details:
     - Stream: {{{stream}}}
     - Credit Budget: {{{creditBudget}}}
     - Interests: {{{interests}}}
     
-    Available Courses (JSON format):
+    Available Courses (JSON format, all are 12 weeks/3 credits):
     {{{courseData}}}
 
     Based on the student's stream and interests, select a combination of around 8-10 relevant courses from the provided list. The student will choose from your suggestions to meet their credit budget. For each recommendation, provide a compelling, one-sentence description explaining WHY it's a good fit for the student's specific interests.
@@ -68,7 +70,7 @@ const suggestHonoursCoursesFlow = ai.defineFlow(
     outputSchema: SuggestHonoursCoursesOutputSchema,
   },
   async ({ stream, creditBudget, interests }) => {
-    const relevantCourses = honoursCourses.filter(c => c.stream === stream);
+    const relevantCourses = honoursCourses.filter(c => c.stream === stream || interests.includes(c.stream));
     
     const courseDataForPrompt = relevantCourses.map(c => ({ 
         title: c.title, 
