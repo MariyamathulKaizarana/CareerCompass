@@ -59,7 +59,28 @@ const generateCareerReportFlow = ai.defineFlow(
     outputSchema: GenerateCareerReportOutputSchema,
   },
   async (input) => {
-    const { output } = await prompt(input);
-    return output!;
+    const maxRetries = 3;
+    let attempt = 0;
+    let delay = 1000; // start with 1 second
+
+    while (attempt < maxRetries) {
+      try {
+        const { output } = await prompt(input);
+        return output!;
+      } catch (error: any) {
+        if (error.message.includes('503') && attempt < maxRetries - 1) {
+          console.warn(`Attempt ${attempt + 1} failed with 503 error. Retrying in ${delay}ms...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+          delay *= 2; // exponential backoff
+          attempt++;
+        } else {
+          // For other errors or if max retries are reached, throw the error
+          console.error(`Failed after ${attempt + 1} attempts.`);
+          throw error;
+        }
+      }
+    }
+    // This part should ideally not be reached, but is here for type safety
+    throw new Error('Failed to generate career report after multiple retries.');
   }
 );
