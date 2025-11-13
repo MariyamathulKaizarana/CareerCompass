@@ -21,17 +21,32 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Introduction to Industry 4.0 and Industrial Internet of Things', description: 'Taught by Prof. Sudip Misra.', stream: 'Computer Science & Engineering', credits: 4 },
     { title: 'Social Networks', description: 'Taught by Prof. Sudarshan Iyengar.', stream: 'Computer Science & Engineering', credits: 4 },
     { title: 'Artificial Intelligence Search Methods For Problem Solving', description: 'Taught by Prof. Deepak Khemani.', stream: 'Computer Science & Engineering', credits: 4 },
+    { title: 'Fundamentals of Artificial Intelligence', description: 'Taught by Prof. Shyamanta M. Hazarika.', stream: 'Computer Science & Engineering', credits: 4 },
+    { title: 'Hardware Modelling using Verilog', description: 'Taught by Prof. Indranil Sengupta.', stream: 'Computer Science & Engineering', credits: 4 },
+    { title: 'Computer Graphics', description: 'Taught by Prof. Samit Bhattacharya.', stream: 'Computer Science & Engineering', credits: 4 },
+    { title: 'Google Cloud Computing Foundation Course', description: 'Taught by Prof. Soumya Kanti Ghosh.', stream: 'Computer Science & Engineering', credits: 4 },
+    { title: 'Data Base Management System', description: 'Taught by Prof. Partha Pratim Das, Prof. Samiran Chattopadhyay.', stream: 'Computer Science & Engineering', credits: 4 },
+    { title: 'Cloud computing', description: 'Taught by Prof. Soumya Kanti Ghosh.', stream: 'Computer Science & Engineering', credits: 4 },
+    { title: 'Programming, Data Structures And Algorithms Using Python', description: 'Taught by Prof. Madhavan Mukund.', stream: 'Computer Science & Engineering', credits: 4 },
+    { title: 'Software Testing', description: 'Taught by Prof. Meenakshi D\'souza.', stream: 'Computer Science & Engineering', credits: 3 },
+
 
     // Design Engineering
     { title: 'System Design for Sustainability', description: 'Taught by Prof. Sharmistha Banerjee.', stream: 'Design Engineering', credits: 4 },
-    { title: 'Functional and Conceptual Design', description: 'Taught by Prof. Anban T.', stream: 'Design Engineering', credits: 4 },
-    
+    { title: 'Functional and Conceptual Design', description: 'Taught by Prof. T. Asokan.', stream: 'Design Engineering', credits: 4 },
+    { title: 'Design, Technology and Innovation', description: 'Taught by Prof. B.K. Chakrabarty.', stream: 'Design Engineering', credits: 4 },
+
+
     // Mathematics
     { title: 'Regression Analysis', description: 'Taught by Prof. Soumen Maity.', stream: 'Mathematics', credits: 4 },
     { title: 'Computational Commutative Algebra', description: 'Taught by Prof. Manoj Kummini.', stream: 'Mathematics', credits: 4 },
     { title: 'Scientific Computing using Matlab', description: 'Taught by Prof. Vivek K. Aggarwal & Prof. Arvind Kumar Lal.', stream: 'Mathematics', credits: 4 },
     { title: 'Linear Algebra', description: 'Taught by Prof. P. N. Agrawal & Prof. D. N. Pandey.', stream: 'Mathematics', credits: 4 },
     { title: 'Introduction to Fuzzy Set Theory, Arithmetic and Logic', description: 'Taught by Prof. Niladri Chatterjee.', stream: 'Mathematics', credits: 4 },
+    { title: 'Numerical methods', description: 'Taught by Prof. Ameeya Kumar Nayak, Prof. Sanjeev Kumar.', stream: 'Mathematics', credits: 4 },
+    { title: 'Essential Mathematics for Machine Learning', description: 'Taught by Prof. Sanjeev Kumar, Prof. S.K. Gupta.', stream: 'Mathematics', credits: 4 },
+    { title: 'Introduction to R Software', description: 'Taught by Prof. Shalabh.', stream: 'Mathematics', credits: 4 },
+
 
     // Electrical & Electronics Engineering
     { title: 'Mapping Signal Processing Algorithms to DSP Architectures', description: 'Taught by Prof. Nitin Chandrachoodan.', stream: 'Electronics & Communication Engineering', credits: 4 },
@@ -40,11 +55,13 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Sensors and Actuators', description: 'Taught by Prof. Hardik J Pandya.', stream: 'Electronics & Communication Engineering', credits: 4 },
     { title: 'Pattern Recognition and Application', description: 'Taught by Prof. Prabir Kumar Biswas.', stream: 'Electronics & Communication Engineering', credits: 4 },
     { title: 'Applied Optimization for Wireless, Machine Learning, Big Data', description: 'Taught by Prof. Aditya K. Jagannatham.', stream: 'Electronics & Communication Engineering', credits: 4 },
-    { title: 'Design of Photovoltaic Systems', description: 'Taught by Prof. UME. Anand.', stream: 'Electronics & Communication Engineering', credits: 4 },
+    { title: 'Design of Photovoltaic Systems', description: 'Taught by Prof. L. Umanand.', stream: 'Electronics & Communication Engineering', credits: 4 },
     { title: 'Fabrication Techniques for MEMS-Based Sensors: Clinical Perspective', description: 'Taught by Prof. Hardik Jeetendra Pandya.', stream: 'Electronics & Communication Engineering', credits: 4 },
     { title: 'Introductory Neuroscience & Neuro-Instrumentation', description: 'Taught by Prof. Mahesh Jayachandra.', stream: 'Electronics & Communication Engineering', credits: 4 },
+    { title: 'Advanced Linear Continuous Control Systems: Applications with MATLAB Programming and Simulink', description: 'Taught by Prof. Yogesh Vijay Hote.', stream: 'Electronics & Communication Engineering', credits: 4 },
 
-    // Chemistry
+
+    // Chemistry & Chemical Engineering
     { title: 'Spectroscopic Techniques for Pharmaceutical and Biopharmaceutical Industries', description: 'Taught by Prof. Shashank Deep.', stream: 'Chemistry', credits: 4 },
     { title: 'Chemical Process Safety', description: 'Taught by Prof. Shishir Sinha.', stream: 'Chemical Engineering', credits: 4 },
 
@@ -52,13 +69,32 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Drug Delivery: Principles and Applications', description: 'Taught by Prof. Rachit Agarwal.', stream: 'Biotechnology', credits: 4 },
     { title: 'Genetic Engineering: Theory and Application', description: 'Taught by Prof. Vishal Trivedi.', stream: 'Biotechnology', credits: 4 },
     { title: 'Fundamentals of Food Process Engineering', description: 'Taught by Prof. Jayeeta Mitra.', stream: 'Biotechnology', credits: 4 },
+    { title: 'Tissue Engineering', description: 'Taught by Prof. Vignesh Muthuvijayan.', stream: 'Biotechnology', credits: 4 },
+    { title: 'Biomaterials for Bone Tissue Engineering Applications', description: 'Taught by Prof. Biman B. Mandal.', stream: 'Biotechnology', credits: 4 },
 
-    // Other/Multidisciplinary/Management
+
+    // Mechanical & Civil Engineering
     { title: 'Advanced Materials and Processes', description: 'Taught by Prof. Jayanta Das.', stream: 'Mechanical Engineering', credits: 4 },
     { title: 'X-Ray Crystallography and Diffraction', description: 'Taught by Prof. Ranjit Kumar.', stream: 'Mechanical Engineering', credits: 4 },
+    { title: 'Finite Element Method: Variational Methods to Computer Programming', description: 'Taught by Prof. Atanu Banerjee, Prof. Arup Nandy.', stream: 'Mechanical Engineering', credits: 4 },
+    { title: 'Technical English for Scientists and Engineers', description: 'Taught by Prof. Aysha Iqbal.', stream: 'Mechanical Engineering', credits: 4 },
+    { title: 'Remote Sensing and GIS', description: 'Taught by Prof. Rishikesh Bharti.', stream: 'Civil Engineering', credits: 4 },
+
+
+    // Humanities & Social Sciences
     { title: 'Patent Law for Engineers and Scientists', description: 'Taught by Prof. Feroz Ali.', stream: 'Humanities', credits: 4 },
     { title: 'Soft Skills', description: 'Taught by Prof. Binod Mishra.', stream: 'Humanities', credits: 4 },
     { title: 'Science, Technology and Society', description: 'Taught by Prof. Sambit Mallick.', stream: 'Humanities', credits: 4 },
+    { title: 'Neuroscience of human movements', description: 'Taught by Prof. Varun.', stream: 'Humanities', credits: 4 },
+    { title: 'Numerical Methods for Engineers', description: 'Taught by Prof. Niket Kaisare.', stream: 'Humanities', credits: 4 },
+    { title: 'Learning Analytics Tools', description: 'Taught by Prof. Ramkumar Rajendran.', stream: 'Humanities', credits: 4 },
+    { title: 'Health Research Fundamentals', description: 'Taught by Prof. P. Manickam.', stream: 'Humanities', credits: 4 },
+    { title: 'Consumer Psychology', description: 'Taught by Prof. Naveen Kashyap.', stream: 'Humanities', credits: 4 },
+    { title: 'Entrepreneurship and IP Strategy', description: 'Taught by Prof. Gouri Gargate.', stream: 'Humanities', credits: 4 },
+    { title: 'Energy Economics and Policy', description: 'Taught by Prof. S. P. Das.', stream: 'Humanities', credits: 4 },
+
+
+    // Management
     { title: 'Human Resource Development', description: 'Taught by Prof. K.B.L. Srivastava.', stream: 'Management', credits: 4 },
     { title: 'Soft Skills for Business Negotiations and Marketing Strategies', description: 'Taught by Prof. Uttam Kumar Banerjee.', stream: 'Management', credits: 4 },
     { title: 'Industrial Safety Engineering', description: 'Taught by Prof. J. Maiti.', stream: 'Management', credits: 4 },
@@ -70,10 +106,22 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Management Information System', description: 'Taught by Prof. Surojit Mukherjee.', stream: 'Management', credits: 4 },
     { title: 'Management Accounting', description: 'Taught by Prof. Anil K. Sharma.', stream: 'Management', credits: 4 },
     { title: 'Financial Accounting - IIT Mandi', description: 'Taught by Prof. Puran Singh.', stream: 'Management', credits: 4 },
-    { title: 'Finite Element Method: Variational Methods to Computer Programming', description: 'Taught by Prof. Atanu Banerjee, Prof. Arup Nandy.', stream: 'Mechanical Engineering', credits: 4 },
-    { title: 'Neuroscience of human movements', description: 'Taught by Prof. Varun.', stream: 'Humanities', credits: 4 },
-    { title: 'Numerical Methods for Engineers', description: 'Taught by Prof. Niket Kaisare.', stream: 'Humanities', credits: 4 },
-    { title: 'Learning Analytics Tools', description: 'Taught by Prof. Ramkumar Rajendran.', stream: 'Humanities', credits: 4 },
-    { title: 'Fundamentals of Artificial Intelligence', description: 'Taught by Prof. Shyamanta M. Hazarika.', stream: 'Computer Science & Engineering', credits: 4 },
-    { title: 'Solar Energy Engineering and Technology', description: 'Taught by Prof. Pankaj Kalita.', stream: 'Physics', credits: 4 }
+    { title: 'Managing Service Operations', description: 'Taught by Prof. Jayanta Chatterjee.', stream: 'Management', credits: 4 },
+    { title: 'Knowledge Management', description: 'Taught by Prof. K.B.L. Srivastava.', stream: 'Management', credits: 4 },
+    { title: 'Ethics in Engineering Practice', description: 'Taught by Prof. Susmita Mukhopadhyay.', stream: 'Management', credits: 4 },
+    { title: 'Innovation, Business Models and Entrepreneurship', description: 'Taught by Prof. Rajat Agrawal, Prof. Vinay Sharma.', stream: 'Management', credits: 4 },
+    { title: 'Marketing Research and Analysis', description: 'Taught by Prof. J.K. Nayak.', stream: 'Management', credits: 4 },
+    { title: 'Financial Accounting - IITB', description: 'Taught by Prof. Varadraj Bapat.', stream: 'Management', credits: 4 },
+    { title: 'Organization Development and Change in 21st Century', description: 'Taught by Prof. Ashish Pandey.', stream: 'Management', credits: 4 },
+    { title: 'Customer Relationship Management', description: 'Taught by Prof. Swagato Chatterjee.', stream: 'Management', credits: 4 },
+    { title: 'Introduction to Marketing Essentials', description: 'Taught by Prof. Z. Rahman.', stream: 'Management', credits: 4 },
+    { title: 'Business Analytics & Text Mining Modeling Using Python', description: 'Taught by Prof. Gaurav Dixit.', stream: 'Management', credits: 4 },
+    { title: 'Marketing Management I', description: 'Taught by Prof. Jayanta Chatterjee, Prof. Shashi Shekhar Mishra.', stream: 'Management', credits: 4 },
+    { title: 'Economics of Health and Health Care', description: 'Taught by Prof. Angan Sengupta.', stream: 'Management', credits: 4 },
+
+
+    // Other / Multidisciplinary
+    { title: 'Introduction to Research', description: 'Taught by Prof. Prathap Haridoss.', stream: 'Multidisciplinary', credits: 4 },
+    { title: 'Solar Energy Engineering and Technology', description: 'Taught by Prof. Pankaj Kalita.', stream: 'Physics', credits: 4 },
+    { title: 'Operations Research', description: 'Taught by Prof. Kusum Deep.', stream: 'Mathematics', credits: 4 }
 ];
