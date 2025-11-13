@@ -55,7 +55,7 @@ const prompt = ai.definePrompt(
     - Credit Budget: {{{creditBudget}}}
     - Interests: {{{interests}}}
     
-    Available Courses (JSON format, all are 12 weeks/3 credits):
+    Available Courses (JSON format):
     {{{courseData}}}
 
     Based on the student's stream and interests, select a combination of around 8-10 relevant courses from the provided list. The student will choose from your suggestions to meet their credit budget. For each recommendation, provide a compelling, one-sentence description explaining WHY it's a good fit for the student's specific interests.
@@ -75,7 +75,8 @@ const suggestHonoursCoursesFlow = ai.defineFlow(
     const courseDataForPrompt = relevantCourses.map(c => ({ 
         title: c.title, 
         description: c.description, 
-        credits: c.credits
+        credits: c.credits,
+        weeks: c.weeks,
     }));
 
     const maxRetries = 3;
