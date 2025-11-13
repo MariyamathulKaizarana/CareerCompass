@@ -8,10 +8,10 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Checkbox } from '@/components/ui/checkbox';
 import { suggestHonoursCourses, type HonoursCourseSuggestion } from '@/ai/flows/suggest-honours-courses';
-import { Loader2, Sparkles, Wand2 } from 'lucide-react';
+import { Loader2, Sparkles } from 'lucide-react';
+import { honoursCourses } from '@/lib/honours-courses-data';
+import { Checkbox } from '@/components/ui/checkbox';
 
 type Step = 'stream' | 'budget' | 'interests' | 'suggestions' | 'result';
 
@@ -26,11 +26,14 @@ const engineeringStreams = [
     'Biotechnology'
 ];
 
+const interestAreas = [...new Set(honoursCourses.map(c => c.stream))];
+
+
 export default function HonoursAdvisorPage() {
     const [step, setStep] = useState<Step>('stream');
     const [stream, setStream] = useState('');
     const [credits, setCredits] = useState('');
-    const [interests, setInterests] = useState('');
+    const [interests, setInterests] = useState<string[]>([]);
     const [suggestions, setSuggestions] = useState<HonoursCourseSuggestion[]>([]);
     const [selectedCourses, setSelectedCourses] = useState<HonoursCourseSuggestion[]>([]);
     const [loading, setLoading] = useState(false);
@@ -43,13 +46,22 @@ export default function HonoursAdvisorPage() {
         if (credits) setStep('interests');
     };
 
+    const handleInterestSelection = (interest: string) => {
+        setInterests(prev => {
+            if (prev.includes(interest)) {
+                return prev.filter(i => i !== interest);
+            }
+            return [...prev, interest];
+        });
+    }
+
     const handleGetSuggestions = async () => {
         setLoading(true);
         try {
             const results = await suggestHonoursCourses({
                 stream,
                 creditBudget: parseInt(credits, 10),
-                interests,
+                interests: interests.join(', '),
             });
             setSuggestions(results);
             setStep('suggestions');
@@ -133,14 +145,24 @@ export default function HonoursAdvisorPage() {
                          <>
                             <CardHeader>
                                 <CardTitle>Step 3: Your Interests</CardTitle>
-                                <CardDescription>Tell us what you're passionate about. What topics, technologies, or career goals excite you?</CardDescription>
+                                <CardDescription>Select one or more areas you are passionate about.</CardDescription>
                             </CardHeader>
                             <CardContent className="space-y-4">
-                                <Label htmlFor="interests">Interests</Label>
-                                <Textarea id="interests" placeholder="e.g., artificial intelligence, building web apps, robotics, sustainable energy, financial markets..." value={interests} onChange={e => setInterests(e.target.value)} />
-                                 <div className="flex gap-2">
+                                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                    {interestAreas.map(interest => (
+                                        <div key={interest} className="flex items-center space-x-2">
+                                            <Checkbox 
+                                                id={interest}
+                                                checked={interests.includes(interest)}
+                                                onCheckedChange={() => handleInterestSelection(interest)}
+                                            />
+                                            <Label htmlFor={interest} className="font-normal cursor-pointer">{interest}</Label>
+                                        </div>
+                                    ))}
+                                </div>
+                                 <div className="flex gap-2 pt-4">
                                     <Button variant="outline" onClick={() => setStep('budget')} className="w-full">Back</Button>
-                                    <Button onClick={handleGetSuggestions} disabled={!interests || loading} className="w-full">
+                                    <Button onClick={handleGetSuggestions} disabled={interests.length === 0 || loading} className="w-full">
                                         {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                                         Get Suggestions
                                     </Button>
