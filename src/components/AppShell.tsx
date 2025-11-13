@@ -15,6 +15,7 @@ import {
   History,
   Menu,
   X,
+  Sparkles,
 } from 'lucide-react';
 import { signOut } from 'firebase/auth';
 
@@ -37,6 +38,7 @@ const navItems = [
   { href: '/quiz', icon: HelpCircle, label: 'Take Quiz' },
   { href: '/careers', icon: Book, label: 'Explore Careers' },
   { href: '/courses', icon: GraduationCap, label: 'Explore Courses' },
+  { href: '/honours-advisor', icon: Sparkles, label: 'Honours Advisor' },
   { href: '/favorites', icon: Heart, label: 'My Favorites' },
   { href: '/history', icon: History, label: 'History' },
 ];
