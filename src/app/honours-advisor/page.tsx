@@ -2,14 +2,18 @@
 
 import { useState } from 'react';
 import { AppShell } from '@/components/AppShell';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
 import { suggestHonoursCourses, type HonoursCourseSuggestion } from '@/ai/flows/suggest-honours-courses';
-import { Loader2, Sparkles } from 'lucide-react';
+import { Loader2, Sparkles, ArrowRight } from 'lucide-react';
 import { honoursCourses } from '@/lib/honours-courses-data';
 import { Checkbox } from '@/components/ui/checkbox';
+import Image from 'next/image';
+import { placeholderImages } from '@/lib/placeholder-images';
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
 
 type Step = 'stream' | 'interests' | 'suggestions' | 'result';
 
@@ -114,6 +118,7 @@ export default function HonoursAdvisorPage() {
                 interests: interests.join(', '),
             });
             setSuggestions(results);
+            setSelectedCourses([]);
             setStep('suggestions');
         } catch (error) {
             console.error("Failed to get suggestions:", error);
@@ -125,13 +130,10 @@ export default function HonoursAdvisorPage() {
     
     const handleCourseSelection = (course: HonoursCourseSuggestion) => {
         setSelectedCourses(prev => {
-            const courseWithWeeks = honoursCourses.find(c => c.title === course.title);
-            const courseToToggle = { ...course, weeks: courseWithWeeks?.weeks || 0 };
-
             if (prev.some(c => c.title === course.title)) {
                 return prev.filter(c => c.title !== course.title);
             }
-            return [...prev, courseToToggle];
+            return [...prev, course];
         });
     };
 
@@ -147,11 +149,18 @@ export default function HonoursAdvisorPage() {
     }
 
     const totalSelectedCredits = selectedCourses.reduce((sum, course) => sum + course.credits, 0);
-    const totalSelectedWeeks = selectedCourses.reduce((sum, course) => sum + (course.weeks || 0), 0);
+    const totalSelectedWeeks = selectedCourses.reduce((sum, course) => sum + (honoursCourses.find(c => c.title === course.title)?.weeks || 0), 0);
+    
+      const findImage = (courseTitle: string) => {
+        const searchTerms = ['data', 'blockchain', 'fintech', 'construction', 'transportation', 'analytics'];
+        const titleLower = courseTitle.toLowerCase();
+        const foundTerm = searchTerms.find(term => titleLower.includes(term));
+        return placeholderImages.find(p => p.id === foundTerm) || placeholderImages.find(p => p.id === 'report');
+      };
 
     return (
         <AppShell>
-            <div className="mx-auto w-full max-w-4xl">
+            <div className="mx-auto w-full max-w-7xl">
                 <div className="mb-8 text-center">
                     <Sparkles className="mx-auto h-12 w-12 text-primary" />
                     <h1 className="mt-4 font-headline text-3xl font-bold tracking-tight text-foreground md:text-4xl">
@@ -162,110 +171,144 @@ export default function HonoursAdvisorPage() {
                     </p>
                 </div>
                 
-                <Card>
-                    {step === 'stream' && (
-                        <>
-                            <CardHeader>
-                                <CardTitle>Step 1: Select Your Stream</CardTitle>
-                                <CardDescription>What is your primary branch of engineering?</CardDescription>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                                <Select onValueChange={setStream} value={stream}>
-                                    <SelectTrigger>
-                                        <SelectValue placeholder="Select your engineering stream" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        {engineeringStreams.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}
-                                    </SelectContent>
-                                </Select>
-                                <Button onClick={handleStreamNext} disabled={!stream} className="w-full">Next</Button>
-                            </CardContent>
-                        </>
-                    )}
-                    
-                    {step === 'interests' && (
-                         <>
-                            <CardHeader>
-                                <CardTitle>Step 2: Your Interests</CardTitle>
-                                <CardDescription>Select one or more areas you are passionate about.</CardDescription>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                    {availableInterests.map(interest => (
-                                        <div key={interest} className="flex items-center space-x-2">
-                                            <Checkbox 
-                                                id={interest}
-                                                checked={interests.includes(interest)}
-                                                onCheckedChange={() => handleInterestSelection(interest)}
-                                            />
-                                            <Label htmlFor={interest} className="font-normal cursor-pointer">{interest}</Label>
-                                        </div>
-                                    ))}
-                                </div>
-                                 <div className="flex gap-2 pt-4">
-                                    <Button variant="outline" onClick={handleGoBackToStream} className="w-full">Back</Button>
-                                    <Button onClick={handleGetSuggestions} disabled={interests.length === 0 || loading} className="w-full">
-                                        {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                                        Get Suggestions
-                                    </Button>
-                                </div>
-                            </CardContent>
-                        </>
-                    )}
+                {step === 'stream' && (
+                    <Card className="mx-auto max-w-4xl">
+                        <CardHeader>
+                            <CardTitle>Step 1: Select Your Stream</CardTitle>
+                            <CardDescription>What is your primary branch of engineering?</CardDescription>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                            <Select onValueChange={setStream} value={stream}>
+                                <SelectTrigger>
+                                    <SelectValue placeholder="Select your engineering stream" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    {engineeringStreams.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}
+                                </SelectContent>
+                            </Select>
+                            <Button onClick={handleStreamNext} disabled={!stream} className="w-full">Next</Button>
+                        </CardContent>
+                    </Card>
+                )}
+                
+                {step === 'interests' && (
+                     <Card className="mx-auto max-w-4xl">
+                        <CardHeader>
+                            <CardTitle>Step 2: Your Interests</CardTitle>
+                            <CardDescription>Select one or more areas you are passionate about.</CardDescription>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                {availableInterests.map(interest => (
+                                    <div key={interest} className="flex items-center space-x-2">
+                                        <Checkbox 
+                                            id={interest}
+                                            checked={interests.includes(interest)}
+                                            onCheckedChange={() => handleInterestSelection(interest)}
+                                        />
+                                        <Label htmlFor={interest} className="font-normal cursor-pointer">{interest}</Label>
+                                    </div>
+                                ))}
+                            </div>
+                             <div className="flex gap-2 pt-4">
+                                <Button variant="outline" onClick={handleGoBackToStream} className="w-full">Back</Button>
+                                <Button onClick={handleGetSuggestions} disabled={interests.length === 0 || loading} className="w-full">
+                                    {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : 'Get Suggestions'}
+                                </Button>
+                            </div>
+                        </CardContent>
+                    </Card>
+                )}
 
-                    {step === 'suggestions' && (
-                        <>
-                            <CardHeader>
-                                <CardTitle>AI-Powered Suggestions</CardTitle>
-                                <CardDescription>Based on your input, here are some recommended courses. Select one or more.</CardDescription>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                               <div className="space-y-4">
-                                    {suggestions.map(course => (
-                                        <div key={course.title} className="flex items-start gap-4 rounded-lg border p-4">
-                                            <Checkbox 
-                                                id={course.title} 
-                                                onCheckedChange={() => handleCourseSelection(course)}
-                                                checked={selectedCourses.some(c => c.title === course.title)}
-                                            />
-                                            <div className="grid gap-1.5">
-                                                <Label htmlFor={course.title} className="text-base font-medium">{course.title} ({course.credits} credits)</Label>
-                                                <p className="text-sm text-muted-foreground">{course.description}</p>
-                                            </div>
-                                        </div>
-                                    ))}
-                               </div>
-                                <div className="flex gap-2">
-                                    <Button variant="outline" onClick={() => setStep('interests')} className="w-full">Back</Button>
-                                    <Button onClick={handleShowResult} disabled={selectedCourses.length === 0} className="w-full">View My Selection</Button>
-                                </div>
-                            </CardContent>
-                        </>
-                    )}
+                {step === 'suggestions' && (
+                    <>
+                        <div className="text-center mb-8">
+                            <CardTitle className="font-headline text-2xl">AI-Powered Suggestions</CardTitle>
+                            <CardDescription>Based on your input, here are some recommended courses. Select one or more.</CardDescription>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            {suggestions.map(course => {
+                                const image = findImage(course.title);
+                                const isSelected = selectedCourses.some(c => c.title === course.title);
+                                return (
+                                <Card 
+                                    key={course.title} 
+                                    className={cn(
+                                        "flex flex-col overflow-hidden cursor-pointer transition-all",
+                                        isSelected ? "ring-2 ring-primary ring-offset-2" : "ring-0"
+                                    )}
+                                    onClick={() => handleCourseSelection(course)}
+                                >
+                                    {image && (
+                                    <div className="aspect-video overflow-hidden relative">
+                                        <Image
+                                        src={image.imageUrl}
+                                        alt={image.description}
+                                        data-ai-hint={image.imageHint}
+                                        width={400}
+                                        height={225}
+                                        className="h-full w-full object-cover transition-transform hover:scale-105"
+                                        />
+                                        {isSelected && <div className="absolute inset-0 bg-primary/30" />}
+                                    </div>
+                                    )}
+                                    <CardHeader>
+                                        <CardTitle className="font-headline text-lg leading-tight">{course.title}</CardTitle>
+                                    </CardHeader>
+                                    <CardContent className="flex-grow">
+                                        <p className="text-sm text-muted-foreground line-clamp-2">{course.description}</p>
+                                    </CardContent>
+                                    <CardFooter>
+                                        <Badge variant="secondary">{course.credits} Credits</Badge>
+                                    </CardFooter>
+                                </Card>
+                                )
+                            })}
+                        </div>
+                        <div className="flex gap-4 mt-8 justify-center">
+                            <Button variant="outline" onClick={() => setStep('interests')} className="w-full max-w-xs">Back</Button>
+                            <Button onClick={handleShowResult} disabled={selectedCourses.length === 0} className="w-full max-w-xs">
+                                View My Selection <ArrowRight className="ml-2 h-4 w-4" />
+                            </Button>
+                        </div>
+                    </>
+                )}
+                
+                {loading && step !== 'interests' && (
+                    <Card className="mx-auto max-w-4xl">
+                        <CardContent className="p-12 flex flex-col items-center justify-center gap-4">
+                            <Loader2 className="h-10 w-10 animate-spin text-primary" />
+                            <p className="text-muted-foreground">Getting AI suggestions...</p>
+                        </CardContent>
+                    </Card>
+                )}
 
-                    {step === 'result' && (
-                        <>
-                             <CardHeader>
-                                <CardTitle className="font-headline text-2xl">Your Honours Course Plan</CardTitle>
-                                <CardDescription>Here are the courses you've selected.</CardDescription>
-                            </CardHeader>
-                             <CardContent className="space-y-4">
-                                <ul className="space-y-3 list-disc list-inside">
-                                    {selectedCourses.map(course => (
+
+                {step === 'result' && (
+                    <Card className="mx-auto max-w-4xl">
+                         <CardHeader>
+                            <CardTitle className="font-headline text-2xl">Your Honours Course Plan</CardTitle>
+                            <CardDescription>Here are the courses you've selected.</CardDescription>
+                        </CardHeader>
+                         <CardContent className="space-y-4">
+                            <ul className="space-y-3 list-disc list-inside">
+                                {selectedCourses.map(course => {
+                                    const fullCourse = honoursCourses.find(c => c.title === course.title);
+                                    return (
                                         <li key={course.title} className="text-lg">
-                                            <span className="font-semibold">{course.title}</span> ({course.credits} credits / {course.weeks} weeks)
+                                            <span className="font-semibold">{course.title}</span> ({course.credits} credits / {fullCourse?.weeks || 0} weeks)
                                         </li>
-                                    ))}
-                                </ul>
-                                <div className="pt-4 border-t">
-                                    <p className="text-xl font-bold text-right">Total Credits: {totalSelectedCredits}</p>
-                                    <p className="text-md font-medium text-right text-muted-foreground">Total Duration: {totalSelectedWeeks} weeks</p>
-                                </div>
-                                <Button variant="outline" onClick={() => setStep('suggestions')} className="w-full">Back to Selections</Button>
-                            </CardContent>
-                        </>
-                    )}
-                </Card>
+                                    );
+                                })}
+                            </ul>
+                            <div className="pt-4 border-t">
+                                <p className="text-xl font-bold text-right">Total Credits: {totalSelectedCredits}</p>
+                                <p className="text-md font-medium text-right text-muted-foreground">Total Duration: {totalSelectedWeeks} weeks</p>
+                            </div>
+                            <Button variant="outline" onClick={() => setStep('suggestions')} className="w-full">Back to Selections</Button>
+                        </CardContent>
+                    </Card>
+                )}
             </div>
         </AppShell>
     );
