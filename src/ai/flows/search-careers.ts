@@ -83,14 +83,34 @@ const searchCareersFlow = ai.defineFlow(
         skills: c.skills,
         slug: `/careers/${c.slug}`
     }));
+    
+    const maxRetries = 3;
+    let attempt = 0;
+    let delay = 1000; // start with 1 second
 
-    const { output } = await prompt({
-        query,
-        careerData: JSON.stringify(careerDataForPrompt),
-        courseData: JSON.stringify(allCourses),
-        examData: JSON.stringify(allExams),
-    });
-
-    return output ?? [];
+    while (attempt < maxRetries) {
+        try {
+            const { output } = await prompt({
+                query,
+                careerData: JSON.stringify(careerDataForPrompt),
+                courseData: JSON.stringify(allCourses),
+                examData: JSON.stringify(allExams),
+            });
+            return output ?? [];
+        } catch (error: any) {
+            if (error.message.includes('503') && attempt < maxRetries - 1) {
+              console.warn(`Attempt ${attempt + 1} failed with 503 error. Retrying in ${delay}ms...`);
+              await new Promise(resolve => setTimeout(resolve, delay));
+              delay *= 2; // exponential backoff
+              attempt++;
+            } else {
+              // For other errors or if max retries are reached, throw the error
+              console.error(`Failed after ${attempt + 1} attempts.`);
+              throw error;
+            }
+        }
+    }
+     // This part should ideally not be reached, but is here for type safety
+    throw new Error('Failed to get search results after multiple retries.');
   }
 );
