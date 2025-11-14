@@ -16,18 +16,59 @@ import { Checkbox } from '@/components/ui/checkbox';
 type Step = 'stream' | 'budget' | 'interests' | 'suggestions' | 'result';
 
 const engineeringStreams = [
-    'Computer Science & Engineering',
-    'Information Science & Engineering',
-    'Computer Science & Engineering (AI & ML)',
-    'Computer Science & Engineering (Data Science)',
-    'Computer Science (IoT and Cybersecurity including Blockchain Technology)',
-    'Electronics & Communication Engineering',
-    'Mechanical Engineering',
+    // Civil Engineering Stream
     'Civil Engineering',
-    'Electrical Engineering',
-    'Chemical Engineering',
+    'Ceramics and Cement Technology',
+    'Construction Technology & Management',
+    'Environmental Engineering',
+    'Mining Engineering',
+
+    // Computer Science & Engineering Stream
+    'Computer Science & Engineering',
+    'Computer Engineering',
+    'Artificial Intelligence & Data Science',
+    'Artificial Intelligence and Machine Learning',
+    'Biotechnology',
+    'Computer & Communication Engineering',
+    'Computer Science & Business System',
+    'Computer Science & Design',
+    'Computer Science & Engineering (IoT)',
+    'CSE(Artificial Intelligence & Machine Learning)',
+    'CSE(Artificial Intelligence)',
+    'CSE(Cyber Security)',
+    'CSE(Data Science)',
+    'CSE(IoT & Cyber Security including Block Chain Technology)',
+    'Data Science',
+    'Information Science & Engineering',
+
+    // Electrical & Electronics Engineering Stream
+    'Electronics & Communication Engg',
+    'Biomedical Engineering',
+    'Electrical & Electronics Engineering',
+    'Electronics & Instrumentation Engineering',
+    'Electronics & Telecommunication Engg',
+    'Industrial IoT',
+    'Medical Electronics Engineering',
+
+    // Mechanical Engineering Stream
+    'Aeronautical Engineering',
     'Aerospace Engineering',
-    'Biotechnology'
+    'Agreecultural Engineering',
+    'Automation and Robotics',
+    'Automobile Engineering',
+    'Chemical Engineering',
+    'Industrial & Production Engineering',
+    'Industrial Engineering & Management',
+    'Manufacturing Science & Engineering',
+    'Marine Engineering',
+    'Mechanical & Smart Manufacturing',
+    'Mechanical Engineering',
+    'Mechatronics',
+    'Petrochem Engineering',
+    'Robotics & Automation',
+    'Robotics and Artificial Intelligence',
+    'Silk Technology',
+    'Textile Technology'
 ];
 
 const interestAreas = [...new Set(honoursCourses.map(c => c.stream))];
