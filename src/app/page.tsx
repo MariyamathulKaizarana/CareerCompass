@@ -10,17 +10,17 @@ const heroImage = placeholderImages.find(p => p.id === 'hero');
 
 const features = [
   {
-    icon: <Compass className="h-10 w-10 text-accent" />,
+    icon: <Compass className="h-8 w-8 text-accent" />,
     title: 'Interactive Quiz',
     description: 'Answer our quick, fun quiz to uncover your interests and personality traits.',
   },
   {
-    icon: <Lightbulb className="h-10 w-10 text-accent" />,
+    icon: <Lightbulb className="h-8 w-8 text-accent" />,
     title: 'AI-Powered Suggestions',
     description: 'Get smart, data-driven career recommendations tailored just for you.',
   },
   {
-    icon: <FileText className="h-10 w-10 text-accent" />,
+    icon: <FileText className="h-8 w-8 text-accent" />,
     title: 'Detailed Reports',
     description: 'Explore in-depth information about career paths, salaries, and future scope.',
   },
