@@ -77,7 +77,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full bg-white py-16 md:py-24 lg:py-32 dark:bg-card">
+        <section className="w-full bg-card py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="mx-auto mb-12 max-w-2xl text-center">
               <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl">
@@ -118,7 +118,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-white dark:bg-card">
+      <footer className="bg-card">
         <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 md:flex-row md:px-6">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} CareerCompass. All rights reserved.
