@@ -20,7 +20,7 @@ const engineeringStreams = [
     'Information Science & Engineering',
     'Computer Science & Engineering (AI & ML)',
     'Computer Science & Engineering (Data Science)',
-    'Computer Science & Engineering (Cyber Security)',
+    'Computer Science (IoT and Cybersecurity including Blockchain Technology)',
     'Electronics & Communication Engineering',
     'Mechanical Engineering',
     'Civil Engineering',
