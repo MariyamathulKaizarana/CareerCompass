@@ -45,6 +45,7 @@ const prompt = ai.definePrompt(
   {
     name: 'searchCareersPrompt',
     input: { schema: PromptInputSchema },
+    output: { schema: SearchCareersOutputSchema },
     prompt: `You are a career search engine assistant. Your task is to search through the provided career, course, and exam data to find relevant results for the user's query.
 
     Return up to 10 results. Prioritize careers, but include courses and exams if they are a strong match.
@@ -94,12 +95,6 @@ const searchCareersFlow = ai.defineFlow(
                 careerData: JSON.stringify(careerDataForPrompt),
                 courseData: JSON.stringify(allCourses),
                 examData: JSON.stringify(allExams),
-            }, {
-              config: {
-                output: {
-                  schema: SearchCareersOutputSchema,
-                },
-              },
             });
             return output ?? [];
         } catch (error: any) {

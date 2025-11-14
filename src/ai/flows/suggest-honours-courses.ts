@@ -43,6 +43,7 @@ const prompt = ai.definePrompt(
   {
     name: 'suggestHonoursCoursesPrompt',
     input: { schema: PromptInputSchema },
+    output: { schema: SuggestHonoursCoursesOutputSchema },
     prompt: `You are an expert academic advisor for B.Tech students in India. Your task is to recommend a set of Honours courses.
 
     Important Rule: The course must not be a subject already covered or forming part of the student's regular B.E./B.Tech. curriculum. If there is a similar course, the Honours version must be at a higher academic level than the one in their core degree.
@@ -89,12 +90,6 @@ const suggestHonoursCoursesFlow = ai.defineFlow(
             stream,
             interests,
             courseData: JSON.stringify(courseDataForPrompt),
-        }, {
-          config: {
-            output: {
-              schema: SuggestHonoursCoursesOutputSchema,
-            },
-          },
         });
         return output ?? [];
       } catch (error: any) {

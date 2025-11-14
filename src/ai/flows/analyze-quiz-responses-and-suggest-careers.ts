@@ -53,6 +53,7 @@ const PromptInputSchema = z.object({
 const prompt = ai.definePrompt({
   name: 'analyzeQuizResponsesPrompt',
   input: {schema: PromptInputSchema},
+  output: {schema: AnalyzeQuizResponsesOutputSchema},
   prompt: `You are an AI career counselor for students in India. Analyze the student's quiz responses to suggest suitable career paths.
 
 The quiz responses are provided as a JSON array. Each object in the array contains a 'questionId' and the 'selectedOption' which represents the user's answer. The 'selectedOption' value is a composite string like 'interest_strength' (e.g., 'analytical_problemsolving', 'caring_humanbody'). Use these values to understand the user's inclinations. For example, 'analytical' is an interest, and 'problemsolving' is a strength.
@@ -95,12 +96,6 @@ const analyzeQuizResponsesAndSuggestCareersFlow = ai.defineFlow(
         const { output } = await prompt({
           ...input,
           quizResponses: JSON.stringify(input.quizResponses),
-        }, {
-          config: {
-            output: {
-              schema: AnalyzeQuizResponsesOutputSchema,
-            },
-          },
         });
         return output!;
       } catch (error: any) {

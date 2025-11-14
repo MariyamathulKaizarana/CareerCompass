@@ -38,6 +38,7 @@ export async function generateCareerReport(
 const prompt = ai.definePrompt({
   name: 'generateCareerReportPrompt',
   input: {schema: GenerateCareerReportInputSchema},
+  output: {schema: GenerateCareerReportOutputSchema},
   prompt: `You are an expert career counselor for students in India. Generate a detailed career report for the career path: {{{careerPath}}}. The user has the following interests: {{{interests}}}. Include the following sections:
 
 Description: A short description of the career path.
@@ -64,13 +65,7 @@ const generateCareerReportFlow = ai.defineFlow(
 
     while (attempt < maxRetries) {
       try {
-        const { output } = await prompt(input, {
-          config: {
-            output: {
-              schema: GenerateCareerReportOutputSchema,
-            },
-          },
-        });
+        const { output } = await prompt(input);
         return output!;
       } catch (error: any) {
         if (error.message.includes('503') && attempt < maxRetries - 1) {

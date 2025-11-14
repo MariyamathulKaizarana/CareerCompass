@@ -29,6 +29,7 @@ export async function updateCareerText(input: UpdateCareerTextInput): Promise<Up
 const prompt = ai.definePrompt({
   name: 'updateCareerTextPrompt',
   input: {schema: UpdateCareerTextInputSchema},
+  output: {schema: UpdateCareerTextOutputSchema},
   prompt: `You are an expert career counselor. Your task is to improve the description of a given career. The description should be engaging, concise, and give a clear overview of the role.
 
 Career Name: {{{careerName}}}
@@ -46,13 +47,7 @@ const updateCareerTextFlow = ai.defineFlow(
     outputSchema: UpdateCareerTextOutputSchema,
   },
   async input => {
-    const {output} = await prompt(input, {
-      config: {
-        output: {
-          schema: UpdateCareerTextOutputSchema,
-        },
-      },
-    });
+    const {output} = await prompt(input);
     return output!;
   }
 );
