@@ -46,6 +46,8 @@ const prompt = ai.definePrompt(
     output: { schema: SuggestHonoursCoursesOutputSchema },
     prompt: `You are an expert academic advisor for B.Tech students in India. Your task is to recommend a set of Honours courses.
 
+    Important Rule: The course must not be a subject already covered or forming part of the student's regular B.E./B.Tech. curriculum. If there is a similar course, the Honours version must be at a higher academic level than the one in their core degree.
+
     The credit system is as follows: 4-week courses are 1 credit, 8-week courses are 2 credits, and 12-week courses are 3 credits.
 
     Student Details:
