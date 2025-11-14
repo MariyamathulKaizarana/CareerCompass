@@ -15,7 +15,6 @@ import { honoursCourses } from '@/lib/honours-courses-data';
 
 const SuggestHonoursCoursesInputSchema = z.object({
   stream: z.string().describe('The student\'s primary engineering stream (e.g., Computer Science & Engineering).'),
-  creditBudget: z.number().describe('The total number of credits the student wants to take.'),
   interests: z.string().describe('A free-text description of the student\'s interests, passions, and career goals.'),
 });
 export type SuggestHonoursCoursesInput = z.infer<typeof SuggestHonoursCoursesInputSchema>;
@@ -36,7 +35,6 @@ export async function suggestHonoursCourses(input: SuggestHonoursCoursesInput): 
 
 const PromptInputSchema = z.object({
     stream: z.string(),
-    creditBudget: z.number(),
     interests: z.string(),
     courseData: z.string(),
 });
@@ -52,13 +50,12 @@ const prompt = ai.definePrompt(
 
     Student Details:
     - Stream: {{{stream}}}
-    - Credit Budget: {{{creditBudget}}}
     - Interests: {{{interests}}}
     
     Available Courses (JSON format):
     {{{courseData}}}
 
-    Based on the student's stream and interests, select a combination of around 8-10 relevant courses from the provided list. The student will choose from your suggestions to meet their credit budget. For each recommendation, provide a compelling, one-sentence description explaining WHY it's a good fit for the student's specific interests.
+    Based on the student's stream and interests, select a combination of around 8-10 relevant courses from the provided list. The student will choose from your suggestions. For each recommendation, provide a compelling, one-sentence description explaining WHY it's a good fit for the student's specific interests.
     `,
   },
 );
@@ -69,7 +66,7 @@ const suggestHonoursCoursesFlow = ai.defineFlow(
     inputSchema: SuggestHonoursCoursesInputSchema,
     outputSchema: SuggestHonoursCoursesOutputSchema,
   },
-  async ({ stream, creditBudget, interests }) => {
+  async ({ stream, interests }) => {
     const relevantCourses = honoursCourses.filter(c => c.stream === stream || interests.includes(c.stream));
     
     const courseDataForPrompt = relevantCourses.map(c => ({ 
@@ -87,7 +84,6 @@ const suggestHonoursCoursesFlow = ai.defineFlow(
       try {
         const { output } = await prompt({
             stream,
-            creditBudget,
             interests,
             courseData: JSON.stringify(courseDataForPrompt),
         });

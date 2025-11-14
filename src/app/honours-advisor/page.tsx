@@ -6,69 +6,43 @@ import { AppShell } from '@/components/AppShell';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { suggestHonoursCourses, type HonoursCourseSuggestion } from '@/ai/flows/suggest-honours-courses';
 import { Loader2, Sparkles } from 'lucide-react';
 import { honoursCourses } from '@/lib/honours-courses-data';
 import { Checkbox } from '@/components/ui/checkbox';
 
-type Step = 'stream' | 'budget' | 'interests' | 'suggestions' | 'result';
+type Step = 'stream' | 'interests' | 'suggestions' | 'result';
 
 const engineeringStreams = [
-    // Civil Engineering Stream
-    'Civil Engineering',
-    'Ceramics and Cement Technology',
-    'Construction Technology & Management',
-    'Environmental Engineering',
-    'Mining Engineering',
-
-    // Computer Science & Engineering Stream
     'Computer Science & Engineering',
-    'Computer Engineering',
-    'Artificial Intelligence & Data Science',
-    'Artificial Intelligence and Machine Learning',
-    'Biotechnology',
-    'Computer & Communication Engineering',
-    'Computer Science & Business System',
-    'Computer Science & Design',
-    'Computer Science & Engineering (IoT)',
-    'CSE(Artificial Intelligence & Machine Learning)',
-    'CSE(Artificial Intelligence)',
-    'CSE(Cyber Security)',
-    'CSE(Data Science)',
-    'CSE(IoT & Cyber Security including Block Chain Technology)',
-    'Data Science',
     'Information Science & Engineering',
-
-    // Electrical & Electronics Engineering Stream
+    'Artificial Intelligence & Machine Learning',
+    'Data Science',
+    'Cyber Security',
+    'Computer Science & Engineering (IoT & Cyber Security including Block Chain Technology)',
+    'Computer Science & Business System',
+    'Artificial Intelligence & Data Science',
+    'Computer Science & Design',
+    'Computer & Communication Engineering',
     'Electronics & Communication Engg',
-    'Biomedical Engineering',
-    'Electrical & Electronics Engineering',
-    'Electronics & Instrumentation Engineering',
-    'Electronics & Telecommunication Engg',
-    'Industrial IoT',
-    'Medical Electronics Engineering',
-
-    // Mechanical Engineering Stream
+    'Mechanical Engineering',
+    'Civil Engineering',
     'Aeronautical Engineering',
     'Aerospace Engineering',
-    'Agreecultural Engineering',
-    'Automation and Robotics',
-    'Automobile Engineering',
+    'Electrical & Electronics Engineering',
+    'Biotechnology',
     'Chemical Engineering',
+    'Automobile Engineering',
     'Industrial & Production Engineering',
+    'Electronics & Telecommunication Engg',
     'Industrial Engineering & Management',
-    'Manufacturing Science & Engineering',
-    'Marine Engineering',
-    'Mechanical & Smart Manufacturing',
-    'Mechanical Engineering',
+    'Electronics & Instrumentation Engineering',
+    'Medical Electronics Engineering',
     'Mechatronics',
-    'Petrochem Engineering',
-    'Robotics & Automation',
+    'Automation and Robotics',
     'Robotics and Artificial Intelligence',
-    'Silk Technology',
-    'Textile Technology'
+    'Biomedical Engineering'
 ];
 
 const interestAreas = [...new Set(honoursCourses.map(c => c.stream))];
@@ -77,18 +51,13 @@ const interestAreas = [...new Set(honoursCourses.map(c => c.stream))];
 export default function HonoursAdvisorPage() {
     const [step, setStep] = useState<Step>('stream');
     const [stream, setStream] = useState('');
-    const [credits, setCredits] = useState('');
     const [interests, setInterests] = useState<string[]>([]);
     const [suggestions, setSuggestions] = useState<HonoursCourseSuggestion[]>([]);
     const [selectedCourses, setSelectedCourses] = useState<HonoursCourseSuggestion[]>([]);
     const [loading, setLoading] = useState(false);
 
     const handleStreamNext = () => {
-        if (stream) setStep('budget');
-    };
-
-    const handleBudgetNext = () => {
-        if (credits) setStep('interests');
+        if (stream) setStep('interests');
     };
 
     const handleInterestSelection = (interest: string) => {
@@ -105,7 +74,6 @@ export default function HonoursAdvisorPage() {
         try {
             const results = await suggestHonoursCourses({
                 stream,
-                creditBudget: parseInt(credits, 10),
                 interests: interests.join(', '),
             });
             setSuggestions(results);
@@ -172,28 +140,11 @@ export default function HonoursAdvisorPage() {
                             </CardContent>
                         </>
                     )}
-
-                    {step === 'budget' && (
-                         <>
-                            <CardHeader>
-                                <CardTitle>Step 2: Credit Budget</CardTitle>
-                                <CardDescription>What is your target credit count for your Honours degree? You can select courses to meet this goal.</CardDescription>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                                <Label htmlFor="credits">Target Credits</Label>
-                                <Input id="credits" type="number" placeholder="e.g., 12 or 16" value={credits} onChange={e => setCredits(e.target.value)} />
-                                <div className="flex gap-2">
-                                    <Button variant="outline" onClick={() => setStep('stream')} className="w-full">Back</Button>
-                                    <Button onClick={handleBudgetNext} disabled={!credits} className="w-full">Next</Button>
-                                </div>
-                            </CardContent>
-                        </>
-                    )}
                     
                     {step === 'interests' && (
                          <>
                             <CardHeader>
-                                <CardTitle>Step 3: Your Interests</CardTitle>
+                                <CardTitle>Step 2: Your Interests</CardTitle>
                                 <CardDescription>Select one or more areas you are passionate about.</CardDescription>
                             </CardHeader>
                             <CardContent className="space-y-4">
@@ -210,7 +161,7 @@ export default function HonoursAdvisorPage() {
                                     ))}
                                 </div>
                                  <div className="flex gap-2 pt-4">
-                                    <Button variant="outline" onClick={() => setStep('budget')} className="w-full">Back</Button>
+                                    <Button variant="outline" onClick={() => setStep('stream')} className="w-full">Back</Button>
                                     <Button onClick={handleGetSuggestions} disabled={interests.length === 0 || loading} className="w-full">
                                         {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                                         Get Suggestions
