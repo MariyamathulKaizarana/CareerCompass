@@ -152,10 +152,84 @@ export default function HonoursAdvisorPage() {
     const totalSelectedWeeks = selectedCourses.reduce((sum, course) => sum + (honoursCourses.find(c => c.title === course.title)?.weeks || 0), 0);
     
       const findImage = (courseTitle: string) => {
-        const searchTerms = ['data', 'blockchain', 'fintech', 'construction', 'transportation', 'analytics'];
         const titleLower = courseTitle.toLowerCase();
-        const foundTerm = searchTerms.find(term => titleLower.includes(term));
-        return placeholderImages.find(p => p.id === foundTerm) || placeholderImages.find(p => p.id === 'report');
+        const keywordMap: { [key: string]: string } = {
+          'python': 'software',
+          'algorithm': 'software',
+          'machine learning': 'ai/ml',
+          'deep learning': 'ai/ml',
+          'natural language': 'ai/ml',
+          'data science': 'data',
+          'database': 'data',
+          'iot': 'iot',
+          'cloud computing': 'software',
+          'operating system': 'software',
+          'computer architecture': 'electrical',
+          'verilog': 'electrical',
+          'social networks': 'social',
+          'graphics': 'graphic',
+          'software testing': 'software',
+          'sustainability': 'civil',
+          'design': 'interior',
+          'regression': 'data',
+          'algebra': 'math',
+          'matlab': 'math',
+          'fuzzy set': 'math',
+          'numerical methods': 'math',
+          'optimization': 'math',
+          'signal processing': 'electrical',
+          'microelectronics': 'electrical',
+          'op-amp': 'electrical',
+          'sensors': 'electrical',
+          'photovoltaic': 'electrical',
+          'neuroscience': 'doctor',
+          'control systems': 'mechanical',
+          'fabrication': 'mechanical',
+          'smart grid': 'electrical',
+          'spectroscopic': 'pharmacist',
+          'chemical process': 'chemical',
+          'renewable energy': 'civil',
+          'drug delivery': 'pharmacist',
+      'genetic engineering': 'geneticist',
+      'food process': 'food',
+      'tissue engineering': 'biotechnologist',
+      'biomaterials': 'biotechnologist',
+      'nanotechnology': 'biotechnologist',
+      'advanced materials': 'mechanical',
+      'crystallography': 'chemical',
+      'finite element': 'mechanical',
+      'remote sensing': 'aerospace',
+      'product design': 'product',
+      'patent law': 'lawyer',
+      'soft skills': 'human',
+      'psychology': 'psychologist',
+      'entrepreneurship': 'business',
+      'energy economics': 'economist',
+      'water': 'civil',
+      'intellectual property': 'lawyer',
+      'human resource': 'human',
+      'negotiations': 'management',
+      'safety engineering': 'civil',
+      'working capital': 'investment',
+      'project management': 'management',
+      'international business': 'business',
+      'management': 'management',
+      'accounting': 'chartered',
+      'marketing': 'marketing',
+      'text mining': 'data',
+      'leadership': 'human',
+      'navigation satellite': 'aerospace'
+        };
+      
+        for (const keyword in keywordMap) {
+          if (titleLower.includes(keyword)) {
+            const imageId = keywordMap[keyword];
+            const foundImage = placeholderImages.find(p => p.id === imageId);
+            if (foundImage) return foundImage;
+          }
+        }
+      
+        return placeholderImages.find(p => p.id === 'report'); // Default image
       };
 
     return (
