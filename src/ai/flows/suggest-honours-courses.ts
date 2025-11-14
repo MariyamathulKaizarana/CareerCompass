@@ -43,7 +43,6 @@ const prompt = ai.definePrompt(
   {
     name: 'suggestHonoursCoursesPrompt',
     input: { schema: PromptInputSchema },
-    output: { schema: SuggestHonoursCoursesOutputSchema },
     prompt: `You are an expert academic advisor for B.Tech students in India. Your task is to recommend a set of Honours courses.
 
     Important Rule: The course must not be a subject already covered or forming part of the student's regular B.E./B.Tech. curriculum. If there is a similar course, the Honours version must be at a higher academic level than the one in their core degree.
@@ -58,6 +57,8 @@ const prompt = ai.definePrompt(
     {{{courseData}}}
 
     Based on the student's stream and their selected interest areas, select a combination of around 8-10 relevant courses from the provided list. The student will choose from your suggestions. For each recommendation, provide a compelling, one-sentence description explaining WHY it's a good fit for the student's specific interests.
+    
+    Return your response as a JSON array of course suggestions.
     `,
   },
 );
@@ -86,12 +87,23 @@ const suggestHonoursCoursesFlow = ai.defineFlow(
 
     while (attempt < maxRetries) {
       try {
-        const { output } = await prompt({
+        const response = await prompt({
             stream,
             interests,
             courseData: JSON.stringify(courseDataForPrompt),
         });
-        return output ?? [];
+
+        const rawText = response.text;
+        const jsonMatch = rawText.match(/```json\n([\s\S]*?)\n```/);
+        const jsonString = jsonMatch ? jsonMatch[1] : rawText;
+
+        if (!jsonString) {
+          return [];
+        }
+
+        const parsedOutput = JSON.parse(jsonString);
+        return SuggestHonoursCoursesOutputSchema.parse(parsedOutput);
+
       } catch (error: any) {
         if (error.message.includes('503') && attempt < maxRetries - 1) {
           console.warn(`Attempt ${attempt + 1} failed with 503 error. Retrying in ${delay}ms...`);

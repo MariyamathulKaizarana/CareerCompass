@@ -53,7 +53,6 @@ const PromptInputSchema = z.object({
 const prompt = ai.definePrompt({
   name: 'analyzeQuizResponsesPrompt',
   input: {schema: PromptInputSchema},
-  output: {schema: AnalyzeQuizResponsesOutputSchema},
   prompt: `You are an AI career counselor for students in India. Analyze the student's quiz responses to suggest suitable career paths.
 
 The quiz responses are provided as a JSON array. Each object in the array contains a 'questionId' and the 'selectedOption' which represents the user's answer. The 'selectedOption' value is a composite string like 'interest_strength' (e.g., 'analytical_problemsolving', 'caring_humanbody'). Use these values to understand the user's inclinations. For example, 'analytical' is an interest, and 'problemsolving' is a strength.
@@ -69,15 +68,7 @@ Student Strengths: {{{studentStrengths}}}
 Based on this, suggest 2-3 most suitable career paths with detailed information. Your suggestions should be directly influenced by the patterns in the quiz answers. For example, a student who consistently chooses 'analytical' and 'technical' options might be a good fit for Software Developer or Data Scientist, while a student choosing 'caring' and 'humanbody' is a better fit for Doctor or Physiotherapist.
 
 Format your response as a JSON array of career suggestions.
-
-Each career suggestion should include:
-- careerPath: The suggested career path.
-- description: A short description of the career path.
-- requiredSkills: List of required skills for the career.
-- requiredCourses: List of required courses for the career.
-- careerRoadmap: The career roadmap (education -> internships -> job roles).
-- averageSalary: The average salary for this career path in Indian Rupees (INR), formatted as "₹X-Y LPA". For example: "₹8-12 LPA".
-- futureScope: The future scope and outlook for this career.`,
+`,
 });
 
 const analyzeQuizResponsesAndSuggestCareersFlow = ai.defineFlow(
@@ -93,11 +84,18 @@ const analyzeQuizResponsesAndSuggestCareersFlow = ai.defineFlow(
 
     while (attempt < maxRetries) {
       try {
-        const { output } = await prompt({
+        const response = await prompt({
           ...input,
           quizResponses: JSON.stringify(input.quizResponses),
         });
-        return output!;
+        
+        const rawText = response.text;
+        const jsonMatch = rawText.match(/```json\n([\s\S]*?)\n```/);
+        const jsonString = jsonMatch ? jsonMatch[1] : rawText;
+
+        const parsedOutput = JSON.parse(jsonString);
+        return AnalyzeQuizResponsesOutputSchema.parse(parsedOutput);
+
       } catch (error: any) {
         if (error.message.includes('503') && attempt < maxRetries - 1) {
           console.warn(`Attempt ${attempt + 1} failed with 503 error. Retrying in ${delay}ms...`);

@@ -29,7 +29,6 @@ export async function updateCareerText(input: UpdateCareerTextInput): Promise<Up
 const prompt = ai.definePrompt({
   name: 'updateCareerTextPrompt',
   input: {schema: UpdateCareerTextInputSchema},
-  output: {schema: UpdateCareerTextOutputSchema},
   prompt: `You are an expert career counselor. Your task is to improve the description of a given career. The description should be engaging, concise, and give a clear overview of the role.
 
 Career Name: {{{careerName}}}
@@ -37,6 +36,8 @@ Career Name: {{{careerName}}}
 Current Description: {{{currentDescription}}}
 
 Rewrite the description to be more professional and appealing to students exploring career options.
+
+Return your response as a JSON object with the key "updatedDescription".
 `,
 });
 
@@ -47,7 +48,19 @@ const updateCareerTextFlow = ai.defineFlow(
     outputSchema: UpdateCareerTextOutputSchema,
   },
   async input => {
-    const {output} = await prompt(input);
-    return output!;
+    const response = await prompt(input);
+    const rawText = response.text;
+    
+    // Sometimes the model returns markdown with the JSON. We need to extract the JSON.
+    const jsonMatch = rawText.match(/```json\n([\s\S]*?)\n```/);
+    const jsonString = jsonMatch ? jsonMatch[1] : rawText;
+
+    try {
+        const parsedOutput = JSON.parse(jsonString);
+        return UpdateCareerTextOutputSchema.parse(parsedOutput);
+    } catch (e) {
+        console.error("Failed to parse AI output:", e);
+        throw new Error("AI returned an invalid format.");
+    }
   }
 );

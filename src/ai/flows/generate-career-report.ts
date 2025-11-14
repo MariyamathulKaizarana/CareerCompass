@@ -38,7 +38,6 @@ export async function generateCareerReport(
 const prompt = ai.definePrompt({
   name: 'generateCareerReportPrompt',
   input: {schema: GenerateCareerReportInputSchema},
-  output: {schema: GenerateCareerReportOutputSchema},
   prompt: `You are an expert career counselor for students in India. Generate a detailed career report for the career path: {{{careerPath}}}. The user has the following interests: {{{interests}}}. Include the following sections:
 
 Description: A short description of the career path.
@@ -49,6 +48,8 @@ Average Salary: The average salary for the career path in Indian Rupees (INR), f
 Future Scope: The future scope of the career path.
 
 Format each section clearly and concisely.
+
+Return your response as a single JSON object with keys: "description", "requiredSkills", "courses", "careerRoadmap", "averageSalary", "futureScope".
 `,
 });
 
@@ -65,8 +66,15 @@ const generateCareerReportFlow = ai.defineFlow(
 
     while (attempt < maxRetries) {
       try {
-        const { output } = await prompt(input);
-        return output!;
+        const response = await prompt(input);
+        
+        const rawText = response.text;
+        const jsonMatch = rawText.match(/```json\n([\s\S]*?)\n```/);
+        const jsonString = jsonMatch ? jsonMatch[1] : rawText;
+
+        const parsedOutput = JSON.parse(jsonString);
+        return GenerateCareerReportOutputSchema.parse(parsedOutput);
+
       } catch (error: any) {
         if (error.message.includes('503') && attempt < maxRetries - 1) {
           console.warn(`Attempt ${attempt + 1} failed with 503 error. Retrying in ${delay}ms...`);

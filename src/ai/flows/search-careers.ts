@@ -45,7 +45,6 @@ const prompt = ai.definePrompt(
   {
     name: 'searchCareersPrompt',
     input: { schema: PromptInputSchema },
-    output: { schema: SearchCareersOutputSchema },
     prompt: `You are a career search engine assistant. Your task is to search through the provided career, course, and exam data to find relevant results for the user's query.
 
     Return up to 10 results. Prioritize careers, but include courses and exams if they are a strong match.
@@ -65,6 +64,8 @@ const prompt = ai.definePrompt(
     - For careers, the context should be the career description.
     - For courses, the slug is always '/courses' and the context is 'Recommended for various careers.'.
     - For exams, the slug is always '/careers' and the context is 'Competitive entrance exam.'.
+
+    Return your response as a JSON array of search results.
     `,
   },
 );
@@ -90,13 +91,24 @@ const searchCareersFlow = ai.defineFlow(
 
     while (attempt < maxRetries) {
         try {
-            const { output } = await prompt({
+            const response = await prompt({
                 query,
                 careerData: JSON.stringify(careerDataForPrompt),
                 courseData: JSON.stringify(allCourses),
                 examData: JSON.stringify(allExams),
             });
-            return output ?? [];
+
+            const rawText = response.text;
+            const jsonMatch = rawText.match(/```json\n([\s\S]*?)\n```/);
+            const jsonString = jsonMatch ? jsonMatch[1] : rawText;
+
+            if (!jsonString) {
+              return [];
+            }
+
+            const parsedOutput = JSON.parse(jsonString);
+            return SearchCareersOutputSchema.parse(parsedOutput);
+
         } catch (error: any) {
             if (error.message.includes('503') && attempt < maxRetries - 1) {
               console.warn(`Attempt ${attempt + 1} failed with 503 error. Retrying in ${delay}ms...`);
