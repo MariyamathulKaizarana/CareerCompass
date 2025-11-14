@@ -58,7 +58,7 @@ const prompt = ai.definePrompt(
 
     Based on the student's stream and their selected interest areas, select a combination of around 8-10 relevant courses from the provided list. The student will choose from your suggestions. For each recommendation, provide a compelling, one-sentence description explaining WHY it's a good fit for the student's specific interests.
     
-    Return your response as a JSON array of course suggestions.
+    Return your response as a JSON array of course suggestions. Each object in the array MUST include "title", "description", and "credits".
     `,
   },
 );
