@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -45,7 +44,38 @@ const engineeringStreams = [
     'Biomedical Engineering'
 ];
 
-const interestAreas = [...new Set(honoursCourses.map(c => c.stream))];
+const interestCategoryMapping: Record<string, string[]> = {
+    'Computer Science & Engineering': ['Computer Science & Engineering', 'Mathematics', 'Management'],
+    'Information Science & Engineering': ['Computer Science & Engineering', 'Mathematics', 'Management'],
+    'Artificial Intelligence & Machine Learning': ['Computer Science & Engineering', 'Mathematics', 'Management'],
+    'Data Science': ['Computer Science & Engineering', 'Mathematics', 'Management'],
+    'Cyber Security': ['Computer Science & Engineering', 'Management'],
+    'Computer Science & Engineering (IoT & Cyber Security including Block Chain Technology)': ['Computer Science & Engineering', 'Electronics & Communication Engineering', 'Management'],
+    'Computer Science & Business System': ['Computer Science & Engineering', 'Management'],
+    'Artificial Intelligence & Data Science': ['Computer Science & Engineering', 'Mathematics', 'Management'],
+    'Computer Science & Design': ['Computer Science & Engineering', 'Design Engineering', 'Humanities'],
+    'Computer & Communication Engineering': ['Computer Science & Engineering', 'Electronics & Communication Engineering'],
+    'Electronics & Communication Engg': ['Electronics & Communication Engineering', 'Computer Science & Engineering', 'Physics'],
+    'Mechanical Engineering': ['Mechanical Engineering', 'Design Engineering', 'Management', 'Physics'],
+    'Civil Engineering': ['Civil Engineering', 'Design Engineering', 'Management', 'Earth Science'],
+    'Aeronautical Engineering': ['Aerospace Engineering', 'Mechanical Engineering', 'Design Engineering'],
+    'Aerospace Engineering': ['Aerospace Engineering', 'Mechanical Engineering', 'Design Engineering', 'Physics'],
+    'Electrical & Electronics Engineering': ['Electrical Engineering', 'Electronics & Communication Engineering', 'Computer Science & Engineering', 'Physics'],
+    'Biotechnology': ['Biotechnology', 'Chemistry'],
+    'Chemical Engineering': ['Chemical Engineering', 'Chemistry', 'Management'],
+    'Automobile Engineering': ['Mechanical Engineering', 'Design Engineering'],
+    'Industrial & Production Engineering': ['Mechanical Engineering', 'Management'],
+    'Electronics & Telecommunication Engg': ['Electronics & Communication Engineering', 'Computer Science & Engineering'],
+    'Industrial Engineering & Management': ['Mechanical Engineering', 'Management'],
+    'Electronics & Instrumentation Engineering': ['Electronics & Communication Engineering', 'Electrical Engineering'],
+    'Medical Electronics Engineering': ['Electronics & Communication Engineering', 'Biotechnology'],
+    'Mechatronics': ['Mechanical Engineering', 'Electronics & Communication Engineering', 'Computer Science & Engineering'],
+    'Automation and Robotics': ['Mechanical Engineering', 'Computer Science & Engineering', 'Electronics & Communication Engineering'],
+    'Robotics and Artificial Intelligence': ['Computer Science & Engineering', 'Mechanical Engineering', 'Electronics & Communication Engineering'],
+    'Biomedical Engineering': ['Biotechnology', 'Electronics & Communication Engineering']
+};
+
+const allInterestAreas = [...new Set(honoursCourses.map(c => c.stream))];
 
 
 export default function HonoursAdvisorPage() {
@@ -55,9 +85,16 @@ export default function HonoursAdvisorPage() {
     const [suggestions, setSuggestions] = useState<HonoursCourseSuggestion[]>([]);
     const [selectedCourses, setSelectedCourses] = useState<HonoursCourseSuggestion[]>([]);
     const [loading, setLoading] = useState(false);
+    const [availableInterests, setAvailableInterests] = useState<string[]>(allInterestAreas);
 
     const handleStreamNext = () => {
-        if (stream) setStep('interests');
+        if (stream) {
+            const relevantCategories = interestCategoryMapping[stream] || allInterestAreas;
+            const interestsForStream = allInterestAreas.filter(area => relevantCategories.includes(area));
+            setAvailableInterests(interestsForStream);
+            setInterests([]); // Reset interests when stream changes
+            setStep('interests');
+        }
     };
 
     const handleInterestSelection = (interest: string) => {
@@ -102,6 +139,11 @@ export default function HonoursAdvisorPage() {
         if(selectedCourses.length > 0) {
             setStep('result');
         }
+    }
+    
+    const handleGoBackToStream = () => {
+        setInterests([]);
+        setStep('stream');
     }
 
     const totalSelectedCredits = selectedCourses.reduce((sum, course) => sum + course.credits, 0);
@@ -149,7 +191,7 @@ export default function HonoursAdvisorPage() {
                             </CardHeader>
                             <CardContent className="space-y-4">
                                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                    {interestAreas.map(interest => (
+                                    {availableInterests.map(interest => (
                                         <div key={interest} className="flex items-center space-x-2">
                                             <Checkbox 
                                                 id={interest}
@@ -161,7 +203,7 @@ export default function HonoursAdvisorPage() {
                                     ))}
                                 </div>
                                  <div className="flex gap-2 pt-4">
-                                    <Button variant="outline" onClick={() => setStep('stream')} className="w-full">Back</Button>
+                                    <Button variant="outline" onClick={handleGoBackToStream} className="w-full">Back</Button>
                                     <Button onClick={handleGetSuggestions} disabled={interests.length === 0 || loading} className="w-full">
                                         {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                                         Get Suggestions

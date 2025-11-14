@@ -52,12 +52,12 @@ const prompt = ai.definePrompt(
 
     Student Details:
     - Stream: {{{stream}}}
-    - Interests: {{{interests}}}
+    - Interests in specialized areas: {{{interests}}}
     
     Available Courses (JSON format):
     {{{courseData}}}
 
-    Based on the student's stream and interests, select a combination of around 8-10 relevant courses from the provided list. The student will choose from your suggestions. For each recommendation, provide a compelling, one-sentence description explaining WHY it's a good fit for the student's specific interests.
+    Based on the student's stream and their selected interest areas, select a combination of around 8-10 relevant courses from the provided list. The student will choose from your suggestions. For each recommendation, provide a compelling, one-sentence description explaining WHY it's a good fit for the student's specific interests.
     `,
   },
 );
@@ -69,7 +69,9 @@ const suggestHonoursCoursesFlow = ai.defineFlow(
     outputSchema: SuggestHonoursCoursesOutputSchema,
   },
   async ({ stream, interests }) => {
-    const relevantCourses = honoursCourses.filter(c => c.stream === stream || interests.includes(c.stream));
+    // Filter courses based on the provided interest streams, which are more specific now.
+    const interestList = interests.split(',').map(i => i.trim());
+    const relevantCourses = honoursCourses.filter(c => interestList.includes(c.stream));
     
     const courseDataForPrompt = relevantCourses.map(c => ({ 
         title: c.title, 
