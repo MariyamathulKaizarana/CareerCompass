@@ -17,6 +17,10 @@ type Step = 'stream' | 'budget' | 'interests' | 'suggestions' | 'result';
 
 const engineeringStreams = [
     'Computer Science & Engineering',
+    'Information Science & Engineering',
+    'Computer Science & Engineering (AI & ML)',
+    'Computer Science & Engineering (Data Science)',
+    'Computer Science & Engineering (Cyber Security)',
     'Electronics & Communication Engineering',
     'Mechanical Engineering',
     'Civil Engineering',
@@ -76,7 +80,7 @@ export default function HonoursAdvisorPage() {
     const handleCourseSelection = (course: HonoursCourseSuggestion) => {
         setSelectedCourses(prev => {
             const courseWithWeeks = honoursCourses.find(c => c.title === course.title);
-            const courseToToggle = { ...course, weeks: courseWithWeeks?.weeks || 12 };
+            const courseToToggle = { ...course, weeks: courseWithWeeks?.weeks || 0 };
 
             if (prev.some(c => c.title === course.title)) {
                 return prev.filter(c => c.title !== course.title);
