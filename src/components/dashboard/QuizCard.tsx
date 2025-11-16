@@ -25,7 +25,7 @@ export default function QuizCard() {
             </CardContent>
           </Card>
 
-          <div className="lg:col-span-2 overflow-hidden rounded-xl">
+          <div className="lg:col-span-2 overflow-hidden rounded-xl aspect-[16/10]">
             {quizImage && <Image src={quizImage.imageUrl} alt={quizImage.description} data-ai-hint={quizImage.imageHint} width={600} height={400} className="h-full w-full object-cover" />}
           </div>
         </div>
