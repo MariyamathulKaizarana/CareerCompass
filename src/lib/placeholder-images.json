@@ -14,9 +14,9 @@
     },
     {
       "id": "report",
-      "description": "An abstract visualization of data and charts representing a career report.",
-      "imageUrl": "https://images.unsplash.com/photo-1579226905180-636b76d96082?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkYXRhJTIwY2hhcnRzfGVufDB8fHx8MTc2MTA2ODU0MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "data charts"
+      "description": "A robot hand pointing at an analytical chart, symbolizing AI-driven reporting.",
+      "imageUrl": "https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8QXJ0aWZpY2lhbCUyMEludGVsbGlnZW5jZXxlbnwwfHx8fDE3NjMyNjkwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI reporting"
     },
     {
       "id": "auth-background",
@@ -80,9 +80,9 @@
     },
     {
       "id": "pharmacist",
-      "description": "A pharmacist in a white coat organizing prescription bottles on a shelf.",
-      "imageUrl": "https://images.unsplash.com/photo-1652295372392-3171ab2c0e01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaGFybWFjeSUyMHdvcmt8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pharmacy work"
+      "description": "Pharmaceutical manufacturing equipment in a sterile environment.",
+      "imageUrl": "https://images.unsplash.com/photo-1580281657529-557a6abb6387?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8UGhhcm1hY2V1dGljYWxzJTIwfGVufDB8fHx8MTc2MzI2ODkyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pharmaceutical manufacturing"
     },
     {
       "id": "psychologist",
@@ -98,9 +98,9 @@
     },
     {
       "id": "investment",
-      "description": "A busy financial trading floor with screens showing stock data.",
-      "imageUrl": "https://images.unsplash.com/photo-1518245078939-75312b6f72c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0cmFkaW5nJTIwZmxvb3J8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "trading floor"
+      "description": "A computer screen showing stock market charts and data analysis.",
+      "imageUrl": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxJbnZlc3RtZW50fGVufDB8fHx8MTc2MzI2ODk2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "investment charts"
     },
     {
       "id": "journalist",
@@ -134,15 +134,15 @@
     },
     {
       "id": "fashion",
-      "description": "A mannequin draped with fabric and design sketches on a wall.",
-      "imageUrl": "https://images.unsplash.com/photo-1474666488182-66ec723476c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmYXNoaW9uJTIwc3R1ZGlvfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "fashion studio"
+      "description": "A fashion designer's sketchbook with colorful designs.",
+      "imageUrl": "https://images.unsplash.com/photo-1565206776249-a01813727c94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxGYXNoaW9uJTIwRGVzaWdufGVufDB8fHx8MTc2MzI2OTA5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fashion design"
     },
     {
       "id": "veterinarian",
-      "description": "A vet listening to a dog's heartbeat with a stethoscope.",
-      "imageUrl": "https://images.unsplash.com/photo-1606619788441-a9a360e8f685?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx2ZXQlMjBjaGVja3VwfGVufDB8fHx8MTc2MTE0NDE5MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "vet checkup"
+      "description": "A veterinarian examining a dog.",
+      "imageUrl": "https://images.unsplash.com/photo-1733783489145-f3d3ee7a9ccf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxWZXRlcmluaWFufGVufDB8fHx8MTc2MzI2OTA3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "veterinarian dog"
     },
     {
       "id": "mechanical",
@@ -206,9 +206,9 @@
     },
     {
       "id": "animator",
-      "description": "A digital artist's tablet showing a character animation timeline.",
-      "imageUrl": "https://images.unsplash.com/photo-1724342388536-7ec21aa75af0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbmltYXRpb24lMjB0aW1lbGluZXxlbnwwfHx8fDE3NjExNDQxOTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "animation timeline"
+      "description": "A vibrant cartoon character illustration.",
+      "imageUrl": "https://images.unsplash.com/photo-1616098063625-65f32186e609?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8Y2FydG9vbnxlbnwwfHx8fDE3NjMyNjkyMzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cartoon character"
     },
     {
       "id": "human",
@@ -417,7 +417,7 @@
     {
       "id": "iot",
       "description": "A network of connected smart devices in a home.",
-      "imageUrl": "https://images.unsplash.com/photo-1633458925325-1e3a6c230623?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzbWFydCUyMGhvbWUlMjBpb3R8ZW58MHx8fHwxNzYxODQ4MTc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1633458925325-1e3a6c230623?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzbWFydCUyMGhvbWUlMjBpb3R8ZW58MHx8fHwxNzYxODQ4MTc0fDA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "smart home"
     },
     {
