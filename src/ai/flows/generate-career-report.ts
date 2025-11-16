@@ -49,6 +49,7 @@ Future Scope: The future scope of the career path.
 
 **CRITICAL FORMATTING RULES**:
 - The "requiredSkills" and "courses" fields MUST be JSON arrays of strings.
+- The "careerRoadmap" field MUST be a single string formatted with markdown for readability.
 - The "averageSalary" field MUST be a single string formatted as "₹X-Y LPA".
 
 Return your response as a single JSON object with keys: "description", "requiredSkills", "courses", "careerRoadmap", "averageSalary", "futureScope".
