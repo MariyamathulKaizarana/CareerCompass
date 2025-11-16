@@ -128,18 +128,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </ul>
         </nav>
         <div className="mt-auto border-t p-4">
-           <div className='mb-4'>
-             <p className="px-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Contact Us</p>
-             <a href="https://github.com/MariyamathulKaizarana" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary">
-                <Github className="h-5 w-5" />
-                <span>GitHub</span>
-             </a>
-             <a href="mailto:CareerCompass@gmail.com" className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary">
-                <Mail className="h-5 w-5" />
-                <span>Email</span>
-             </a>
-           </div>
-           <Separator className="my-4" />
             <Link href="/profile" className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary">
                 <UserIcon className="h-5 w-5" />
                 <span>My Profile</span>
