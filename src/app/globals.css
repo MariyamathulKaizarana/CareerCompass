@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98.8%; /* #FCFAFA */
-    --foreground: 200 10% 48%; /* #6E8387 */
-    --card: 200 15% 81%; /* #C8D3D5 */
-    --card-foreground: 200 15% 25%;
-    --popover: 0 0% 98.8%; /* #FCFAFA */
-    --popover-foreground: 200 10% 48%; /* #6E8387 */
-    --primary: 203 24% 71%; /* #A4B8C4 */
-    --primary-foreground: 0 0% 10%;
-    --secondary: 200 15% 81%; /* #C8D3D5 */
-    --secondary-foreground: 200 10% 48%; /* #6E8387 */
-    --muted: 200 15% 88%; /* Lighter version of C8D3D5 */
-    --muted-foreground: 200 10% 55%;
-    --accent: 203 24% 71%; /* #A4B8C4 */
-    --accent-foreground: 0 0% 10%;
+    --background: 48 100% 98%; /* #FFFCF2 */
+    --foreground: 40 4% 26%; /* #403D39 */
+    --card: 40 10% 90%; /* A lighter shade of #CCC5B9 */
+    --card-foreground: 40 4% 26%;
+    --popover: 48 100% 98%; /* #FFFCF2 */
+    --popover-foreground: 40 4% 26%; /* #403D39 */
+    --primary: 40 10% 77%; /* #CCC5B9 */
+    --primary-foreground: 30 5% 14%; /* #252422 */
+    --secondary: 40 10% 90%; /* A lighter shade of #CCC5B9 */
+    --secondary-foreground: 40 4% 26%; /* #403D39 */
+    --muted: 40 10% 90%;
+    --muted-foreground: 40 4% 35%; /* A slightly lighter version of #403D39 */
+    --accent: 40 10% 77%; /* #CCC5B9 */
+    --accent-foreground: 30 5% 14%; /* #252422 */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 200 15% 81%; /* #C8D3D5 */
-    --input: 200 15% 88%; /* Lighter version of C8D3D5 */
-    --ring: 203 24% 71%; /* #A4B8C4 */
+    --border: 40 10% 85%; /* A slightly lighter version of #CCC5B9 */
+    --input: 40 10% 88%; /* A slightly lighter version of #CCC5B9 */
+    --ring: 40 10% 77%; /* #CCC5B9 */
     --radius: 0.5rem;
   }
  
