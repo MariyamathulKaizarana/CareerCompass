@@ -8,9 +8,9 @@
     },
     {
       "id": "quiz",
-      "description": "A person silhouetted against a sunrise, looking towards a mountain peak, symbolizing aspiration and goals.",
-      "imageUrl": "https://images.unsplash.com/photo-1594493594742-b569b92d9b65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOXx8QXNwaXJhdGlvbnxlbnwwfHx8fDE3NjE1ODMwMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "aspiration goals"
+      "description": "A collection of books on a shelf, symbolizing knowledge and learning.",
+      "imageUrl": "https://images.unsplash.com/photo-1705721357357-ab87523248f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Ym9va3N8ZW58MHx8fHwxNzYzMjczNjI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "books knowledge"
     },
     {
       "id": "report",
@@ -57,13 +57,13 @@
     {
       "id": "marketing",
       "description": "A whiteboard with a marketing funnel and strategy notes.",
-      "imageUrl": "https://images.unsplash.com/photo-1607703703520-bb638e84caf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXJrZXRpbmclMjBzdHJhdGVneXxlbnwwfHx8fDE3NjExMjAxODN8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1607703703520-bb638e84caf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXJrZXRpbmclMjBzdHJhdGVneXxlbnwwfHx8fDE3NjExMjAxODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "marketing strategy"
     },
     {
       "id": "architect",
       "description": "An architectural model of a modern building on a desk.",
-      "imageUrl": "https://images.unsplash.com/photo-1617902944265-d54ae33cc2c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcmNoaXRlY3QlMjBtb2RlbHxlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1617902944265-d54ae33cc2c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcmNoaXRlY3QlMjBtb2RlbHxlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "architect model"
     },
     {
@@ -75,7 +75,7 @@
     {
       "id": "civil",
       "description": "A large suspension bridge under construction.",
-      "imageUrl": "https://images.unsplash.com/photo-1633363961301-4f100a78e92d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHwicmlkZ2UlMjBjb25zdHJ1Y3Rpb258ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1633363961301-4f100a78e92d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHwicmlkZ2UlMjBjb25zdHJ1Y3Rpb258ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bridge construction"
     },
     {
@@ -87,13 +87,13 @@
     {
       "id": "psychologist",
       "description": "A calm and welcoming therapy office with two chairs.",
-      "imageUrl": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0aGVyYXB5JTIwb2ZmaWNlfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0aGVyYXB5JTIwb2ZmaWNlfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "therapy office"
     },
     {
       "id": "graphic",
       "description": "A colorful graphic design composition on a tablet.",
-      "imageUrl": "https://images.unsplash.com/photo-1561070791-2526d30994b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxncmFwaGljJTIwZGVzaWdufGVufDB8fHx8MTc2MTExNzEyM3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1561070791-2526d30994b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxncmFwaGljJTIwZGVzaWdufGVufDB8fHx8MTc2MTExNzEyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "graphic design"
     },
     {
@@ -105,13 +105,13 @@
     {
       "id": "journalist",
       "description": "An old-fashioned reporter's notepad and a vintage camera.",
-      "imageUrl": "https://images.unsplash.com/photo-1564648995771-54ef348ae3fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyZXBvcnRlciUyMHRvb2xzfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1564648995771-54ef348ae3fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyZXBvcnRlciUyMHRvb2xzfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "reporter tools"
     },
     {
       "id": "ai/ml",
       "description": "A futuristic neural network visualization.",
-      "imageUrl": "https://images.unsplash.com/photo-1597733336794-12d05021d510?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc2MTA2MDg2OHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1597733336794-12d05021d510?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc2MTA2MDg2OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "neural network"
     },
     {
@@ -123,7 +123,7 @@
     {
       "id": "management",
       "description": "Two professionals discussing charts on a glass wall.",
-      "imageUrl": "https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YnVzaW5lc3MlMjBzdHJhdGVneXxlbnwwfHx8fDE3NjEwODQ1NDh8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YnVzaW5lc3MlMjBzdHJhdGVneXxlbnwwfHx8fDE3NjEwODQ1NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "business strategy"
     },
     {
@@ -147,13 +147,13 @@
     {
       "id": "mechanical",
       "description": "Close-up of gears and cogs in a complex machine.",
-      "imageUrl": "https://images.unsplash.com/photo-1721036265601-f0cbc1346057?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWNoaW5lJTIwZ2VhcnN8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1721036265601-f0cbc1346057?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWNoaW5lJTIwZ2VhcnN8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "machine gears"
     },
     {
       "id": "economist",
       "description": "A complex graph showing supply and demand curves.",
-      "imageUrl": "https://images.unsplash.com/photo-1736751035793-353baaa416cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxlY29ub21pYyUyMGdyYXBofGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1736751035793-353baaa416cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxlY29ub21pYyUyMGdyYXBofGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "economic graph"
     },
     {
@@ -165,25 +165,25 @@
     {
       "id": "pilot",
       "description": "The cockpit of an airplane with a view of the clouds outside.",
-      "imageUrl": "https://images.unsplash.com/photo-1518566107615-f7267099eced?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhaXJwbGFuZSUyMGNvY2twaXR8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1518566107615-f7267099eced?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhaXJwbGFuZSUyMGNvY2twaXR8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "airplane cockpit"
     },
     {
       "id": "biotechnologist",
       "description": "A scientist looking at a petri dish in a modern laboratory.",
-      "imageUrl": "https://images.unsplash.com/photo-1606206873764-fd15e242df52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzY2llbmNlJTIwbGFifGVufDB8fHx8MTc2MTA4NjQzOXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1606206873764-fd15e242df52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzY2llbmNlJTIwbGFifGVufDB8fHx8MTc2MTA4NjQzOXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "science lab"
     },
     {
       "id": "hotel",
       "description": "The luxurious lobby of a modern hotel.",
-      "imageUrl": "https://images.unsplash.com/photo-1546967900-1bea5f16b69d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aG90ZWwlMjBsb2JieXxlbnwwfHx8fDE3NjEwNjMxNjJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1546967900-1bea5f16b69d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aG90ZWwlMjBsb2JieXxlbnwwfHx8fDE3NjEwNjMxNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "hotel lobby"
     },
     {
       "id": "actuary",
       "description": "A complex mathematical graph showing risk probabilities.",
-      "imageUrl": "https://images.unsplash.com/photo-1634542984003-e0fb8e200e91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cmlzayUyMGdyYXBofGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1634542984003-e0fb8e200e91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cmlzayUyMGdyYXBofGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "risk graph"
     },
     {
@@ -195,7 +195,7 @@
     {
       "id": "chef",
       "description": "A chef meticulously plating a gourmet dish in a professional kitchen.",
-      "imageUrl": "https://images.unsplash.com/photo-1616669944447-d65d41a222bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnb3VybWV0JTIwZm9vZHxlbnwwfHx8fDE3NjExMDQ2Njl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1616669944447-d65d41a222bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnb3VybWV0JTIwZm9vZHxlbnwwfHx8fDE3NjExMDQ2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "gourmet food"
     },
     {
@@ -225,7 +225,7 @@
     {
       "id": "archaeologist",
       "description": "An archaeologist carefully brushing dirt from an ancient artifact at a dig site.",
-      "imageUrl": "https://images.unsplash.com/photo-1760544470620-66ae16291e54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhcmNoYWVvbG9neSUyMGRpZ3xlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1760544470620-66ae16291e54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhcmNoYWVvbG9neSUyMGRpZ3xlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "archaeology dig"
     },
     {
@@ -243,19 +243,19 @@
     {
       "id": "librarian",
       "description": "A modern library with rows of books and people studying quietly.",
-      "imageUrl": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGlicmFyeSUyMGJvb2tzfGVufDB8fHx8MTc2MTA3MzgyOXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGlicmFyeSUyMGJvb2tzfGVufDB8fHx8MTc2MTA3MzgyOXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "library books"
     },
     {
       "id": "financial",
       "description": "Stock market charts on a screen.",
-      "imageUrl": "https://images.unsplash.com/photo-1621264448270-9ef00e88a935?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdG9jayUyMGNoYXJ0c3xlbnwwfHx8fDE3NjExMjg0MTZ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1621264448270-9ef00e88a935?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdG9jayUyMGNoYXJ0c3xlbnwwfHx8fDE3NjExMjg0MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "stock charts"
     },
     {
       "id": "dentist",
       "description": "A modern, clean dentist's office with an examination chair.",
-      "imageUrl": "https://images.unsplash.com/photo-1704455306251-b4634215d98f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkZW50aXN0JTIwb2ZmaWNlfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1704455306251-b4634215d98f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkZW50aXN0JTIwb2ZmaWNlfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "dentist office"
     },
     {
@@ -267,7 +267,7 @@
     {
       "id": "business",
       "description": "A person presenting charts and graphs to a team in a meeting.",
-      "imageUrl": "https://images.unsplash.com/photo-1688380692117-63178554d76d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzYxMDQ5NzUyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1688380692117-63178554d76d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzYxMDQ5NzUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "business meeting"
     },
     {
@@ -279,31 +279,31 @@
     {
       "id": "sociologist",
       "description": "A diverse crowd of people, representing society.",
-      "imageUrl": "https://images.unsplash.com/photo-1717944097660-352ec0dc5c1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkaXZlcnNlJTIwY3Jvd2R8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1717944097660-352ec0dc5c1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkaXZlcnNlJTIwY3Jvd2R8ZW58MHx8fHwxNzYxMTQ0MTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "diverse crowd"
     },
     {
       "id": "logistics",
       "description": "A large cargo ship being loaded with containers at a busy port.",
-      "imageUrl": "https://images.unsplash.com/photo-1678182451047-196f22a4143e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXJnbyUyMHBvcnR8ZW58MHx8fHwxNzYxMTQ0MTkwfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1678182451047-196f22a4143e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXJnbyUyMHBvcnR8ZW58MHx8fHwxNzYxMTQ0MTkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cargo port"
     },
     {
       "id": "chemical",
       "description": "Glass beakers and flasks with colorful liquids in a chemistry lab.",
-      "imageUrl": "https://images.unsplash.com/photo-1608037222022-62649819f8aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGVtaXN0cnklMjBsYWJ8ZW58MHx8fHwxNzYxMTIwNDk5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1608037222022-62649819f8aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGVtaXN0cnklMjBsYWJ8ZW58MHx8fHwxNzYxMTIwNDk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chemistry lab"
     },
     {
       "id": "historian",
       "description": "A scholar examining an ancient manuscript with a magnifying glass.",
-      "imageUrl": "https://images.unsplash.com/photo-1562164914-f71b2835e86b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbmNpZW50JTIwbWFudXNjcmlwdHxlbnwwfHx8fDE3NjEwODU5NDh8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1562164914-f71b2835e86b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbmNpZW50JTIwbWFudXNjcmlwdHxlbnwwfHx8fDE3NjEwODU5NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ancient manuscript"
     },
     {
       "id": "auditor",
       "description": "A person's hands using a magnifying glass to inspect a financial document.",
-      "imageUrl": "https://images.unsplash.com/photo-1693801874720-05ae2c89ede1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmaW5hbmNpYWwlMjBpbnNwZWN0aW9ufGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1693801874720-05ae2c89ede1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmaW5hbmNpYWwlMjBpbnNwZWN0aW9ufGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "financial inspection"
     },
     {
@@ -315,7 +315,7 @@
     {
       "id": "anthropologist",
       "description": "A collage of artifacts from different cultures around the world.",
-      "imageUrl": "https://images.unsplash.com/photo-1760679674606-cd621fb5bfed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjdWx0dXJhbCUyMGFydGlmYWN0c3xlbnwwfHx8fDE3NjEwNDYxODd8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1760679674606-cd621fb5bfed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjdWx0dXJhbCUyMGFydGlmYWN0c3xlbnwwfHx8fDE3NjEwNDYxODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cultural artifacts"
     },
     {
@@ -327,25 +327,25 @@
     {
       "id": "agricultural",
       "description": "A scientist in a lab coat examining a plant sprout in a modern greenhouse.",
-      "imageUrl": "https://images.unsplash.com/photo-1726923153023-3cc61adf9284?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGxhbnQlMjBzY2llbmNlfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1726923153023-3cc61adf9284?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGxhbnQlMjBzY2llbmNlfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "plant science"
     },
     {
       "id": "political",
       "description": "The exterior of a parliament or government building.",
-      "imageUrl": "https://images.unsplash.com/photo-1625516581237-3d9d0a31538c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxnb3Zlcm5tZW50JTIwYnVpbGRpbmd8ZW58MHx8fHwxNzYxMDgwOTcwfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1625516581237-3d9d0a31538c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxnb3Zlcm5tZW50JTIwYnVpbGRpbmd8ZW58MHx8fHwxNzYxMDgwOTcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "government building"
     },
     {
       "id": "tax",
       "description": "A desk with tax forms, a calculator, and glasses.",
-      "imageUrl": "https://images.unsplash.com/photo-1636038197596-28e7dce070e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0YXglMjBmb3Jtc3xlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1636038197596-28e7dce070e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0YXglMjBmb3Jtc3xlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "tax forms"
     },
     {
       "id": "astrophysicist",
       "description": "A stunning image of a distant nebula from a space telescope.",
-      "imageUrl": "https://images.unsplash.com/photo-1642635715930-b3a1eba9c99f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzcGFjZSUyMG5lYnVsYXxlbnwwfHx8fDE3NjEwNzQxODR8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1642635715930-b3a1eba9c99f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzcGFjZSUyMG5lYnVsYXxlbnwwfHx8fDE3NjEwNzQxODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "space nebula"
     },
     {
@@ -375,7 +375,7 @@
     {
       "id": "certified",
       "description": "A financial planner discussing charts with a client.",
-      "imageUrl": "https://images.unsplash.com/photo-1506784881475-0e408bbca849?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmluYW5jaWFsJTIwcGxhbm5pbmd8ZW58MHx8fHwxNzYxMDMzMTI0fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1506784881475-0e408bbca849?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmluYW5jaWFsJTIwcGxhbm5pbmd8ZW58MHx8fHwxNzYxMDMzMTI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "financial planning"
     },
     {
@@ -393,25 +393,25 @@
     {
       "id": "audiologist-speech-pathologist",
       "description": "A speech pathologist working with a child in a therapy session.",
-      "imageUrl": "https://images.unsplash.com/photo-1758691463331-2ac00e6f676f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGlsZCUyMHNwZWVjaCUyMHBhdGhvbG9naXN0fGVufDB8fHx8MTc2MTU4NTIyNXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758691463331-2ac00e6f676f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGlsZCUyMHNwZWVjaCUyMHBhdGhvbG9naXN0fGVufDB8fHx8MTc2MTU4NTIyNXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "child speech"
     },
     {
       "id": "radiotherapy",
       "description": "A modern radiotherapy machine in a hospital room.",
-      "imageUrl": "https://images.unsplash.com/photo-1587010580103-fd86b8ea14ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjByYWRpb3RoZXJhcHklMjBtYWNoaW5lJTIwaW4lMjBhJTIwaG9zcGl0YWwlMjByb29tfGVufDB8fHx8MTc2MTU4NDkwNnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1587010580103-fd86b8ea14ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjByYWRpb3RoZXJhcHklMjBtYWNoaW5lJTIwaW4lMjBhJTIwaG9zcGl0YWwlMjByb29tfGVufDB8fHx8MTc2MTU4NDkwNnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "radiation therapy"
     },
     {
       "id": "optometrist",
       "description": "An optometrist's phoropter machine used for eye examinations.",
-      "imageUrl": "https://images.unsplash.com/photo-1758206524001-56b1b1ec72cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxleWUlMjBleGFtaW5hdGlvbnxlbnwwfHx8fDE3NjE1ODU0NzV8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758206524001-56b1b1ec72cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxleWUlMjBleGFtaW5hdGlvbnxlbnwwfHx8fDE3NjE1ODU0NzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "eye examination"
     },
     {
       "id": "cybersecurity",
       "description": "A digital lock on a circuit board background, symbolizing cybersecurity.",
-      "imageUrl": "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjeWJlcnNlY3VyaXR5fGVufDB8fHx8MTc2MTg0ODExOXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjeWJlcnNlY3VyaXR5fGVufDB8fHx8MTc2MTg0ODExOXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cybersecurity lock"
     },
     {
@@ -423,7 +423,7 @@
     {
       "id": "blockchain",
       "description": "Abstract visualization of interconnected digital blocks.",
-      "imageUrl": "https://images.unsplash.com/photo-1639322537228-f710d846310a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxibG9ja2NoYWlufGVufDB8fHx8MTc2MTg0ODIxMXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1639322537228-f710d846310a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxibG9ja2NoYWlufGVufDB8fHx8MTc2MTg0ODIxMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "blockchain blocks"
     }
   ]
