@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { AppShell } from '@/components/AppShell';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,6 +12,23 @@ import { useRouter } from 'next/navigation';
 interface ReportClientPageProps {
   careerName: string;
 }
+
+const MarkdownRenderer = ({ content }: { content: string }) => {
+    return (
+        <ReactMarkdown
+            className="prose prose-sm sm:prose-base dark:prose-invert"
+            components={{
+                h3: ({ node, ...props }) => <h3 className="font-headline text-xl font-bold mt-6 mb-2" {...props} />,
+                p: ({ node, ...props }) => <p className="text-base text-muted-foreground leading-relaxed" {...props} />,
+                ul: ({ node, ...props }) => <ul className="list-disc pl-5 space-y-1" {...props} />,
+                li: ({ node, ...props }) => <li className="text-base text-muted-foreground" {...props} />,
+            }}
+        >
+            {content}
+        </ReactMarkdown>
+    );
+};
+
 
 export default function ReportClientPage({ careerName }: ReportClientPageProps) {
   const [report, setReport] = useState<GenerateCareerReportOutput | null>(null);
@@ -43,9 +61,9 @@ export default function ReportClientPage({ careerName }: ReportClientPageProps) 
   const detailCards = report ? [
     { title: "Required Skills", content: Array.isArray(report.requiredSkills) ? report.requiredSkills.join(', ') : report.requiredSkills },
     { title: "Recommended Courses", content: Array.isArray(report.courses) ? report.courses.join(', ') : report.courses },
-    { title: "Career Roadmap", content: report.careerRoadmap },
+    { title: "Career Roadmap", content: report.careerRoadmap, isMarkdown: true },
     { title: "Average Salary", content: report.averageSalary },
-    { title: "Future Scope", content: report.futureScope },
+    { title: "Future Scope", content: report.futureScope, isMarkdown: true },
   ] : [];
 
   return (
@@ -84,14 +102,18 @@ export default function ReportClientPage({ careerName }: ReportClientPageProps) 
               </CardContent>
             </Card>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1">
               {detailCards.map(item => (
                   <Card key={item.title}>
                       <CardHeader className="pb-2">
                           <CardTitle className="text-sm font-medium">{item.title}</CardTitle>
                       </CardHeader>
                       <CardContent>
-                          <div className="text-lg font-semibold text-foreground">{item.content}</div>
+                          {item.isMarkdown ? (
+                            <MarkdownRenderer content={item.content} />
+                          ) : (
+                            <div className="text-lg font-semibold text-foreground">{item.content}</div>
+                          )}
                       </CardContent>
                   </Card>
               ))}
