@@ -62,14 +62,14 @@ export default function Home() {
                 <Link href="/signup">Take the Free Quiz</Link>
               </Button>
             </div>
-            <div className="overflow-hidden rounded-xl aspect-video">
+            <div className="overflow-hidden rounded-xl aspect-[4/1]">
               {heroImage && (
                 <Image
                   src={heroImage.imageUrl}
                   alt={heroImage.description}
                   data-ai-hint={heroImage.imageHint}
                   width={600}
-                  height={338}
+                  height={150}
                   className="h-full w-full object-cover"
                 />
               )}
