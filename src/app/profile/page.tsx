@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { format } from 'date-fns';
 import { useUser, useAuth } from '@/firebase';
-import { updateProfile, sendPasswordResetEmail, EmailAuthProvider, reauthenticateWithCredential, updatePassword, deleteUser } from 'firebase/auth';
+import { updateProfile, sendPasswordResetEmail, EmailAuthProvider, reauthenticateWithCredential, updatePassword, deleteUser, sendEmailVerification } from 'firebase/auth';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -13,13 +13,14 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { KeyRound, Mail, Pencil, User, Calendar, Loader2, ShieldAlert, Trash2 } from 'lucide-react';
+import { KeyRound, Mail, Pencil, User, Calendar, Loader2, ShieldAlert, Trash2, MailCheck, MailWarning } from 'lucide-react';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input, PasswordInput } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
+import { Badge } from '@/components/ui/badge';
 
 const profileFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -53,6 +54,7 @@ export default function ProfilePage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isPasswordSubmitting, setIsPasswordSubmitting] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isVerificationSubmitting, setIsVerificationSubmitting] = useState(false);
 
   const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false);
   const [isPasswordDialogOpen, setIsPasswordDialogOpen] = useState(false);
@@ -164,6 +166,28 @@ export default function ProfilePage() {
       });
     }
   }
+  
+  async function handleResendVerification() {
+    if (!user) return;
+    setIsVerificationSubmitting(true);
+    try {
+      await sendEmailVerification(user);
+      toast({
+        variant: 'success',
+        title: 'Verification Email Sent',
+        description: `A new verification email has been sent to ${user.email}.`,
+      });
+    } catch (error: any) {
+      toast({
+        variant: 'destructive',
+        title: 'Failed to Send Email',
+        description: error.message,
+      });
+    } finally {
+      setIsVerificationSubmitting(false);
+    }
+  }
+
 
   async function handleDeleteAccount(values: z.infer<typeof deleteAccountFormSchema>) {
     if (!user || !user.email) return;
@@ -213,6 +237,10 @@ export default function ProfilePage() {
   const creationTime = user.metadata.creationTime ? new Date(user.metadata.creationTime) : null;
   const formattedCreationDate = creationTime ? format(creationTime, 'MMMM d, yyyy') : 'N/A';
 
+  const isEmailVerified = user.emailVerified;
+  const isGoogleProvider = user.providerData.some(p => p.providerId === 'google.com');
+
+
   return (
     <AppShell>
       <div className="w-full">
@@ -245,7 +273,18 @@ export default function ProfilePage() {
                   <Mail className="h-5 w-5 text-muted-foreground" />
                   <div className="flex-1">
                     <p className="text-sm text-muted-foreground">Email Address</p>
-                    <p className="font-medium text-foreground">{user.email}</p>
+                    <div className="flex items-center gap-2">
+                        <p className="font-medium text-foreground">{user.email}</p>
+                        {isEmailVerified ? (
+                            <Badge variant="success" className="bg-green-100 text-green-800 border-green-200">
+                                <MailCheck className="mr-1 h-3 w-3"/> Verified
+                            </Badge>
+                        ) : (
+                            <Badge variant="destructive">
+                                <MailWarning className="mr-1 h-3 w-3"/> Not Verified
+                            </Badge>
+                        )}
+                    </div>
                   </div>
                 </div>
                  <Separator />
@@ -307,76 +346,87 @@ export default function ProfilePage() {
                     </DialogContent>
                     </Dialog>
                     
-                    <Dialog open={isPasswordDialogOpen} onOpenChange={setIsPasswordDialogOpen}>
-                    <DialogTrigger asChild>
-                        <Button variant="outline" className="w-full justify-start">
-                        <KeyRound className="mr-2 h-4 w-4" />
-                        Change Password
-                        </Button>
-                    </DialogTrigger>
-                    <DialogContent>
-                        <DialogHeader>
-                            <DialogTitle>Change Password</DialogTitle>
-                            <DialogDescription>
-                                Enter your current password and a new password below.
-                            </DialogDescription>
-                        </DialogHeader>
-                        <Form {...passwordForm}>
-                            <form onSubmit={passwordForm.handleSubmit(handlePasswordUpdate)} className="space-y-4">
-                                <FormField
-                                    control={passwordForm.control}
-                                    name="currentPassword"
-                                    render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>Current Password</FormLabel>
-                                        <FormControl>
-                                        <PasswordInput placeholder="Current Password" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                    )}
-                                />
-                                <FormField
-                                    control={passwordForm.control}
-                                    name="newPassword"
-                                    render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>New Password</FormLabel>
-                                        <FormControl>
-                                        <PasswordInput placeholder="New Password" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                    )}
-                                />
-                                <FormField
-                                    control={passwordForm.control}
-                                    name="confirmPassword"
-                                    render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>Confirm New Password</FormLabel>
-                                        <FormControl>
-                                        <PasswordInput placeholder="Confirm New Password" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                    )}
-                                />
-                                <DialogFooter>
-                                    <Button type="submit" disabled={isPasswordSubmitting}>
-                                        {isPasswordSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                                        Update Password
-                                    </Button>
-                                </DialogFooter>
-                            </form>
-                        </Form>
-                    </DialogContent>
-                    </Dialog>
+                    {!isGoogleProvider && (
+                        <>
+                            <Dialog open={isPasswordDialogOpen} onOpenChange={setIsPasswordDialogOpen}>
+                            <DialogTrigger asChild>
+                                <Button variant="outline" className="w-full justify-start">
+                                <KeyRound className="mr-2 h-4 w-4" />
+                                Change Password
+                                </Button>
+                            </DialogTrigger>
+                            <DialogContent>
+                                <DialogHeader>
+                                    <DialogTitle>Change Password</DialogTitle>
+                                    <DialogDescription>
+                                        Enter your current password and a new password below.
+                                    </DialogDescription>
+                                </DialogHeader>
+                                <Form {...passwordForm}>
+                                    <form onSubmit={passwordForm.handleSubmit(handlePasswordUpdate)} className="space-y-4">
+                                        <FormField
+                                            control={passwordForm.control}
+                                            name="currentPassword"
+                                            render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>Current Password</FormLabel>
+                                                <FormControl>
+                                                <PasswordInput placeholder="Current Password" {...field} />
+                                                </FormControl>
+                                                <FormMessage />
+                                            </FormItem>
+                                            )}
+                                        />
+                                        <FormField
+                                            control={passwordForm.control}
+                                            name="newPassword"
+                                            render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>New Password</FormLabel>
+                                                <FormControl>
+                                                <PasswordInput placeholder="New Password" {...field} />
+                                                </FormControl>
+                                                <FormMessage />
+                                            </FormItem>
+                                            )}
+                                        />
+                                        <FormField
+                                            control={passwordForm.control}
+                                            name="confirmPassword"
+                                            render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>Confirm New Password</FormLabel>
+                                                <FormControl>
+                                                <PasswordInput placeholder="Confirm New Password" {...field} />
+                                                </FormControl>
+                                                <FormMessage />
+                                            </FormItem>
+                                            )}
+                                        />
+                                        <DialogFooter>
+                                            <Button type="submit" disabled={isPasswordSubmitting}>
+                                                {isPasswordSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                                                Update Password
+                                            </Button>
+                                        </DialogFooter>
+                                    </form>
+                                </Form>
+                            </DialogContent>
+                            </Dialog>
 
-                    <Button variant="outline" className="w-full justify-start" onClick={handlePasswordReset}>
-                        <ShieldAlert className="mr-2 h-4 w-4" />
-                        Reset Password via Email
-                    </Button>
+                            {!isEmailVerified && (
+                                <Button variant="outline" className="w-full justify-start" onClick={handleResendVerification} disabled={isVerificationSubmitting}>
+                                    {isVerificationSubmitting ? <Loader2 className="mr-2 h-4 w-4 animate-spin"/> : <MailWarning className="mr-2 h-4 w-4" />}
+                                    Resend Verification Email
+                                </Button>
+                            )}
+
+                            <Button variant="outline" className="w-full justify-start" onClick={handlePasswordReset}>
+                                <ShieldAlert className="mr-2 h-4 w-4" />
+                                Reset Password via Email
+                            </Button>
+                        </>
+                    )}
                 </CardContent>
             </Card>
 
@@ -409,9 +459,9 @@ export default function ProfilePage() {
                                         name="password"
                                         render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Current Password</FormLabel>
+                                            <FormLabel>{isGoogleProvider ? 'Confirm Deletion' : 'Current Password'}</FormLabel>
                                             <FormControl>
-                                            <PasswordInput placeholder='Enter password to confirm' {...field} />
+                                            <PasswordInput placeholder={isGoogleProvider ? 'Enter your email to confirm' : 'Enter password to confirm'} {...field} />
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
