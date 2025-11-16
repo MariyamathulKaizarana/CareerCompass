@@ -44,6 +44,7 @@ const navItems = [
   { href: '/honours-advisor', icon: Sparkles, label: 'Honours Advisor' },
   { href: '/favorites', icon: Heart, label: 'My Favorites' },
   { href: '/history', icon: History, label: 'History' },
+  { href: '/contact', icon: Mail, label: 'Contact Us' },
 ];
 
 function FullScreenLoader() {
