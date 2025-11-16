@@ -6,9 +6,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import {
   GoogleAuthProvider,
-  getRedirectResult,
+  signInWithPopup,
   signInWithEmailAndPassword,
-  signInWithRedirect,
 } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -26,13 +25,13 @@ import {
 import { Input, PasswordInput } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { useAuth } from '@/firebase';
+import { useAuth, useUser } from '@/firebase';
 import { Compass, Loader2 } from 'lucide-react';
 import { placeholderImages } from '@/lib/placeholder-images';
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Invalid email address.' }),
-  password: z.string().min(6, { message: 'Password must be at least 6 characters.' }),
+  password: z.string().min(8, { message: 'password must be 8 characters, including uppercase, lowercase, numbers and special characters' }),
 });
 
 const authBgImage = placeholderImages.find(p => p.id === 'auth-background');
@@ -42,35 +41,14 @@ export default function LoginPage() {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
-  const [isCheckingRedirect, setIsCheckingRedirect] = useState(true);
+  const { user, isUserLoading } = useUser();
   const auth = useAuth();
-
+  
   useEffect(() => {
-    const checkRedirectResult = async () => {
-      try {
-        const result = await getRedirectResult(auth);
-        if (result) {
-          toast({
-            variant: 'success',
-            title: 'Success!',
-            description: "You've been logged in with Google.",
-          });
-          router.push('/dashboard');
-        } else {
-          setIsCheckingRedirect(false);
-        }
-      } catch (error: any) {
-        toast({
-          variant: 'destructive',
-          title: 'Google Sign-In Failed',
-          description: error.message,
-        });
-        setIsCheckingRedirect(false);
-      }
-    };
-
-    checkRedirectResult();
-  }, [auth, router, toast]);
+    if (!isUserLoading && user) {
+        router.push('/dashboard');
+    }
+  }, [user, isUserLoading, router]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -105,7 +83,13 @@ export default function LoginPage() {
     setIsGoogleLoading(true);
     const provider = new GoogleAuthProvider();
     try {
-      await signInWithRedirect(auth, provider);
+      await signInWithPopup(auth, provider);
+      toast({
+        variant: 'success',
+        title: 'Success!',
+        description: "You've been logged in with Google.",
+      });
+      router.push('/dashboard');
     } catch (error: any) {
       toast({
         variant: 'destructive',
@@ -116,12 +100,12 @@ export default function LoginPage() {
     }
   }
 
-  if (isCheckingRedirect) {
+  if (isUserLoading || user) {
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm">
         <div className="flex flex-col items-center gap-4">
           <Compass className="h-12 w-12 animate-pulse-spin text-primary" />
-          <p className="text-muted-foreground">Checking for login information...</p>
+          <p className="text-muted-foreground">Loading...</p>
         </div>
       </div>
     );
