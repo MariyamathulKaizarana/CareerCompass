@@ -18,8 +18,9 @@ import {
   Sparkles,
   Github,
   Mail,
+  MailWarning,
 } from 'lucide-react';
-import { signOut } from 'firebase/auth';
+import { signOut, sendEmailVerification } from 'firebase/auth';
 
 import { useUser, useAuth } from '@/firebase';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -35,6 +36,7 @@ import { Button } from './ui/button';
 import { Search } from './Search';
 import { cn } from '@/lib/utils';
 import { Separator } from './ui/separator';
+import { useToast } from '@/hooks/use-toast';
 
 const navItems = [
   { href: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
@@ -44,8 +46,12 @@ const navItems = [
   { href: '/honours-advisor', icon: Sparkles, label: 'Honours Advisor' },
   { href: '/favorites', icon: Heart, label: 'My Favorites' },
   { href: '/history', icon: History, label: 'History' },
+];
+
+const contactNavItems = [
   { href: '/contact', icon: Mail, label: 'Contact Us' },
 ];
+
 
 function FullScreenLoader() {
   return (
@@ -64,18 +70,26 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { toast } = useToast();
 
   useEffect(() => {
-    if (!isUserLoading && !user) {
-      router.replace('/login');
+    if (!isUserLoading) {
+      if (!user) {
+        router.replace('/login');
+      } else if (!user.emailVerified) {
+        const allowedPaths = ['/verify-email', '/profile', '/login', '/signup'];
+        if (!allowedPaths.includes(pathname)) {
+          router.replace('/verify-email');
+        }
+      }
     }
-  }, [user, isUserLoading, router]);
+  }, [user, isUserLoading, router, pathname]);
 
   useEffect(() => {
     // Close sidebar on route change for mobile
     setIsSidebarOpen(false);
   }, [pathname]);
-
+  
   const handleLogout = async () => {
     await signOut(auth);
     router.push('/login');
@@ -84,6 +98,17 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   if (isUserLoading || !user) {
     return <FullScreenLoader />;
   }
+  
+  // If user is loaded but not verified, show a minimal shell until redirected
+  if (!user.emailVerified) {
+    const allowedPaths = ['/verify-email', '/profile'];
+     if (allowedPaths.includes(pathname)) {
+       // render children for allowed paths e.g. verify-email page
+       return <main className="flex-1 p-4 sm:p-6 md:p-8">{children}</main>;
+     }
+    return <FullScreenLoader />;
+  }
+
 
   const getInitials = (name?: string | null) => {
     if (!name) return 'U';
@@ -126,6 +151,46 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 </Link>
               </li>
             ))}
+             {!user.emailVerified && (
+                <li>
+                  <Link
+                    href="/verify-email"
+                    className={cn(
+                      'flex items-center gap-3 rounded-lg px-3 py-2 text-destructive transition-all hover:text-primary',
+                       pathname === '/verify-email' && 'bg-destructive/10'
+                    )}
+                  >
+                    <MailWarning className="h-5 w-5" />
+                    <span>Verify Email</span>
+                  </Link>
+                </li>
+            )}
+          </ul>
+           <Separator className="my-4" />
+           <p className="px-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+            Contact
+          </p>
+          <ul className="space-y-1 mt-2">
+             {contactNavItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={cn(
+                    'flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary',
+                    pathname === item.href && 'bg-muted text-primary'
+                  )}
+                >
+                  <item.icon className="h-5 w-5" />
+                  <span>{item.label}</span>
+                </Link>
+              </li>
+            ))}
+             <li>
+              <a href="https://github.com/MariyamathulKaizarana" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary">
+                 <Github className="h-5 w-5" />
+                 <span>GitHub</span>
+              </a>
+            </li>
           </ul>
         </nav>
         <div className="mt-auto border-t p-4">
