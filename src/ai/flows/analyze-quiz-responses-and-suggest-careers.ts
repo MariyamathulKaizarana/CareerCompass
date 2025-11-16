@@ -69,6 +69,10 @@ Based on this, suggest 2-3 most suitable career paths with detailed information.
 
 For each suggestion, you MUST include all of the following fields: "careerPath", "description", "requiredSkills", "requiredCourses", "careerRoadmap", "averageSalary", and "futureScope".
 
+**CRITICAL FORMATTING RULES**:
+- The "requiredSkills" and "requiredCourses" fields MUST be JSON arrays of strings.
+- The "averageSalary" field MUST be a single string formatted as "₹X-Y LPA" (e.g., "₹8-12 LPA"). Do not return it as an object.
+
 Format your response as a JSON array of career suggestions.
 `,
 });
