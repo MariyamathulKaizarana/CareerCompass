@@ -7,6 +7,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "CareerCompass",
   description: "Find your ideal career path with CareerCompass.",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 const inter = Inter({
