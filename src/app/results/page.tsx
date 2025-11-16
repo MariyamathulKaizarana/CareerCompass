@@ -84,7 +84,7 @@ export default function ResultsPage() {
                             </div>
                             <div className='mt-4'>
                                 <h3 className="mb-2 font-semibold text-foreground">Average Salary</h3>
-                                <p className='text-lg font-medium text-accent'>{suggestion.averageSalary}</p>
+                                <p className='text-lg font-medium text-foreground'>{suggestion.averageSalary}</p>
                             </div>
                         </CardContent>
                         <CardFooter>
