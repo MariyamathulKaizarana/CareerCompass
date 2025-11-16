@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAuth, useUser } from '@/firebase';
 import { sendEmailVerification, signOut } from 'firebase/auth';
 import { useToast } from '@/hooks/use-toast';
@@ -12,12 +12,24 @@ import { MailCheck, Loader2, LogOut, Compass } from 'lucide-react';
 import Link from 'next/link';
 
 export default function VerifyEmailPage() {
-  const { user } = useUser();
+  const { user, isUserLoading } = useUser();
   const auth = useAuth();
   const { toast } = useToast();
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
+
+  useEffect(() => {
+    // If the user is loaded and their email is verified, redirect them.
+    if (user && user.emailVerified) {
+      toast({
+        variant: 'success',
+        title: 'Email Verified!',
+        description: 'Redirecting you to the dashboard...',
+      });
+      router.push('/dashboard');
+    }
+  }, [user, router, toast]);
 
   const handleResendVerification = async () => {
     if (!user) {
@@ -48,6 +60,31 @@ export default function VerifyEmailPage() {
     await signOut(auth);
     router.push('/login');
   };
+  
+  if (isUserLoading) {
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm">
+            <div className="flex flex-col items-center gap-4">
+                <Compass className="h-12 w-12 animate-pulse-spin text-primary" />
+                <p className="text-muted-foreground">Loading...</p>
+            </div>
+        </div>
+    );
+  }
+
+  // This check is to prevent a flash of the verify email page if the user is already verified
+  // and the redirect is in progress.
+  if (user && user.emailVerified) {
+      return (
+         <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm">
+            <div className="flex flex-col items-center gap-4">
+                <MailCheck className="h-12 w-12 text-green-500" />
+                 <p className="text-muted-foreground">Email verified. Redirecting...</p>
+            </div>
+        </div>
+      );
+  }
+
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted/40 p-4">
