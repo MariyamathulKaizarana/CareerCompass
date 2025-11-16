@@ -41,8 +41,8 @@ export default function ReportClientPage({ careerName }: ReportClientPageProps) 
   }, [careerName]);
 
   const detailCards = report ? [
-    { title: "Required Skills", content: report.requiredSkills },
-    { title: "Recommended Courses", content: report.courses },
+    { title: "Required Skills", content: Array.isArray(report.requiredSkills) ? report.requiredSkills.join(', ') : report.requiredSkills },
+    { title: "Recommended Courses", content: Array.isArray(report.courses) ? report.courses.join(', ') : report.courses },
     { title: "Career Roadmap", content: report.careerRoadmap },
     { title: "Average Salary", content: report.averageSalary },
     { title: "Future Scope", content: report.futureScope },

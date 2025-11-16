@@ -19,8 +19,8 @@ export type GenerateCareerReportInput = z.infer<typeof GenerateCareerReportInput
 
 const GenerateCareerReportOutputSchema = z.object({
   description: z.string().describe('A short description of the career path.'),
-  requiredSkills: z.string().describe('The required skills for the career path.'),
-  courses: z.string().describe('The courses required for the career path.'),
+  requiredSkills: z.array(z.string()).describe('An array of required skills for the career path.'),
+  courses: z.array(z.string()).describe('An array of courses required for the career path.'),
   careerRoadmap: z
     .string()
     .describe('The career roadmap, including education, internships, and job roles.'),
@@ -47,7 +47,9 @@ Career Roadmap: The career roadmap, including education, internships, and job ro
 Average Salary: The average salary for the career path in Indian Rupees (INR), formatted as "₹X-Y LPA". For example: "₹8-12 LPA".
 Future Scope: The future scope of the career path.
 
-Format each section clearly and concisely.
+**CRITICAL FORMATTING RULES**:
+- The "requiredSkills" and "courses" fields MUST be JSON arrays of strings.
+- The "averageSalary" field MUST be a single string formatted as "₹X-Y LPA".
 
 Return your response as a single JSON object with keys: "description", "requiredSkills", "courses", "careerRoadmap", "averageSalary", "futureScope".
 `,
