@@ -57,6 +57,7 @@ export default function SignupPage() {
         const result = await getRedirectResult(auth);
         if (result) {
           toast({
+            variant: 'success',
             title: 'Account Created!',
             description: "You've been signed up with Google.",
           });
@@ -94,6 +95,7 @@ export default function SignupPage() {
         await updateProfile(userCredential.user, { displayName: values.name });
       }
       toast({
+        variant: 'success',
         title: 'Account Created!',
         description: 'Welcome to CareerCompass.',
       });

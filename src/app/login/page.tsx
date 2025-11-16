@@ -51,6 +51,7 @@ export default function LoginPage() {
         const result = await getRedirectResult(auth);
         if (result) {
           toast({
+            variant: 'success',
             title: 'Success!',
             description: "You've been logged in with Google.",
           });
@@ -84,6 +85,7 @@ export default function LoginPage() {
     try {
       await signInWithEmailAndPassword(auth, values.email, values.password);
       toast({
+        variant: 'success',
         title: 'Success!',
         description: "You've been logged in.",
       });

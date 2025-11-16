@@ -90,6 +90,7 @@ export default function FavoriteButton({ career, size, className }: FavoriteButt
         errorEmitter.emit('permission-error', permissionError);
       });
       toast({
+        variant: 'success',
         title: 'Favorited!',
         description: `${career.title} added to your favorites.`,
       });

@@ -89,6 +89,7 @@ export default function ProfilePage() {
       await updateProfile(user, { displayName: values.name });
       setDisplayName(values.name); 
       toast({
+        variant: 'success',
         title: 'Success!',
         description: 'Your profile has been updated.',
       });
@@ -116,6 +117,7 @@ export default function ProfilePage() {
         await updatePassword(user, values.newPassword);
 
         toast({
+            variant: 'success',
             title: 'Password Updated!',
             description: 'Your password has been changed successfully.',
         });
@@ -150,6 +152,7 @@ export default function ProfilePage() {
     try {
       await sendPasswordResetEmail(auth, user.email);
       toast({
+        variant: 'success',
         title: 'Password Reset Email Sent',
         description: `An email has been sent to ${user.email} with instructions to reset your password.`,
       });
