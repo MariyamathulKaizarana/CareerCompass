@@ -131,7 +131,7 @@ export const scholarships: Scholarship[] = [
         provider: "Ministry of Social Justice and Empowerment, Govt. of India",
         eligibility: "OBC/EBC/DNT students in Class 9 or 11 with parental income < ₹2.5 lakh p.a.",
         deadline: "October 2025 (Tentative)",
-        url: "https://scholarships.gov.in/"
+        url: "https://www.google.com/search?q=PM+Yasasvi+Scheme+2025"
     },
     {
         id: "sch_2",
@@ -139,7 +139,7 @@ export const scholarships: Scholarship[] = [
         provider: "Reliance Foundation",
         eligibility: "First-year undergraduate students in any stream with household income < ₹15 lakh p.a.",
         deadline: "October 2025 (Tentative)",
-        url: "https://www.reliancefoundation.org/education"
+        url: "https://www.google.com/search?q=Reliance+Foundation+Undergraduate+Scholarships+2025"
     },
     {
         id: "sch_3",
@@ -147,7 +147,7 @@ export const scholarships: Scholarship[] = [
         provider: "HDFC Bank",
         eligibility: "School students from Class 1 to UG and PG courses facing financial crisis.",
         deadline: "September 2025 (Tentative)",
-        url: "https://www.hdfcbank.com/personal/about-us/corporate-social-responsibility/parivartan"
+        url: "https://www.google.com/search?q=HDFC+Bank+Parivartan's+ECSS+Programme+2025"
     },
     {
         id: "sch_4",
@@ -155,7 +155,7 @@ export const scholarships: Scholarship[] = [
         provider: "Colgate-Palmolive (India) Ltd.",
         eligibility: "Students from Class 11 to graduation, sportspersons, and individuals helping others.",
         deadline: "Varies by category",
-        url: "https://www.colgate.com/en-in/keep-india-smiling-scholarship"
+        url: "https://www.google.com/search?q=Keep+India+Smiling+Foundational+Scholarship+Programme+2025"
     },
     {
         id: "sch_5",
@@ -171,7 +171,7 @@ export const scholarships: Scholarship[] = [
         provider: "Department of Science and Technology, Govt. of India",
         eligibility: "1st Rank holders in PG degrees in Basic & Applied Sciences.",
         deadline: "September 2025 (Tentative)",
-        url: "https://www.online-inspire.gov.in/"
+        url: "https://www.google.com/search?q=INSPIRE+Fellowship+for+Doctoral+Research"
     },
     {
         id: "sch_7",
@@ -179,7 +179,7 @@ export const scholarships: Scholarship[] = [
         provider: "Tata Trusts",
         eligibility: "Undergraduate and postgraduate students in specific fields like medicine, engineering.",
         deadline: "Varies, check portal",
-        url: "https://www.tatatrusts.org/our-work/education/individual-grants-programme"
+        url: "https://www.google.com/search?q=Tata+Trusts+Means+Grant+for+College+2025"
     },
     {
         id: "sch_8",
@@ -187,7 +187,7 @@ export const scholarships: Scholarship[] = [
         provider: "Ministry of Railways, Govt. of India",
         eligibility: "Wards/widows of ex/serving RPF/RPSF personnel pursuing technical/professional education.",
         deadline: "October 2025 (Tentative)",
-        url: "https://scholarships.gov.in/"
+        url: "https://www.google.com/search?q=PM's+Scholarship+Scheme+For+RPF/RPSF+Personnel+2025"
     },
     {
         id: "sch_9",
@@ -195,7 +195,7 @@ export const scholarships: Scholarship[] = [
         provider: "Kotak Mahindra Group",
         eligibility: "Meritorious girl students from low-income families to pursue professional UG courses.",
         deadline: "September 2025 (Tentative)",
-        url: "https://www.kotakeducation.org/kotak-kanya-scholarship/"
+        url: "https://www.google.com/search?q=Kotak+Kanya+Scholarship+2025"
     },
     {
         id: "sch_10",
@@ -203,7 +203,7 @@ export const scholarships: Scholarship[] = [
         provider: "Institution of Engineering and Technology",
         eligibility: "Undergraduate engineering students in any year.",
         deadline: "October 2025 (Tentative)",
-        url: "https://scholarships.theiet.in/"
+        url: "https://www.google.com/search?q=IET+India+Scholarship+Awards+2025"
     },
     {
         id: "sch_11",
@@ -211,7 +211,7 @@ export const scholarships: Scholarship[] = [
         provider: "Aditya Birla Capital Foundation",
         eligibility: "Students from Class 1 to undergraduate, based on merit and financial need.",
         deadline: "September 2025 (Tentative)",
-        url: "https://www.adityabirlacapital.com/sustainability/aditya-birla-capital-foundation"
+        url: "https://www.google.com/search?q=Aditya+Birla+Capital+Scholarship+2025"
     },
     {
         id: "sch_12",
@@ -219,7 +219,7 @@ export const scholarships: Scholarship[] = [
         provider: "Department of Science and Technology, Govt. of India",
         eligibility: "Top 1% students in Class 12 board exams pursuing basic and natural sciences.",
         deadline: "November 2025 (Tentative)",
-        url: "https://www.online-inspire.gov.in/"
+        url: "https://www.google.com/search?q=INSPIRE+Scholarship+for+Higher+Education+(SHE)+2025"
     },
     {
         id: "sch_13",
@@ -227,7 +227,7 @@ export const scholarships: Scholarship[] = [
         provider: "Legrand India",
         eligibility: "Meritorious students (especially girls) to pursue B.Tech/BE or finance-related degrees.",
         deadline: "October 2025 (Tentative)",
-        url: "https://www.legrand.co.in/social-commitments"
+        url: "https://www.google.com/search?q=Legrand+Empowering+Scholarship+Program+2025"
     },
     {
         id: "sch_14",
@@ -235,7 +235,7 @@ export const scholarships: Scholarship[] = [
         provider: "Dept. of Empowerment of Persons with Disabilities, Govt. of India",
         eligibility: "Students with 40% or more disability from Class 11 to post-graduation.",
         deadline: "December 2025 (Tentative)",
-        url: "https://scholarships.gov.in/"
+        url: "https://www.google.com/search?q=Post-Matric+Scholarship+for+Students+with+Disabilities+2025"
     },
     {
         id: "sch_15",
@@ -243,6 +243,6 @@ export const scholarships: Scholarship[] = [
         provider: "Virchow Foundation",
         eligibility: "Female students from Andhra Pradesh and Telangana pursuing intermediate (11th & 12th).",
         deadline: "Check website for details",
-        url: "https://www.virchowlabs.com/foundation.php"
+        url: "https://www.google.com/search?q=Virchow+Scholarship+Program+2025"
     }
 ];
