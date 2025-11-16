@@ -27,11 +27,11 @@ export default function NewsSection({ handleLinkClick }: NewsSectionProps) {
 
   useEffect(() => {
     const initialSeed = Math.floor(Date.now() / 1000 / 60);
-    setDisplayedNews(shuffleAndSlice(latestNews, 5, initialSeed));
+    setDisplayedNews(shuffleAndSlice(latestNews, 3, initialSeed));
 
     const intervalId = setInterval(() => {
       const newSeed = Math.floor(Date.now() / 1000 / 60);
-      setDisplayedNews(shuffleAndSlice(latestNews, 5, newSeed));
+      setDisplayedNews(shuffleAndSlice(latestNews, 3, newSeed));
     }, 4 * 60 * 1000); 
 
     return () => clearInterval(intervalId);
