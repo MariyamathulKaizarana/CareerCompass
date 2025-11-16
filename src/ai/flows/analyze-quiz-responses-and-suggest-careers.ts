@@ -67,6 +67,8 @@ Student Strengths: {{{studentStrengths}}}
 
 Based on this, suggest 2-3 most suitable career paths with detailed information. Your suggestions should be directly influenced by the patterns in the quiz answers. For example, a student who consistently chooses 'analytical' and 'technical' options might be a good fit for Software Developer or Data Scientist, while a student choosing 'caring' and 'humanbody' is a better fit for Doctor or Physiotherapist.
 
+For each suggestion, you must include a "description".
+
 Format your response as a JSON array of career suggestions.
 `,
 });
