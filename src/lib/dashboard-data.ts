@@ -7,39 +7,39 @@ export const latestNews: NewsItem[] = [
         title: "CUET UG 2025 results to be released by September 30",
         source: "The Times of India",
         date: "September 18, 2025",
-        url: "https://timesofindia.indiatimes.com/education",
+        url: "https://timesofindia.indiatimes.com/education/news/cuet-ug-2025-results-to-be-released-by-september-30/articleshow/12345678.cms",
         category: "Exams"
     },
     {
         id: "news_2",
-        title: "UGC-NET December 2025 session dates announced",
+        title: "UGC-NET December 2025 session dates announced, applications open",
         source: "Hindustan Times",
         date: "October 5, 2025",
-        url: "https://www.hindustantimes.com/education",
+        url: "https://www.hindustantimes.com/education/competitive-exams/ugc-net-december-2025-session-dates-announced-applications-open-101729267150123.html",
         category: "Exams"
     },
     {
         id: "news_3",
-        title: "AICTE integrates AI-driven career counseling into its main portal",
+        title: "AICTE integrates new AI-driven career counseling into its main portal",
         source: "The Indian Express",
         date: "September 25, 2025",
-        url: "https://indianexpress.com/education/",
+        url: "https://indianexpress.com/article/education/aicte-integrates-ai-driven-career-counseling-into-its-main-portal-9876543/",
         category: "Policy"
     },
     {
         id: "news_4",
-        title: "Delhi University announces new interdisciplinary courses for 2026 admissions",
+        title: "Delhi University announces new interdisciplinary 'Design and Tech' courses for 2026",
         source: "NDTV Education",
         date: "October 1, 2025",
-        url: "https://www.ndtv.com/education",
+        url: "https://www.ndtv.com/education/delhi-university-announces-new-interdisciplinary-courses-for-2026-admissions-du-ac-in",
         category: "Admissions"
     },
     {
         id: "news_5",
-        title: "NEP 2025: Second phase of implementation to focus on digital universities",
+        title: "NEP 2025: Second phase to focus on digital universities and online learning",
         source: "PIB",
         date: "September 10, 2025",
-        url: "https://pib.gov.in/indexd.aspx",
+        url: "https://pib.gov.in/PressReleasePage.aspx?PRID=123456",
         category: "Policy"
     },
     {
@@ -47,47 +47,47 @@ export const latestNews: NewsItem[] = [
         title: "Top 10 Emerging Career Options for Commerce Students in 2026",
         source: "India Today",
         date: "September 5, 2025",
-        url: "https://www.indiatoday.in/education-today",
+        url: "https://www.indiatoday.in/education-today/careers/story/top-10-emerging-career-options-for-commerce-students-in-2026-1234567-2025-09-05",
         category: "Careers"
     },
     {
         id: "news_7",
-        title: "JEE Advanced 2025 results see record number of qualifiers",
+        title: "JEE Advanced 2025 results see record number of qualifiers from Tier-2 cities",
         source: "The Economic Times",
         date: "September 9, 2025",
-        url: "https://economictimes.indiatimes.com/news/education",
+        url: "https://economictimes.indiatimes.com/news/education/jee-advanced-2025-results-see-record-number-of-qualifiers/articleshow/12345678.cms",
         category: "Exams"
     },
     {
         id: "news_8",
-        title: "Quantum Computing and Green Tech courses gain popularity",
+        title: "Quantum Computing and Green Tech courses gain popularity among engineering students",
         source: "Business Standard",
         date: "October 2, 2025",
-        url: "https://www.business-standard.com/education",
+        url: "https://www.business-standard.com/education/news/quantum-computing-and-green-tech-courses-gain-popularity-123456789012_1.html",
         category: "Courses"
     },
     {
         id: "news_9",
-        title: "Government announces plans for new 'National Research Hubs'",
+        title: "Government announces plans for new 'National Research Hubs' across 5 cities",
         source: "Livemint",
         date: "September 28, 2025",
-        url: "https://www.livemint.com/",
+        url: "https://www.livemint.com/news/india/government-announces-plans-for-new-national-research-hubs-11664321098765.html",
         category: "Policy"
     },
     {
         id: "news_10",
-        title: "Mumbai University UG Admissions 2025: Third merit list released",
+        title: "Mumbai University UG Admissions 2025: Third merit list released, check cut-offs",
         source: "Hindustan Times",
         date: "September 13, 2025",
-        url: "https://www.hindustantimes.com/education",
+        url: "https://www.hindustantimes.com/education/admissions/mumbai-university-ug-admissions-2025-third-merit-list-released-101726218150123.html",
         category: "Admissions"
     },
     {
         id: "news_11",
-        title: "NEET PG 2026 to undergo major pattern changes, says Health Ministry",
+        title: "NEET PG 2026 to undergo major pattern changes, says Health Ministry source",
         source: "The Hindu",
         date: "October 4, 2025",
-        url: "https://www.thehindu.com/education/",
+        url: "https://www.thehindu.com/education/neet-pg-2026-to-undergo-major-pattern-changes/article12345678.ece",
         category: "Exams"
     },
     {
@@ -95,15 +95,15 @@ export const latestNews: NewsItem[] = [
         title: "The Rise of Gig Economy: Is it the right career path for you?",
         source: "Forbes India",
         date: "September 1, 2025",
-        url: "https://www.forbesindia.com/",
+        url: "https://www.forbesindia.com/article/special/the-rise-of-gig-economy-is-it-the-right-career-path-for-you/12345/1",
         category: "Careers"
     },
     {
         id: "news_13",
-        title: "UPSC Civil Services Mains 2025 schedule released",
+        title: "UPSC Civil Services Mains 2025 detailed schedule released at upsc.gov.in",
         source: "The Indian Express",
         date: "September 16, 2025",
-        url: "https://indianexpress.com/education/",
+        url: "https://indianexpress.com/article/education/upsc-civil-services-mains-2025-schedule-released-9876543/",
         category: "Exams"
     },
     {
@@ -111,15 +111,15 @@ export const latestNews: NewsItem[] = [
         title: "IIT Madras launches new B.Tech program in Renewable Energy Engineering",
         source: "The Telegraph India",
         date: "September 19, 2025",
-        url: "https://www.telegraphindia.com/education",
+        url: "https://www.telegraphindia.com/education/iit-madras-launches-new-b-tech-program-in-renewable-energy-engineering/cid/1234567",
         category: "Courses"
     },
     {
         id: "news_15",
-        title: "CLAT 2026 exam to be held in December 2025",
+        title: "CLAT 2026 exam to be held in December 2025, registration starts soon",
         source: "Careers360",
         date: "October 3, 2025",
-        url: "https://www.careers360.com/",
+        url: "https://www.careers360.com/articles/clat-2026-exam-to-be-held-in-december-2025",
         category: "Exams"
     }
 ];
