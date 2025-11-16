@@ -7,7 +7,7 @@ export const latestNews: NewsItem[] = [
         title: "CUET UG 2025 results to be released by September 30",
         source: "The Times of India",
         date: "September 18, 2025",
-        url: "#",
+        url: "https://timesofindia.indiatimes.com/education",
         category: "Exams"
     },
     {
@@ -15,7 +15,7 @@ export const latestNews: NewsItem[] = [
         title: "UGC-NET December 2025 session dates announced",
         source: "Hindustan Times",
         date: "October 5, 2025",
-        url: "#",
+        url: "https://www.hindustantimes.com/education",
         category: "Exams"
     },
     {
@@ -23,7 +23,7 @@ export const latestNews: NewsItem[] = [
         title: "AICTE integrates AI-driven career counseling into its main portal",
         source: "The Indian Express",
         date: "September 25, 2025",
-        url: "#",
+        url: "https://indianexpress.com/education/",
         category: "Policy"
     },
     {
@@ -31,7 +31,7 @@ export const latestNews: NewsItem[] = [
         title: "Delhi University announces new interdisciplinary courses for 2026 admissions",
         source: "NDTV Education",
         date: "October 1, 2025",
-        url: "#",
+        url: "https://www.ndtv.com/education",
         category: "Admissions"
     },
     {
@@ -39,7 +39,7 @@ export const latestNews: NewsItem[] = [
         title: "NEP 2025: Second phase of implementation to focus on digital universities",
         source: "PIB",
         date: "September 10, 2025",
-        url: "#",
+        url: "https://pib.gov.in/indexd.aspx",
         category: "Policy"
     },
     {
@@ -47,7 +47,7 @@ export const latestNews: NewsItem[] = [
         title: "Top 10 Emerging Career Options for Commerce Students in 2026",
         source: "India Today",
         date: "September 5, 2025",
-        url: "#",
+        url: "https://www.indiatoday.in/education-today",
         category: "Careers"
     },
     {
@@ -55,7 +55,7 @@ export const latestNews: NewsItem[] = [
         title: "JEE Advanced 2025 results see record number of qualifiers",
         source: "The Economic Times",
         date: "September 9, 2025",
-        url: "#",
+        url: "https://economictimes.indiatimes.com/news/education",
         category: "Exams"
     },
     {
@@ -63,7 +63,7 @@ export const latestNews: NewsItem[] = [
         title: "Quantum Computing and Green Tech courses gain popularity",
         source: "Business Standard",
         date: "October 2, 2025",
-        url: "#",
+        url: "https://www.business-standard.com/education",
         category: "Courses"
     },
     {
@@ -71,7 +71,7 @@ export const latestNews: NewsItem[] = [
         title: "Government announces plans for new 'National Research Hubs'",
         source: "Livemint",
         date: "September 28, 2025",
-        url: "#",
+        url: "https://www.livemint.com/",
         category: "Policy"
     },
     {
@@ -79,7 +79,7 @@ export const latestNews: NewsItem[] = [
         title: "Mumbai University UG Admissions 2025: Third merit list released",
         source: "Hindustan Times",
         date: "September 13, 2025",
-        url: "#",
+        url: "https://www.hindustantimes.com/education",
         category: "Admissions"
     },
     {
@@ -87,7 +87,7 @@ export const latestNews: NewsItem[] = [
         title: "NEET PG 2026 to undergo major pattern changes, says Health Ministry",
         source: "The Hindu",
         date: "October 4, 2025",
-        url: "#",
+        url: "https://www.thehindu.com/education/",
         category: "Exams"
     },
     {
@@ -95,7 +95,7 @@ export const latestNews: NewsItem[] = [
         title: "The Rise of Gig Economy: Is it the right career path for you?",
         source: "Forbes India",
         date: "September 1, 2025",
-        url: "#",
+        url: "https://www.forbesindia.com/",
         category: "Careers"
     },
     {
@@ -103,7 +103,7 @@ export const latestNews: NewsItem[] = [
         title: "UPSC Civil Services Mains 2025 schedule released",
         source: "The Indian Express",
         date: "September 16, 2025",
-        url: "#",
+        url: "https://indianexpress.com/education/",
         category: "Exams"
     },
     {
@@ -111,7 +111,7 @@ export const latestNews: NewsItem[] = [
         title: "IIT Madras launches new B.Tech program in Renewable Energy Engineering",
         source: "The Telegraph India",
         date: "September 19, 2025",
-        url: "#",
+        url: "https://www.telegraphindia.com/education",
         category: "Courses"
     },
     {
@@ -119,7 +119,7 @@ export const latestNews: NewsItem[] = [
         title: "CLAT 2026 exam to be held in December 2025",
         source: "Careers360",
         date: "October 3, 2025",
-        url: "#",
+        url: "https://www.careers360.com/",
         category: "Exams"
     }
 ];
@@ -131,7 +131,7 @@ export const scholarships: Scholarship[] = [
         provider: "Ministry of Social Justice and Empowerment, Govt. of India",
         eligibility: "OBC/EBC/DNT students in Class 9 or 11 with parental income < ₹2.5 lakh p.a.",
         deadline: "October 2025 (Tentative)",
-        url: "#"
+        url: "https://scholarships.gov.in/"
     },
     {
         id: "sch_2",
@@ -139,7 +139,7 @@ export const scholarships: Scholarship[] = [
         provider: "Reliance Foundation",
         eligibility: "First-year undergraduate students in any stream with household income < ₹15 lakh p.a.",
         deadline: "October 2025 (Tentative)",
-        url: "#"
+        url: "https://www.reliancefoundation.org/education"
     },
     {
         id: "sch_3",
@@ -147,7 +147,7 @@ export const scholarships: Scholarship[] = [
         provider: "HDFC Bank",
         eligibility: "School students from Class 1 to UG and PG courses facing financial crisis.",
         deadline: "September 2025 (Tentative)",
-        url: "#"
+        url: "https://www.hdfcbank.com/personal/about-us/corporate-social-responsibility/parivartan"
     },
     {
         id: "sch_4",
@@ -155,7 +155,7 @@ export const scholarships: Scholarship[] = [
         provider: "Colgate-Palmolive (India) Ltd.",
         eligibility: "Students from Class 11 to graduation, sportspersons, and individuals helping others.",
         deadline: "Varies by category",
-        url: "#"
+        url: "https://www.colgate.com/en-in/keep-india-smiling-scholarship"
     },
     {
         id: "sch_5",
@@ -163,7 +163,7 @@ export const scholarships: Scholarship[] = [
         provider: "Government of India",
         eligibility: "Various schemes for different social categories and educational levels.",
         deadline: "Varies by scheme",
-        url: "#"
+        url: "https://scholarships.gov.in/"
     },
     {
         id: "sch_6",
@@ -171,7 +171,7 @@ export const scholarships: Scholarship[] = [
         provider: "Department of Science and Technology, Govt. of India",
         eligibility: "1st Rank holders in PG degrees in Basic & Applied Sciences.",
         deadline: "September 2025 (Tentative)",
-        url: "#"
+        url: "https://www.online-inspire.gov.in/"
     },
     {
         id: "sch_7",
@@ -179,7 +179,7 @@ export const scholarships: Scholarship[] = [
         provider: "Tata Trusts",
         eligibility: "Undergraduate and postgraduate students in specific fields like medicine, engineering.",
         deadline: "Varies, check portal",
-        url: "#"
+        url: "https://www.tatatrusts.org/our-work/education/individual-grants-programme"
     },
     {
         id: "sch_8",
@@ -187,7 +187,7 @@ export const scholarships: Scholarship[] = [
         provider: "Ministry of Railways, Govt. of India",
         eligibility: "Wards/widows of ex/serving RPF/RPSF personnel pursuing technical/professional education.",
         deadline: "October 2025 (Tentative)",
-        url: "#"
+        url: "https://scholarships.gov.in/"
     },
     {
         id: "sch_9",
@@ -195,7 +195,7 @@ export const scholarships: Scholarship[] = [
         provider: "Kotak Mahindra Group",
         eligibility: "Meritorious girl students from low-income families to pursue professional UG courses.",
         deadline: "September 2025 (Tentative)",
-        url: "#"
+        url: "https://www.kotakeducation.org/kotak-kanya-scholarship/"
     },
     {
         id: "sch_10",
@@ -203,7 +203,7 @@ export const scholarships: Scholarship[] = [
         provider: "Institution of Engineering and Technology",
         eligibility: "Undergraduate engineering students in any year.",
         deadline: "October 2025 (Tentative)",
-        url: "#"
+        url: "https://scholarships.theiet.in/"
     },
     {
         id: "sch_11",
@@ -211,7 +211,7 @@ export const scholarships: Scholarship[] = [
         provider: "Aditya Birla Capital Foundation",
         eligibility: "Students from Class 1 to undergraduate, based on merit and financial need.",
         deadline: "September 2025 (Tentative)",
-        url: "#"
+        url: "https://www.adityabirlacapital.com/sustainability/aditya-birla-capital-foundation"
     },
     {
         id: "sch_12",
@@ -219,7 +219,7 @@ export const scholarships: Scholarship[] = [
         provider: "Department of Science and Technology, Govt. of India",
         eligibility: "Top 1% students in Class 12 board exams pursuing basic and natural sciences.",
         deadline: "November 2025 (Tentative)",
-        url: "#"
+        url: "https://www.online-inspire.gov.in/"
     },
     {
         id: "sch_13",
@@ -227,7 +227,7 @@ export const scholarships: Scholarship[] = [
         provider: "Legrand India",
         eligibility: "Meritorious students (especially girls) to pursue B.Tech/BE or finance-related degrees.",
         deadline: "October 2025 (Tentative)",
-        url: "#"
+        url: "https://www.legrand.co.in/social-commitments"
     },
     {
         id: "sch_14",
@@ -235,7 +235,7 @@ export const scholarships: Scholarship[] = [
         provider: "Dept. of Empowerment of Persons with Disabilities, Govt. of India",
         eligibility: "Students with 40% or more disability from Class 11 to post-graduation.",
         deadline: "December 2025 (Tentative)",
-        url: "#"
+        url: "https://scholarships.gov.in/"
     },
     {
         id: "sch_15",
@@ -243,6 +243,6 @@ export const scholarships: Scholarship[] = [
         provider: "Virchow Foundation",
         eligibility: "Female students from Andhra Pradesh and Telangana pursuing intermediate (11th & 12th).",
         deadline: "Check website for details",
-        url: "#"
+        url: "https://www.virchowlabs.com/foundation.php"
     }
 ];
