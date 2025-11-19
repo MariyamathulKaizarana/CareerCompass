@@ -23,8 +23,8 @@ export default function CoursesPage() {
             <Card key={course}>
               <CardHeader>
                 <CardTitle className="font-headline text-2xl flex items-center gap-3">
-                  <GraduationCap className="h-6 w-6 text-accent" />
-                  {course}
+                  <GraduationCap className="h-6 w-6 text-accent flex-shrink-0" />
+                  <span>{course}</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
