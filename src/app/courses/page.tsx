@@ -34,7 +34,7 @@ export default function CoursesPage() {
                 <ul className="mt-4 list-disc pl-5 text-sm text-foreground">
                     {careers.filter(c => c.courses.includes(course)).map(c => (
                         <li key={c.id} className="mb-1">
-                            <Link href={`/careers/${c.slug}`} className="hover:underline text-primary font-medium">
+                            <Link href={`/careers/${c.slug}`} className="hover:underline text-accent-foreground font-semibold">
                                 {c.title}
                             </Link>
                         </li>
