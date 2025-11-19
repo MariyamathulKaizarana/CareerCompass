@@ -117,7 +117,7 @@
     {
       "id": "product",
       "description": "Post-it notes on a whiteboard showing a product development process.",
-      "imageUrl": "https://images.unsplash.com/photo-1590402494587-44b71d7772f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9kdWN0JTIwcm9hZG1hcHxlbnwwfHx8fDE3NjExMjQ1NTh8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1590402494587-44b71d7772f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9kdWN0JTIwcm9hZG1hcHxlbnwwfHx8fDE3NjExMjQ1NTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "product roadmap"
     },
     {
@@ -129,7 +129,7 @@
     {
       "id": "social",
       "description": "A phone screen showing a brand's engaging Instagram feed.",
-      "imageUrl": "https://images.unsplash.com/photo-1706515524433-25855ddc32bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzb2NpYWwlMjBmZWVkfGVufDB8fHx8MTc2MTEzNTczM3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1706515524433-25855ddc32bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzb2NpYWwlMjBmZWVkfGVufDB8fHx8MTc2MTEzNTczM3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "social feed"
     },
     {
@@ -159,7 +159,7 @@
     {
       "id": "company",
       "description": "A formal boardroom with a large table and chairs.",
-      "imageUrl": "https://images.unsplash.com/photo-1758691736493-aa6d22c0f8a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb3Jwb3JhdGUlMjBib2FyZHJvb218ZW58MHx8fHwxNzYxMTQ0MTkwfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758691736493-aa6d22c0f8a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb3Jwb3JhdGUlMjBib2FyZHJvb218ZW58MHx8fHwxNzYxMTQ0MTkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "corporate boardroom"
     },
     {
@@ -171,8 +171,8 @@
     {
       "id": "biotechnologist",
       "description": "A scientist looking at a petri dish in a modern laboratory.",
-      "imageUrl": "https://images.unsplash.com/photo-1606206873764-fd15e242df52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzY2llbmNlJTIwbGFifGVufDB8fHx8MTc2MTA4NjQzOXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "science lab"
+      "imageUrl": "https://images.unsplash.com/photo-1714845596415-40d93c7253d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOXx8Ym9uZSUyMHRpc3N1ZSUyMGVuZ2luZWVyaW5nfGVufDB8fHx8MTc2MzUyNTcwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bone tissue"
     },
     {
       "id": "hotel",
@@ -189,7 +189,7 @@
     {
       "id": "interior",
       "description": "A stylishly decorated modern living room with elegant furniture.",
-      "imageUrl": "https://images.unsplash.com/photo-1648536474504-7bbf8a1ee3ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBpbnRlcmlvcnxlbnwwfHx8fDE3NjEwODY3Nzl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1648536474504-7bbf8a1ee3ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBpbnRlcmlvcnxlbnwwfHx8fDE3NjEwODY3Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern interior"
     },
     {
@@ -201,25 +201,25 @@
     {
       "id": "physiotherapist",
       "description": "A physiotherapist helping a patient with stretching exercises.",
-      "imageUrl": "https://images.unsplash.com/photo-1609113160023-4e31f3765fd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwaHlzaW90aGVyYXB5JTIwc2Vzc2lvbnxlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1609113160023-4e31f3765fd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwaHlzaW90aGVyYXB5JTIwc2Vzc2lvbnxlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "physiotherapy session"
     },
     {
       "id": "animator",
       "description": "A vibrant cartoon character illustration.",
-      "imageUrl": "https://images.unsplash.com/photo-1616098063625-65f32186e609?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8Y2FydG9vbnxlbnwwfHx8fDE3NjMyNjkyMzB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1616098063625-65f32186e609?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8Y2FydG9vbnxlbnwwfHx8fDE3NjMyNjkyMzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cartoon character"
     },
     {
       "id": "human",
       "description": "A group of diverse professionals in a meeting.",
-      "imageUrl": "https://images.unsplash.com/photo-1568992687947-868a62a9f521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwbWVldGluZ3xlbnwwfHx8fDE3NjEwODIwNzh8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1568992687947-868a62a9f521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwbWVldGluZ3xlbnwwfHx8fDE3NjEwODIwNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "team meeting"
     },
     {
       "id": "microbiologist",
       "description": "A scientist observing samples through a powerful microscope.",
-      "imageUrl": "https://images.unsplash.com/photo-1743792930023-774d74a015cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtaWNyb3Njb3BlJTIwc2NpZW5jZXxlbnwwfHx8fDE3NjExMDI3MDF8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1743792930023-774d74a015cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtaWNyb3Njb3BlJTIwc2NpZW5jZXxlbnwwfHx8fDE3NjExMDI3MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "microscope science"
     },
     {
@@ -231,13 +231,13 @@
     {
       "id": "cost",
       "description": "A calculator and pen on top of financial spreadsheets with cost analysis charts.",
-      "imageUrl": "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmaW5hbmNpYWwlMjBhbmFseXNpc3xlbnwwfHx8fDE3NjEwNzcxMjZ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmaW5hbmNpYWwlMjBhbmFseXNpc3xlbnwwfHx8fDE3NjEwNzcxMjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "financial analysis"
     },
     {
       "id": "electrical",
       "description": "A complex electronic circuit board with glowing components.",
-      "imageUrl": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzYxMDYyNzY1fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzYxMDYyNzY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "circuit board"
     },
     {
@@ -261,7 +261,7 @@
     {
       "id": "cinematographer",
       "description": "A professional cinema camera on a tripod on a film set.",
-      "imageUrl": "https://images.unsplash.com/photo-1497008323932-4f726e0f13f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmaWxtJTIwY2FtZXJhfGVufDB8fHx8MTc2MTA2MjA4M3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1497008323932-4f726e0f13f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmaWxtJTIwY2FtZXJhfGVufDB8fHx8MTc2MTA2MjA4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "film camera"
     },
     {
@@ -273,7 +273,7 @@
     {
       "id": "geologist",
       "description": "A geologist in the field examining a rock formation with a hammer.",
-      "imageUrl": "https://images.unsplash.com/photo-1580963713395-4bfe2863106a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyb2NrJTIwZm9ybWF0aW9ufGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1580963713395-4bfe2863106a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyb2NrJTIwZm9ybWF0aW9ufGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "rock formation"
     },
     {
@@ -309,7 +309,7 @@
     {
       "id": "aerospace",
       "description": "A rocket launching into space.",
-      "imageUrl": "https://images.unsplash.com/photo-1614728263952-84ea256f9679?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2NrZXQlMjBsYXVuY2h8ZW58MHx8fHwxNzYxMDg3ODAwfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1614728263952-84ea256f9679?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2NrZXQlMjBsYXVuY2h8ZW58MHx8fHwxNzYxMDg3ODAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "rocket launch"
     },
     {
@@ -321,7 +321,7 @@
     {
       "id": "credit",
       "description": "A hand stamping a document with an 'Approved' stamp.",
-      "imageUrl": "https://images.unsplash.com/photo-1702825328124-dab63d85490e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhcHByb3ZlZCUyMHN0YW1wfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1702825328124-dab63d85490e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhcHByb3ZlZCUyMHN0YW1wfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "approved stamp"
     },
     {
@@ -351,25 +351,25 @@
     {
       "id": "filmmaker",
       "description": "A director looking through a camera viewfinder on a film set.",
-      "imageUrl": "https://images.unsplash.com/photo-1632187981988-40f3cbaeef5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmaWxtJTIwc2V0fGVufDB8fHx8MTc2MTEyMzQ4MHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1632187981988-40f3cbaeef5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmaWxtJTIwc2V0fGVufDB8fHx8MTc2MTEyMzQ4MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "film set"
     },
     {
       "id": "insurance",
       "description": "A family protected under a large umbrella, symbolizing insurance.",
-      "imageUrl": "https://images.unsplash.com/photo-1581056771188-021d4a0f8ec0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBwcm90ZWN0aW9ufGVufDB8fHx8MTc2MTA1NDE4OHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1581056771188-021d4a0f8ec0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBwcm90ZWN0aW9ufGVufDB8fHx8MTc2MTA1NDE4OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "family protection"
     },
     {
       "id": "food",
       "description": "A food scientist inspecting food quality in a sterile laboratory.",
-      "imageUrl": "https://images.unsplash.com/photo-1615690055356-14dc400892d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmb29kJTIwbGFifGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1615690055356-14dc400892d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmb29kJTIwbGFifGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "food lab"
     },
     {
       "id": "curator",
       "description": "A person carefully arranging an artifact in a museum display case.",
-      "imageUrl": "https://images.unsplash.com/photo-1674074070126-42f0a5def8f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtdXNldW0lMjBkaXNwbGF5fGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1674074070126-42f0a5def8f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtdXNldW0lMjBkaXNwbGF5fGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "museum display"
     },
     {
@@ -381,13 +381,13 @@
     {
       "id": "geneticist",
       "description": "A visualization of a DNA double helix strand.",
-      "imageUrl": "https://images.unsplash.com/photo-1738944910373-811b7b417762?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkbmElMjBoZWxpeHxlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1738944910373-811b7b417762?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkbmElMjBoZWxpeHxlbnwwfHx8fDE3NjExNDQxODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "dna helix"
     },
     {
       "id": "technical",
       "description": "A page from a clear, well-structured user manual with diagrams.",
-      "imageUrl": "https://images.unsplash.com/photo-1616861771635-49063a4636ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx1c2VyJTIwbWFudWFsfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1616861771635-49063a4636ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx1c2VyJTIwbWFudWFsfGVufDB8fHx8MTc2MTE0NDE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "user manual"
     },
     {
