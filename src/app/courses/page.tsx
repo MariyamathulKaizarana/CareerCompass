@@ -23,7 +23,7 @@ export default function CoursesPage() {
             <Card key={course}>
               <CardHeader>
                 <CardTitle className="font-headline text-2xl flex items-center gap-3">
-                  <GraduationCap className="h-8 w-8 text-accent" />
+                  <GraduationCap className="h-6 w-6 text-accent" />
                   {course}
                 </CardTitle>
               </CardHeader>
@@ -48,5 +48,3 @@ export default function CoursesPage() {
     </AppShell>
   );
 }
-
-    
