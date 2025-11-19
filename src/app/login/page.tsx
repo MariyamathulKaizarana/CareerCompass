@@ -69,10 +69,24 @@ export default function LoginPage() {
       });
       router.push('/dashboard');
     } catch (error: any) {
+      let description = "An unexpected error occurred. Please try again.";
+      switch (error.code) {
+        case 'auth/user-not-found':
+        case 'auth/wrong-password':
+        case 'auth/invalid-credential':
+          description = "Invalid email or password. Please check your credentials and try again.";
+          break;
+        case 'auth/invalid-email':
+            description = "The email address you entered is not valid.";
+            break;
+        default:
+            description = error.message;
+            break;
+      }
       toast({
         variant: 'destructive',
-        title: 'Uh oh! Something went wrong.',
-        description: error.message,
+        title: 'Login Failed',
+        description: description,
       });
     } finally {
       setIsLoading(false);
@@ -96,6 +110,7 @@ export default function LoginPage() {
         title: 'Google Sign-In Failed',
         description: error.message,
       });
+    } finally {
       setIsGoogleLoading(false);
     }
   }
