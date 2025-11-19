@@ -24,8 +24,18 @@ const SearchCareersInputSchema = z.object({
 });
 export type SearchCareersInput = z.infer<typeof SearchCareersInputSchema>;
 
-const SearchCareersOutputSchema = z.array(SearchResultSchema);
 export type SearchCareersOutput = z.infer<typeof SearchCareersOutputSchema>;
+
+const SearchCareersOutputSchema = z.array(
+    z.preprocess(
+      (item: any) => ({
+        ...item,
+        type: item.type ? item.type.charAt(0).toUpperCase() + item.type.slice(1) : undefined,
+      }),
+      SearchResultSchema
+    )
+);
+
 
 export async function searchCareers(input: SearchCareersInput): Promise<SearchCareersOutput> {
   return searchCareersFlow(input);
@@ -61,6 +71,7 @@ const prompt = ai.definePrompt(
     {{{examData}}}
 
     For each result, provide the type, title, slug, and a short context.
+    - The type MUST be one of 'Career', 'Course', or 'Exam'.
     - For careers, the context should be the career description.
     - For courses, the slug is always '/courses' and the context is 'Recommended for various careers.'.
     - For exams, the slug is always '/careers' and the context is 'Competitive entrance exam.'.
