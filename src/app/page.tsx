@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Compass, FileText, Lightbulb } from 'lucide-react';
 import { placeholderImages } from '@/lib/placeholder-images';
-import { ComparisonSection } from '@/components/landing/ComparisonSection';
 
 const heroImage = placeholderImages.find(p => p.id === 'hero');
 
@@ -103,8 +102,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <ComparisonSection />
 
         <section className="container mx-auto px-4 py-16 md:px-6 md:py-24 lg:py-32">
           <div className="mx-auto max-w-4xl text-center">
