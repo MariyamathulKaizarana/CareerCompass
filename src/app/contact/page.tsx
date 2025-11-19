@@ -12,12 +12,13 @@ import { Mail } from 'lucide-react';
 
 export default function ContactPage() {
     const { toast } = useToast();
+    const contactEmail = "CareerCompassContactus@gmail.com";
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         toast({
             title: "Message Sent!",
-            description: "Thank you for reaching out. We'll get back to you shortly.",
+            description: `Your message has been sent to ${contactEmail}. We'll get back to you shortly.`,
             variant: "success",
         });
         (e.target as HTMLFormElement).reset();
@@ -45,8 +46,8 @@ export default function ContactPage() {
                 </p>
                 <div className="flex items-center gap-4">
                     <Mail className="h-5 w-5 text-muted-foreground" />
-                    <a href="mailto:CareerCompassContactus@gmail.com" className="font-medium text-foreground hover:underline">
-                        CareerCompassContactus@gmail.com
+                    <a href={`mailto:${contactEmail}`} className="font-medium text-foreground hover:underline">
+                        {contactEmail}
                     </a>
                 </div>
             </div>
@@ -56,7 +57,7 @@ export default function ContactPage() {
                     <CardHeader>
                         <CardTitle>Send us a Message</CardTitle>
                         <CardDescription>
-                            Fill out the form and our team will get back to you as soon as possible.
+                            Fill out the form to send a message to our team at {contactEmail}.
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
