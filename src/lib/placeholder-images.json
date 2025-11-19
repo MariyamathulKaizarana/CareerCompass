@@ -425,6 +425,42 @@
       "description": "Abstract visualization of interconnected digital blocks.",
       "imageUrl": "https://images.unsplash.com/photo-1639322537228-f710d846310a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxibG9ja2NoYWlufGVufDB8fHx8MTc2MTg0ODIxMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "blockchain blocks"
+    },
+    {
+      "id": "cloud",
+      "description": "Abstract visualization of cloud computing network.",
+      "imageUrl": "https://images.unsplash.com/photo-1624424344018-ca4c56345a68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjbG91ZCUyMGNvbXB1dGluZ3xlbnwwfHx8fDE3NjM1MjU1Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cloud computing"
+    },
+    {
+      "id": "hardware",
+      "description": "A close-up of a computer motherboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1542393545-10f5cde2c810?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb21wdXRlciUyMGhhcmR3YXJlfGVufDB8fHx8MTc2MzUyNTU0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "computer hardware"
+    },
+    {
+      "id": "sustainability",
+      "description": "Wind turbines on a hill at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdXN0YWluYWJpbGl0eXxlbnwwfHx8fDE3NjM1MjU1NzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sustainability energy"
+    },
+    {
+      "id": "solar",
+      "description": "A field of solar panels under a clear blue sky.",
+      "imageUrl": "https://images.unsplash.com/photo-1594285871231-87a892790105?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzb2xhciUyMHBhbmVsc3xlbnwwfHx8fDE3NjM1MjU2MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar panels"
+    },
+    {
+      "id": "robotics",
+      "description": "A robotic arm working on a production line.",
+      "imageUrl": "https://images.unsplash.com/photo-1620370428489-1383454b5133?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2JvdGljcyUyMGFybXxlbnwwfHx8fDE3NjM1MjU2MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robotics arm"
+    },
+    {
+      "id": "industry",
+      "description": "A modern, automated factory with robotic arms.",
+      "imageUrl": "https://images.unsplash.com/photo-1620370422339-4c65377f8042?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmR1c3RyeSUyMDQuMHxlbnwwfHx8fDE3NjM1MjU2NzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "industry automation"
     }
   ]
 }
