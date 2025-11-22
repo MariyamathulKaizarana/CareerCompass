@@ -2,7 +2,7 @@
 
 CareerCompass is a comprehensive web application designed to help students and young professionals navigate the complex landscape of career choices. It leverages AI to provide personalized guidance, moving beyond simple career listings to offer a truly interactive and insightful experience.
 
-The user journey begins with a dynamic, multi-step quiz that adapts based on the user's academic stream (Science, Commerce, or Arts). Upon completion, a Genkit-powered AI flow analyzes the responses to identify the user's core interests and strengths, generating a set of tailored career suggestions. Users can then explore these suggestions, view detailed career reports, browse a comprehensive list of career paths and related courses, and save their favorite options to a personalized dashboard. The platform also includes an AI-powered search and an "Honours Advisor" to help engineering students select specialized courses.
+The user journey begins with a dynamic, multi-step quiz that adapts based on the user's academic stream (Science, Commerce, or Arts). Upon completion, a Genkit-powered AI flow analyzes the responses to identify the user's core interests and strengths, generating a set of tailored career suggestions. Users can then explore these suggestions, view detailed career reports, browse a comprehensive list of career paths and related courses, and save their favorite options to a personalized dashboard. The platform also includes an AI-powered search and an "Honors Advisor" to help engineering students select specialized courses.
 
 ## Technical Implementation Details
 
@@ -31,7 +31,7 @@ The application is built on a modern, robust, and scalable stack, chosen to opti
   1.  `analyzeQuizResponsesAndSuggestCareers`: Analyzes quiz answers to generate personalized career paths.
   2.  `generateCareerReport`: Creates a detailed, on-the-fly report for any given career.
   3.  `searchCareers`: Powers the semantic search bar, allowing natural language queries.
-  4.  `suggestHonoursCourses`: The engine behind the Honours Advisor feature.
+  4.  `suggestHonorsCourses`: The engine behind the Honors Advisor feature.
 
 ### Data Flow Example: The Career Quiz
 

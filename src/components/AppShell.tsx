@@ -43,7 +43,7 @@ const navItems = [
   { href: '/quiz', icon: HelpCircle, label: 'Take Quiz' },
   { href: '/careers', icon: Book, label: 'Explore Careers' },
   { href: '/courses', icon: GraduationCap, label: 'Explore Courses' },
-  { href: '/honours-advisor', icon: Sparkles, label: 'Honours Advisor' },
+  { href: '/honors-advisor', icon: Sparkles, label: 'Honors Advisor' },
   { href: '/favorites', icon: Heart, label: 'My Favorites' },
   { href: '/history', icon: History, label: 'History' },
 ];
