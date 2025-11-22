@@ -64,6 +64,18 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Linear programming and its applications to computer science', description: 'A course on linear programming and its applications.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
     { title: 'Affective Computing', description: 'A course on affective computing.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'AI: Constraint Satisfaction', description: 'A course on AI constraint satisfaction.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Data Analytics with Python', description: 'A course on data analytics using Python.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Discrete Mathematics - IITB', description: 'A course on discrete mathematics from IITB.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Foundations of Cyber Physical Systems', description: 'Learn the foundations of cyber-physical systems.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'GPU Architectures and Programming', description: 'A course on GPU architectures and programming.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Information Security - 5 - Secure Systems Engineering', description: 'A course on secure systems engineering.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Introduction to Embedded System Design', description: 'An introductory course on embedded system design.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Introduction To Internet Of Things', description: 'An introductory course on the Internet of Things.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Introduction To Soft Computing', description: 'An introductory course on soft computing.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Problem Solving Through Programming In C', description: 'Learn problem-solving using C programming.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Programming in Modern C++', description: 'A course on modern C++ programming.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Reinforcement Learning', description: 'A comprehensive course on reinforcement learning.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Secure Computation: Part I', description: 'An introductory course on secure computation.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
 
     // Design Engineering
     { title: 'System Design for Sustainability', description: 'Taught by Prof. Sharmistha Banerjee.', stream: 'Design Engineering', credits: 3, weeks: 12 },
