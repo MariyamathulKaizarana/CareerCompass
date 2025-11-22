@@ -298,7 +298,21 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Welding Application Technology', description: 'A course on welding application technology.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
     { title: 'Robotics', description: 'An introductory course on robotics.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
     { title: 'Principles Of Metal Forming Technology', description: 'A course on the principles of metal forming technology.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
-
+    { title: 'Selection Of Nanomaterials For Energy Harvesting And Storage Application', description: 'Selection Of Nanomaterials For Energy Harvesting And Storage Application', stream: 'Mechanical Engineering', credits: 1, weeks: 4 },
+    { title: 'Structural Analysis Of Nanomaterials', description: 'Structural Analysis Of Nanomaterials', stream: 'Mechanical Engineering', credits: 1, weeks: 4 },
+    { title: 'Introduction To Mechanical Vibration', description: 'Introduction To Mechanical Vibration', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Fundamentals Of Manufacturing Processes', description: 'Fundamentals Of Manufacturing Processes', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Design Of Mechatronic Systems', description: 'Design Of Mechatronic Systems', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Advanced Machining Processes', description: 'Advanced Machining Processes', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Advanced Robotics', description: 'Advanced Robotics', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Applied Ergonomics', description: 'Applied Ergonomics', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Automatic Control', description: 'Automatic Control', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Computational Fluid Dynamics For Incompressible Flows', description: 'Computational Fluid Dynamics For Incompressible Flows', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Convective Heat Transfer', description: 'Convective Heat Transfer', stream: 'Mechanical Engineering', credits: 1, weeks: 4 },
+    { title: 'Data-Enabled Tribological Engineering: From Experiments to Predictive Models', description: 'Data-Enabled Tribological Engineering: From Experiments to Predictive Models', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Electronic Packaging and Manufacturing', description: 'Electronic Packaging and Manufacturing', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Experimental Stress Analysis', description: 'Experimental Stress Analysis', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    
     // Other / Multidisciplinary
     { title: 'Introduction to Research', description: 'Taught by Prof. Prathap Haridoss.', stream: 'Multidisciplinary', credits: 1, weeks: 4 },
     { title: 'Stress Management', description: 'Taught by Prof. Rajlakshmi Guha.', stream: 'Multidisciplinary', credits: 1, weeks: 4 },
