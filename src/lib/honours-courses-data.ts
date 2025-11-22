@@ -80,6 +80,22 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Artificial Intelligence (AI) for Everyone', description: 'A beginner-friendly course on AI.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Foundations of Data Science', description: 'A course on the foundations of data science.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Introduction to Operating Systems', description: 'An introductory course on operating systems.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Discrete Mathematics', description: 'A course on discrete mathematics.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Compiler Design', description: 'An introductory course on compiler design.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Computer Networks and Internet Protocol', description: 'A course on computer networks and internet protocols.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Design and analysis of algorithms', description: 'A course on designing and analyzing algorithms.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Ethical Hacking', description: 'An introductory course on ethical hacking.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Introduction to Cyber Security', description: 'An introductory course on cyber security.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Introduction to Machine Learning-IITG', description: 'An introductory course on machine learning from IITG.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Model Checking', description: 'A course on model checking.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Object-Oriented System Development using UML, Java and Patterns', description: 'A course on object-oriented system development.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Privacy and Security in Online Social Media', description: 'A course on privacy and security in social media.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Real Time Operating System', description: 'A course on real-time operating systems.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Theory of Computation', description: 'A course on the theory of computation.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Cryptography and Network Security', description: 'A course on cryptography and network security.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Data Structures and algorithms', description: 'A course on data structures and algorithms.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Introduction to Database Systems', description: 'An introductory course on database systems.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Introduction to Programming in C', description: 'An introductory course on programming in C.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
 
     // Design Engineering
     { title: 'System Design for Sustainability', description: 'Taught by Prof. Sharmistha Banerjee.', stream: 'Design Engineering', credits: 3, weeks: 12 },
@@ -100,7 +116,7 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Operations Research', description: 'Taught by Prof. Kusum Deep.', stream: 'Mathematics', credits: 2, weeks: 8 },
 
 
-    // Electrical & Electronics Engineering
+    // Electronics & Communication Engineering
     { title: 'Mapping Signal Processing Algorithms to DSP Architectures', description: 'Taught by Prof. Nitin Chandrachoodan.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Microelectronics: Devices to Circuits', description: 'Taught by Prof. Sudeb Dasgupta.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Op-Amp Practical Applications: Design, Simulation & Implementation', description: 'Taught by Prof. Hardik Jeetendra Pandya.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
@@ -112,6 +128,8 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Introductory Neuroscience & Neuro-Instrumentation', description: 'Taught by Prof. Mahesh Jayachandra.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Advanced Linear Continuous Control Systems: Applications with MATLAB Programming and Simulink', description: 'Taught by Prof. Yogesh Vijay Hote.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Fundamentals of Electronic Device Fabrication', description: 'Taught by Prof. Parasuraman Swaminathan.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
+    
+    // Electrical Engineering
     { title: 'Introduction to Smart Grid', description: 'Taught by Prof. N.P. Padhy.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
 
 
@@ -160,15 +178,10 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Plant Developmental Biology', description: 'A course on the developmental processes of plants.', stream: 'Biotechnology', credits: 1, weeks: 4 },
     { title: 'Structural Biology', description: 'An introductory course to structural biology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Thermodynamics for Biological Systems: Classical and Statistical Aspect', description: 'A course on thermodynamics for biological systems.', stream: 'Biotechnology', credits: 3, weeks: 12 },
-
-
-    // Mechanical & Civil Engineering
-    { title: 'Advanced Materials and Processes', description: 'Taught by Prof. Jayanta Das.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
-    { title: 'X-Ray Crystallography and Diffraction', description: 'Taught by Prof. Ranjit Kumar.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
-    { title: 'Finite Element Method: Variational Methods to Computer Programming', description: 'Taught by Prof. Atanu Banerjee, Prof. Arup Nandy.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
-    { title: 'Remote Sensing and GIS', description: 'Taught by Prof. Rishikesh Bharti.', stream: 'Civil Engineering', credits: 1, weeks: 4 },
-    { title: 'Product Design and Development', description: 'Taught by Prof. Inderdeep Singh.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
     { title: 'Maternal Infant Young Child Nutrition', description: 'A course on nutrition for mothers and young children.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+
+    // Civil Engineering
+    { title: 'Remote Sensing and GIS', description: 'Taught by Prof. Rishikesh Bharti.', stream: 'Civil Engineering', credits: 1, weeks: 4 },
     { title: 'Finite Element Method And Computational Structural Dynamics', description: 'A course on finite element methods and computational structural dynamics.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
     { title: 'Mechanics Of Materials', description: 'A course on the mechanics of materials.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
     { title: 'Project Planning & Control', description: 'A course on project planning and control.', stream: 'Civil Engineering', credits: 2, weeks: 8 },
@@ -201,6 +214,7 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Soil Structure Interaction', description: 'A course on soil structure interaction.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
     { title: 'Unsaturated Soil Mechanics', description: 'A course on unsaturated soil mechanics.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
     { title: 'Structural Dynamics for Civil Engineers - SDOF Systems', description: 'A course on structural dynamics for civil engineers.', stream: 'Civil Engineering', credits: 1, weeks: 4 },
+
 
     // Humanities & Social Sciences
     { title: 'Patent Law for Engineers and Scientists', description: 'Taught by Prof. Feroz Ali.', stream: 'Humanities', credits: 3, weeks: 12 },
@@ -267,13 +281,34 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Leadership and Team Effectiveness', description: 'A course on leadership and team effectiveness.', stream: 'Management', credits: 3, weeks: 12 },
     { title: 'Management of Commercial Banking', description: 'A course on the management of commercial banking.', stream: 'Management', credits: 3, weeks: 12 },
     { title: 'Managing change in organizations', description: 'A course on managing change in organizations.', stream: 'Management', credits: 2, weeks: 8 },
+    { title: 'Simulation of Business Systems: An Applied Approach', description: 'An applied approach to simulating business systems.', stream: 'Management', credits: 2, weeks: 8 },
+    { title: 'Strategic Services Marketing', description: 'A course on strategic services marketing.', stream: 'Management', credits: 3, weeks: 12 },
+    { title: 'Systems Engineering: Theory & Practice', description: 'A course on the theory and practice of systems engineering.', stream: 'Management', credits: 2, weeks: 8 },
+    { title: 'Business Forecasting', description: 'An introductory course on business forecasting.', stream: 'Management', credits: 2, weeks: 8 },
+
+    // Mechanical Engineering
+    { title: 'Advanced Materials and Processes', description: 'Taught by Prof. Jayanta Das.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'X-Ray Crystallography and Diffraction', description: 'Taught by Prof. Ranjit Kumar.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Finite Element Method: Variational Methods to Computer Programming', description: 'Taught by Prof. Atanu Banerjee, Prof. Arup Nandy.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Product Design and Development', description: 'Taught by Prof. Inderdeep Singh.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Fundamentals Of Convective Heat Transfer', description: 'A course on the fundamentals of convective heat transfer.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Aircraft Propulsion', description: 'A course on aircraft propulsion systems.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Laser Based Manufacturing', description: 'A course on laser-based manufacturing techniques.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Mathematical Modeling Of Manufacturing Processes', description: 'A course on the mathematical modeling of manufacturing processes.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Welding Application Technology', description: 'A course on welding application technology.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Robotics', description: 'An introductory course on robotics.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Principles Of Metal Forming Technology', description: 'A course on the principles of metal forming technology.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
 
     // Other / Multidisciplinary
     { title: 'Introduction to Research', description: 'Taught by Prof. Prathap Haridoss.', stream: 'Multidisciplinary', credits: 1, weeks: 4 },
-    { title: 'Solar Energy Engineering and Technology', description: 'Taught by Prof. Pankaj Kalita.', stream: 'Physics', credits: 3, weeks: 12 },
     { title: 'Stress Management', description: 'Taught by Prof. Rajlakshmi Guha.', stream: 'Multidisciplinary', credits: 1, weeks: 4 },
     { title: 'Strategies for Learner-centric e-learning in STEM disciplines', description: 'Taught by Prof. Sahana Murthy.', stream: 'Multidisciplinary', credits: 2, weeks: 8 },
     { title: 'Teaching and Learning in General Programs: TALG', description: 'Taught by Prof. N J Rao.', stream: 'Multidisciplinary', credits: 3, weeks: 12 },
+    
+    // Physics
+    { title: 'Solar Energy Engineering and Technology', description: 'Taught by Prof. Pankaj Kalita.', stream: 'Physics', credits: 3, weeks: 12 },
+
+    // Earth Science
     { title: 'Global Navigation Satellite Systems And Applications', description: 'Taught by Prof. Arun K. Saraf.', stream: 'Earth Science', credits: 3, weeks: 12 },
 
     // Aerospace Engineering
