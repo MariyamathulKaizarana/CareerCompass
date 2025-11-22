@@ -154,7 +154,7 @@ export default function HonorsAdvisorPage() {
     const findImage = (courseTitle: string) => {
         const titleLower = courseTitle.toLowerCase();
         const keywordMap: { [key: string]: string } = {
-            // More Specific first
+            // More Specific first to ensure they are matched first
             'bandit algorithm': 'ai/ml',
             'graph theory': 'math',
             'gpu architectures': 'hardware',
@@ -325,7 +325,17 @@ export default function HonorsAdvisorPage() {
             'quality management': 'management',
             'six sigma': 'management',
             'brand management': 'marketing',
-            'incubation': 'business'
+            'incubation': 'business',
+             'propulsion': 'aerospace',
+            'thermodynamics': 'mechanical',
+            'fluid mechanics': 'mechanical',
+            'structural dynamics': 'civil',
+            'control': 'electrical',
+            'electronics': 'electrical',
+            'biology': 'biotechnologist',
+            'chemistry': 'chemical',
+            'physics': 'physics',
+            'economics': 'economist',
         };
       
         for (const keyword in keywordMap) {
