@@ -118,12 +118,10 @@ export const honoursCourses: HonoursCourse[] = [
 
     // Electronics & Communication Engineering
     { title: 'Mapping Signal Processing Algorithms to DSP Architectures', description: 'Taught by Prof. Nitin Chandrachoodan.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
-    { title: 'Microelectronics: Devices to Circuits', description: 'Taught by Prof. Sudeb Dasgupta.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Op-Amp Practical Applications: Design, Simulation & Implementation', description: 'Taught by Prof. Hardik Jeetendra Pandya.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Sensors and Actuators', description: 'Taught by Prof. Hardik J Pandya.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
     { title: 'Pattern Recognition and Application', description: 'Taught by Prof. Prabir Kumar Biswas.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Applied Optimization for Wireless, Machine Learning, Big Data', description: 'Taught by Prof. Aditya K. Jagannatham.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
-    { title: 'Design of Photovoltaic Systems', description: 'Taught by Prof. L. Umanand.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Fabrication Techniques for MEMS-Based Sensors: Clinical Perspective', description: 'Taught by Prof. Hardik Jeetendra Pandya.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Introductory Neuroscience & Neuro-Instrumentation', description: 'Taught by Prof. Mahesh Jayachandra.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Advanced Linear Continuous Control Systems: Applications with MATLAB Programming and Simulink', description: 'Taught by Prof. Yogesh Vijay Hote.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
@@ -131,6 +129,7 @@ export const honoursCourses: HonoursCourse[] = [
     
     // Electrical Engineering
     { title: 'Introduction to Smart Grid', description: 'Taught by Prof. N.P. Padhy.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
+    { title: 'Design of Photovoltaic Systems', description: 'A comprehensive course on designing photovoltaic systems.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
 
 
     // Chemistry & Chemical Engineering
@@ -325,6 +324,10 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Product Design and Manufacturing', description: 'A course on product design and manufacturing.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
     { title: 'Product Engineering and Design Thinking', description: 'A course on product engineering and design thinking.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
     { title: 'Robotics: Basics and Selected Advanced Concepts', description: 'A course on the basics and advanced concepts of robotics.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Mechanics of Sheet Metal Forming', description: 'A course on the mechanics of sheet metal forming.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Mechatronics', description: 'An introductory course on mechatronics.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Smart Materials and Intelligent System Design', description: 'A course on smart materials and intelligent system design.', stream: 'Mechanical Engineering', credits: 1, weeks: 4 },
+
     
     // Other / Multidisciplinary
     { title: 'Introduction to Research', description: 'Taught by Prof. Prathap Haridoss.', stream: 'Multidisciplinary', credits: 1, weeks: 4 },
@@ -347,5 +350,15 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Space Flight Mechanics', description: 'A course on the mechanics of space flight.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
     { title: 'Vibration And Structural Dynamics', description: 'A course on vibration and structural dynamics in aerospace.', stream: 'Aerospace Engineering', credits: 2, weeks: 8 },
     { title: 'Aerodynamic Design Of Axial Flow Compressors & Fans', description: 'A course on the aerodynamic design of compressors and fans.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
-    { title: 'Introduction to Experiments in Flight', description: 'An introductory course on flight experiments.', stream: 'Aerospace Engineering', credits: 1, weeks: 4 }
+    { title: 'Introduction to Experiments in Flight', description: 'An introductory course on flight experiments.', stream: 'Aerospace Engineering', credits: 1, weeks: 4 },
+
+    // Electrical and Electronics Engineering
+    { title: 'Smart Grid: Basics To Advanced Technologies', description: 'A course on smart grid technologies, from basics to advanced.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
+    { title: 'Advances In Uhv Transmission And Distribution', description: 'A course on advances in UHV transmission and distribution.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
+    { title: 'Enclosure Design Of Electronics Equipment', description: 'A course on the design of enclosures for electronic equipment.', stream: 'Design Engineering', credits: 3, weeks: 12 },
+    { title: 'Microelectronics: Devices To Circuits', description: 'A course on microelectronics, from devices to circuits.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Dc Microgrid And Control Systems', description: 'A course on DC microgrids and their control systems.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
+    { title: 'Electrical Distribution System Analysis', description: 'A course on the analysis of electrical distribution systems.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
+    { title: 'Digital Control in Switched Mode Power Converters and FPGA-based Prototyping', description: 'A course on digital control in power converters.', stream: 'Electrical Engineering', credits: 3, weeks: 12 }
 ];
+
