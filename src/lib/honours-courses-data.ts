@@ -136,13 +136,25 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Microwave Integrated Circuits', description: 'A course on microwave integrated circuits.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
     { title: 'Optical Wireless Communications for Beyond 5G Networks and IoT', description: 'A course on optical wireless communications for 5G and IoT.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Physics of Nanoscale Devices', description: 'A course on the physics of nanoscale devices.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
-    
+    { title: 'DC Microgrid And Control Systems', description: 'A course on DC microgrids and their control systems.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
+    { title: 'Electrical Distribution System Analysis', description: 'A course on the analysis of electrical distribution systems.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
+    { title: 'Digital Control in Switched Mode Power Converters and FPGA-based Prototyping', description: 'A course on digital control in power converters.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Power Management Integrated Circuits', description: 'A course on Power Management Integrated Circuits.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Power System Dynamics, Control and Monitoring', description: 'A course on Power System Dynamics, Control and Monitoring.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Recent Advances in Transmission Insulators', description: 'A course on Recent Advances in Transmission Insulators.', stream: 'Electronics & Communication Engineering', credits: 1, weeks: 4 },
+    { title: 'Semiconductor device modeling and Simulation', description: 'A course on Semiconductor device modeling and Simulation.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Design Of Power Electronic Converters', description: 'A course on Design Of Power Electronic Converters.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
+
     // Electrical Engineering
     { title: 'Introduction to Smart Grid', description: 'Taught by Prof. N.P. Padhy.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
     { title: 'Design of Photovoltaic Systems', description: 'A comprehensive course on designing photovoltaic systems.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
     { title: 'VLSI Interconnects', description: 'An introductory course on VLSI interconnects.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
     { title: 'System Design Through Verilog', description: 'A course on system design using Verilog.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
     { title: 'Applied Electromagnetics For Engineers', description: 'A course on applied electromagnetics for engineers.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
+    { title: 'Smart Grid: Basics To Advanced Technologies', description: 'A course on smart grid technologies, from basics to advanced.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
+    { title: 'Advances In Uhv Transmission And Distribution', description: 'A course on advances in UHV transmission and distribution.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
+    { title: 'Enclosure Design Of Electronics Equipment', description: 'A course on the design of enclosures for electronic equipment.', stream: 'Design Engineering', credits: 3, weeks: 12 },
+    { title: 'Microelectronics: Devices To Circuits', description: 'A course on microelectronics, from devices to circuits.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
 
 
     // Chemistry & Chemical Engineering
@@ -191,6 +203,10 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Structural Biology', description: 'An introductory course to structural biology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Thermodynamics for Biological Systems: Classical and Statistical Aspect', description: 'A course on thermodynamics for biological systems.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Maternal Infant Young Child Nutrition', description: 'A course on nutrition for mothers and young children.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Introduction To Developmental Biology', description: 'A course on developmental biology.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Plant Developmental Biology', description: 'A course on plant developmental biology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Immunology', description: 'An introductory course on immunology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Metabolic Engineering', description: 'A course on metabolic engineering.', stream: 'Biotechnology', credits: 2, weeks: 8 },
 
     // Civil Engineering
     { title: 'Remote Sensing and GIS', description: 'Taught by Prof. Rishikesh Bharti.', stream: 'Civil Engineering', credits: 1, weeks: 4 },
@@ -226,7 +242,20 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Soil Structure Interaction', description: 'A course on soil structure interaction.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
     { title: 'Unsaturated Soil Mechanics', description: 'A course on unsaturated soil mechanics.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
     { title: 'Structural Dynamics for Civil Engineers - SDOF Systems', description: 'A course on structural dynamics for civil engineers.', stream: 'Civil Engineering', credits: 1, weeks: 4 },
-
+    { title: 'Advanced Concrete Technology', description: 'An advanced course on concrete technology.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Advanced Hydrology', description: 'An advanced course on hydrology.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Advanced Soil Mechanics', description: 'An advanced course on soil mechanics.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Advanced Structural Analysis', description: 'An advanced course on structural analysis.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Air Pollution and Control', description: 'A course on air pollution and its control.', stream: 'Civil Engineering', credits: 2, weeks: 8 },
+    { title: 'Concrete Engineering and Technology', description: 'A course on concrete engineering and technology.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Design Of Reinforced Concrete Structures', description: 'A course on designing reinforced concrete structures.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Engineering Geology', description: 'A course on engineering geology.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Environmental Geomechanics', description: 'A course on environmental geomechanics.', stream: 'Civil Engineering', credits: 2, weeks: 8 },
+    { title: 'Foundation Engineering', description: 'An introductory course on foundation engineering.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Geosynthetics And Reinforced Soil Structures', description: 'A course on geosynthetics and reinforced soil structures.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Ground Improvement Techniques', description: 'A course on ground improvement techniques.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Groundwater Hydrology', description: 'A course on groundwater hydrology.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Hydrology', description: 'An introductory course on hydrology.', stream: 'Civil Engineering', credits: 2, weeks: 8 },
 
     // Humanities & Social Sciences
     { title: 'Patent Law for Engineers and Scientists', description: 'Taught by Prof. Feroz Ali.', stream: 'Humanities', credits: 3, weeks: 12 },
@@ -297,6 +326,10 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Strategic Services Marketing', description: 'A course on strategic services marketing.', stream: 'Management', credits: 3, weeks: 12 },
     { title: 'Systems Engineering: Theory & Practice', description: 'A course on the theory and practice of systems engineering.', stream: 'Management', credits: 2, weeks: 8 },
     { title: 'Business Forecasting', description: 'An introductory course on business forecasting.', stream: 'Management', credits: 2, weeks: 8 },
+    { title: 'Supply Chain Analytics', description: 'A course on supply chain analytics.', stream: 'Management', credits: 3, weeks: 12 },
+    { title: 'Total Quality Management - I', description: 'A course on Total Quality Management.', stream: 'Management', credits: 2, weeks: 8 },
+    { title: 'Six Sigma', description: 'An introductory course on Six Sigma.', stream: 'Management', credits: 3, weeks: 12 },
+    { title: 'The Future Of Manufacturing Business: Role Of It', description: 'A course on the role of IT in manufacturing business.', stream: 'Management', credits: 2, weeks: 8 },
 
     // Mechanical Engineering
     { title: 'Advanced Materials and Processes', description: 'Taught by Prof. Jayanta Das.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
@@ -340,8 +373,30 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Mechanics of Sheet Metal Forming', description: 'A course on the mechanics of sheet metal forming.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
     { title: 'Mechatronics', description: 'An introductory course on mechatronics.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
     { title: 'Smart Materials and Intelligent System Design', description: 'A course on smart materials and intelligent system design.', stream: 'Mechanical Engineering', credits: 1, weeks: 4 },
+    { title: 'Refrigeration And Air Conditioning', description: 'A course on refrigeration and air conditioning.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Machinery Fault Diagnosis And Signal Processing', description: 'A course on machinery fault diagnosis and signal processing.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Fluid Machines', description: 'A course on fluid machines.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Engineering Mechanics: Statics and Dynamics', description: 'A course on engineering mechanics.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Energy Efficiency, Acoustics And Daylighting In Building', description: 'A course on energy efficiency, acoustics, and daylighting in buildings.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Acoustics & Noise Control', description: 'A course on acoustics and noise control.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Automation In Manufacturing', description: 'A course on automation in manufacturing.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Computational Fluid Dynamics', description: 'An introductory course on computational fluid dynamics.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Computer Integrated Manufacturing', description: 'A course on computer-integrated manufacturing.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Design for Quality, Manufacturing and Assembly', description: 'A course on design for quality, manufacturing, and assembly.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Financial Mathematics', description: 'A course on financial mathematics.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Fluid Dynamics And Turbomachines', description: 'A course on fluid dynamics and turbomachines.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Gas Dynamics', description: 'A course on gas dynamics.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Industrial Automation And Control', description: 'A course on industrial automation and control.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Laws Of Thermodynamics', description: 'A course on the laws of thermodynamics.', stream: 'Mechanical Engineering', credits: 1, weeks: 4 },
+    { title: 'Manufacturing Process Technology I & II', description: 'A course on manufacturing process technology.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Micro and Smart Systems', description: 'A course on micro and smart systems.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Noc:computational Science And Engineering Using Python', description: 'A course on computational science and engineering using Python.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Principles Of Casting Technology', description: 'A course on the principles of casting technology.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Principles of Vibration Control', description: 'A course on the principles of vibration control.', stream: 'Mechanical Engineering', credits: 2, weeks: 8 },
+    { title: 'Steam And Gas Power Systems', description: 'A course on steam and gas power systems.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Turbomachinery Aerodynamics', description: 'A course on turbomachinery aerodynamics.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Advanced Thermodynamics', description: 'An advanced course on thermodynamics.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
 
-    
     // Other / Multidisciplinary
     { title: 'Introduction to Research', description: 'Taught by Prof. Prathap Haridoss.', stream: 'Multidisciplinary', credits: 1, weeks: 4 },
     { title: 'Stress Management', description: 'Taught by Prof. Rajlakshmi Guha.', stream: 'Multidisciplinary', credits: 1, weeks: 4 },
@@ -364,13 +419,20 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Vibration And Structural Dynamics', description: 'A course on vibration and structural dynamics in aerospace.', stream: 'Aerospace Engineering', credits: 2, weeks: 8 },
     { title: 'Aerodynamic Design Of Axial Flow Compressors & Fans', description: 'A course on the aerodynamic design of compressors and fans.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
     { title: 'Introduction to Experiments in Flight', description: 'An introductory course on flight experiments.', stream: 'Aerospace Engineering', credits: 1, weeks: 4 },
+    { title: 'Acoustic Instabilities In Aerospace Propulsion', description: 'A course on acoustic instabilities in aerospace propulsion.', stream: 'Aerospace Engineering', credits: 2, weeks: 8 },
+    { title: 'Advanced Aircraft Maintenance', description: 'An advanced course on aircraft maintenance.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
+    { title: 'Aerospace Propulsion', description: 'A course on aerospace propulsion systems.', stream: 'Aerospace Engineering', credits: 2, weeks: 8 },
+    { title: 'Applied Aerodynamics', description: 'A course on applied aerodynamics.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
+    { title: 'Avionics', description: 'An introductory course on avionics systems.', stream: 'Aerospace Engineering', credits: 1, weeks: 4 },
+    { title: 'Introduction to Finite Volume Methods-I', description: 'An introductory course on finite volume methods.', stream: 'Aerospace Engineering', credits: 2, weeks: 8 },
+    { title: 'Rocket Propulsion', description: 'A comprehensive course on rocket propulsion.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
 
-    // Electrical and Electronics Engineering
-    { title: 'Smart Grid: Basics To Advanced Technologies', description: 'A course on smart grid technologies, from basics to advanced.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
-    { title: 'Advances In Uhv Transmission And Distribution', description: 'A course on advances in UHV transmission and distribution.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
-    { title: 'Enclosure Design Of Electronics Equipment', description: 'A course on the design of enclosures for electronic equipment.', stream: 'Design Engineering', credits: 3, weeks: 12 },
-    { title: 'Microelectronics: Devices To Circuits', description: 'A course on microelectronics, from devices to circuits.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
-    { title: 'Dc Microgrid And Control Systems', description: 'A course on DC microgrids and their control systems.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
-    { title: 'Electrical Distribution System Analysis', description: 'A course on the analysis of electrical distribution systems.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
-    { title: 'Digital Control in Switched Mode Power Converters and FPGA-based Prototyping', description: 'A course on digital control in power converters.', stream: 'Electrical Engineering', credits: 3, weeks: 12 }
+    // Textile Engineering
+    { title: 'Principles Of Combing, Roving Preparation & Ring Spinning', description: 'A course on the principles of combing, roving preparation, and ring spinning.', stream: 'Textile Engineering', credits: 3, weeks: 12 },
+    { title: 'Yarn Manufacture I : Principle Of Opening, Carding And Drawing', description: 'A course on the principles of yarn manufacturing, including opening, carding, and drawing.', stream: 'Textile Engineering', credits: 3, weeks: 12 },
+    { title: 'Technical Textiles', description: 'An introductory course on technical textiles.', stream: 'Textile Engineering', credits: 3, weeks: 12 },
+    { title: 'Science Of Clothing Comfort', description: 'A course on the science of clothing comfort.', stream: 'Textile Engineering', credits: 3, weeks: 12 },
+    { title: 'Textile Finishing', description: 'A course on textile finishing techniques.', stream: 'Textile Engineering', credits: 3, weeks: 12 },
+    { title: 'Science And Technology Of Weft And Warp Knitting', description: 'A course on the science and technology of weft and warp knitting.', stream: 'Textile Engineering', credits: 3, weeks: 12 },
+    { title: 'Advanced Textile Printing Technology', description: 'An advanced course on textile printing technology.', stream: 'Textile Engineering', credits: 2, weeks: 8 },
 ];
