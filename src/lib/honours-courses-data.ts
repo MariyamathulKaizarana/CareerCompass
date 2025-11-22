@@ -136,6 +136,8 @@ export const honoursCourses: HonoursCourse[] = [
 
 
     // Electronics & Communication Engineering
+    { title: 'Embedded Sensing, Actuation and Interfacing Systems', description: 'An introductory course on embedded sensing, actuation, and interfacing systems.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Digital Protection of Power System', description: 'A course on the digital protection of power systems.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
     { title: 'Mapping Signal Processing Algorithms to DSP Architectures', description: 'Taught by Prof. Nitin Chandrachoodan.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Op-Amp Practical Applications: Design, Simulation & Implementation', description: 'Taught by Prof. Hardik Jeetendra Pandya.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Sensors and Actuators', description: 'Taught by Prof. Hardik J Pandya.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
