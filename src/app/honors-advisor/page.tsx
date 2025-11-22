@@ -156,7 +156,7 @@ export default function HonorsAdvisorPage() {
         const keywordMap: { [key: string]: string } = {
             'python': 'software', 'algorithms': 'software', 'data structures': 'data', 'machine learning': 'ai/ml', 
             'deep learning': 'ai/ml', 'natural language': 'ai/ml', 'data science': 'data', 'database': 'data', 'iot': 'iot', 
-            'internet of things': 'iot', 'cloud computing': 'cloud', 'operating system': 'software', 'computer architecture': 'electrical', 
+            'internet of things': 'iot', 'cloud computing': 'cloud', 'operating system': 'software', 'computer architecture': 'hardware', 
             'verilog': 'hardware', 'social networks': 'social', 'graphics': 'graphic', 'software testing': 'software', 
             'sustainability': 'sustainability', 'design': 'interior', 'regression': 'data', 'algebra': 'math', 'matlab': 'math', 
             'fuzzy set': 'math', 'numerical methods': 'math', 'optimization': 'math', 'signal processing': 'electrical', 
