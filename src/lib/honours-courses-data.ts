@@ -137,7 +137,6 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Organ Printing', description: 'A course on the principles and applications of organ printing.', stream: 'Biotechnology', credits: 2, weeks: 8 },
     { title: 'Genome Editing And Engineering', description: 'A comprehensive course on genome editing and engineering techniques.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Functional Genomics', description: 'An introductory course on functional genomics.', stream: 'Biotechnology', credits: 1, weeks: 4 },
-    { title: 'Conservation Geography', description: 'A course on the principles of conservation geography.', stream: 'Earth Science', credits: 3, weeks: 12 },
     { title: 'Experimental Biotechnology', description: 'A course on experimental techniques in biotechnology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Introduction To Mechanobiology', description: 'An introductory course on mechanobiology.', stream: 'Biotechnology', credits: 2, weeks: 8 },
     { title: 'Industrial Biotechnology', description: 'A course on the applications of biotechnology in industry.', stream: 'Biotechnology', credits: 3, weeks: 12 },
@@ -193,6 +192,15 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Geology and Soil Mechanics', description: 'A course on geology and soil mechanics.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
     { title: 'Geomorphic Processes: Landforms and Landscapes', description: 'A course on geomorphic processes, landforms, and landscapes.', stream: 'Civil Engineering', credits: 2, weeks: 8 },
     { title: 'GPS Surveying', description: 'An introductory course on GPS surveying.', stream: 'Civil Engineering', credits: 1, weeks: 4 },
+    { title: 'Hydraulic Engineering', description: 'A course on hydraulic engineering principles.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Industrial Wastewater Treatment', description: 'A course on industrial wastewater treatment.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Introduction to Accounting and Finance for Civil Engineers', description: 'An introductory course on accounting and finance for civil engineers.', stream: 'Civil Engineering', credits: 2, weeks: 8 },
+    { title: 'Introduction to Civil Engineering Profession', description: 'An introductory course to the civil engineering profession.', stream: 'Civil Engineering', credits: 2, weeks: 8 },
+    { title: 'Maintenance and Repair of Concrete Structures', description: 'A course on the maintenance and repair of concrete structures.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Modern Construction Materials', description: 'A course on modern construction materials.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Soil Structure Interaction', description: 'A course on soil structure interaction.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Unsaturated Soil Mechanics', description: 'A course on unsaturated soil mechanics.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Structural Dynamics for Civil Engineers - SDOF Systems', description: 'A course on structural dynamics for civil engineers.', stream: 'Civil Engineering', credits: 1, weeks: 4 },
 
     // Humanities & Social Sciences
     { title: 'Patent Law for Engineers and Scientists', description: 'Taught by Prof. Feroz Ali.', stream: 'Humanities', credits: 3, weeks: 12 },
@@ -244,7 +252,9 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Business Analytics & Data Mining Modeling Using R Part II', description: 'Taught by Prof. Gaurav Dixit.', stream: 'Management', credits: 3, weeks: 12 },
     { title: 'Cost Accounting', description: 'Taught by Prof. Varadraj Bapat.', stream: 'Management', credits: 3, weeks: 12 },
     { title: 'Decision Making Under Uncertainty', description: 'Taught by Prof. N. Gautam.', stream: 'Management', credits: 3, weeks: 12 },
-
+    { title: 'Toyota Production System', description: 'A course on the Toyota Production System.', stream: 'Management', credits: 2, weeks: 8 },
+    { title: 'Training Of Trainers', description: 'A course on training methodologies.', stream: 'Management', credits: 3, weeks: 12 },
+    { title: 'Business Analytics & Data Mining Modeling Using R Part II', description: 'A course on business analytics and data mining.', stream: 'Management', credits: 1, weeks: 4 },
 
     // Other / Multidisciplinary
     { title: 'Introduction to Research', description: 'Taught by Prof. Prathap Haridoss.', stream: 'Multidisciplinary', credits: 1, weeks: 4 },
