@@ -139,6 +139,18 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Basics of Biology', description: 'A foundational course on the basics of biology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Biochemistry - IITM', description: 'A comprehensive course on biochemistry from IITM.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Bioengineering: An Interface with Biology and Medicine', description: 'A course on the interface between bioengineering, biology, and medicine.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Biointerface Engineering', description: 'An introductory course on biointerface engineering.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Biomechanics', description: 'A course on the principles of biomechanics.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Bioreactor Design and Analysis', description: 'A course on the design and analysis of bioreactors.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Biostatistics and Design of experiments', description: 'A course on biostatistics and experimental design.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Cell Biology: Cellular organization, division and processes', description: 'A course on the fundamentals of cell biology.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Computational Systems Biology', description: 'A course on computational approaches in systems biology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Data Analysis for Biologists', description: 'A practical course on data analysis for biologists.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Demystifying the Brain', description: 'An introductory course on the workings of the brain.', stream: 'Biotechnology', credits: 1, weeks: 4 },
+    { title: 'Environmental Chemistry and Microbiology', description: 'A course on environmental chemistry and microbiology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Interactomics: Basics & Applications', description: 'A course on the basics and applications of interactomics.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Introductory Mathematical Methods for Biologists', description: 'A course on essential mathematical methods for biologists.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Material and Energy Balances', description: 'A course on material and energy balances in bioprocesses.', stream: 'Biotechnology', credits: 3, weeks: 12 },
 
 
     // Mechanical & Civil Engineering
