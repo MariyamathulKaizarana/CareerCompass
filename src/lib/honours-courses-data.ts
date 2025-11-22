@@ -75,6 +75,11 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Programming in Modern C++', description: 'A course on modern C++ programming.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Secure Computation: Part I', description: 'An introductory course on secure computation.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Foundation of Cloud IoT Edge ML', description: 'An introductory course on the convergence of Cloud, IoT, Edge, and ML.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Computer architecture', description: 'A course on computer architecture.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Deep Learning For Computer Vision', description: 'A course on deep learning for computer vision.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Artificial Intelligence (AI) for Everyone', description: 'A beginner-friendly course on AI.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Foundations of Data Science', description: 'A course on the foundations of data science.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Introduction to Operating Systems', description: 'An introductory course on operating systems.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
 
     // Design Engineering
     { title: 'System Design for Sustainability', description: 'Taught by Prof. Sharmistha Banerjee.', stream: 'Design Engineering', credits: 3, weeks: 12 },
@@ -151,6 +156,11 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Interactomics: Basics & Applications', description: 'A course on the basics and applications of interactomics.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Introductory Mathematical Methods for Biologists', description: 'A course on essential mathematical methods for biologists.', stream: 'Biotechnology', credits: 2, weeks: 8 },
     { title: 'Material and Energy Balances', description: 'A course on material and energy balances in bioprocesses.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Medical Biomaterials', description: 'An overview of medical biomaterials.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Nanotechnology in Agriculture', description: 'Exploring the applications of nanotechnology in agriculture.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Plant Developmental Biology', description: 'A course on the developmental processes of plants.', stream: 'Biotechnology', credits: 1, weeks: 4 },
+    { title: 'Structural Biology', description: 'An introductory course to structural biology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Thermodynamics for Biological Systems: Classical and Statistical Aspect', description: 'A course on thermodynamics for biological systems.', stream: 'Biotechnology', credits: 3, weeks: 12 },
 
 
     // Mechanical & Civil Engineering
@@ -159,7 +169,13 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Finite Element Method: Variational Methods to Computer Programming', description: 'Taught by Prof. Atanu Banerjee, Prof. Arup Nandy.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
     { title: 'Remote Sensing and GIS', description: 'Taught by Prof. Rishikesh Bharti.', stream: 'Civil Engineering', credits: 1, weeks: 4 },
     { title: 'Product Design and Development', description: 'Taught by Prof. Inderdeep Singh.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
-
+    { title: 'Maternal Infant Young Child Nutrition', description: 'A course on nutrition for mothers and young children.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Finite Element Method And Computational Structural Dynamics', description: 'A course on finite element methods and computational structural dynamics.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Mechanics Of Materials', description: 'A course on the mechanics of materials.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Project Planning & Control', description: 'A course on project planning and control.', stream: 'Civil Engineering', credits: 2, weeks: 8 },
+    { title: 'Principles Of Construction Management', description: 'A course on the principles of construction management.', stream: 'Civil Engineering', credits: 2, weeks: 8 },
+    { title: 'Municipal Solid Waste Management', description: 'A course on municipal solid waste management.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
+    { title: 'Introduction to Multimodal Urban', description: 'An introductory course on multimodal urban transportation.', stream: 'Civil Engineering', credits: 3, weeks: 12 },
 
     // Humanities & Social Sciences
     { title: 'Patent Law for Engineers and Scientists', description: 'Taught by Prof. Feroz Ali.', stream: 'Humanities', credits: 3, weeks: 12 },
