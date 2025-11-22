@@ -122,6 +122,10 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Tissue Engineering', description: 'Taught by Prof. Vignesh Muthuvijayan.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Biomaterials for Bone Tissue Engineering Applications', description: 'Taught by Prof. Biman B. Mandal.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Biomedical Nanotechnology', description: 'Taught by Prof. P. Gopinath.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Genetic Engineering: Theory And Application', description: 'A course on the theory and application of genetic engineering.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Cellular Biophysics: A Framework For Quantitative Biology', description: 'A course on cellular biophysics and quantitative biology.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Medical Image Analysis', description: 'A course on medical image analysis.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Computer Aided Drug Design', description: 'A course on computer-aided drug design.', stream: 'Biotechnology', credits: 2, weeks: 8 },
 
 
     // Mechanical & Civil Engineering
@@ -195,10 +199,11 @@ export const honoursCourses: HonoursCourse[] = [
     // Aerospace Engineering
     { title: 'Aircraft Stability And Control', description: 'A course on aircraft stability and control.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
     { title: 'Introduction To Airplane Performance', description: 'An introductory course on airplane performance.', stream: 'Aerospace Engineering', credits: 2, weeks: 8 },
-    { title: 'Introduction To Air breathing Propulsion', description: 'An introductory course on air-breathing propulsion systems.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
+    { title: 'Introduction To Airbreathing Propulsion', description: 'An introductory course on air-breathing propulsion systems.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
     { title: 'Design Of Fixed Wing Unmanned Aerial Vehicles', description: 'A course on designing fixed-wing UAVs.', stream: 'Aerospace Engineering', credits: 2, weeks: 8 },
     { title: 'Introduction To Aircraft Design', description: 'An introductory course on aircraft design principles.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
     { title: 'Space Flight Mechanics', description: 'A course on the mechanics of space flight.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
     { title: 'Vibration And Structural Dynamics', description: 'A course on vibration and structural dynamics in aerospace.', stream: 'Aerospace Engineering', credits: 2, weeks: 8 },
-    { title: 'Aerodynamic Design Of Axial Flow Compressors & Fans', description: 'A course on the aerodynamic design of compressors and fans.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 }
+    { title: 'Aerodynamic Design Of Axial Flow Compressors & Fans', description: 'A course on the aerodynamic design of compressors and fans.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
+    { title: 'Introduction to Experiments in Flight', description: 'An introductory course on flight experiments.', stream: 'Aerospace Engineering', credits: 1, weeks: 4 }
 ];
