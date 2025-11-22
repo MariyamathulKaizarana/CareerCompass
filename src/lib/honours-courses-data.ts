@@ -99,6 +99,8 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Cloud Computing', description: 'A comprehensive course on Cloud Computing.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Introduction To Machine Learning - IITKGP', description: 'An introductory course on Machine Learning from IIT Kharagpur.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
     { title: 'Programming In Java', description: 'A detailed course on programming in Java.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Social Network Analysis', description: 'A course on social network analysis.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Design & Implementation Of Human-Computer Interfaces', description: 'A course on the design and implementation of human-computer interfaces.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
 
     // Design Engineering
     { title: 'System Design for Sustainability', description: 'Taught by Prof. Sharmistha Banerjee.', stream: 'Design Engineering', credits: 3, weeks: 12 },
@@ -155,6 +157,7 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Principles Of Signals And Systems', description: 'A course on the principles of signals and systems.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'An Introduction To Coding Theory', description: 'An introductory course to coding theory.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
     { title: 'Smart Grid: Basics To Advanced Technologies', description: 'A course on Smart Grid, from basics to advanced technologies.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Fundamentals Of Micro And Nanofabrication', description: 'A course on the fundamentals of micro and nanofabrication.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
 
     // Electrical Engineering
     { title: 'Introduction to Smart Grid', description: 'Taught by Prof. N.P. Padhy.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
@@ -168,6 +171,7 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Microelectronics: Devices To Circuits', description: 'A course on microelectronics, from devices to circuits.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Control systems', description: 'A course on control systems.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
     { title: 'Fundamentals of Power Electronics', description: 'A course on the fundamentals of power electronics.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
+    { title: 'Fundamentals Of Micro And Nanofabrication', description: 'A course on the fundamentals of micro and nanofabrication.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
 
     // Chemistry & Chemical Engineering
     { title: 'Spectroscopic Techniques for Pharmaceutical and Biopharmaceutical Industries', description: 'Taught by Prof. Shashank Deep.', stream: 'Chemistry', credits: 3, weeks: 12 },
@@ -178,6 +182,13 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Transport Phenomena Of Non-Newtonian Fluids', description: 'A course on transport phenomena of non-newtonian fluids.', stream: 'Chemical Engineering', credits: 3, weeks: 12 },
     { title: 'Natural Gas Engineering', description: 'An introductory course on natural gas engineering.', stream: 'Chemical Engineering', credits: 2, weeks: 8 },
     { title: 'Aspen Plus® Simulation Software - A Basic Course For Beginners', description: 'A beginner\'s course on Aspen Plus simulation software.', stream: 'Chemical Engineering', credits: 3, weeks: 12 },
+    { title: 'Chemical Process Control', description: 'A course on chemical process control.', stream: 'Chemical Engineering', credits: 2, weeks: 8 },
+    { title: 'Trace And Ultra-Trace Analysis Of Metals Using Atomic Absorption Spectrometry', description: 'A course on trace and ultra-trace analysis of metals.', stream: 'Chemical Engineering', credits: 2, weeks: 8 },
+    { title: 'Mechanical Operations', description: 'A course on mechanical operations in chemical engineering.', stream: 'Chemical Engineering', credits: 1, weeks: 4 },
+    { title: 'Equipment Design: Mechanical Aspects', description: 'A course on the mechanical aspects of equipment design.', stream: 'Chemical Engineering', credits: 1, weeks: 4 },
+    { title: 'Basic Environmental Engineering And Pollution Abatement', description: 'A course on environmental engineering and pollution abatement.', stream: 'Chemical Engineering', credits: 3, weeks: 12 },
+    { title: 'Hydrogen Energy: Production, Storage, Transportation And Safety', description: 'A course on hydrogen energy.', stream: 'Chemical Engineering', credits: 3, weeks: 12 },
+
 
     // Biotechnology and Bioengineering
     { title: 'Drug Delivery: Principles and Applications', description: 'Taught by Prof. Rachit Agarwal.', stream: 'Biotechnology', credits: 3, weeks: 12 },
