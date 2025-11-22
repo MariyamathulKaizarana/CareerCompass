@@ -31,6 +31,11 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Programming, Data Structures And Algorithms Using Python', description: 'Taught by Prof. Madhavan Mukund.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Software Testing', description: 'Taught by Prof. Meenakshi D\'souza.', stream: 'Computer Science & Engineering', credits: 1, weeks: 4 },
     { title: 'Python for Data Science', description: 'Taught by Prof. Rengasamy.', stream: 'Computer Science & Engineering', credits: 1, weeks: 4 },
+    { title: 'Introduction To Haskell Programming', description: 'A course on functional programming with Haskell.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'C Programming And Assembly Language', description: 'A course on C programming and assembly language.', stream: 'Computer Science & Engineering', credits: 1, weeks: 4 },
+    { title: 'Natural Language Processing', description: 'An introductory course on Natural Language Processing.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Modern Algebra', description: 'A course on Modern Algebra.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Data Science For Engineers', description: 'A course on Data Science for engineering students.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
 
 
     // Design Engineering
