@@ -109,12 +109,14 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Introduction to Data Analytics', description: 'An introductory course on data analytics.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Modern Computer Vision', description: 'A course on modern computer vision techniques.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Scalable Data Science', description: 'A course on scalable data science.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Big Data Computing', description: 'A course on Big Data Computing.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
 
 
     // Design Engineering
     { title: 'System Design for Sustainability', description: 'Taught by Prof. Sharmistha Banerjee.', stream: 'Design Engineering', credits: 3, weeks: 12 },
     { title: 'Functional and Conceptual Design', description: 'Taught by Prof. T. Asokan.', stream: 'Design Engineering', credits: 2, weeks: 8 },
     { title: 'Design, Technology and Innovation', description: 'Taught by Prof. B.K. Chakrabarty.', stream: 'Design Engineering', credits: 3, weeks: 12 },
+    { title: 'Enclosure Design Of Electronics Equipment', description: 'A course on the design of enclosures for electronic equipment.', stream: 'Design Engineering', credits: 3, weeks: 12 },
 
 
     // Mathematics
@@ -173,6 +175,8 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Digital Switching - I', description: 'A course on digital switching principles.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Spread Spectrum Communications And Jamming', description: 'A course on spread spectrum communications and jamming.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Basics of software-defined radios and practical applications', description: 'Learn the basics of software-defined radios and their practical applications.', stream: 'Electronics & Communication Engineering', credits: 1, weeks: 4 },
+    { title: 'Modern Digital Communication Techniques', description: 'A course on Modern Digital Communication Techniques.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Fundamentals of semiconductor devices', description: 'A course on the Fundamentals of semiconductor devices.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
 
 
     // Electrical Engineering
@@ -182,7 +186,6 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'System Design Through Verilog', description: 'A course on system design using Verilog.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
     { title: 'Applied Electromagnetics For Engineers', description: 'A course on applied electromagnetics for engineers.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
     { title: 'Advances In Uhv Transmission And Distribution', description: 'A course on advances in UHV transmission and distribution.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
-    { title: 'Enclosure Design Of Electronics Equipment', description: 'A course on the design of enclosures for electronic equipment.', stream: 'Design Engineering', credits: 3, weeks: 12 },
     { title: 'Microelectronics: Devices To Circuits', description: 'A course on microelectronics, from devices to circuits.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Control systems', description: 'A course on control systems.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
     { title: 'Fundamentals of Power Electronics', description: 'A course on the fundamentals of power electronics.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
@@ -344,6 +347,7 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Technical English For Engineers', description: 'A course on technical English for engineers.', stream: 'Humanities', credits: 2, weeks: 8 },
     { title: 'German - I', description: 'An introductory course to the German language.', stream: 'Humanities', credits: 3, weeks: 12 },
     { title: 'The Science of Happiness and Wellbeing', description: 'A course on the science of happiness and well-being.', stream: 'Humanities', credits: 2, weeks: 8 },
+    { title: 'Intellectual Property Rights and Competition Law', description: 'A course on Intellectual Property Rights and Competition Law.', stream: 'Humanities', credits: 2, weeks: 8 },
 
 
     // Management
@@ -403,6 +407,7 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Product And Brand Management', description: 'A course on product and brand management.', stream: 'Management', credits: 3, weeks: 12 },
     { title: 'Services Marketing: Integrating People, Technology, Strategy', description: 'A course on services marketing integrating people, technology, and strategy.', stream: 'Management', credits: 2, weeks: 8 },
     { title: 'Operations And Supply Chain Management', description: 'A course on operations and supply chain management.', stream: 'Management', credits: 3, weeks: 12 },
+    { title: 'Understanding Incubation and Entrepreneurship', description: 'A course on Understanding Incubation and Entrepreneurship.', stream: 'Management', credits: 3, weeks: 12 },
 
 
     // Mechanical Engineering
