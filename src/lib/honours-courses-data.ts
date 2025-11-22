@@ -98,9 +98,11 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Introduction to Programming in C', description: 'An introductory course on programming in C.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
     { title: 'Cloud Computing', description: 'A comprehensive course on Cloud Computing.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Introduction To Machine Learning - IITKGP', description: 'An introductory course on Machine Learning from IIT Kharagpur.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
-    { title: 'Programming In Java', description: 'A detailed course on programming in Java.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Social Network Analysis', description: 'A course on social network analysis.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Design & Implementation Of Human-Computer Interfaces', description: 'A course on the design and implementation of human-computer interfaces.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Data Structure And Algorithms Using Java', description: 'A course on data structures and algorithms using Java.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Python For Data Science', description: 'An introductory course on Python for data science.', stream: 'Computer Science & Engineering', credits: 1, weeks: 4 },
+
 
     // Design Engineering
     { title: 'System Design for Sustainability', description: 'Taught by Prof. Sharmistha Banerjee.', stream: 'Design Engineering', credits: 3, weeks: 12 },
@@ -128,7 +130,6 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Op-Amp Practical Applications: Design, Simulation & Implementation', description: 'Taught by Prof. Hardik Jeetendra Pandya.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Sensors and Actuators', description: 'Taught by Prof. Hardik J Pandya.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
     { title: 'Pattern Recognition and Application', description: 'Taught by Prof. Prabir Kumar Biswas.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
-    { title: 'Applied Optimization for Wireless, Machine Learning, Big Data', description: 'Taught by Prof. Aditya K. Jagannatham.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Fabrication Techniques for MEMS-Based Sensors: Clinical Perspective', description: 'Taught by Prof. Hardik Jeetendra Pandya.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Introductory Neuroscience & Neuro-Instrumentation', description: 'Taught by Prof. Mahesh Jayachandra.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Advanced Linear Continuous Control Systems: Applications with MATLAB Programming and Simulink', description: 'Taught by Prof. Yogesh Vijay Hote.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
@@ -158,6 +159,9 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'An Introduction To Coding Theory', description: 'An introductory course to coding theory.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
     { title: 'Smart Grid: Basics To Advanced Technologies', description: 'A course on Smart Grid, from basics to advanced technologies.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Fundamentals Of Micro And Nanofabrication', description: 'A course on the fundamentals of micro and nanofabrication.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Discrete Time Signal Processing', description: 'An introductory course on discrete time signal processing.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
+    { title: 'Fiber Optic Communication Technology', description: 'A course on fiber optic communication technology.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Applied Optimization For Wireless, Machine Learning, Big Data', description: 'A course on applied optimization for wireless, machine learning, and big data.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
 
     // Electrical Engineering
     { title: 'Introduction to Smart Grid', description: 'Taught by Prof. N.P. Padhy.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
@@ -165,7 +169,6 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'VLSI Interconnects', description: 'An introductory course on VLSI interconnects.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
     { title: 'System Design Through Verilog', description: 'A course on system design using Verilog.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
     { title: 'Applied Electromagnetics For Engineers', description: 'A course on applied electromagnetics for engineers.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
-    { title: 'Smart Grid: Basics To Advanced Technologies', description: 'A course on smart grid technologies, from basics to advanced.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
     { title: 'Advances In Uhv Transmission And Distribution', description: 'A course on advances in UHV transmission and distribution.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
     { title: 'Enclosure Design Of Electronics Equipment', description: 'A course on the design of enclosures for electronic equipment.', stream: 'Design Engineering', credits: 3, weeks: 12 },
     { title: 'Microelectronics: Devices To Circuits', description: 'A course on microelectronics, from devices to circuits.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
@@ -232,7 +235,6 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Thermodynamics for Biological Systems: Classical and Statistical Aspect', description: 'A course on thermodynamics for biological systems.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Maternal Infant Young Child Nutrition', description: 'A course on nutrition for mothers and young children.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Introduction To Developmental Biology', description: 'A course on developmental biology.', stream: 'Biotechnology', credits: 2, weeks: 8 },
-    { title: 'Plant Developmental Biology', description: 'A course on plant developmental biology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Immunology', description: 'An introductory course on immunology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Metabolic Engineering', description: 'A course on metabolic engineering.', stream: 'Biotechnology', credits: 2, weeks: 8 },
     { title: 'Plant Physiology, Plant Growth and Development and Plant Biotechnology', description: 'A comprehensive course on plant physiology and biotechnology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
@@ -371,7 +373,6 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Six Sigma', description: 'An introductory course on Six Sigma.', stream: 'Management', credits: 3, weeks: 12 },
     { title: 'The Future Of Manufacturing Business: Role Of It', description: 'A course on the role of IT in manufacturing business.', stream: 'Management', credits: 2, weeks: 8 },
     { title: 'Entrepreneurship', description: 'A course on entrepreneurship.', stream: 'Management', credits: 3, weeks: 12 },
-    { title: 'E-Business', description: 'A comprehensive course on E-Business.', stream: 'Management', credits: 3, weeks: 12 },
 
     // Mechanical Engineering
     { title: 'Advanced Materials and Processes', description: 'Taught by Prof. Jayanta Das.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
