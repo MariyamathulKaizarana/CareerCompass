@@ -96,6 +96,9 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Data Structures and algorithms', description: 'A course on data structures and algorithms.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
     { title: 'Introduction to Database Systems', description: 'An introductory course on database systems.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Introduction to Programming in C', description: 'An introductory course on programming in C.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Cloud Computing', description: 'A comprehensive course on Cloud Computing.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Introduction To Machine Learning - IITKGP', description: 'An introductory course on Machine Learning from IIT Kharagpur.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Programming In Java', description: 'A detailed course on programming in Java.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
 
     // Design Engineering
     { title: 'System Design for Sustainability', description: 'Taught by Prof. Sharmistha Banerjee.', stream: 'Design Engineering', credits: 3, weeks: 12 },
@@ -150,6 +153,8 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'A Brief Introduction To Wireless Communication', description: 'An introductory course on wireless communication.', stream: 'Electronics & Communication Engineering', credits: 1, weeks: 4 },
     { title: 'Principles Of Communication Systems - Part 1', description: 'An introductory course on communication systems.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Principles Of Signals And Systems', description: 'A course on the principles of signals and systems.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'An Introduction To Coding Theory', description: 'An introductory course to coding theory.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
+    { title: 'Smart Grid: Basics To Advanced Technologies', description: 'A course on Smart Grid, from basics to advanced technologies.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
 
     // Electrical Engineering
     { title: 'Introduction to Smart Grid', description: 'Taught by Prof. N.P. Padhy.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
@@ -168,6 +173,11 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Spectroscopic Techniques for Pharmaceutical and Biopharmaceutical Industries', description: 'Taught by Prof. Shashank Deep.', stream: 'Chemistry', credits: 3, weeks: 12 },
     { title: 'Chemical Process Safety', description: 'Taught by Prof. Shishir Sinha.', stream: 'Chemical Engineering', credits: 2, weeks: 8 },
     { title: 'Technologies for Clean and Renewable Energy Production', description: 'Taught by Prof. P. Mondal.', stream: 'Chemical Engineering', credits: 3, weeks: 12 },
+    { title: 'Colloids And Surfaces', description: 'An introductory course on colloids and surfaces.', stream: 'Chemical Engineering', credits: 2, weeks: 8 },
+    { title: 'Chemical Process Intensification', description: 'A course on chemical process intensification.', stream: 'Chemical Engineering', credits: 3, weeks: 12 },
+    { title: 'Transport Phenomena Of Non-Newtonian Fluids', description: 'A course on transport phenomena of non-newtonian fluids.', stream: 'Chemical Engineering', credits: 3, weeks: 12 },
+    { title: 'Natural Gas Engineering', description: 'An introductory course on natural gas engineering.', stream: 'Chemical Engineering', credits: 2, weeks: 8 },
+    { title: 'Aspen Plus® Simulation Software - A Basic Course For Beginners', description: 'A beginner\'s course on Aspen Plus simulation software.', stream: 'Chemical Engineering', credits: 3, weeks: 12 },
 
     // Biotechnology and Bioengineering
     { title: 'Drug Delivery: Principles and Applications', description: 'Taught by Prof. Rachit Agarwal.', stream: 'Biotechnology', credits: 3, weeks: 12 },
@@ -350,6 +360,7 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Six Sigma', description: 'An introductory course on Six Sigma.', stream: 'Management', credits: 3, weeks: 12 },
     { title: 'The Future Of Manufacturing Business: Role Of It', description: 'A course on the role of IT in manufacturing business.', stream: 'Management', credits: 2, weeks: 8 },
     { title: 'Entrepreneurship', description: 'A course on entrepreneurship.', stream: 'Management', credits: 3, weeks: 12 },
+    { title: 'E-Business', description: 'A comprehensive course on E-Business.', stream: 'Management', credits: 3, weeks: 12 },
 
     // Mechanical Engineering
     { title: 'Advanced Materials and Processes', description: 'Taught by Prof. Jayanta Das.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
@@ -416,6 +427,7 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Steam And Gas Power Systems', description: 'A course on steam and gas power systems.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
     { title: 'Turbomachinery Aerodynamics', description: 'A course on turbomachinery aerodynamics.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
     { title: 'Advanced Thermodynamics', description: 'An advanced course on thermodynamics.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
+    { title: 'Applied Thermodynamics For Engineers', description: 'A course on applied thermodynamics for engineers.', stream: 'Mechanical Engineering', credits: 3, weeks: 12 },
 
     // Other / Multidisciplinary
     { title: 'Introduction to Research', description: 'Taught by Prof. Prathap Haridoss.', stream: 'Multidisciplinary', credits: 1, weeks: 4 },
@@ -426,6 +438,8 @@ export const honoursCourses: HonoursCourse[] = [
     
     // Physics
     { title: 'Solar Energy Engineering and Technology', description: 'Taught by Prof. Pankaj Kalita.', stream: 'Physics', credits: 3, weeks: 12 },
+    { title: 'Introduction To Astrophysical Fluids', description: 'An introductory course on astrophysical fluids.', stream: 'Physics', credits: 3, weeks: 12 },
+    { title: 'Advanced Quantum Mechanics With Applications', description: 'A course on advanced quantum mechanics with applications.', stream: 'Physics', credits: 2, weeks: 8 },
 
     // Earth Science
     { title: 'Global Navigation Satellite Systems And Applications', description: 'Taught by Prof. Arun K. Saraf.', stream: 'Earth Science', credits: 3, weeks: 12 },
