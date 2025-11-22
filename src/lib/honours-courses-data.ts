@@ -71,7 +71,7 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Information Security - 5 - Secure Systems Engineering', description: 'A course on secure systems engineering.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
     { title: 'Introduction to Embedded System Design', description: 'An introductory course on embedded system design.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Introduction To Soft Computing', description: 'An introductory course on soft computing.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
-    { title: 'Problem Solving Through Programming In C', description: 'Learn problem-solving using C programming.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Problem Solving Through Programming In C', description: 'Learn problem-solving using C programming.', stream: 'Computer Science & Engineering', credits: 3- 12 },
     { title: 'Programming in Modern C++', description: 'A course on modern C++ programming.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Secure Computation: Part I', description: 'An introductory course on secure computation.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Foundation of Cloud IoT Edge ML', description: 'An introductory course on the convergence of Cloud, IoT, Edge, and ML.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
@@ -126,10 +126,23 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Introductory Neuroscience & Neuro-Instrumentation', description: 'Taught by Prof. Mahesh Jayachandra.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Advanced Linear Continuous Control Systems: Applications with MATLAB Programming and Simulink', description: 'Taught by Prof. Yogesh Vijay Hote.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Fundamentals of Electronic Device Fabrication', description: 'Taught by Prof. Parasuraman Swaminathan.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
+    { title: 'Analog Circuits', description: 'An introductory course on analog circuits.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
+    { title: 'Analog Ic Design', description: 'A course on analog integrated circuit design.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'CMOS Digital VLSI Design', description: 'A course on CMOS digital VLSI design.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
+    { title: 'Computer Vision And Image Processing - Fundamentals And Applications', description: 'A course on computer vision and image processing.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Electronics Enclosures Thermal issues', description: 'A course on thermal issues in electronics enclosures.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
+    { title: 'Foundations of Wavelets and Multirate Digital Signal Processing', description: 'A course on wavelets and multirate digital signal processing.', stream: 'Electronics & Communication Engineering', credits: 1, weeks: 4 },
+    { title: 'Medical Image Analysis', description: 'A course on medical image analysis.', stream: 'Electronics & Communication Engineering', credits: 1, weeks: 4 },
+    { title: 'Microwave Integrated Circuits', description: 'A course on microwave integrated circuits.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
+    { title: 'Optical Wireless Communications for Beyond 5G Networks and IoT', description: 'A course on optical wireless communications for 5G and IoT.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Physics of Nanoscale Devices', description: 'A course on the physics of nanoscale devices.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     
     // Electrical Engineering
     { title: 'Introduction to Smart Grid', description: 'Taught by Prof. N.P. Padhy.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
     { title: 'Design of Photovoltaic Systems', description: 'A comprehensive course on designing photovoltaic systems.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
+    { title: 'VLSI Interconnects', description: 'An introductory course on VLSI interconnects.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
+    { title: 'System Design Through Verilog', description: 'A course on system design using Verilog.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
+    { title: 'Applied Electromagnetics For Engineers', description: 'A course on applied electromagnetics for engineers.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
 
 
     // Chemistry & Chemical Engineering
@@ -361,4 +374,3 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Electrical Distribution System Analysis', description: 'A course on the analysis of electrical distribution systems.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
     { title: 'Digital Control in Switched Mode Power Converters and FPGA-based Prototyping', description: 'A course on digital control in power converters.', stream: 'Electrical Engineering', credits: 3, weeks: 12 }
 ];
-
