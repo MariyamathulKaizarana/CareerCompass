@@ -60,6 +60,20 @@ const SalaryDisplay = ({ salary }: { salary: Salary | string }) => {
     );
 }
 
+const SkillsList = ({ skills }: { skills: string[] }) => {
+    return (
+        <ul className="space-y-2">
+            {skills.map((skill, index) => (
+                <li key={index} className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-accent mt-1 mr-2 flex-shrink-0" />
+                    <span className="text-foreground font-medium">{skill}</span>
+                </li>
+            ))}
+        </ul>
+    );
+};
+
+
 export default function CareerDetailPage({ params }: CareerDetailPageProps) {
   const career = getCareerBySlug(params.slug);
 
@@ -70,19 +84,19 @@ export default function CareerDetailPage({ params }: CareerDetailPageProps) {
   const image = findImage(career.title);
 
   const detailCards = [
-    { icon: <GraduationCap className="h-6 w-6 text-accent" />, title: "Required Courses", content: career.courses.join(', ') },
-    { icon: <CheckCircle className="h-6 w-6 text-accent" />, title: "Key Skills", content: career.skills.join(', ') },
+    { icon: <GraduationCap className="h-6 w-6 text-accent" />, title: "Required Courses", content: career.courses },
+    { icon: <CheckCircle className="h-6 w-6 text-accent" />, title: "Key Skills", content: career.skills, isSkillsList: true },
     { icon: <Map className="h-6 w-6 text-accent" />, title: "Career Roadmap", content: career.roadmap, isRoadmap: true },
     { icon: <DollarSign className="h-6 w-6 text-accent" />, title: "Average Salary", content: career.avgSalary, isSalary: true },
     { icon: <TrendingUp className="h-6 w-6 text-accent" />, title: "Future Scope", content: career.futureScope },
   ];
 
   if (career.exams && career.exams.length > 0) {
-    detailCards.push({ icon: <Trophy className="h-6 w-6 text-accent" />, title: "Competitive Exams", content: career.exams.join(', ') });
+    detailCards.push({ icon: <Trophy className="h-6 w-6 text-accent" />, title: "Competitive Exams", content: career.exams });
   }
 
   if (career.topColleges && career.topColleges.length > 0) {
-    detailCards.push({ icon: <University className="h-6 w-6 text-accent" />, title: "Top Colleges in India", content: career.topColleges.join(', ') });
+    detailCards.push({ icon: <University className="h-6 w-6 text-accent" />, title: "Top Colleges in India", content: career.topColleges });
   }
 
   if (career.admissionProcess) {
@@ -123,12 +137,14 @@ export default function CareerDetailPage({ params }: CareerDetailPageProps) {
                             {item.icon}
                         </CardHeader>
                         <CardContent>
-                            {item.isRoadmap ? (
+                           {item.isSkillsList ? (
+                                <SkillsList skills={item.content as string[]} />
+                            ) : item.isRoadmap ? (
                                 <Roadmap roadmap={item.content as string} />
                             ) : item.isSalary ? (
                                 <SalaryDisplay salary={item.content as Salary | string} />
                             ) : (
-                                <div className="text-lg font-semibold text-foreground">{item.content as string}</div>
+                                <div className="text-lg font-semibold text-foreground">{Array.isArray(item.content) ? item.content.join(', ') : item.content}</div>
                             )}
                         </CardContent>
                     </Card>
