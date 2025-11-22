@@ -36,6 +36,23 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Natural Language Processing', description: 'An introductory course on Natural Language Processing.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Modern Algebra', description: 'A course on Modern Algebra.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
     { title: 'Data Science For Engineers', description: 'A course on Data Science for engineering students.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Foundations Of Cryptography', description: 'A course on the foundations of cryptography.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Introduction To Soft Computing', description: 'A course on soft computing techniques.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Introduction To Internet Of Things', description: 'An introductory course on the Internet of Things.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Introduction To Blockchain Technology And Applications', description: 'An introductory course on blockchain technology.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Reinforcement Learning', description: 'A course on reinforcement learning.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Google Cloud Computing Foundations', description: 'Foundational course on Google Cloud.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Programming In Java', description: 'A comprehensive course on Java programming.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Getting Started With Competitive Programming', description: 'Learn the fundamentals of competitive programming.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Advanced Computer Networks', description: 'An advanced course on computer networks.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Advanced Graph Theory', description: 'An advanced course on graph theory.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Block Chain and its Applications', description: 'Learn about blockchain and its applications.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Circuit Complexity Theory', description: 'A course on circuit complexity theory.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Cloud Computing and Distributed Systems', description: 'A course on cloud and distributed systems.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Computational Number Theory and Algebra', description: 'A course on computational number theory and algebra.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Data Mining', description: 'An introductory course on data mining.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Digital Design with Verilog', description: 'A course on digital design using Verilog.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Edge Computing', description: 'An introductory course on edge computing.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
 
 
     // Design Engineering
