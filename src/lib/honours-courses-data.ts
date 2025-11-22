@@ -53,7 +53,17 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Data Mining', description: 'An introductory course on data mining.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
     { title: 'Digital Design with Verilog', description: 'A course on digital design using Verilog.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Edge Computing', description: 'An introductory course on edge computing.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
-
+    { title: 'Embedded System Design with ARM', description: 'Learn to design embedded systems with ARM.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Fundamental Algorithms: Design and Analysis', description: 'A course on fundamental algorithm design and analysis.', stream: 'Computer Science & Engineering', credits: 1, weeks: 4 },
+    { title: 'Optimisation for Machine Learning: Theory and Implementation(Hindi)', description: 'Learn machine learning optimization in Hindi.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Parallel Computer Architecture', description: 'An advanced course on parallel computer architecture.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Quantum Algorithms and Cryptography', description: 'A course on quantum algorithms and cryptography.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Switching Circuits and Logic Design', description: 'A course on switching circuits and logic design.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Systems and Usable Security', description: 'A course on system security and usability.', stream: 'Computer Science & Engineering', credits: 1, weeks: 4 },
+    { title: 'User-centric Computing For Human-Computer Interaction', description: 'Learn about user-centric computing for HCI.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Linear programming and its applications to computer science', description: 'A course on linear programming and its applications.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Affective Computing', description: 'A course on affective computing.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'AI: Constraint Satisfaction', description: 'A course on AI constraint satisfaction.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
 
     // Design Engineering
     { title: 'System Design for Sustainability', description: 'Taught by Prof. Sharmistha Banerjee.', stream: 'Design Engineering', credits: 3, weeks: 12 },
