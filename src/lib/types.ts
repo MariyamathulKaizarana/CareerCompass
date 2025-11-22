@@ -2,6 +2,12 @@ import type { User as FirebaseUser } from 'firebase/auth';
 
 export interface User extends FirebaseUser {}
 
+export interface Salary {
+    fresher: string;
+    midLevel: string;
+    senior: string;
+}
+
 export interface Career {
   id: string;
   slug: string;
@@ -15,7 +21,7 @@ export interface Career {
   topColleges?: string[];
   admissionProcess?: string;
   roadmap: string;
-  avgSalary: string;
+  avgSalary: Salary | string; // Keep string for backward compatibility with old format
   futureScope: string;
 }
 
@@ -37,7 +43,7 @@ export interface CareerSuggestion {
   requiredSkills: string[];
   requiredCourses: string[];
   careerRoadmap: string;
-  averageSalary: string;
+  averageSalary: Salary;
   futureScope: string;
 }
 

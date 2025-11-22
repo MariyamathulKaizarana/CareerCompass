@@ -5,9 +5,10 @@ import ReactMarkdown from 'react-markdown';
 import { AppShell } from '@/components/AppShell';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Loader2, ServerCrash, ArrowLeft } from 'lucide-react';
+import { Loader2, ServerCrash, ArrowLeft, DollarSign } from 'lucide-react';
 import { generateCareerReport, type GenerateCareerReportOutput } from '@/ai/flows/generate-career-report';
 import { useRouter } from 'next/navigation';
+import type { Salary } from '@/lib/types';
 
 interface ReportClientPageProps {
   careerName: string;
@@ -28,6 +29,25 @@ const MarkdownRenderer = ({ content }: { content: string }) => {
         </ReactMarkdown>
     );
 };
+
+const SalaryDisplay = ({ salary }: { salary: Salary }) => {
+    return (
+        <div className="space-y-2">
+            <div className="flex justify-between items-center">
+                <span className="text-muted-foreground">Fresher (0-2 yrs)</span>
+                <span className="font-semibold text-foreground">{salary.fresher}</span>
+            </div>
+            <div className="flex justify-between items-center">
+                <span className="text-muted-foreground">Mid-Level (3-7 yrs)</span>
+                <span className="font-semibold text-foreground">{salary.midLevel}</span>
+            </div>
+            <div className="flex justify-between items-center">
+                <span className="text-muted-foreground">Senior (8+ yrs)</span>
+                <span className="font-semibold text-foreground">{salary.senior}</span>
+            </div>
+        </div>
+    );
+}
 
 
 export default function ReportClientPage({ careerName }: ReportClientPageProps) {
@@ -62,7 +82,6 @@ export default function ReportClientPage({ careerName }: ReportClientPageProps) 
     { title: "Required Skills", content: Array.isArray(report.requiredSkills) ? report.requiredSkills.join(', ') : report.requiredSkills },
     { title: "Recommended Courses", content: Array.isArray(report.courses) ? report.courses.join(', ') : report.courses },
     { title: "Career Roadmap", content: report.careerRoadmap, isMarkdown: true },
-    { title: "Average Salary", content: report.averageSalary },
     { title: "Future Scope", content: report.futureScope, isMarkdown: true },
   ] : [];
 
@@ -100,6 +119,16 @@ export default function ReportClientPage({ careerName }: ReportClientPageProps) 
               <CardContent>
                 <p className="text-lg text-muted-foreground">{report.description}</p>
               </CardContent>
+            </Card>
+            
+             <Card>
+                <CardHeader className="flex flex-row items-center justify-between pb-2">
+                    <CardTitle className="text-sm font-medium">Average Salary</CardTitle>
+                    <DollarSign className="h-6 w-6 text-accent" />
+                </CardHeader>
+                <CardContent>
+                   <SalaryDisplay salary={report.averageSalary} />
+                </CardContent>
             </Card>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1">

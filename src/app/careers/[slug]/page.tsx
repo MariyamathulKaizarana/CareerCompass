@@ -8,9 +8,10 @@ import { placeholderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { BookOpen, CheckCircle, DollarSign, GraduationCap, Map, TrendingUp, Trophy, University } from 'lucide-react';
+import { BookOpen, CheckCircle, DollarSign, GraduationCap, Map, TrendingUp, Trophy, University, Briefcase } from 'lucide-react';
 import CareerDetailClient from './CareerDetailClient';
 import FavoriteButton from '@/components/FavoriteButton';
+import type { Salary } from '@/lib/types';
 
 
 interface CareerDetailPageProps {
@@ -37,6 +38,28 @@ const Roadmap = ({ roadmap }: { roadmap: string }) => {
     );
 };
 
+const SalaryDisplay = ({ salary }: { salary: Salary | string }) => {
+    if (typeof salary === 'string') {
+        return <div className="text-lg font-semibold text-foreground">{salary}</div>;
+    }
+    return (
+        <div className="space-y-2">
+            <div className="flex justify-between items-center">
+                <span className="text-muted-foreground">Fresher (0-2 yrs)</span>
+                <span className="font-semibold text-foreground">{salary.fresher}</span>
+            </div>
+            <div className="flex justify-between items-center">
+                <span className="text-muted-foreground">Mid-Level (3-7 yrs)</span>
+                <span className="font-semibold text-foreground">{salary.midLevel}</span>
+            </div>
+            <div className="flex justify-between items-center">
+                <span className="text-muted-foreground">Senior (8+ yrs)</span>
+                <span className="font-semibold text-foreground">{salary.senior}</span>
+            </div>
+        </div>
+    );
+}
+
 export default function CareerDetailPage({ params }: CareerDetailPageProps) {
   const career = getCareerBySlug(params.slug);
 
@@ -50,7 +73,7 @@ export default function CareerDetailPage({ params }: CareerDetailPageProps) {
     { icon: <GraduationCap className="h-6 w-6 text-accent" />, title: "Required Courses", content: career.courses.join(', ') },
     { icon: <CheckCircle className="h-6 w-6 text-accent" />, title: "Key Skills", content: career.skills.join(', ') },
     { icon: <Map className="h-6 w-6 text-accent" />, title: "Career Roadmap", content: career.roadmap, isRoadmap: true },
-    { icon: <DollarSign className="h-6 w-6 text-accent" />, title: "Average Salary", content: career.avgSalary },
+    { icon: <DollarSign className="h-6 w-6 text-accent" />, title: "Average Salary", content: career.avgSalary, isSalary: true },
     { icon: <TrendingUp className="h-6 w-6 text-accent" />, title: "Future Scope", content: career.futureScope },
   ];
 
@@ -101,9 +124,11 @@ export default function CareerDetailPage({ params }: CareerDetailPageProps) {
                         </CardHeader>
                         <CardContent>
                             {item.isRoadmap ? (
-                                <Roadmap roadmap={item.content} />
+                                <Roadmap roadmap={item.content as string} />
+                            ) : item.isSalary ? (
+                                <SalaryDisplay salary={item.content as Salary | string} />
                             ) : (
-                                <div className="text-lg font-semibold text-foreground">{item.content}</div>
+                                <div className="text-lg font-semibold text-foreground">{item.content as string}</div>
                             )}
                         </CardContent>
                     </Card>

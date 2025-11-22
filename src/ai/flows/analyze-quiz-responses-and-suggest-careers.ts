@@ -16,13 +16,19 @@ const QuizResponseSchema = z.object({
 });
 export type QuizResponse = z.infer<typeof QuizResponseSchema>;
 
+const SalarySchema = z.object({
+    fresher: z.string().describe('Salary range for a fresher (0-2 years experience).'),
+    midLevel: z.string().describe('Salary range for a mid-level professional (3-7 years experience).'),
+    senior: z.string().describe('Salary range for a senior-level professional (8+ years experience).'),
+});
+
 const CareerSuggestionSchema = z.object({
   careerPath: z.string().describe('The suggested career path.'),
   description: z.string().describe('A short description of the career path.'),
   requiredSkills: z.array(z.string()).describe('List of required skills for the career.'),
   requiredCourses: z.array(z.string()).describe('List of required courses for the career.'),
   careerRoadmap: z.string().describe('The career roadmap (education -> internships -> job roles).'),
-  averageSalary: z.string().describe('The average salary for this career path in Indian Rupees (INR), formatted as "₹X-Y LPA".'),
+  averageSalary: SalarySchema.describe('An object containing salary ranges for different experience levels in Indian Rupees (INR), formatted as "₹X-Y LPA".'),
   futureScope: z.string().describe('The future scope and outlook for this career.'),
 });
 export type CareerSuggestion = z.infer<typeof CareerSuggestionSchema>;
@@ -71,7 +77,7 @@ For each suggestion, you MUST include all of the following fields: "careerPath",
 
 **CRITICAL FORMATTING RULES**:
 - The "requiredSkills" and "requiredCourses" fields MUST be JSON arrays of strings.
-- The "averageSalary" field MUST be a single string formatted as "₹X-Y LPA" (e.g., "₹8-12 LPA"). Do not return it as an object.
+- The "averageSalary" field MUST be a JSON object with three keys: "fresher", "midLevel", and "senior". Each key should have a string value formatted as "₹X-Y LPA" (e.g., "₹8-12 LPA").
 
 Format your response as a JSON array of career suggestions.
 `,

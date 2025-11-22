@@ -7,10 +7,29 @@ import { useRouter } from 'next/navigation';
 import { AppShell } from '@/components/AppShell';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import type { CareerSuggestion } from '@/lib/types';
+import type { CareerSuggestion, Salary } from '@/lib/types';
 import { ArrowRight, FileText, Loader2, RefreshCw } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { careers } from '@/lib/career-data';
+
+const SalaryDisplay = ({ salary }: { salary: Salary }) => {
+    return (
+        <div className="space-y-1 text-sm">
+            <div className="flex justify-between items-center">
+                <span className="text-muted-foreground">Fresher</span>
+                <span className="font-medium text-foreground">{salary.fresher}</span>
+            </div>
+            <div className="flex justify-between items-center">
+                <span className="text-muted-foreground">Mid-Level</span>
+                <span className="font-medium text-foreground">{salary.midLevel}</span>
+            </div>
+            <div className="flex justify-between items-center">
+                <span className="text-muted-foreground">Senior</span>
+                <span className="font-medium text-foreground">{salary.senior}</span>
+            </div>
+        </div>
+    );
+}
 
 export default function ResultsPage() {
   const [suggestions, setSuggestions] = useState<CareerSuggestion[]>([]);
@@ -75,16 +94,18 @@ export default function ResultsPage() {
                             <CardTitle className="font-headline text-2xl">{suggestion.careerPath}</CardTitle>
                             <CardDescription>{suggestion.description}</CardDescription>
                         </CardHeader>
-                        <CardContent className="flex-grow">
-                            <h3 className="mb-2 font-semibold text-foreground">Top Skills</h3>
-                            <div className="flex flex-wrap gap-2">
-                                {suggestion.requiredSkills.slice(0, 4).map(skill => (
-                                    <Badge key={skill} variant="secondary">{skill}</Badge>
-                                ))}
+                        <CardContent className="flex-grow space-y-4">
+                            <div>
+                                <h3 className="mb-2 font-semibold text-foreground">Top Skills</h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {suggestion.requiredSkills.slice(0, 4).map(skill => (
+                                        <Badge key={skill} variant="secondary">{skill}</Badge>
+                                    ))}
+                                </div>
                             </div>
-                            <div className='mt-4'>
-                                <h3 className="mb-2 font-semibold text-foreground">Average Salary</h3>
-                                <p className='text-lg font-medium text-foreground'>{suggestion.averageSalary}</p>
+                            <div>
+                                <h3 className="mb-2 font-semibold text-foreground">Salary Outlook</h3>
+                                <SalaryDisplay salary={suggestion.averageSalary} />
                             </div>
                         </CardContent>
                         <CardFooter>

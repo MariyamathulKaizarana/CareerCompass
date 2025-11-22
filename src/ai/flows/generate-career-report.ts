@@ -17,6 +17,13 @@ const GenerateCareerReportInputSchema = z.object({
 });
 export type GenerateCareerReportInput = z.infer<typeof GenerateCareerReportInputSchema>;
 
+const SalarySchema = z.object({
+    fresher: z.string().describe('Salary range for a fresher (0-2 years experience).'),
+    midLevel: z.string().describe('Salary range for a mid-level professional (3-7 years experience).'),
+    senior: z.string().describe('Salary range for a senior-level professional (8+ years experience).'),
+});
+
+
 const GenerateCareerReportOutputSchema = z.object({
   description: z.string().describe('A short description of the career path.'),
   requiredSkills: z.array(z.string()).describe('An array of required skills for the career path.'),
@@ -24,7 +31,7 @@ const GenerateCareerReportOutputSchema = z.object({
   careerRoadmap: z
     .string()
     .describe('The career roadmap, including education, internships, and job roles.'),
-  averageSalary: z.string().describe('The average salary for the career path in Indian Rupees (INR), formatted as "₹X-Y LPA".'),
+  averageSalary: SalarySchema.describe('An object containing salary ranges for different experience levels in Indian Rupees (INR), formatted as "₹X-Y LPA".'),
   futureScope: z.string().describe('The future scope of the career path.'),
 });
 export type GenerateCareerReportOutput = z.infer<typeof GenerateCareerReportOutputSchema>;
@@ -44,13 +51,13 @@ Description: A short description of the career path.
 Required Skills: The required skills for the career path.
 Courses: The courses required for the career path.
 Career Roadmap: The career roadmap, including education, internships, and job roles.
-Average Salary: The average salary for the career path in Indian Rupees (INR), formatted as "₹X-Y LPA". For example: "₹8-12 LPA".
+Average Salary: The average salary for the career path in Indian Rupees (INR).
 Future Scope: The future scope of the career path.
 
 **CRITICAL FORMATTING RULES**:
 - The "requiredSkills" and "courses" fields MUST be JSON arrays of strings.
 - The "careerRoadmap" field MUST be a single string formatted with markdown for readability.
-- The "averageSalary" field MUST be a single string formatted as "₹X-Y LPA".
+- The "averageSalary" field MUST be a JSON object with three keys: "fresher", "midLevel", and "senior". Each key should have a string value formatted as "₹X-Y LPA" (e.g., "₹8-12 LPA").
 
 Return your response as a single JSON object with keys: "description", "requiredSkills", "courses", "careerRoadmap", "averageSalary", "futureScope".
 `,
