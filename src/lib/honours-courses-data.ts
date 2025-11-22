@@ -70,12 +70,11 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'GPU Architectures and Programming', description: 'A course on GPU architectures and programming.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Information Security - 5 - Secure Systems Engineering', description: 'A course on secure systems engineering.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
     { title: 'Introduction to Embedded System Design', description: 'An introductory course on embedded system design.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
-    { title: 'Introduction To Internet Of Things', description: 'An introductory course on the Internet of Things.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Introduction To Soft Computing', description: 'An introductory course on soft computing.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
     { title: 'Problem Solving Through Programming In C', description: 'Learn problem-solving using C programming.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Programming in Modern C++', description: 'A course on modern C++ programming.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
-    { title: 'Reinforcement Learning', description: 'A comprehensive course on reinforcement learning.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Secure Computation: Part I', description: 'An introductory course on secure computation.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
+    { title: 'Foundation of Cloud IoT Edge ML', description: 'An introductory course on the convergence of Cloud, IoT, Edge, and ML.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
 
     // Design Engineering
     { title: 'System Design for Sustainability', description: 'Taught by Prof. Sharmistha Banerjee.', stream: 'Design Engineering', credits: 3, weeks: 12 },
@@ -191,5 +190,15 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Stress Management', description: 'Taught by Prof. Rajlakshmi Guha.', stream: 'Multidisciplinary', credits: 1, weeks: 4 },
     { title: 'Strategies for Learner-centric e-learning in STEM disciplines', description: 'Taught by Prof. Sahana Murthy.', stream: 'Multidisciplinary', credits: 2, weeks: 8 },
     { title: 'Teaching and Learning in General Programs: TALG', description: 'Taught by Prof. N J Rao.', stream: 'Multidisciplinary', credits: 3, weeks: 12 },
-    { title: 'Global Navigation Satellite Systems And Applications', description: 'Taught by Prof. Arun K. Saraf.', stream: 'Earth Science', credits: 3, weeks: 12 }
+    { title: 'Global Navigation Satellite Systems And Applications', description: 'Taught by Prof. Arun K. Saraf.', stream: 'Earth Science', credits: 3, weeks: 12 },
+
+    // Aerospace Engineering
+    { title: 'Aircraft Stability And Control', description: 'A course on aircraft stability and control.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
+    { title: 'Introduction To Airplane Performance', description: 'An introductory course on airplane performance.', stream: 'Aerospace Engineering', credits: 2, weeks: 8 },
+    { title: 'Introduction To Air breathing Propulsion', description: 'An introductory course on air-breathing propulsion systems.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
+    { title: 'Design Of Fixed Wing Unmanned Aerial Vehicles', description: 'A course on designing fixed-wing UAVs.', stream: 'Aerospace Engineering', credits: 2, weeks: 8 },
+    { title: 'Introduction To Aircraft Design', description: 'An introductory course on aircraft design principles.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
+    { title: 'Space Flight Mechanics', description: 'A course on the mechanics of space flight.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 },
+    { title: 'Vibration And Structural Dynamics', description: 'A course on vibration and structural dynamics in aerospace.', stream: 'Aerospace Engineering', credits: 2, weeks: 8 },
+    { title: 'Aerodynamic Design Of Axial Flow Compressors & Fans', description: 'A course on the aerodynamic design of compressors and fans.', stream: 'Aerospace Engineering', credits: 3, weeks: 12 }
 ];
