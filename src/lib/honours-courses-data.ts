@@ -37,7 +37,7 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Modern Algebra', description: 'A course on Modern Algebra.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
     { title: 'Data Science For Engineers', description: 'A course on Data Science for engineering students.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
     { title: 'Foundations Of Cryptography', description: 'A course on the foundations of cryptography.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
-    { title: 'Introduction To Soft Computing', description: 'A course on soft computing techniques.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
+    { title: 'Introduction To Soft Computing', description: 'An introductory course on soft computing techniques.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
     { title: 'Introduction To Internet Of Things', description: 'An introductory course on the Internet of Things.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
     { title: 'Introduction To Blockchain Technology And Applications', description: 'An introductory course on blockchain technology.', stream: 'Computer Science & Engineering', credits: 2, weeks: 8 },
     { title: 'Reinforcement Learning', description: 'A course on reinforcement learning.', stream: 'Computer Science & Engineering', credits: 3, weeks: 12 },
@@ -126,6 +126,19 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Cellular Biophysics: A Framework For Quantitative Biology', description: 'A course on cellular biophysics and quantitative biology.', stream: 'Biotechnology', credits: 2, weeks: 8 },
     { title: 'Medical Image Analysis', description: 'A course on medical image analysis.', stream: 'Biotechnology', credits: 3, weeks: 12 },
     { title: 'Computer Aided Drug Design', description: 'A course on computer-aided drug design.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Plant Cell Bioprocessing', description: 'A course on the bioprocessing of plant cells.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Bioreactors', description: 'An introductory course on bioreactors.', stream: 'Biotechnology', credits: 1, weeks: 4 },
+    { title: 'Introduction To Biomedical Imaging Systems', description: 'An introductory course on biomedical imaging systems.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Organ Printing', description: 'A course on the principles and applications of organ printing.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Genome Editing And Engineering', description: 'A comprehensive course on genome editing and engineering techniques.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Functional Genomics', description: 'An introductory course on functional genomics.', stream: 'Biotechnology', credits: 1, weeks: 4 },
+    { title: 'Conservation Geography', description: 'A course on the principles of conservation geography.', stream: 'Earth Science', credits: 3, weeks: 12 },
+    { title: 'Experimental Biotechnology', description: 'A course on experimental techniques in biotechnology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Introduction To Mechanobiology', description: 'An introductory course on mechanobiology.', stream: 'Biotechnology', credits: 2, weeks: 8 },
+    { title: 'Industrial Biotechnology', description: 'A course on the applications of biotechnology in industry.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Basics of Biology', description: 'A foundational course on the basics of biology.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Biochemistry - IITM', description: 'A comprehensive course on biochemistry from IITM.', stream: 'Biotechnology', credits: 3, weeks: 12 },
+    { title: 'Bioengineering: An Interface with Biology and Medicine', description: 'A course on the interface between bioengineering, biology, and medicine.', stream: 'Biotechnology', credits: 2, weeks: 8 },
 
 
     // Mechanical & Civil Engineering
