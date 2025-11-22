@@ -154,16 +154,11 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Foundations of Wavelets and Multirate Digital Signal Processing', description: 'A course on wavelets and multirate digital signal processing.', stream: 'Electronics & Communication Engineering', credits: 1, weeks: 4 },
     { title: 'Medical Image Analysis', description: 'A course on medical image analysis.', stream: 'Electronics & Communication Engineering', credits: 1, weeks: 4 },
     { title: 'Microwave Integrated Circuits', description: 'A course on microwave integrated circuits.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
-    { title: 'Optical Wireless Communications for Beyond 5G Networks and IoT', description: 'A course on optical wireless communications for 5G and IoT.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
-    { title: 'Physics of Nanoscale Devices', description: 'A course on the physics of nanoscale devices.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'DC Microgrid And Control Systems', description: 'A course on DC microgrids and their control systems.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
     { title: 'Electrical Distribution System Analysis', description: 'A course on the analysis of electrical distribution systems.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
     { title: 'Digital Control in Switched Mode Power Converters and FPGA-based Prototyping', description: 'A course on digital control in power converters.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
-    { title: 'Power Management Integrated Circuits', description: 'A course on Power Management Integrated Circuits.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
-    { title: 'Power System Dynamics, Control and Monitoring', description: 'A course on Power System Dynamics, Control and Monitoring.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Recent Advances in Transmission Insulators', description: 'A course on Recent Advances in Transmission Insulators.', stream: 'Electronics & Communication Engineering', credits: 1, weeks: 4 },
     { title: 'Semiconductor device modeling and Simulation', description: 'A course on Semiconductor device modeling and Simulation.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
-    { title: 'Design Of Power Electronic Converters', description: 'A course on Design Of Power Electronic Converters.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
     { title: 'Antennas', description: 'A course on antennas.', stream: 'Electronics & Communication Engineering', credits: 2, weeks: 8 },
     { title: 'A Brief Introduction To Wireless Communication', description: 'An introductory course on wireless communication.', stream: 'Electronics & Communication Engineering', credits: 1, weeks: 4 },
     { title: 'Principles Of Communication Systems - Part 1', description: 'An introductory course on communication systems.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
@@ -179,6 +174,10 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Basics of software-defined radios and practical applications', description: 'Learn the basics of software-defined radios and their practical applications.', stream: 'Electronics & Communication Engineering', credits: 1, weeks: 4 },
     { title: 'Modern Digital Communication Techniques', description: 'A course on Modern Digital Communication Techniques.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
     { title: 'Fundamentals of semiconductor devices', description: 'A course on the Fundamentals of semiconductor devices.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Optical Wireless Communications for Beyond 5G Networks and IoT', description: 'A course on optical wireless communications for 5G and IoT.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Physics of Nanoscale Devices', description: 'A course on the physics of nanoscale devices.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Power Management Integrated Circuits', description: 'A course on Power Management Integrated Circuits.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
+    { title: 'Power System Dynamics, Control and Monitoring', description: 'A course on Power System Dynamics, Control and Monitoring.', stream: 'Electronics & Communication Engineering', credits: 3, weeks: 12 },
 
 
     // Electrical Engineering
@@ -194,6 +193,7 @@ export const honoursCourses: HonoursCourse[] = [
     { title: 'Fundamentals Of Micro And Nanofabrication', description: 'A course on the fundamentals of micro and nanofabrication.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
     { title: 'Power Electronics', description: 'A course on power electronics.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
     { title: 'Power Quality Improvement Technique', description: 'A course on power quality improvement techniques.', stream: 'Electrical Engineering', credits: 3, weeks: 12 },
+    { title: 'Design Of Power Electronic Converters', description: 'A course on Design Of Power Electronic Converters.', stream: 'Electrical Engineering', credits: 2, weeks: 8 },
 
 
     // Chemistry & Chemical Engineering
